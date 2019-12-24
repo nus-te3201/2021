@@ -1,15 +1,15 @@
-<span id="module">CS2103</span>
+<span id="module">TE3201</span>
 
-<span id="module_pair">CS2103/T</span>
+<span id="module_pair">TE3201</span>
 
 <span id="module_name">Software Engineering</span>
 
 <span id="S">2</span>
 <span id="semester">AY1920S{{ S }}</span>
 
-<span id="period">2020 Jan-Apr</span>
+<span id="period">2020</span>
 
-<span id="module_color">success</span>
+<span id="module_color">danger</span>
 
 <span id="edition_badge"><small><small><small><span class='badge badge-pill badge-{{ module_color }}'>{{ module_pair }} edition - {{ period }}</span></small></small></small></span>
 
@@ -30,17 +30,19 @@
 
 <span id="participation_marks_page">https://docs.google.com/spreadsheets/d/e/2PACX-1vRY8YlRUDpFCI2M04Nd_hpt7MXJzc5EnbNIdCZjO3rVhSVHkuLjS03jpL43TGSdILh8HsVshkOX7DFs/pubhtml</span>
 
-<span id="files_link">https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files</span>
+<span id="files_link">https://luminus.nus.edu.sg/modules/ca668d5a-f851-4dcc-98f4-337c9126c956/files</span>
 
-<span id="announcements_link">https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active</span>
+<span id="announcements_link">https://luminus.nus.edu.sg/modules/ca668d5a-f851-4dcc-98f4-337c9126c956/announcements/active</span>
 
 <span id="bugs_link">{{ module_org | safe }}/forum/issues</span>
 
-<span id="forum_link">{{ module_org | safe }}/forum/issues</span>
+<span id="forum_link">https://luminus.nus.edu.sg/modules/ca668d5a-f851-4dcc-98f4-337c9126c956/forum</span>
 
 <span id="admin_link"><md>[Admin Info page]({{baseUrl}}/admin/index.html)</md></span>
 
 <span id="schedule_link"><md>[Schedule page]({{baseUrl}}/schedule/index.html)</md></span>
+
+<span id="repl_link">https://repl.it/classroom/invite/jcXc9CX</span>
 
 <span id="java_coding_standard">{{ baseUrl }}/coding-standards/java/intermediate.html</span>
 
@@ -104,7 +106,7 @@
 <span id="good"><font color="green"><md>**{{ icon_like | safe }} Good**</md></font></span>
 
 <span id="icon_repo"><md>:fas-code-branch:</md></span>
-
+<span id="icon_try">:fas-laptop:</span>
 
 <span id="evidence"><big>{{ icon_evidence | safe }} Evidence:</big></span>
 

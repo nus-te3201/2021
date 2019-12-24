@@ -1,6 +1,7 @@
 {
-  "baseUrl": "/website",
-  "titlePrefix": "CS2103/T Website",
+  "baseUrl": "/2020",
+  "titlePrefix": "TE3201 Website",
+  "timeZone": "Asia/Singapore",
   "ignore": [
     "_site/*",
     ".idea/*",
@@ -15,7 +16,7 @@
   "pages": [
     {"src": "index.md",
       "searchable": "no"},
-    {"glob": "admin/*.md"},
+    {"src": "admin/te3201-admin.md"},
     {"glob": "schedule/index.md",
       "searchable": "no"},
     {"glob": "schedule/timeline.md",
@@ -24,11 +25,7 @@
       "searchable": "no"},
     {"glob": "schedule/**/index.md",
       "searchable": "no"},
-    {"glob": "schedule/**/project.md",
-      "searchable": "no"},
-    {"glob": "schedule/**/topics.md",
-      "searchable": "no"},
-    {"glob": "schedule/**/tutorial.md",
+    {"glob": "schedule/**/topics*.md",
       "searchable": "no"},
     {"glob": "coding-standards/**/*.mbd"},
     {"glob": "book/about/acknowledgements.md"},
@@ -45,14 +42,28 @@
     },
     {"glob": "book/**/index.md",
       "searchable": "no"
+    },
+    {"glob": "programming/index.md",
+      "searchable": "yes"
+    },
+    {"glob": "programming/chapters/*.md",
+      "searchable": "yes"
     }
   ],
-  "enableSearch": true,
-  "headingIndexingLevel": 5,
-  "plugins": ["filterTags"],
+  "enableSearch": false,
+  "plugins": ["algolia","filterTags"],
   "pluginsContext": {
-   "filterTags" : {
-     "tags": []
-   }
- }
+    "algolia": {
+      "apiKey": "29bf21caddc74372e5c75f9a557715ec", 
+      "indexName": "te3201_2019", 
+      "algoliaOptions": {
+        "hitsPerPage": 10,
+        "facetFilters": [["tags:admin", "tags:programming", "tags:se-book-adapted", "tags:schedule"]]
+      }, 
+      "debug": false 
+    },
+    "filterTags" : {
+      "tags": []
+    }
+  }
 }

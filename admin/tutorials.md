@@ -16,7 +16,6 @@
 
 Module | Venue | Time | ~~%%Tutorial ID<br>in LumiNUS%%~~<br>==(don't use this!)== | **Our Tutorial ID**<br>==(use this!)== | Tutors
 -------|-------|------|------------------------------------------------------------|----------------------------------------|-------
-<include src="tutorial-schedule-{{ module }}-S{{ S }}.mbdf" inline />
 
 </div>
 </panel>

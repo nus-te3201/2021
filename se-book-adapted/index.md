@@ -43,8 +43,6 @@ siteNav: se-book-adapted-sitenav.md
 
 **Supplementary**</big>
 
-  {{ show_chapter("dummy", config.chapters.cppToJava) }}
-
 * [Combined Exercises](common/exercises.html)
 * [List of Definitions](common/definitions.html)
 
