@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Python Basics: Using an IDE</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/admin.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/expressions-types-variables.html">Expressions, Data Types, Variables</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/programs.html">Python Programs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/flowcontrol.html">Program Flow Control</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/functions.html">Functions</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/lists.html">Lists</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/errors.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/strings.html">Strings</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/files.html">Files</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/dictionaries.html">Dictionaries</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/oop.html">Object-Oriented Programming</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/gui.html">GUIs</a></div></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0">
+<hr></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0"><span class="dimmed"><strong>Appendices</strong></span></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/thirdparty.html"><strong>A.</strong> Installing 3rd Party Modules</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/ide.html" class="current"><strong>B.</strong> Using an IDE</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/organizing.html"><strong>C.</strong> Organizing Python Code</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/unittesting.html"><strong>D.</strong> Unit Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/monty.html"><strong>E.</strong> The Monty Project</a></div></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<div class="website-content" id="main">
+<div id="toc"></div>
+<div id="main">
+<div>
+<h2 id="appendix-b-using-an-ide"><span id="appendix-b-using-an-ide" class="anchor"></span>Appendix B: Using an IDE<a class="fa fa-anchor" href="#appendix-b-using-an-ide" onclick="event.stopPropagation()"></a></h2>
+<p><strong>There are several Python <trigger trigger="click" for="modal:pythonIde-IDEs">IDEs (Integrated Development Environments)</trigger></strong> that you can use to manage a Python programming project.</p>
+<b-modal id="modal:pythonIde-IDEs" hide-footer size="lg" modal-class="mb-zoom" ref="modal:pythonIde-IDEs" class="algolia-no-index"><template slot="modal-title"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> What is an IDE?</template>
+<p><span class="dimmed">Given below is an extract from the SE Textbook (<strong><a href="/2021/se-book-adapted/chapters/ides.html">IDEs</a> → Introduction → What</strong>):</span></p>
+<div>
+<p><strong>Professional software engineers often write code using <em>Integrated Development Environments (IDEs)</em>. IDEs support most development-related work within the same tool</strong> (hence, the term <em>integrated</em>).</p>
+<p>An IDE generally consists of:</p>
+<ul>
+<li>A source code editor that includes features such as syntax coloring, auto-completion, easy code navigation, error highlighting, and code-snippet generation.</li>
+<li>A compiler and/or an interpreter (together with other build automation support) that facilitates the compilation/linking/running/deployment of a program.</li>
+<li>A debugger that allows the developer to execute the program one step at a time to observe the run-time behavior in order to locate bugs.</li>
+<li>Other tools that aid various aspects of coding e.g. support for automated testing, drag-and-drop construction of UI components, version management support, simulation of the target runtime platform, and modeling support.</li></ul>
+<p>Examples of popular IDEs:</p>
+<ul>
+<li>Java: Eclipse, Intellij IDEA, NetBeans</li>
+<li>C#, C++: Visual Studio</li>
+<li>Swift: XCode</li>
+<li>Python: PyCharm</li></ul>
+<p>Some web-based IDEs have appeared in recent times too e.g., Amazon's <a href="https://aws.amazon.com/cloud9/">Cloud9 IDE</a>.</p>
+<p>Some experienced developers, in particular those with a UNIX background, prefer lightweight yet powerful text editors with scripting capabilities (e.g. <a href="http://www.gnu.org/software/emacs/">Emacs</a>) over heavier IDEs.</p></div></b-modal>
+<p>If you have not done so already, <trigger trigger="click" for="modal:pythonIde-installingPython">install Python in your Computer.</trigger></p>
+<b-modal id="modal:pythonIde-installingPython" hide-footer size="lg" modal-class="mb-zoom" ref="modal:pythonIde-installingPython" class="algolia-no-index"><template slot="modal-title">Installing Python</template>
+  <div>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> We recommend installing the latest Python <code class="hljs inline no-lang" v-pre>3.*</code> version (not the <code class="hljs inline no-lang" v-pre>2.*</code> version)</p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> How to install Python on Windows</p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/dX2-V2BocqQ" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div></b-modal>
+<p>The standard Python installation comes with a basic IDE called IDLE. It can be used to write, run, and debug Python code.</p>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/5hwG2gEGzVg" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<p><strong><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> is a more sophisticated IDE that is widely used.</strong> PyCharm has a free community edition. The professional edition too is free for students.</p>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Installing and setting up PyCharm</p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/0y5XlNeFxNk" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Setup a Project in PyCharm</p></template>
+  <div>
+<h4 id="exercise-setup-a-project-in-pycharm"><span id="exercise-setup-a-project-in-pycharm" class="anchor"></span>Exercise : Setup a Project in PyCharm<a class="fa fa-anchor" href="#exercise-setup-a-project-in-pycharm" onclick="event.stopPropagation()"></a></h4>
+<ol>
+<li>Install Python and PyCharm if you haven't done so already.</li>
+<li>Start PyCharm and click on the <code class="hljs inline no-lang" v-pre>Create New Project</code> option.<br>
+<a href="/2021/programming/ide/images/createNewProject.png" target="_self"><img src="/2021/programming/ide/images/createNewProject.png" alt class="img-fluid"></a></li>
+<li>Create a folder for your project. In the next screen, specify that as the project location.<br>
+<a href="/2021/programming/ide/images/specifyProjectLocation.png" target="_self"><img src="/2021/programming/ide/images/specifyProjectLocation.png" alt class="img-fluid"></a></li>
+<li>You can accept defaults for the remaining steps.</li>
+<li>To add a new file, right-click on project name and choose <code class="hljs inline no-lang" v-pre>New</code> → <code class="hljs inline no-lang" v-pre>File</code>. Provide a file name in the next screen. E.g., <code class="hljs inline no-lang" v-pre>hello.py</code><br>
+<a href="/2021/programming/ide/images/addNewFile.png" target="_self"><img src="/2021/programming/ide/images/addNewFile.png" alt class="img-fluid"></a></li>
+<li>Type your code in the file.<br>
+<a href="/2021/programming/ide/images/editCode.png" target="_self"><img src="/2021/programming/ide/images/editCode.png" alt class="img-fluid"></a><br>
+Here is an example:<pre><code class="hljs python" v-pre><span>greeting = <span class="hljs-string">&#x27;hello&#x27;</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_greeting</span>(<span class="hljs-params">name</span>):</span>
+</span><span>    message = greeting + <span class="hljs-string">&#x27; &#x27;</span> + name
+</span><span>    print(message)
+</span><span>
+</span><span>
+</span><span>print_greeting(<span class="hljs-string">&#x27;john&#x27;</span>)
+</span><span>print_greeting(<span class="hljs-string">&#x27;jane&#x27;</span>)
+</span></code></pre></li>
+<li>To run the code, Right-click on project name and choose <code class="hljs inline no-lang" v-pre>Run 'filename'</code>.<br>
+<a href="/2021/programming/ide/images/runCode.png" target="_self"><img src="/2021/programming/ide/images/runCode.png" alt class="img-fluid"></a></li>
+<li>The output will appear in the panel at the bottom of the IDE.<br>
+<a href="/2021/programming/ide/images/seeOutput.png" target="_self"><img src="/2021/programming/ide/images/seeOutput.png" alt class="img-fluid"></a></li></ol></div></panel><p></p></div>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Debugging in PyCharm</p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/xuTDnFikBhw" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel>
+<p></p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Debug a Project in PyCharm</p></template>
+  <div>
+<h4 id="exercise-debug-a-project-in-pycharm"><span id="exercise-debug-a-project-in-pycharm" class="anchor"></span>Exercise : Debug a Project in PyCharm<a class="fa fa-anchor" href="#exercise-debug-a-project-in-pycharm" onclick="event.stopPropagation()"></a></h4>
+<ol>
+<li>Open a project in PyCharm. Go to a project file containing Python code.</li>
+<li>To create a breakpoint at a statement, click on the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the area between the statement and the line number</span><em>gutter</em></span> next to the line. A red dot should appear to indicate that the breakpoint has been set. <span class="dimmed">You can remove the breakpoint by clicking on the red dot again.</span><br>
+<a href="/2021/programming/ide/images/addBreakPoint.png" target="_self"><img src="/2021/programming/ide/images/addBreakPoint.png" alt class="img-fluid"></a></li>
+<li>To start debugging, choose <code class="hljs inline no-lang" v-pre>Debug</code> instead of <code class="hljs inline no-lang" v-pre>Run.</code><br>
+<a href="/2021/programming/ide/images/startDebugging.png" target="_self"><img src="/2021/programming/ide/images/startDebugging.png" alt class="img-fluid"></a></li>
+<li>The execution will pause at the first breakpoint. Use the debugging buttons to step through the code. You can see the , choose <code class="hljs inline no-lang" v-pre>Debug</code> instead of <code class="hljs inline no-lang" v-pre>Run</code>. You can see the value of the variables in the <em>debugger</em> Window, in the area below the debugging buttons.<br>
+<a href="/2021/programming/ide/images/stepThroughCode.png" target="_self"><img src="/2021/programming/ide/images/stepThroughCode.png" alt class="img-fluid"></a><br>
+Useful buttons:<br>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>Step over</code>: executes the statement and moves to the next statement</li>
+<li><code class="hljs inline no-lang" v-pre>Step in</code>: goes into the function that is called in the current statement.</li>
+<li><code class="hljs inline no-lang" v-pre>Step out</code>: finish executing the current function and goes back to the code that called the function.</li></ul></li></ol></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;"></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#appendix-b-using-an-ide">Appendix B: Using an IDE&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-setup-a-project-in-pycharm">Exercise : Setup a Project in PyCharm&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-debug-a-project-in-pycharm">Exercise : Debug a Project in PyCharm&#x200E;</a>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Textbook Chapter : Integration</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/requirements.html">Requirements</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/gatheringRequirements.html">Gathering Requirements</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/specifyingRequirements.html">Specifying Requirements</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/design.html">Software Design</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/designFundamentals.html">Design Fundamentals</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/modeling.html">Modeling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/oop.html">Object-Oriented Programming</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/errorHandling.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/ides.html">IDEs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/integration.html" class="current">Integration</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/codeQuality.html">Code Quality</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/refactoring.html">Refactoring</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/reuse.html">Reuse</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/documentation.html">Documentation</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality Assurance</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/testing.html">Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/testCaseDesign.html">Test Case Design</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/qualityAssurance.html">Quality Assurance</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project Management</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/projectPlanning.html">Project Planning</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/teamwork.html">Teamwork</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/processModels.html">SDLC Process Models</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/revisionControl.html">Revision Control</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/uml.html">UML</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Supplementary
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<link rel="stylesheet" href="/2021/book/css/textbook.css">
+<link rel="stylesheet" href="/2021/se-book-adapted/css/te3201.css">
+<div class="website-content">
+<p><span class="dimmed"><strong><span></span></strong></span></p>
+<div id="title">
+<div><h1 id="integration"><span id="integration" class="anchor"></span><span>Integration</span><a class="fa fa-anchor" href="#integration" onclick="event.stopPropagation()"></a></h1></div></div>
+<panel type="seamless" expanded id="introduction">
+  <span slot="header" class="card-title"><div><h2 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="what"><template slot="header"><h4 id="what"><span id="what" class="anchor"></span>What<a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain integration</span></span></span></span><p></p>
+  <div>
+<p><strong>Combining parts of a software product to form a whole is called <em>integration</em></strong>. It is also one of the most troublesome tasks and it rarely goes smoothly.</p></div>
+  <div></div></div></panel></panel>
+<panel type="seamless" expanded id="approaches">
+  <span slot="header" class="card-title"><div><h2 id="approaches"><span id="approaches" class="anchor"></span><span>Approaches</span><a class="fa fa-anchor" href="#approaches" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="late-and-one-time-vs-early-and-frequent"><template slot="header"><h4 id="late-and-one-time-vs-early-and-frequent"><span id="late-and-one-time-vs-early-and-frequent" class="anchor"></span>Late-and-One-Time vs Early-and-Frequent<a class="fa fa-anchor" href="#late-and-one-time-vs-early-and-frequent" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how integration approaches vary based on timing and frequency</span></span></span></span><p></p>
+  <div>
+<p><strong>In terms of timing and frequency, there are two general approaches to integration: <em>late and one-time</em>, <em>early and frequent</em>.</strong></p>
+<p><strong><em>Late and one-time</em>: wait till all components are completed and integrate all finished components near the end of the project.</strong></p>
+<box type="wrong">
+<p>This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays <span class="dimmed">i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date</span>.</p></box>
+<p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet</span>walking skeleton</span></em> can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.</p></box>
+<div v-closeable alt="slideshow: comparison" class="non-printable">
+<p>Here is an animation that compares the two approaches:</p>
+<div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="big-bang-vs-incremental-integration"><template slot="header"><h4 id="big-bang-vs-incremental-integration"><span id="big-bang-vs-incremental-integration" class="anchor"></span>Big-Bang vs Incremental Integration<a class="fa fa-anchor" href="#big-bang-vs-incremental-integration" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how integration approaches vary based on amount merged at a time</span></span></span></span><p></p>
+  <div>
+<p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
+<box type="wrong">
+<p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p></box>
+<p><strong><em>Incremental integration</em>: integrate a few components at a time.</strong> This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.</p>
+<div v-closeable alt="slideshow: comparison" class="non-printable">
+<p>Here is an animation that compares the two approaches:</p>
+<div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
+  <div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Big-bang integration in school projects</p></template>
+<question has-input="true">
+<p>Give two arguments in support and two arguments against the following statement.</p>
+<p><em>Because there is no external client, it is OK to use big bang integration for a school project.</em></p>
+<div slot="answer" class="algolia-no-index">
+<p>Arguments for:</p>
+<ul>
+<li>It is relatively simple; even big-bang can succeed.</li>
+<li>Project duration is short; there is not enough time to integrate in steps.</li>
+<li>The system is non-critical, non-production (demo only); the cost of integration issues is relatively small.</li></ul>
+<p>Arguments against:</p>
+<ul>
+<li>Inexperienced developers; big-bang more likely to fail.</li>
+<li>Too many problems may be discovered too late. Submission deadline (fixed) can be missed.</li>
+<li>Team members have not worked together before; increases the probability of integration problems.</li></ul></div></question></panel></div></panel></div></div></div></panel>
+<panel type="seamless" expanded id="top-down-vs-bottom-up-integration"><template slot="header"><h4 id="top-down-vs-bottom-up-integration"><span id="top-down-vs-bottom-up-integration" class="anchor"></span>Top-Down vs Bottom-Up Integration<a class="fa fa-anchor" href="#top-down-vs-bottom-up-integration" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how integration approaches vary based on the order of integration</span></span></span></span><p></p>
+  <div>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
+<p></p>
+<p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
+<p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <trigger for="pop:topdown-stub">stubs</trigger> in place of lower level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+<span id="pop:topdown-stub" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
+  <div data-mb-slot-name="content">
+    <div>
+<p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p></div></div></span>
+<p><strong><em>Bottom-up</em> integration: the reverse of top-down integration.</strong> Note that when integrating lower level components, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">additional code written to provide inputs to a component via an API</span>drivers</span> may be needed to test the integrated components <span class="dimmed">because the UI may not be integrated yet</span>, just like how top-down integration needs stubs.</p>
+<p><strong><em>Sandwich</em> integration: a mix of the top-down and bottom-up approaches.</strong> The idea is to do both top-down and bottom-up so as to 'meet' in the middle.</p>
+<div v-closeable alt="slideshow: comparison">
+<p>Here is an animation that compares the three approaches:</p>
+<div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212318&authkey=AD27jxfKqq3nqpQ&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
+  <div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suggest an integration strategy</p></template>
+<question has-input="true">
+<p>Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
+<p>Also take into account the following facts in your test strategy:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
+<li><code class="hljs inline no-lang" v-pre>HospitalFacade</code> shields the UI from the complexities of the application layer. It simply redirects the method calls received to the appropriate classes below.</li>
+<li><code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications.</li>
+<li>Development of the <code class="hljs inline no-lang" v-pre>OutPatient</code> component has been outsourced, and its delivery is not expected until the 2nd half of the project.</li></ul>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
+<p></p>
+<div slot="answer" class="algolia-no-index">
+<p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the following:</p>
+<ul>
+<li>Because <code class="hljs inline no-lang" v-pre>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code class="hljs inline no-lang" v-pre>HospitalUI</code>)</li>
+<li>Because <code class="hljs inline no-lang" v-pre>HospitalFacade</code> is unlikely to have a lot of business logic, it may not be worth to write stubs to test it (i.e. a bottom-up integration is better for <code class="hljs inline no-lang" v-pre>HospitalFacade</code>).</li>
+<li>Because <code class="hljs inline no-lang" v-pre>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code class="hljs inline no-lang" v-pre>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
+<li>Because the <code class="hljs inline no-lang" v-pre>OutPatient</code> class may be delayed, you may have to integrate <code class="hljs inline no-lang" v-pre>PatientMgr</code> using a stub.</li>
+<li><code class="hljs inline no-lang" v-pre>TypeA</code>, <code class="hljs inline no-lang" v-pre>TypeB</code>, and <code class="hljs inline no-lang" v-pre>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li></ul>
+<p>Given below is one possible integration test strategy. The relative positioning of items is used to indicate a rough timeline.</p>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
+<p></p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Integration order</p></template>
+<question has-input="false">
+<p>Consider the architecture given below. Describe the order in which components will be integrated with one another if the following integration strategies were adopted.</p>
+<p>a)	top-down<br>
+b)	bottom-up<br>
+c)	sandwich</p>
+<p>Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).</p>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
+<p></p>
+<div slot="answer" class="algolia-no-index">
+<p>a) Diagram:</p>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
+<p></p>
+<p>b) Diagram:</p>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/bAnswer.png" height="230">
+<p></p>
+<p>c) Diagram:</p>
+<img src="/2021/book/integration/approaches/topDownVsBottomUp/images/cAnswer.png" height="230">
+<p></p></div></question></panel></div></panel></div></div></div></panel></panel></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#integration">Integration&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction">Introduction&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#what">What&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#approaches">Approaches&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#late-and-one-time-vs-early-and-frequent">Late-and-One-Time vs Early-and-Frequent&#x200E;</a>
+<a class="nav-link py-1" href="#big-bang-vs-incremental-integration">Big-Bang vs Incremental Integration&#x200E;</a>
+<a class="nav-link py-1" href="#top-down-vs-bottom-up-integration">Top-Down vs Bottom-Up Integration&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

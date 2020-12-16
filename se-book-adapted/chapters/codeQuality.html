@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Textbook Chapter : Code Quality</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/requirements.html">Requirements</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/gatheringRequirements.html">Gathering Requirements</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/specifyingRequirements.html">Specifying Requirements</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/design.html">Software Design</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/designFundamentals.html">Design Fundamentals</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/modeling.html">Modeling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/oop.html">Object-Oriented Programming</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/errorHandling.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/ides.html">IDEs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/integration.html">Integration</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/codeQuality.html" class="current">Code Quality</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/refactoring.html">Refactoring</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/reuse.html">Reuse</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/documentation.html">Documentation</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality Assurance</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/testing.html">Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/testCaseDesign.html">Test Case Design</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/qualityAssurance.html">Quality Assurance</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project Management</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/projectPlanning.html">Project Planning</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/teamwork.html">Teamwork</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/processModels.html">SDLC Process Models</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/revisionControl.html">Revision Control</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/chapters/uml.html">UML</a></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Supplementary
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/2021/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<link rel="stylesheet" href="/2021/book/css/textbook.css">
+<link rel="stylesheet" href="/2021/se-book-adapted/css/te3201.css">
+<div class="website-content">
+<p><span class="dimmed"><strong><span></span></strong></span></p>
+<div id="title">
+<div><h1 id="code-quality"><span id="code-quality" class="anchor"></span><span>Code quality</span><a class="fa fa-anchor" href="#code-quality" onclick="event.stopPropagation()"></a></h1></div></div>
+<panel type="seamless" expanded id="introduction">
+  <span slot="header" class="card-title"><div><h2 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="basic"><template slot="header"><h4 id="basic"><span id="basic" class="anchor"></span>Basic<a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the importance of code quality</span></span></span></span><p></p>
+  <div>
+<blockquote>
+<p>Always code as if the person who ends up maintaining your code will be a violent psychopath who knows where you live. <sub>-- Martin Golding</sub></p></blockquote>
+<p><strong><trigger for="pop:production-code">Production code</trigger> needs to be of high quality</strong>. Given how the world is becoming increasingly dependent on software, poor quality code is something no one can afford to tolerate.</p>
+<span id="pop:production-code" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> Production Code</span>
+  <div data-mb-slot-name="content">
+    Code being used in an actual product with actual users
+  </div></span></div>
+  <div></div></div></panel></panel>
+<panel type="seamless" expanded id="guideline-maximise-readability">
+  <span slot="header" class="card-title"><div><h2 id="guideline-maximise-readability"><span id="guideline-maximise-readability" class="anchor"></span><span>Guideline: Maximise readability</span><a class="fa fa-anchor" href="#guideline-maximise-readability" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="introduction-2"><template slot="header"><h4 id="introduction-2"><span id="introduction-2" class="anchor"></span>Introduction<a class="fa fa-anchor" href="#introduction-2" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the importance of readability</span></span></span></span><p></p>
+  <div>
+<blockquote>
+<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Programs should be written and polished until they acquire publication quality. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>--<a href="https://en.wikipedia.org/wiki/Niklaus_Wirth">Niklaus Wirth</a></sub></p></blockquote>
+<p><strong>Among various dimensions of code quality, such as run-time efficiency, security, and robustness, one of the most important is understandability.</strong> This is because in any non-trivial software project, code needs to be read, understood, and modified by other developers later on. Even if you do not intend to pass the code to someone else, code quality is still important because you will become a 'stranger' to your own code someday.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The two code samples given below achieve the same functionality, but one is easier to read.</p>
+<div class="alt-java">
+  <div>
+<table> 
+<tr>
+  <td>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (!age) {
+</span><span>        <span class="hljs-keyword">if</span> (!sub) {
+</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {
+</span><span>                subsidy = <span class="hljs-number">500</span>;
+</span><span>            } <span class="hljs-keyword">else</span> {
+</span><span>                subsidy = <span class="hljs-number">250</span>;
+</span><span>            }
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            subsidy = <span class="hljs-number">250</span>;
+</span><span>        }
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = -<span class="hljs-number">1</span>;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (isSenior) {
+</span><span>        subsidy = REJECT_SENIOR;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidized) {
+</span><span>        subsidy = SUBSIDIZED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = FULLTIME_SUBSIDY;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre></td></tr></table></div></div>
+<div class="alt-python">
+  <div>
+<table> 
+<tr>
+  <td>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span>():</span>
+</span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+</span><span>                subsidy = <span class="hljs-number">500</span>
+</span><span>            <span class="hljs-keyword">else</span>:
+</span><span>                subsidy = <span class="hljs-number">250</span>
+</span><span>        <span class="hljs-keyword">else</span>:
+</span><span>            subsidy = <span class="hljs-number">250</span>
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        subsidy = -<span class="hljs-number">1</span>
+</span><span>    <span class="hljs-keyword">return</span> subsidy
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span>():</span>
+</span><span>    <span class="hljs-keyword">if</span> is_senior:
+</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidized:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDIZED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_parttime:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</span></code></pre></td></tr></table></div></div></box></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="basic-2">
+  <span slot="header" class="card-title"><div><h3 id="basic-2"><span id="basic-2" class="anchor"></span><span>Basic</span><a class="fa fa-anchor" href="#basic-2" onclick="event.stopPropagation()"></a></h3></div></span>
+<panel type="seamless" expanded id="avoid-long-methods"><template slot="header"><h4 id="avoid-long-methods"><span id="avoid-long-methods" class="anchor"></span>Avoid Long Methods<a class="fa fa-anchor" href="#avoid-long-methods" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid long methods </span></span></span></span><p></p>
+  <div>
+<p>Be wary when a method is longer than the computer screen, and take corrective action when it goes beyond 30 LOC (lines of code). The bigger the haystack, the harder it is to find a needle.</p></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="avoid-deep-nesting"><template slot="header"><h4 id="avoid-deep-nesting"><span id="avoid-deep-nesting" class="anchor"></span>Avoid Deep Nesting<a class="fa fa-anchor" href="#avoid-deep-nesting" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid deep nesting </span></span></span></span><p></p>
+  <div>
+<blockquote>
+<p>If you need more than 3 levels of indentation, you're screwed anyway, and should fix your program. <sub>--Linux 1.3.53 Coding Style</sub></p></blockquote>
+<p>In particular, avoid <a href="https://blog.codinghorror.com/flattening-arrow-code/"><em>arrowhead</em> style code</a>.</p>
+<img src="/2021/book/codeQuality/maximiseReadability/basic/avoidDeepNesting/images/arrowheadStyle.png" width="500">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A real code example:</p>
+<div class="alt-java">
+  <div>
+<table> 
+<tr>
+  <td>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">subsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (!age) {
+</span><span>        <span class="hljs-keyword">if</span> (!sub) {
+</span><span>            <span class="hljs-keyword">if</span> (!notFullTime) {
+</span><span>                subsidy = <span class="hljs-number">500</span>;
+</span><span>            } <span class="hljs-keyword">else</span> {
+</span><span>                subsidy = <span class="hljs-number">250</span>;
+</span><span>            }
+</span><span>        } <span class="hljs-keyword">else</span> {
+</span><span>            subsidy = <span class="hljs-number">250</span>;
+</span><span>        }
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = -<span class="hljs-number">1</span>;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculateSubsidy</span><span class="hljs-params">()</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> subsidy;
+</span><span>    <span class="hljs-keyword">if</span> (isSenior) {
+</span><span>        subsidy = REJECT_SENIOR;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isAlreadySubsidized) {
+</span><span>        subsidy = SUBSIDIZED_SUBSIDY;
+</span><span>    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (isPartTime) {
+</span><span>        subsidy = FULLTIME_SUBSIDY * RATIO;
+</span><span>    } <span class="hljs-keyword">else</span> {
+</span><span>        subsidy = FULLTIME_SUBSIDY;
+</span><span>    }
+</span><span>    <span class="hljs-keyword">return</span> subsidy;
+</span><span>}
+</span></code></pre></td></tr></table></div></div>
+<div class="alt-python">
+  <div>
+<table> 
+<tr>
+  <td>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subs</span>():</span>
+</span><span>    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> age:
+</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> sub:
+</span><span>            <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> not_fulltime:
+</span><span>                subsidy = <span class="hljs-number">500</span>
+</span><span>            <span class="hljs-keyword">else</span>:
+</span><span>                subsidy = <span class="hljs-number">250</span>
+</span><span>        <span class="hljs-keyword">else</span>:
+</span><span>            subsidy = <span class="hljs-number">250</span>
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        subsidy = -<span class="hljs-number">1</span>
+</span><span>    <span class="hljs-keyword">return</span> subsidy
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_subsidy</span>():</span>
+</span><span>    <span class="hljs-keyword">if</span> is_senior:
+</span><span>        <span class="hljs-keyword">return</span> REJECT_SENIOR
+</span><span>    <span class="hljs-keyword">elif</span> is_already_subsidized:
+</span><span>        <span class="hljs-keyword">return</span> SUBSIDIZED_SUBSIDY
+</span><span>    <span class="hljs-keyword">elif</span> is_parttime:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY * RATIO
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        <span class="hljs-keyword">return</span> FULLTIME_SUBSIDY
+</span></code></pre></td></tr></table></div></div></box></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="avoid-complicated-expressions"><template slot="header"><h4 id="avoid-complicated-expressions"><span id="avoid-complicated-expressions" class="anchor"></span>Avoid Complicated Expressions<a class="fa fa-anchor" href="#avoid-complicated-expressions" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid complicated expressions </span></span></span></span><p></p>
+  <div>
+<p>Avoid complicated expressions, especially those having many negations and nested parentheses. If you must evaluate complicated expressions, have it done in steps (i.e. calculate some intermediate values first and use them to calculate the final value).</p>
+<div class="alt-java">
+<div>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) || (previousSize != length)) &amp;&amp; (typeCode == URGENT);
+</span></code></pre><p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">boolean</span> isWithinSizeLimit = length &lt; MAX_LENGTH;
+</span><span><span class="hljs-keyword">boolean</span> isSameSize = previousSize != length;
+</span><span><span class="hljs-keyword">boolean</span> isValidCode = isWithinSizeLimit || isSameSize;
+</span><span>
+</span><span><span class="hljs-keyword">boolean</span> isUrgent = typeCode == URGENT;
+</span><span>
+</span><span><span class="hljs-keyword">return</span> isValidCode &amp;&amp; isUrgent;
+</span></code></pre></box></div></div>
+<div class="alt-python">
+<div>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> ((length &lt; MAX_LENGTH) <span class="hljs-keyword">or</span> (previous_size != length)) <span class="hljs-keyword">and</span> (type_code == URGENT)
+</span></code></pre><p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span>is_within_size_limit = length &lt; MAX_LENGTH
+</span><span>is_same_size = previous_size != length
+</span><span>is_valid_code = is_within_size_limit <span class="hljs-keyword">or</span> is_same_size
+</span><span>
+</span><span>is_urgent = type_code == URGENT
+</span><span>
+</span><span><span class="hljs-keyword">return</span> is_valid_code <span class="hljs-keyword">and</span> is_urgent
+</span></code></pre></box></div></div>
+<blockquote>
+<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility, and among other things he avoids clever tricks like the plague. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Edsger Dijkstra</sub></p></blockquote></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="avoid-magic-numbers"><template slot="header"><h4 id="avoid-magic-numbers"><span id="avoid-magic-numbers" class="anchor"></span>Avoid Magic Numbers<a class="fa fa-anchor" href="#avoid-magic-numbers" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid magic numbers </span></span></span></span><p></p>
+  <div>
+<p>When the code has a number that does not explain the meaning of the number, it is called a &quot;magic number&quot; (as in &quot;the number appears as if by magic&quot;). Using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., <code class="hljs inline no-lang" v-pre>PI</code></span><em>named constant</em></span> makes the code easier to understand because the name tells us more about the meaning of the number.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<div class="alt-java">
+<div>
+<table> 
+<tr>
+  <td valign="top">
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>;
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> PI = <span class="hljs-number">3.14236</span>;
+</span><span><span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX_SIZE = <span class="hljs-number">10</span>;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> PI;
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE - <span class="hljs-number">1</span>;
+</span></code></pre></td></tr></table></div></div>
+<div class="alt-python">
+<div>
+<p>Note: Python does not have a way to make a variable a constant. However, you can use a normal variable with an <code class="hljs inline no-lang" v-pre>ALL_CAPS</code> name to simulate a constant.</p>
+<table> 
+<tr>
+  <td valign="top">
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-number">3.14236</span>
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> <span class="hljs-number">9</span>
+</span></code></pre></td>
+  <td>&nbsp;&nbsp;<br><br></td>
+  <td valign="top">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span>PI = <span class="hljs-number">3.14236</span>
+</span><span>MAX_SIZE = <span class="hljs-number">10</span>
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> PI
+</span><span>...
+</span><span><span class="hljs-keyword">return</span> MAX_SIZE - <span class="hljs-number">1</span>
+</span></code></pre></td></tr></table></div></div></box>
+<p>Similarly, you can have ‘magic’ values of other data types.</p>
+<box>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error 1432&quot;</span>; <span class="hljs-comment">// A magic string!</span>
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Error 1432&quot;</span> <span class="hljs-comment"># A magic string!</span>
+</span></code></pre></div></box>
+<p>In general, try to avoid any magic literals.</p></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="make-the-code-obvious"><template slot="header"><h4 id="make-the-code-obvious"><span id="make-the-code-obvious" class="anchor"></span>Make the Code Obvious<a class="fa fa-anchor" href="#make-the-code-obvious" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: make the code obvious </span></span></span></span><p></p>
+  <div>
+<p>Make the code as explicit as possible, even if the language syntax allows them to be implicit. Here are some examples:</p>
+<ul>
+<li>[<code class="hljs inline no-lang" v-pre>Java</code>] Use explicit type conversion instead of implicit type conversion.</li>
+<li>[<code class="hljs inline no-lang" v-pre>Java</code>, <code class="hljs inline no-lang" v-pre>Python</code>] Use parentheses/braces to show groupings even when they can be skipped.</li>
+<li>[<code class="hljs inline no-lang" v-pre>Java</code>, <code class="hljs inline no-lang" v-pre>Python</code>] Use <trigger trigger="click" for="modal:obviousCode-enums">enumerations</trigger> when a certain variable can take only a small number of finite values. For example, instead of declaring the variable 'state' as an integer and using values 0, 1, 2 to denote the states 'starting', 'enabled', and 'disabled' respectively, declare 'state' as type <code class="hljs inline no-lang" v-pre>SystemState</code> and define an enumeration <code class="hljs inline no-lang" v-pre>SystemState</code> that has values <code class="hljs inline no-lang" v-pre>'STARTING'</code>, <code class="hljs inline no-lang" v-pre>'ENABLED'</code>, and <code class="hljs inline no-lang" v-pre>'DISABLED'</code>.</li></ul>
+<b-modal id="modal:obviousCode-enums" hide-footer size modal-class="mb-zoom" ref="modal:obviousCode-enums" class="algolia-no-index"><template slot="modal-title">More about enumerations</template>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html">More about Java enumerations</a></li>
+<li><a href="https://docs.python.org/3/library/enum.html">More about Python enumerations</a></li></ul></b-modal></div>
+  <div></div></div></panel></panel></panel>
+<panel type="seamless" expanded id="guideline-follow-a-standard">
+  <span slot="header" class="card-title"><div><h2 id="guideline-follow-a-standard"><span id="guideline-follow-a-standard" class="anchor"></span><span>Guideline: Follow a standard</span><a class="fa fa-anchor" href="#guideline-follow-a-standard" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="introduction-3"><template slot="header"><h4 id="introduction-3"><span id="introduction-3" class="anchor"></span>Introduction<a class="fa fa-anchor" href="#introduction-3" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for following a standard</span></span></span></span><p></p>
+  <div>
+<p><strong>One essential way to improve code quality is to follow a consistent style. That is why software engineers follow a strict coding standard (aka <em>style guide</em>).</strong></p>
+<p><strong>The aim of a coding standard is to make the entire code base look like it was written by one person</strong>. A coding standard is usually specific to a programming language and specifies guidelines such as the locations of opening and closing braces, indentation styles and naming styles (e.g. whether to use <em>Hungarian style</em>, <em>Pascal casing</em>, <em>Camel casing</em>, etc.). It is important that the whole team/company uses the same coding standard and that the standard is generally not inconsistent with typical industry practices. <span class="dimmed">If a company's coding standard is very different from what is typically used in the industry, new recruits will take longer to get used to the company's coding style.</span></p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p></div>
+  <div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What is the recommended approach regarding coding standards?</p></template>
+<question>
+<p>What is the recommended approach regarding coding standards?</p>
+<ul radio-group="5c5a1" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> a. Each developer should find a suitable coding standard and follow it in their coding.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> b. A developer should understand the importance of following a coding standard. However, there is no need to follow one.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> c. A developer should find out the coding standards currently used by the project and follow that closely.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="5c5a1" type="radio"> d. Coding standards are lame. Real programmers develop their own individual styles.</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>c</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> What is the aim? What is the value?</p></template>
+<question has-input>
+<p>What is the aim of using a coding standard? How does it help?</p></question></panel></div></panel></div></div></div></panel>
+<panel type="seamless" expanded id="basic-3"><template slot="header"><h4 id="basic-3"><span id="basic-3" class="anchor"></span>Basic<a class="fa fa-anchor" href="#basic-3" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can follow simple mechanical style rules</span></span></span></span><p></p>
+  <div>
+<div class="alt-java">
+<p>Go through the <a href="https://se-education.org/guides/conventions/java/basic.html">Java coding standard at @SE-EDU</a> and learn the <em>basic</em> style rules.</p></div>
+<div class="alt-python">
+<p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p></div></div>
+  <div>
+  <div>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
+<question>
+<p>Consider the code given below:</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">&quot;description: &quot;</span>;
+</span><span>    <span class="hljs-keyword">private</span> String description;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+</span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+</span><span>      <span class="hljs-keyword">this</span>.description = d;
+</span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())
+</span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&lt;task&gt;&quot;</span>+description+<span class="hljs-string">&quot;&lt;/task&gt;&quot;</span>; }
+</span><span>
+</span><span>    <span class="hljs-comment">/**</span>
+</span><span><span class="hljs-comment">     * Print the description as a string.</span>
+</span><span><span class="hljs-comment">     */</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+</span><span>}
+</span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
+<div slot="hint" class="algolia-no-index">
+<p>Here are three:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant and should be named <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code></li>
+<li>method name <code class="hljs inline no-lang" v-pre>printingDescription()</code> should be named as <code class="hljs inline no-lang" v-pre>printDescription()</code></li>
+<li>boolean variable <code class="hljs inline no-lang" v-pre>important</code> should be named to sound boolean e.g., <code class="hljs inline no-lang" v-pre>isImportant</code></li></ul>
+<p>There are many more.</p></div></question></panel></div></div></panel></div></div></div></panel></panel>
+<panel type="seamless" expanded id="guideline-name-well">
+  <span slot="header" class="card-title"><div><h2 id="guideline-name-well"><span id="guideline-name-well" class="anchor"></span><span>Guideline: Name well</span><a class="fa fa-anchor" href="#guideline-name-well" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="introduction-4"><template slot="header"><h4 id="introduction-4"><span id="introduction-4" class="anchor"></span>Introduction<a class="fa fa-anchor" href="#introduction-4" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for good names in code</span></span></span></span><p></p>
+  <div>
+<p>Proper naming improves the readability of code. It also reduces bugs caused by ambiguities regarding the intent of a variable or a method.</p>
+<blockquote>
+<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> There are only two hard things in Computer Science: cache invalidation and naming things. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span> <sub>-- Phil Karlton</sub></p></blockquote></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="basic-4">
+  <span slot="header" class="card-title"><div><h3 id="basic-4"><span id="basic-4" class="anchor"></span><span>Basic</span><a class="fa fa-anchor" href="#basic-4" onclick="event.stopPropagation()"></a></h3></div></span>
+<panel type="seamless" expanded id="use-nouns-for-things-and-verbs-for-actions"><template slot="header"><h4 id="use-nouns-for-things-and-verbs-for-actions"><span id="use-nouns-for-things-and-verbs-for-actions" class="anchor"></span>Use Nouns for Things and Verbs for Actions<a class="fa fa-anchor" href="#use-nouns-for-things-and-verbs-for-actions" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: use nouns for things and verbs for actions </span></span></span></span><p></p>
+  <div>
+<blockquote>
+<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span><br><sub>-- Robert C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em></sub></p></blockquote>
+<p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
+<box>
+<p>Examples:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Name for a</th>
+<th><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></th>
+<th><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></th></tr></thead>
+<tbody>
+<tr>
+<td>Class</td>
+<td><code class="hljs inline no-lang" v-pre>CheckLimit</code></td>
+<td><code class="hljs inline no-lang" v-pre>LimitChecker</code></td></tr>
+<tr>
+<td>Method</td>
+<td><code class="hljs inline no-lang" v-pre>result()</code></td>
+<td><code class="hljs inline no-lang" v-pre>calculate()</code></td></tr></tbody></table></div></box>
+<p><strong>Distinguish clearly between single-valued and multi-valued variables.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples:</p>
+<div class="alt-java">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span>Person student;
+</span><span>ArrayList&lt;Person&gt; students;
+</span></code></pre></div>
+<div class="alt-python">
+<p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span>name = <span class="hljs-string">&#x27;Jim&#x27;</span>
+</span><span>names = [<span class="hljs-string">&#x27;Jim&#x27;</span>, <span class="hljs-string">&#x27;Alice&#x27;</span>]
+</span></code></pre></div></box></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="use-standard-words"><template slot="header"><h4 id="use-standard-words"><span id="use-standard-words" class="anchor"></span>Use Standard Words<a class="fa fa-anchor" href="#use-standard-words" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: use standard words </span></span></span></span><p></p>
+  <div>
+<p>Use correct spelling in names. Avoid 'texting-style' spelling. <strong>Avoid foreign language words, slang, and names that are only meaningful within specific contexts/times</strong> <span class="dimmed">e.g. terms from private jokes, a TV show currently popular in your country.</span></p></div>
+  <div></div></div></panel></panel></panel>
+<panel type="seamless" expanded id="guideline-comment-minimally-but-sufficiently">
+  <span slot="header" class="card-title"><div><h2 id="guideline-comment-minimally-but-sufficiently"><span id="guideline-comment-minimally-but-sufficiently" class="anchor"></span><span>Guideline: Comment minimally, but sufficiently</span><a class="fa fa-anchor" href="#guideline-comment-minimally-but-sufficiently" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="introduction-5"><template slot="header"><h4 id="introduction-5"><span id="introduction-5" class="anchor"></span>Introduction<a class="fa fa-anchor" href="#introduction-5" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for commenting minimally but sufficiently</span></span></span></span><p></p>
+  <div>
+<blockquote>
+<p>Good code is its own best documentation. As you’re about to add a comment, ask yourself, ‘How can I improve the code so that this comment isn’t needed?’ Improve the code and then document it to make it even clearer. <sub>-- <a href="https://en.wikipedia.org/wiki/Steve_McConnell">Steve McConnell</a>, Author of <em>Clean Code</em></sub></p></blockquote>
+<p>Some think commenting heavily increases the 'code quality'. That is not so. Avoid writing comments to explain bad code. Improve the code to make it self-explanatory.</p></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="basic-5">
+  <span slot="header" class="card-title"><div><h3 id="basic-5"><span id="basic-5" class="anchor"></span><span>Basic</span><a class="fa fa-anchor" href="#basic-5" onclick="event.stopPropagation()"></a></h3></div></span>
+<panel type="seamless" expanded id="do-not-repeat-the-obvious"><template slot="header"><h4 id="do-not-repeat-the-obvious"><span id="do-not-repeat-the-obvious" class="anchor"></span>Do Not Repeat the Obvious<a class="fa fa-anchor" href="#do-not-repeat-the-obvious" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: do not repeat the obvious </span></span></span></span><p></p>
+  <div>
+<p>If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+<div class="alt-java">
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//increment x</span>
+</span><span>x++;
+</span><span>
+</span><span><span class="hljs-comment">//trim the input</span>
+</span><span>trimInput();
+</span></code></pre></div>
+<div class="alt-python">
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-comment"># increment x</span>
+</span><span>x = x + <span class="hljs-number">1</span>
+</span><span>
+</span><span><span class="hljs-comment"># trim the input</span>
+</span><span>trim_input()
+</span></code></pre></div></div>
+  <div></div></div></panel>
+<panel type="seamless" expanded id="write-to-the-reader"><template slot="header"><h4 id="write-to-the-reader"><span id="write-to-the-reader" class="anchor"></span>Write to the Reader<a class="fa fa-anchor" href="#write-to-the-reader" onclick="event.stopPropagation()"></a></h4></template>
+  <div class="indented">
+  <span class="badge badge-light">
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: write to the reader </span></span></span></span><p></p>
+  <div>
+<p>Do not write comments as if they are private notes to yourself. Instead, write them well enough to be understood by another programmer. One type of comment that is almost always useful is the <em>header comment</em> that you write for a class or an operation to explain its purpose.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples:</p>
+<div class="alt-java">
+<div>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span> </span>{
+</span><span>    ....
+</span><span>}
+</span></code></pre><p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span> </span>{
+</span><span>    ....
+</span><span>}
+</span></code></pre></div></div>
+<div class="alt-python">
+<div>
+<p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span>():</span>
+</span><span><span class="hljs-string">&quot;&quot;&quot;a quick trim function used to fix bug I detected overnight&quot;&quot;&quot;</span>
+</span><span>    ...
+</span></code></pre><p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span>():</span>
+</span><span><span class="hljs-string">&quot;&quot;&quot;Trim the input of leading and trailing spaces&quot;&quot;&quot;</span>
+</span><span>    ...
+</span></code></pre></div></div></box></div>
+  <div></div></div></panel></panel></panel></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#code-quality">Code quality&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction">Introduction&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#basic">Basic&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#guideline-maximise-readability">Guideline: Maximise readability&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction-2">Introduction&#x200E;</a>
+</nav>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#basic-2">Basic&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#avoid-long-methods">Avoid Long Methods&#x200E;</a>
+<a class="nav-link py-1" href="#avoid-deep-nesting">Avoid Deep Nesting&#x200E;</a>
+<a class="nav-link py-1" href="#avoid-complicated-expressions">Avoid Complicated Expressions&#x200E;</a>
+<a class="nav-link py-1" href="#avoid-magic-numbers">Avoid Magic Numbers&#x200E;</a>
+<a class="nav-link py-1" href="#make-the-code-obvious">Make the Code Obvious&#x200E;</a>
+</nav>
+</nav>
+<a class="nav-link py-1" href="#guideline-follow-a-standard">Guideline: Follow a standard&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction-3">Introduction&#x200E;</a>
+<a class="nav-link py-1" href="#basic-3">Basic&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#guideline-name-well">Guideline: Name well&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction-4">Introduction&#x200E;</a>
+</nav>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#basic-4">Basic&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#use-nouns-for-things-and-verbs-for-actions">Use Nouns for Things and Verbs for Actions&#x200E;</a>
+<a class="nav-link py-1" href="#use-standard-words">Use Standard Words&#x200E;</a>
+</nav>
+</nav>
+<a class="nav-link py-1" href="#guideline-comment-minimally-but-sufficiently">Guideline: Comment minimally, but sufficiently&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#introduction-5">Introduction&#x200E;</a>
+</nav>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#basic-5">Basic&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#do-not-repeat-the-obvious">Do Not Repeat the Obvious&#x200E;</a>
+<a class="nav-link py-1" href="#write-to-the-reader">Write to the Reader&#x200E;</a>
+</nav>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

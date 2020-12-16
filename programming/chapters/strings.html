@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Python Basics: Strings</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/admin.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/expressions-types-variables.html">Expressions, Data Types, Variables</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/programs.html">Python Programs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/flowcontrol.html">Program Flow Control</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/functions.html">Functions</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/lists.html">Lists</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/errors.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/strings.html" class="current">Strings</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/files.html">Files</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/dictionaries.html">Dictionaries</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/oop.html">Object-Oriented Programming</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/gui.html">GUIs</a></div></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0">
+<hr></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0"><span class="dimmed"><strong>Appendices</strong></span></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/thirdparty.html"><strong>A.</strong> Installing 3rd Party Modules</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/ide.html"><strong>B.</strong> Using an IDE</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/organizing.html"><strong>C.</strong> Organizing Python Code</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/unittesting.html"><strong>D.</strong> Unit Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/monty.html"><strong>E.</strong> The Monty Project</a></div></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<div class="website-content" id="main">
+<div id="toc">
+<ul>
+<li><a href="#lists"><strong>Strings</strong></a>
+<ul>
+<li><a href="#string-literals">String Literals</a></li>
+<li><a href="#working-with-strings">Working with Strings</a></li>
+<li><a href="#string-methods">String Methods</a></li></ul></li></ul></div>
+<div id="main">
+<h1 id="strings"><span id="strings" class="anchor"></span>Strings<a class="fa fa-anchor" href="#strings" onclick="event.stopPropagation()"></a></h1>
+<div>
+<h3 id="string-literals"><span id="string-literals" class="anchor"></span>String Literals<a class="fa fa-anchor" href="#string-literals" onclick="event.stopPropagation()"></a></h3>
+<p>A <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a string value, not a variable</span>string literal</span> can normally be specified by enclosing it within a pair of <code class="hljs inline no-lang" v-pre>''</code> or a pair of <code class="hljs inline no-lang" v-pre>&quot;&quot;</code> <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>'How is life?'</code></span>. However, this will not work if the string has a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a character that has special meaning in Python</span>special character</span> in it <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>'How's life?'</code> is not acceptable to Python because it contains a <code class="hljs inline no-lang" v-pre>'</code> which has the special meaning 'end of string', confusing Python as to which <code class="hljs inline no-lang" v-pre>'</code> of the string literal indicates the end of the string. This is similarly confusing: <code class="hljs inline no-lang" v-pre>&quot;Say &quot;wow&quot;&quot;</code></span>.</p>
+<div id="strings-escape">
+<p>An escape sequence is a sequence of characters in a string literal that is taken together and interpreted in a special way. You can <strong>use an <em>escape sequence</em>  to include a special character in a string literal</strong> without interpreting it as a special character.  Given below are some examples:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Output</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\'</code></td>
+<td>single quote</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;How\&#x27;s Life&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>How's Life?</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\&quot;</code></td>
+<td>double quote</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&quot;Say \&quot;wow\&quot;&quot;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>Say &quot;wow&quot;</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\\</code></td>
+<td>back slash</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;files\\text&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>files\text</code></td></tr></tbody></table></div><p>Another use of escape sequences is to give a special meaning to a character that normally does not have a special meaning. Here are some examples:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Output</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\t</code></td>
+<td>horizontal tab</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;aaa\tbbb&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>aaa</code> <code class="hljs inline no-lang" v-pre>  </code> <code class="hljs inline no-lang" v-pre>bbb</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\n</code></td>
+<td>line break</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;hi\nthere!&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>hi</code><br><code class="hljs inline no-lang" v-pre>there!</code></td></tr></tbody></table></div></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Escape Sequences</p></template>
+  <div>
+<h4 id="exercise-escape-sequences"><span id="exercise-escape-sequences" class="anchor"></span>Exercise : Escape Sequences<a class="fa fa-anchor" href="#exercise-escape-sequences" onclick="event.stopPropagation()"></a></h4>
+<p>Modify the <code class="hljs inline no-lang" v-pre>get_string()</code> function so that the code prints the given output.<br>
+Note that these words are separated by tabs, not normal spaces:<code class="hljs inline no-lang" v-pre>&quot;oops&quot;</code><span class="dimmed">{tab here}</span><code class="hljs inline no-lang" v-pre>&quot;ok&quot;</code><span class="dimmed">{tab here}</span><code class="hljs inline no-lang" v-pre>&quot;oh?&quot;</code></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_string</span>():</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>
+</span><span>print(get_string())
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Which word didn't he/she say? [&quot;oops&quot; &quot;ok&quot; &quot;oh?&quot;]
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Tips</span></p></template>
+<ul>
+<li>Use <code class="hljs inline no-lang" v-pre>\t</code> to print a tab character.</li>
+<li>Use <code class="hljs inline no-lang" v-pre>\'</code> to print a single quote inside a string.</li></ul></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_string</span>():</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Which word didn\&#x27;t he/she say? ...&#x27;</span>
+</span><span>
+</span><span>print(get_string())
+</span></code></pre></panel></div></panel><p></p></div>
+<p>You can <strong>use a pair of triple quotes to indicate a multi-line string literal</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example multi-line string that uses triple quotes.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;&#x27;&#x27;Hi,</span>
+</span><span><span class="hljs-string">How&#x27;s life?</span>
+</span><span><span class="hljs-string">bye!</span>
+</span><span><span class="hljs-string">-me&#x27;&#x27;&#x27;</span>)
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>Hi,
+</span><span>How's life?
+</span><span>bye!
+</span><span>-me
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_email_body</span>():</span>
+</span><span>  body = <span class="hljs-string">&#x27;&#x27;&#x27;This is the first line of the email.</span>
+</span><span><span class="hljs-string">This is the second line.</span>
+</span><span><span class="hljs-string">This is the third line.</span>
+</span><span><span class="hljs-string">          - bye!&#x27;&#x27;&#x27;</span>
+</span><span>  <span class="hljs-keyword">return</span> body
+</span><span>
+</span><span>print(get_email_body())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>This is the first line of the email.
+</span><span>This is the second line.
+</span><span>This is the third line.
+</span><span>          - bye!
+</span></code></pre></td></tr></table></div></box>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> It is optional to escape <code class="hljs inline no-lang" v-pre>'</code> and <code class="hljs inline no-lang" v-pre>&quot;</code> inside a mult-line string within triple quotes e.g., <code class="hljs inline no-lang" v-pre>How's life?</code> in the example above.</p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Multi-Line String</p></template>
+  <div>
+<h4 id="exercise-multi-line-string"><span id="exercise-multi-line-string" class="anchor"></span>Exercise : Multi-Line String<a class="fa fa-anchor" href="#exercise-multi-line-string" onclick="event.stopPropagation()"></a></h4>
+<p>Modify the <code class="hljs inline no-lang" v-pre>get_multiline_string()</code> function so that the code prints the given output exactly as given.<br></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_multiline_string</span>():</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;</span> <span class="hljs-comment">#REPLACE WITH YOUR CODE</span>
+</span><span>    
+</span><span>print(get_multiline_string()) 
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Which word didn't he/she say?
+</span><span>* &quot;oops&quot;
+</span><span>  * &quot;ok&quot;
+</span><span>    * &quot;oh?&quot;
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Tips</span></p></template>
+<ul>
+<li>Use <code class="hljs inline no-lang" v-pre>'''</code> to indicate multi-line strings.</li></ul></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;&#x27;&#x27;Which word didn&#x27;t he/she say?</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">&#x27;&#x27;&#x27;</span>
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>Triple double-quotes (<code class="hljs inline no-lang" v-pre>&quot;&quot;&quot;</code>) are commonly used to show documentation of code. Such comments are called <em>docstrings</em>.</strong></p>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>remove_head(items)</code> function below has a docstring that explains its behavior.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">remove_head</span>(<span class="hljs-params">items</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Remove the first item of the items.</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  The list should have at least one item.</span>
+</span><span><span class="hljs-string">  Arguments:</span>
+</span><span><span class="hljs-string">  items -- (type: list) the list of items to be modified</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  print(<span class="hljs-string">&#x27;removing head of list &#x27;</span>, items)
+</span><span>  <span class="hljs-keyword">del</span> items[<span class="hljs-number">0</span>]
+</span></code></pre></tip-box>
+<p>📎 Vist <a href="https://www.python.org/dev/peps/pep-0257/">this page</a> to learn more about docstrings</p>
+<div>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-literals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="working-with-strings"><span id="working-with-strings" class="anchor"></span>Working with Strings<a class="fa fa-anchor" href="#working-with-strings" onclick="event.stopPropagation()"></a></h3>
+<p>As you have seen before, you can use <code class="hljs inline no-lang" v-pre>+</code> and <code class="hljs inline no-lang" v-pre>*</code> operators to concatenate and replicate strings<br>
+<span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>'abc' + '!'*5</code> evaluates to <code class="hljs inline no-lang" v-pre>'abc!!!!!'</code></span>.</p>
+<p>You can <strong>use indexes and slices to access characters of a string</strong>, just like if a string is a simply a list of characters.</p>
+<p>i.e., <code class="hljs inline no-lang" v-pre>'Hi there'</code> is same as a list:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>H</th>
+<th>i</th>
+<th></th>
+<th>t</th>
+<th>h</th>
+<th>e</th>
+<th>r</th>
+<th>e</th>
+<th>!</th></tr></thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td></tr></tbody></table></div><box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to use index and slice notations to get parts of a string.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>s = <span class="hljs-string">&#x27;Hi there!&#x27;</span>
+</span><span>print(s[<span class="hljs-number">0</span>])
+</span><span>print(s[-<span class="hljs-number">1</span>])
+</span><span>print(s[<span class="hljs-number">3</span>:<span class="hljs-number">6</span>])
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>H
+</span><span>!
+</span><span>the
+</span></code></pre></td></tr></table></div></box>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Strings are immutable. The following code will not work: <code class="hljs inline no-lang" v-pre>s[0] = 'h'</code></p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Shorten String</p></template>
+  <div>
+<h4 id="exercise-shorten-string"><span id="exercise-shorten-string" class="anchor"></span>Exercise : Shorten String<a class="fa fa-anchor" href="#exercise-shorten-string" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the function given below, to behave as described by its docstring.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">shorten</span>(<span class="hljs-params">text</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot; Return a 10-character version of the string if it is longer.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  If text is longer than 10 characters, return the first four characters </span>
+</span><span><span class="hljs-string">  followed by &#x27;..&#x27; followed by the last four characters.</span>
+</span><span><span class="hljs-string">  If text is not longer than 10 characters, return text.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  shorten(&#x27;1234567890abcd&#x27;) returns &#x27;1234..abcd&#x27;</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>
+</span></code></pre><p>Example usage:</p>
+<table> 
+<tr>
+  <td>
+<pre><code class="hljs python" v-pre><span>print(shorten(<span class="hljs-string">&#x27;1234&#x27;</span>))    
+</span><span>print(shorten(<span class="hljs-string">&#x27;1234567890&#x27;</span>))
+</span><span>print(shorten(<span class="hljs-string">&#x27;1234567890abcd&#x27;</span>))
+</span></code></pre><p></p></td>
+  <td><br> → </td>
+  <td><br><p></p>
+<pre><code class="hljs" v-pre><span>1234
+</span><span>1234567890
+</span><span>1234..abcd
+</span></code></pre><p></p></td><p></p></tr></table>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span>  <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(text) &gt; <span class="hljs-number">10</span>:
+</span><span>    <span class="hljs-keyword">return</span> text[:<span class="hljs-number">4</span>] + <span class="hljs-string">&#x27;..&#x27;</span> <span class="hljs-comment"># ...</span>
+</span><span>  <span class="hljs-keyword">else</span>:
+</span><span>    <span class="hljs-keyword">return</span> text
+</span></code></pre></panel></div></panel><p></p></div>
+<p>You can <strong>use the <code class="hljs inline no-lang" v-pre>in</code> and <code class="hljs inline no-lang" v-pre>not in</code> operator to see if one string is a sub-string of another</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of checking for the existence of a sub-string:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>s = <span class="hljs-string">&#x27;Hi there!&#x27;</span>
+</span><span>print(<span class="hljs-string">&#x27;Hi&#x27;</span> <span class="hljs-keyword">in</span> s)
+</span><span>print(<span class="hljs-string">&#x27;hi&#x27;</span> <span class="hljs-keyword">in</span> s) <span class="hljs-comment"># matching is case-sensitive</span>
+</span><span>print(<span class="hljs-string">&#x27;Hello&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> s)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True
+</span><span>False
+</span><span>True
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-workingWith?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Has All Characters</p></template>
+  <div>
+<h4 id="exercise-has-all-characters"><span id="exercise-has-all-characters" class="anchor"></span>Exercise : Has All Characters<a class="fa fa-anchor" href="#exercise-has-all-characters" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the function given below so that it returns <code class="hljs inline no-lang" v-pre>True</code> if <code class="hljs inline no-lang" v-pre>text</code> has all the characters in the list <code class="hljs inline no-lang" v-pre>characters</code>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">has_all_characters</span>(<span class="hljs-params">text, characters</span>):</span>
+</span><span>  <span class="hljs-comment">#pass # REPLACE WITH YOUR CODE</span>
+</span><span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(has_all_characters(<span class="hljs-string">&#x27;abccde&#x27;</span>, [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>]))
+</span><span>print(has_all_characters(<span class="hljs-string">&#x27;ab cde&#x27;</span>, [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27; &#x27;</span>]))
+</span><span>print(has_all_characters(<span class="hljs-string">&#x27;apple&#x27;</span>, [<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;f&#x27;</span>]))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True
+</span><span>True
+</span><span>False
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">has_all_characters</span>(<span class="hljs-params">text, characters</span>):</span>
+</span><span>  <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> characters:
+</span><span>    <span class="hljs-keyword">if</span> ...
+</span><span>      <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="string-methods"><span id="string-methods" class="anchor"></span>String Methods<a class="fa fa-anchor" href="#string-methods" onclick="event.stopPropagation()"></a></h3>
+<p>String objects have many methods (the full list is <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">here</a>).</p>
+<p>Here are some string methods related to the nature of the string.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>upper()</code>: returns a string with all characters in upper case</li>
+<li><code class="hljs inline no-lang" v-pre>lower()</code>: returns a string with all characters in lower case</li>
+<li><code class="hljs inline no-lang" v-pre>isupper()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if all characters are in upper case</li>
+<li><code class="hljs inline no-lang" v-pre>islower()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if all characters are in lower case</li>
+<li><code class="hljs inline no-lang" v-pre>isalpha()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the string consists only of letters and is not blank.</li>
+<li><code class="hljs inline no-lang" v-pre>isalnum()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the string consists only of letters and numbers and is not blank.</li>
+<li><code class="hljs inline no-lang" v-pre>isdecimal()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the string consists only of numeric characters and is not blank.</li>
+<li><code class="hljs inline no-lang" v-pre>isspace()</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the string consists only of spaces, tabs, and new-lines and is not blank.</li>
+<li><code class="hljs inline no-lang" v-pre>startswith(s)</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the substring <code class="hljs inline no-lang" v-pre>s</code> appears at the start of the string</li>
+<li><code class="hljs inline no-lang" v-pre>endswith(s)</code>: returns <code class="hljs inline no-lang" v-pre>True</code> if the substring <code class="hljs inline no-lang" v-pre>s</code> appears at the end of the string</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of string methods mentioned above:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Hi there!&#x27;</span>.upper())
+</span><span>print(<span class="hljs-string">&#x27;Hi there!&#x27;</span>.lower())
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>HI THERE!
+</span><span>hi there!
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;ABC&#x27;</span>.isupper(), <span class="hljs-string">&#x27;Abc&#x27;</span>.isupper())
+</span><span>print(<span class="hljs-string">&#x27;abc&#x27;</span>.islower(), <span class="hljs-string">&#x27;Abc&#x27;</span>.islower())
+</span><span>print(<span class="hljs-string">&#x27;abc&#x27;</span>.isalpha(), <span class="hljs-string">&#x27;A12&#x27;</span>.isalpha())
+</span><span>print(<span class="hljs-string">&#x27;A23&#x27;</span>.isalnum(), <span class="hljs-string">&#x27;A+1&#x27;</span>.isalnum())
+</span><span>print(<span class="hljs-string">&#x27;123&#x27;</span>.isdecimal(), <span class="hljs-string">&#x27;A12&#x27;</span>.isdecimal())
+</span><span>print(<span class="hljs-string">&#x27; \t\n&#x27;</span>.isspace(), <span class="hljs-string">&#x27;a b&#x27;</span>.isspace())
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True False
+</span><span>True False
+</span><span>True False
+</span><span>True False
+</span><span>True False
+</span><span>True False
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>s = <span class="hljs-string">&#x27;Hi there!&#x27;</span>
+</span><span>print(s.startswith(<span class="hljs-string">&#x27;Hi&#x27;</span>), s.startswith(<span class="hljs-string">&#x27;hi&#x27;</span>))
+</span><span>print(s.endswith(<span class="hljs-string">&#x27;!&#x27;</span>), s.endswith(<span class="hljs-string">&#x27;?&#x27;</span>))
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True False
+</span><span>True False
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Rectify Case</p></template>
+  <div>
+<h4 id="exercise-rectify-case"><span id="exercise-rectify-case" class="anchor"></span>Exercise : Rectify Case<a class="fa fa-anchor" href="#exercise-rectify-case" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>rectify_case(text)</code> function given below, to behave as follows:</p>
+<ul>
+<li>If <code class="hljs inline no-lang" v-pre>text</code> is all upper case, return <code class="hljs inline no-lang" v-pre>text</code> in lower case</li>
+<li>If <code class="hljs inline no-lang" v-pre>text</code> is all lower case, return <code class="hljs inline no-lang" v-pre>text</code> in upper case</li>
+<li>Return <code class="hljs inline no-lang" v-pre>text</code> otherwise</li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rectify_case</span>(<span class="hljs-params">text</span>):</span>
+</span><span>  <span class="hljs-comment">#pass # REPLACE WITH YOUR CODE</span>
+</span><span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(rectify_case(<span class="hljs-string">&#x27;Mrs. Fox&#x27;</span>))
+</span><span>print(rectify_case(<span class="hljs-string">&#x27;MR. FOX&#x27;</span>))
+</span><span>print(rectify_case(<span class="hljs-string">&#x27;baby fox&#x27;</span>))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>Mrs. Fox
+</span><span>mr. fox
+</span><span>BABY FOX
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span>  <span class="hljs-keyword">if</span> text.isupper(): 
+</span><span>    <span class="hljs-keyword">return</span> text.lower()
+</span><span>  ...
+</span></code></pre></panel></div></panel><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Is Doctor</p></template>
+  <div>
+<h4 id="exercise-is-doctor"><span id="exercise-is-doctor" class="anchor"></span>Exercise : Is Doctor<a class="fa fa-anchor" href="#exercise-is-doctor" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>is_doctor(name)</code> function to return <code class="hljs inline no-lang" v-pre>True</code> for the following cases:</p>
+<ul>
+<li>If <code class="hljs inline no-lang" v-pre>name</code> has a <code class="hljs inline no-lang" v-pre>Dr.</code> at the start</li>
+<li>If <code class="hljs inline no-lang" v-pre>name</code> has a <code class="hljs inline no-lang" v-pre>(Dr)</code> at the end</li></ul>
+<p>Note that the matching should be <mark>case-insensitive</mark>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_doctor</span>(<span class="hljs-params">name</span>):</span>
+</span><span>  <span class="hljs-comment">#pass # REPLACE WITH YOUR CODE</span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(is_doctor(<span class="hljs-string">&#x27;Dr. Jekyll&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;DR. Jekyll&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;dR. Jekyll&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;dr. Jekyll&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;Jekyll (Dr)&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;Jekyll (DR)&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;Jekyll (dr)&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;Mr. Hyde&#x27;</span>))
+</span><span>print(is_doctor(<span class="hljs-string">&#x27;Miss Dr. B.more&#x27;</span>))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True
+</span><span>True
+</span><span>True
+</span><span>True
+</span><span>True
+</span><span>True
+</span><span>True
+</span><span>False
+</span><span>False
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Tips</span></p></template>
+<p>Convert the <code class="hljs inline no-lang" v-pre>name</code> to lower case and match with <code class="hljs inline no-lang" v-pre>dr.</code> or <code class="hljs inline no-lang" v-pre>(dr)</code> using string methods <code class="hljs inline no-lang" v-pre>startswith()</code>/<code class="hljs inline no-lang" v-pre>endswith()</code></p></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span>  name = name.lower()
+</span><span>  <span class="hljs-keyword">return</span> name.startswith(<span class="hljs-string">&#x27;dr.&#x27;</span>) ...
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>The <code class="hljs inline no-lang" v-pre>find(s)</code> method gives index of <code class="hljs inline no-lang" v-pre>s</code> in the string</strong>, if it is found. It returns <code class="hljs inline no-lang" v-pre>-1</code> if <code class="hljs inline no-lang" v-pre>s</code> is not found.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of the <code class="hljs inline no-lang" v-pre>find()</code> method:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>s = <span class="hljs-string">&#x27;Monty Python&#x27;</span>
+</span><span>print(s.find(<span class="hljs-string">&#x27;Monty&#x27;</span>))
+</span><span>print(s.find(<span class="hljs-string">&#x27;Python&#x27;</span>))
+</span><span>print(s.find(<span class="hljs-string">&#x27;Spam&#x27;</span>))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>0
+</span><span>6
+</span><span>-1
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Remove From Word</p></template>
+  <div>
+<h4 id="exercise-remove-from-word"><span id="exercise-remove-from-word" class="anchor"></span>Exercise : Remove From Word<a class="fa fa-anchor" href="#exercise-remove-from-word" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>remove_from_word(text, word)</code> function given below, to behave as follows:</p>
+<ul>
+<li>If <code class="hljs inline no-lang" v-pre>word</code> is found in <code class="hljs inline no-lang" v-pre>text</code>, return <code class="hljs inline no-lang" v-pre>text</code> minus the <code class="hljs inline no-lang" v-pre>word</code> (its first appearance) and any characters that appears after the <code class="hljs inline no-lang" v-pre>word</code></li>
+<li>Return <code class="hljs inline no-lang" v-pre>text</code> otherwise</li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">remove_from_word</span>(<span class="hljs-params">text, word</span>):</span>
+</span><span>  <span class="hljs-comment">#pass # REPLACE WITH YOUR CODE</span>
+</span><span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;&gt;&#x27;</span> + remove_from_word(<span class="hljs-string">&#x27;red-hot-lava&#x27;</span>, <span class="hljs-string">&#x27;red&#x27;</span>))
+</span><span>print(<span class="hljs-string">&#x27;&gt;&#x27;</span> + remove_from_word(<span class="hljs-string">&#x27;red-hot-lava&#x27;</span>, <span class="hljs-string">&#x27;hot&#x27;</span>))
+</span><span>print(<span class="hljs-string">&#x27;&gt;&#x27;</span> + remove_from_word(<span class="hljs-string">&#x27;red-hot-lava&#x27;</span>, <span class="hljs-string">&#x27;lava&#x27;</span>))
+</span><span>print(<span class="hljs-string">&#x27;&gt;&#x27;</span> + remove_from_word(<span class="hljs-string">&#x27;red-hot-lava&#x27;</span>, <span class="hljs-string">&#x27;bat&#x27;</span>))
+</span><span>print(<span class="hljs-string">&#x27;&gt;&#x27;</span> + remove_from_word(<span class="hljs-string">&#x27;red-hot-lava&#x27;</span>, <span class="hljs-string">&#x27;-&#x27;</span>))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>&gt;
+</span><span>&gt;red-
+</span><span>&gt;red-hot-
+</span><span>&gt;red-hot-lava
+</span><span>&gt;red
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">remove_from_word</span>(<span class="hljs-params">text, tail_start_word</span>):</span>
+</span><span>  tail_start_position = text.find(tail_start_word)
+</span><span>  <span class="hljs-keyword">if</span> tail_start_position != -<span class="hljs-number">1</span>:
+</span><span>    <span class="hljs-keyword">return</span> ...
+</span><span>  <span class="hljs-keyword">else</span>:
+</span><span>    <span class="hljs-keyword">return</span> ...
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>The <code class="hljs inline no-lang" v-pre>join()</code> method joins a list of string items while using the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the string object upon which the method was called</span>target string object</span> as a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the string that is placed in between each pair of items</span>delimiter</span>.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of the <code class="hljs inline no-lang" v-pre>join()</code> method:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;, &#x27;</span>.join([<span class="hljs-string">&#x27;tom&#x27;</span>, <span class="hljs-string">&#x27;dick&#x27;</span>, <span class="hljs-string">&#x27;harry&#x27;</span>]))
+</span><span>print(<span class="hljs-string">&#x27;-&#x27;</span>.join([<span class="hljs-string">&#x27;one&#x27;</span>, <span class="hljs-string">&#x27;to&#x27;</span>, <span class="hljs-string">&#x27;one&#x27;</span>]))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>tom, dick, harry
+</span><span>one-to-one
+</span></code></pre></td></tr></table></div></box>
+<p><strong>The <code class="hljs inline no-lang" v-pre>split()</code> method is the opposite of <code class="hljs inline no-lang" v-pre>join()</code>.</strong> It splits a string into a list of strings based on a given delimiter string. If no delimiter is given, any <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">space, tab, or newline characters</span>whitespaces</span> in the string are used as delimiters.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using the <code class="hljs inline no-lang" v-pre>split()</code> method:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;hi, how are you?&#x27;</span>.split())
+</span><span>print(<span class="hljs-string">&#x27;A1\t\tA2\nA3&#x27;</span>.split())
+</span><span>print(<span class="hljs-string">&#x27;&#x27;&#x27;Todo:</span>
+</span><span><span class="hljs-string">1. eat</span>
+</span><span><span class="hljs-string">2. sleep&#x27;&#x27;&#x27;</span>.split(<span class="hljs-string">&#x27;\n&#x27;</span>)) <span class="hljs-comment"># split into lines</span>
+</span><span>print(<span class="hljs-string">&#x27;1-to-1-talk&#x27;</span>.split(<span class="hljs-string">&#x27;-&#x27;</span>))
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>['hi,', 'how', 'are', 'you?']
+</span><span>['A1', 'A2', 'A3']
+</span><span>['Todo:', '1. eat', '2. sleep']
+</span><span>['1', 'to', '1', 'talk']
+</span></code></pre></td></tr></table></div></box>
+<p><strong>There are some string methods to help you to strip trailing/leading spaces.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of stripping leading/trailing spaces from a string:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>s = <span class="hljs-string">&#x27;  hello  there!  &#x27;</span>
+</span><span>print(<span class="hljs-string">&#x27;[&#x27;</span>+ s.strip() + <span class="hljs-string">&#x27;]&#x27;</span>)
+</span><span>print(<span class="hljs-string">&#x27;[&#x27;</span>+ s.lstrip() + <span class="hljs-string">&#x27;]&#x27;</span>) <span class="hljs-comment">#left side strip</span>
+</span><span>print(<span class="hljs-string">&#x27;[&#x27;</span>+ s.rstrip() + <span class="hljs-string">&#x27;]&#x27;</span>) <span class="hljs-comment">#right side strip</span>
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>[hello  there!]
+</span><span>[hello  there!  ]
+</span><span>[  hello  there!]
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Get Part</p></template>
+  <div>
+<h4 id="exercise-get-part"><span id="exercise-get-part" class="anchor"></span>Exercise : Get Part<a class="fa fa-anchor" href="#exercise-get-part" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>get_part(text, index)</code> function given below, to behave as follows:</p>
+<ol>
+<li>Split <code class="hljs inline no-lang" v-pre>text</code> using <code class="hljs inline no-lang" v-pre>|</code> as the delimiter</li>
+<li>Return the part indicated by the <code class="hljs inline no-lang" v-pre>index</code></li></ol>
+<p>The return value should not have leading/trailing spaces.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_part</span>(<span class="hljs-params">text, index</span>):</span>
+</span><span>  <span class="hljs-comment">#pass # REPLACE WITH YOUR CODE</span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(get_part(<span class="hljs-string">&#x27; John Doe | Male |    X&#x27;</span>, <span class="hljs-number">0</span>))
+</span><span>print(get_part(<span class="hljs-string">&#x27;John Doe | Male |    X&#x27;</span>, <span class="hljs-number">2</span>))
+</span><span>print(get_part(<span class="hljs-string">&#x27;Dog|Cat&#x27;</span>, <span class="hljs-number">0</span>))
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>John Doe
+</span><span>X
+</span><span>Dog
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">return</span> text.split(<span class="hljs-string">&#x27;|&#x27;</span>)...
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>The <code class="hljs inline no-lang" v-pre>replace()</code> method can replace a character (or a phrase) with another character/phrase</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of using <code class="hljs inline no-lang" v-pre>replace()</code> method:</p>
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;face to face&#x27;</span>.replace(<span class="hljs-string">&#x27; &#x27;</span>, <span class="hljs-string">&#x27;-&#x27;</span>))  <span class="hljs-comment"># replace space with a dash</span>
+</span><span>print(<span class="hljs-string">&#x27;1,2,3,4&#x27;</span>.replace(<span class="hljs-string">&#x27;,&#x27;</span>, <span class="hljs-string">&#x27;\t&#x27;</span>))  <span class="hljs-comment"># replace comma with a tab</span>
+</span><span>print(<span class="hljs-string">&#x27;Yup, Yup, I agree&#x27;</span>.replace(<span class="hljs-string">&#x27;Yup&#x27;</span>, <span class="hljs-string">&#x27;Yes&#x27;</span>))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>face-to-face
+</span><span>1	2	3	4
+</span><span>Yes, Yes, I agree
+</span></code></pre></box>
+<p><strong>There are some string methods to help you to align text.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of aligning text using string methods:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Here:&#x27;</span>.rjust(<span class="hljs-number">20</span>, <span class="hljs-string">&#x27;&gt;&#x27;</span>)) <span class="hljs-comment"># right-justify</span>
+</span><span>print(<span class="hljs-string">&#x27;Price&#x27;</span>.ljust(<span class="hljs-number">20</span>, <span class="hljs-string">&#x27;=&#x27;</span>)) <span class="hljs-comment"># left-justify</span>
+</span><span>print(<span class="hljs-string">&#x27;Title&#x27;</span>.center(<span class="hljs-number">16</span>, <span class="hljs-string">&#x27;:&#x27;</span>)) <span class="hljs-comment"># center</span>
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;Here:
+</span><span>Price===============
+</span><span>:::::Title::::::
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-methods?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Print Formatted Item</p></template>
+  <div>
+<h4 id="exercise-print-formatted-item"><span id="exercise-print-formatted-item" class="anchor"></span>Exercise : Print Formatted Item<a class="fa fa-anchor" href="#exercise-print-formatted-item" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>print_formatted_item(name, count, width)</code> function given below, to behave as follows:</p>
+<ul>
+<li>Print <code class="hljs inline no-lang" v-pre>name</code> and <code class="hljs inline no-lang" v-pre>count</code> in the format <code class="hljs inline no-lang" v-pre>name.................: count</code></li>
+<li>Width used for printing should be <code class="hljs inline no-lang" v-pre>width</code> (counted in number of characters)</li>
+<li>Use 3 spaces for <code class="hljs inline no-lang" v-pre>count</code> i.e., assume <code class="hljs inline no-lang" v-pre>count</code> is <code class="hljs inline no-lang" v-pre>0..999</code></li>
+<li>Left-justify the <code class="hljs inline no-lang" v-pre>name</code> and right-justify the <code class="hljs inline no-lang" v-pre>count</code></li>
+<li>Replace any square brackets <code class="hljs inline no-lang" v-pre>[]</code> in the <code class="hljs inline no-lang" v-pre>name</code> with normal brackets <code class="hljs inline no-lang" v-pre>()</code></li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_formatted_item</span>(<span class="hljs-params">name, count, width</span>):</span>
+</span><span>  print(<span class="hljs-string">&#x27;&#x27;</span>) <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span></code></pre><p>Example usage:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>w = <span class="hljs-number">25</span>
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;pens&#x27;</span>, <span class="hljs-number">2</span>, w)
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;books[old]&#x27;</span>, <span class="hljs-number">50</span>, w)
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;pins[new]&#x27;</span>, <span class="hljs-number">110</span>, w)
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>pens.................:  2
+</span><span>books(old)...........: 50
+</span><span>pins(new)............:110
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>w = <span class="hljs-number">20</span>
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;pens&#x27;</span>, <span class="hljs-number">2</span>, w)
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;books[old]&#x27;</span>, <span class="hljs-number">50</span>, w)
+</span><span>print_formatted_item(<span class="hljs-string">&#x27;pins[new]&#x27;</span>, <span class="hljs-number">110</span>, w)
+</span><span>
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>pens............:  2
+</span><span>books(old)......: 50
+</span><span>pins(new).......:110
+</span></code></pre></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_formatted_item</span>(<span class="hljs-params">name, count, width</span>):</span>
+</span><span>  name = name.replace(<span class="hljs-string">&#x27;[&#x27;</span>, <span class="hljs-string">&#x27;(&#x27;</span>).replace(...)
+</span><span>  print(name.ljust(width-<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;.&#x27;</span>) + ...)
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;"></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#strings">Strings&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#string-literals">String Literals&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-escape-sequences">Exercise : Escape Sequences&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-multi-line-string">Exercise : Multi-Line String&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#working-with-strings">Working with Strings&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-shorten-string">Exercise : Shorten String&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-has-all-characters">Exercise : Has All Characters&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#string-methods">String Methods&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-rectify-case">Exercise : Rectify Case&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-is-doctor">Exercise : Is Doctor&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-remove-from-word">Exercise : Remove From Word&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-get-part">Exercise : Get Part&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-print-formatted-item">Exercise : Print Formatted Item&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

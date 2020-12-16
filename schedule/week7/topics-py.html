@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 7 - Programming Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week6"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week7/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week7/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week7/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week7/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week8"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-7-fri-sep-18th-programming-topics"><span id="week-7-fri-sep-18th-programming-topics" class="anchor"></span>Week 7 <small><small><span class="dimmed">[Fri, Sep 18th]</span> - Programming Topics</small></small><a class="fa fa-anchor" href="#week-7-fri-sep-18th-programming-topics" onclick="event.stopPropagation()"></a></h1>
+<div>
+<div id="week7-toc">
+<ul>
+<li><a href="/2021/programming/chapters/dictionaries.html#dictionaries"><strong>Dictionaries</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/dictionaries.html#the-dictionary-data-structure">The Dictionary Data Structure</a></li>
+<li><a href="/2021/programming/chapters/dictionaries.html#working-with-dictionaries">Working with Dictionaries</a></li>
+<li><a href="/2021/programming/chapters/dictionaries.html#nested-dictionaries">Nested Dictionaries</a></li></ul></li></ul></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>So far, we have learned how to use Python lists to store sequences of objects. This week we move onto another slightly more complex data structure called <em>dictionary</em> which can store a collection of key-value pairs.</p></div></div></div>
+<h2 id="dictionaries"><span id="dictionaries" class="anchor"></span><strong>Dictionaries</strong><a class="fa fa-anchor" href="#dictionaries" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="the-dictionary-data-structure"><span id="the-dictionary-data-structure" class="anchor"></span>The Dictionary Data Structure<a class="fa fa-anchor" href="#the-dictionary-data-structure" onclick="event.stopPropagation()"></a></h3>
+<p><strong>A <em>dictionary</em> (python type: <code class="hljs inline no-lang" v-pre>dict</code>) is a collection of many values that can be indexed by any object type</strong>, unlike lists that are automatically indexed by integers. <strong>Indexes for dictionaries are called <em>keys</em></strong>, and a key with its associated value is called a <em>key-value pair</em>. Python <strong>dictionaries use the curly braces notation <code class="hljs inline no-lang" v-pre>{ key1: value1, key2: value2, ...}</code></strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A list containing names of animals <code class="hljs inline no-lang" v-pre>['cat', 'dog', 'hen', 'fish']</code></p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Index</th>
+<th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>0</code></td>
+<td><code class="hljs inline no-lang" v-pre>'cat'</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>1</code></td>
+<td><code class="hljs inline no-lang" v-pre>'dog'</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>2</code></td>
+<td><code class="hljs inline no-lang" v-pre>'hen'</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>3</code></td>
+<td><code class="hljs inline no-lang" v-pre>'fish'</code></td></tr></tbody></table></div><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A dictionary containing ages of three people <code class="hljs inline no-lang" v-pre>{'john': 12, 'sara': 14.5, 'colin': 13}</code>. <code class="hljs inline no-lang" v-pre>john</code>-<code class="hljs inline no-lang" v-pre>12</code> is a key-value pair.</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Key</th>
+<th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'john'</code></td>
+<td><code class="hljs inline no-lang" v-pre>12</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'sara'</code></td>
+<td><code class="hljs inline no-lang" v-pre>14.5</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'colin'</code></td>
+<td><code class="hljs inline no-lang" v-pre>13</code></td></tr></tbody></table></div><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A dictionary containing details of a person <code class="hljs inline no-lang" v-pre>{'name': 'john', 'age': 14.5, 'sex': 'F', 'citizen': True}</code></p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Key</th>
+<th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'name'</code></td>
+<td><code class="hljs inline no-lang" v-pre>'john'</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'age'</code></td>
+<td><code class="hljs inline no-lang" v-pre>14.5</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'gender'</code></td>
+<td><code class="hljs inline no-lang" v-pre>'F'</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>'citizen'</code></td>
+<td><code class="hljs inline no-lang" v-pre>True</code></td></tr></tbody></table></div></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of defining dictionaries.</p>
+<pre><code class="hljs python" v-pre><span>friends = {} <span class="hljs-comment"># empty dictionary</span>
+</span><span>grades = {<span class="hljs-string">&#x27;TE3201&#x27;</span>: <span class="hljs-string">&#x27;A&#x27;</span>}
+</span><span>numbers = {<span class="hljs-number">1</span>: <span class="hljs-string">&#x27;one&#x27;</span>, <span class="hljs-number">2</span>: <span class="hljs-string">&#x27;two&#x27;</span>, <span class="hljs-number">3</span>: <span class="hljs-string">&#x27;three&#x27;</span>}
+</span><span>is_nice = {<span class="hljs-string">&#x27;jane&#x27;</span>: <span class="hljs-literal">False</span>, <span class="hljs-string">&#x27;hakim&#x27;</span>: <span class="hljs-literal">True</span>, <span class="hljs-string">&#x27;ravi&#x27;</span>: <span class="hljs-literal">True</span>}
+</span><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span></code></pre></box>
+<p>Unlike lists which contain an ordered sequence of items, <strong>dictionaries are not ordered</strong> i.e., you cannot force a key-value pair in a dictionary to be at a specific position <span class="dimmed">e.g., in the example above, there is no guarantee that <code class="hljs inline no-lang" v-pre>'bread'</code>:<code class="hljs inline no-lang" v-pre>'3.50'</code> pair will be at the first position of the dictionary <code class="hljs inline no-lang" v-pre>prices</code> after adding more key-value pairs to it</span>.</p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Get Subject Info</p></template>
+  <div>
+<h4 id="exercise-get-subject-info"><span id="exercise-get-subject-info" class="anchor"></span>Exercise: Get Subject Info<a class="fa fa-anchor" href="#exercise-get-subject-info" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the <code class="hljs inline no-lang" v-pre>get_subject_info</code> function below to return a dictionary such that the code produces the given output.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_subject_info</span>(<span class="hljs-params">code, name, level, is_core</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> {} <span class="hljs-comment"># UPDATE THIS LINE</span>
+</span><span>  
+</span><span>print(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
+</span><span>print(get_subject_info(<span class="hljs-string">&#x27;CS1101&#x27;</span>, <span class="hljs-string">&#x27;Programming Basics&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">True</span>))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>{'code': 'TE3201', 'name': 'Software Engineering', 'level': 3, 'core?': False}
+</span><span>{'code': 'CS1101', 'name': 'Programming Basics', 'level': 1, 'core?': True}
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_subject_info</span>(<span class="hljs-params">code, name, level, is_core</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;code&#x27;</span>: code, ...} 
+</span><span>  
+</span><span>print(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
+</span></code></pre></panel></div></panel><p></p></div></div>
+<div>
+<h3 id="working-with-dictionaries"><span id="working-with-dictionaries" class="anchor"></span>Working with Dictionaries<a class="fa fa-anchor" href="#working-with-dictionaries" onclick="event.stopPropagation()"></a></h3>
+<p><strong>You can use keys to access values in a dictionary.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of retrieving values based on the key:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>numbers = {<span class="hljs-number">1</span>: <span class="hljs-string">&#x27;one&#x27;</span>, <span class="hljs-number">2</span>: <span class="hljs-string">&#x27;two&#x27;</span>, <span class="hljs-number">3</span>: <span class="hljs-string">&#x27;three&#x27;</span>}
+</span><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span>print(<span class="hljs-built_in">type</span>(numbers))
+</span><span>print(numbers[<span class="hljs-number">1</span>])
+</span><span>print(prices[<span class="hljs-string">&#x27;butter&#x27;</span>])
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>&lt;class 'dict'&gt;
+</span><span>one
+</span><span>5.0
+</span></code></pre></td></tr></table></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of adding, updating, and deleting dictionary entries:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>grades = {<span class="hljs-string">&#x27;TE3201&#x27;</span>: <span class="hljs-string">&#x27;A&#x27;</span>}
+</span><span>grades[<span class="hljs-string">&#x27;CS2103&#x27;</span>] = <span class="hljs-string">&#x27;B&#x27;</span>
+</span><span>print(<span class="hljs-string">&#x27;After adding:&#x27;</span>,grades)
+</span><span>grades[<span class="hljs-string">&#x27;TE3201&#x27;</span>] = <span class="hljs-string">&#x27;A+&#x27;</span>
+</span><span>print(<span class="hljs-string">&#x27;After updating:&#x27;</span>,grades)
+</span><span><span class="hljs-keyword">del</span> grades[<span class="hljs-string">&#x27;CS2103&#x27;</span>]
+</span><span>print(<span class="hljs-string">&#x27;After deleting:&#x27;</span>, grades)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>After adding: {'TE3201': 'A', 'CS2103': 'B'}
+</span><span>After updating: {'TE3201': 'A+', 'CS2103': 'B'}
+</span><span>After deleting: {'TE3201': 'A+'}
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Get Set Delete Score</p></template>
+  <div>
+<h4 id="exercise-get-set-delete-score"><span id="exercise-get-set-delete-score" class="anchor"></span>Exercise: Get, Set, Delete Score<a class="fa fa-anchor" href="#exercise-get-set-delete-score" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the three function below such that the code produces the given output.</p>
+<p>Given the parameter<code class="hljs inline no-lang" v-pre>scores</code> is a dictionary of the format <code class="hljs inline no-lang" v-pre>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>get_score(scores, player)</code>: returns the value of the key <code class="hljs inline no-lang" v-pre>player</code></li>
+<li><code class="hljs inline no-lang" v-pre>set_score(scores, player, new_score)</code>: sets the value of the key <code class="hljs inline no-lang" v-pre>player</code> to the <code class="hljs inline no-lang" v-pre>new_score</code></li>
+<li><code class="hljs inline no-lang" v-pre>delete_score(scores, player)</code>: deletes the value for key <code class="hljs inline no-lang" v-pre>player</code></li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_score</span>(<span class="hljs-params">scores, player</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-comment"># UPDATE HERE!</span>
+</span><span>    
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_score</span>(<span class="hljs-params">scores, player, new_score</span>):</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE THIS WITH YOUR CODE!</span>
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">delete_score</span>(<span class="hljs-params">scores, player</span>):</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE THIS WITH YOUR CODE!</span>
+</span><span>  
+</span><span>game1_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}
+</span><span>print(get_score(game1_scores, <span class="hljs-string">&#x27;betty&#x27;</span>))
+</span><span>print(get_score(game1_scores, <span class="hljs-string">&#x27;amy&#x27;</span>))
+</span><span>set_score(game1_scores, <span class="hljs-string">&#x27;charlie&#x27;</span>, <span class="hljs-number">5</span>)
+</span><span>set_score(game1_scores, <span class="hljs-string">&#x27;dan&#x27;</span>, <span class="hljs-number">0</span>)
+</span><span>print(game1_scores)
+</span><span>delete_score(game1_scores, <span class="hljs-string">&#x27;dan&#x27;</span>)
+</span><span>print(game1_scores)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>36
+</span><span>35
+</span><span>{'amy': 35, 'betty': 36, 'charlie': 5, 'dan': 0}
+</span><span>{'amy': 35, 'betty': 36, 'charlie': 5}
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_score</span>(<span class="hljs-params">scores, player</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> scores[player]
+</span><span>    
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_score</span>(<span class="hljs-params">scores, player, new_score</span>):</span>
+</span><span>  scores[player] = new_score
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>Trying to access a value for a non-existent key raises a <code class="hljs inline no-lang" v-pre>KeyError</code> exception.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example raises an exception because the key <code class="hljs inline no-lang" v-pre>'santa'</code> does not exist in the dictionary <code class="hljs inline no-lang" v-pre>is_nice</code>:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>is_nice = {<span class="hljs-string">&#x27;jane&#x27;</span>: <span class="hljs-literal">False</span>, <span class="hljs-string">&#x27;hakim&#x27;</span>: <span class="hljs-literal">True</span>}
+</span><span>print(is_nice[<span class="hljs-string">&#x27;santa&#x27;</span>])
+</span></code></pre></td>
+  <td valign="top">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>Traceback (most recent call last):
+</span><span>  File &quot;python&quot;, line 9, in &lt;module&gt;
+</span><span>KeyError: 'santa'
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Get Score with Error Handling</p></template>
+  <div>
+<h4 id="exercise-get-score-with-error-handling"><span id="exercise-get-score-with-error-handling" class="anchor"></span>Exercise: Get Score with Error Handling<a class="fa fa-anchor" href="#exercise-get-score-with-error-handling" onclick="event.stopPropagation()"></a></h4>
+<p>Update the <code class="hljs inline no-lang" v-pre>get_score1(scores, player)</code> function to handle error situations, as described below.</p>
+<p>Given the parameter<code class="hljs inline no-lang" v-pre>scores</code> is a dictionary of the format <code class="hljs inline no-lang" v-pre>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>get_score1(scores, player)</code>: returns the value of the key <code class="hljs inline no-lang" v-pre>player</code>. <mark>Returns an error message if the <code class="hljs inline no-lang" v-pre>player</code> is not in <code class="hljs inline no-lang" v-pre>scores</code></mark>.</li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_score1</span>(<span class="hljs-params">scores, player</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> scores[player] <span class="hljs-comment"># UPDATE HERE!</span>
+</span><span>    
+</span><span>game1_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}
+</span><span>print(get_score1(game1_scores, <span class="hljs-string">&#x27;charlie&#x27;</span>))
+</span><span>print(get_score1(game1_scores, <span class="hljs-string">&#x27;brown&#x27;</span>))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>30
+</span><span>brown is not in the game!
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_score1</span>(<span class="hljs-params">scores, player</span>):</span>
+</span><span>  <span class="hljs-keyword">try</span>:
+</span><span>    <span class="hljs-keyword">return</span> scores[player]
+</span><span>  <span class="hljs-keyword">except</span> KeyError:
+</span><span>    ...
+</span></code></pre></panel></div></panel><p></p></div>
+<p><strong>You can use <code class="hljs inline no-lang" v-pre>keys()</code> and <code class="hljs inline no-lang" v-pre>values()</code> methods to iterate through keys and values of a dictionary, respectively.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to iterate through keys/values of a dictionary.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span><span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> prices.keys():
+</span><span>  print(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>bread -&gt; 3.5
+</span><span>butter -&gt; 5.0
+</span><span>banana -&gt; 0.15
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span><span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> prices.values():
+</span><span>  print(v)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>3.5
+</span><span>5.0
+</span><span>0.15
+</span></code></pre></td></tr></table></div></box>
+<p>You can <strong>use the <code class="hljs inline no-lang" v-pre>sorted()</code> function to sort the keys/values before iterating through them</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to iterate through keys/values of a dictionary.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span><span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(prices.keys()):
+</span><span>  print(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>banana -&gt; 0.15
+</span><span>bread -&gt; 3.5
+</span><span>butter -&gt; 5.0
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Print Scorecard</p></template>
+  <div>
+<h4 id="exercise-print-scorecard"><span id="exercise-print-scorecard" class="anchor"></span>Exercise: Print Scorecard<a class="fa fa-anchor" href="#exercise-print-scorecard" onclick="event.stopPropagation()"></a></h4>
+<p>Update the functions in the code to behave as described below such that the code produces the output given below the code.</p>
+<p>Given the parameter<code class="hljs inline no-lang" v-pre>scores</code> is a dictionary of the format <code class="hljs inline no-lang" v-pre>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>get_team_score(scores)</code>: returns the total of all scores of all players in <code class="hljs inline no-lang" v-pre>scores</code>.</li>
+<li><code class="hljs inline no-lang" v-pre>print_scorecard(scores)</code>: prints scores of each player in the format given, in the alphabetical order of player names.</li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_team_score</span>(<span class="hljs-params">scores</span>):</span>
+</span><span>  total = <span class="hljs-number">0</span>
+</span><span>  <span class="hljs-comment">#ADD YOUR CODE HERE!</span>
+</span><span>  <span class="hljs-keyword">return</span> total
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_scorecard</span>(<span class="hljs-params">scores</span>):</span>
+</span><span>  <span class="hljs-comment">#pass #REPLACE WITH YOUR CODE!</span>
+</span><span>
+</span><span>game2_scores = {<span class="hljs-string">&#x27;zac&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">30</span>, <span class="hljs-string">&#x27;aaron&#x27;</span>: <span class="hljs-number">10</span>}
+</span><span>print_scorecard(game2_scores)
+</span><span>print(<span class="hljs-string">&#x27;total =&#x27;</span>, get_team_score(game2_scores))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>aaron = 10
+</span><span>betty = 30
+</span><span>zac = 35
+</span><span>total = 75
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> scores.keys():
+</span><span>  ...
+</span><span>  
+</span><span><span class="hljs-keyword">for</span> p <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(scores.keys()):
+</span><span>  ...
+</span></code></pre></panel></div></panel><p></p></div>
+<p>As usual, you can <strong>use <code class="hljs inline no-lang" v-pre>in</code> and <code class="hljs inline no-lang" v-pre>not in</code> to check whether a key or a value is in a dictionary</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to check if a certain key or a value exists in a dictionary.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span>print(<span class="hljs-string">&#x27;bread&#x27;</span> <span class="hljs-keyword">in</span> prices.keys())
+</span><span>print(<span class="hljs-string">&#x27;sugar&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> prices.keys())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True
+</span><span>True
+</span></code></pre></td></tr></table></div>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
+</span><span>print(<span class="hljs-number">3.5</span> <span class="hljs-keyword">in</span> prices.values())
+</span><span>print(<span class="hljs-number">6.0</span> <span class="hljs-keyword">in</span> prices.values())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>True
+</span><span>False
+</span></code></pre></td></tr></table></div></box>
+<div>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/dictionaries-workingWith?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Add Bonus</p></template>
+  <div>
+<h4 id="exercise-add-bonus"><span id="exercise-add-bonus" class="anchor"></span>Exercise: Add Bonus<a class="fa fa-anchor" href="#exercise-add-bonus" onclick="event.stopPropagation()"></a></h4>
+<p>Update the functions in the code to behave as described below such that the code produces the output given below the code.</p>
+<p>Given the parameter<code class="hljs inline no-lang" v-pre>scores</code> is a dictionary of the format <code class="hljs inline no-lang" v-pre>{'amy': 35, 'betty': 36, 'charlie': 30}</code> which contains scores of a bunch of players,</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>add_bonus(scores, player, bonus)</code>: adds the <code class="hljs inline no-lang" v-pre>bonus</code> to the value of the <code class="hljs inline no-lang" v-pre>player</code> if player already exists in <code class="hljs inline no-lang" v-pre>scores</code>. Otherwise, adds the <code class="hljs inline no-lang" v-pre>player</code> to <code class="hljs inline no-lang" v-pre>scores</code> with the value <code class="hljs inline no-lang" v-pre>bonus</code>.</li></ul>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_bonus</span>(<span class="hljs-params">scores, player, bonus</span>):</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment">#REPLACE WITH YOUR CODE!</span>
+</span><span>
+</span><span>
+</span><span>game3_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}    
+</span><span>add_bonus(game3_scores, <span class="hljs-string">&#x27;amy&#x27;</span>, <span class="hljs-number">5</span>)
+</span><span>add_bonus(game3_scores, <span class="hljs-string">&#x27;dan&#x27;</span>, <span class="hljs-number">10</span>)
+</span><span>print(game3_scores)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>{'amy': 40, 'betty': 36, 'charlie': 30, 'dan': 10}
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_bonus</span>(<span class="hljs-params">scores, player, bonus</span>):</span>
+</span><span>  <span class="hljs-keyword">if</span> player <span class="hljs-keyword">in</span> scores.keys():
+</span><span>    ...
+</span><span>  <span class="hljs-keyword">else</span>:
+</span><span>    ...
+</span></code></pre></panel></div></panel><p></p></div></div>
+<div>
+<h3 id="nested-dictionaries"><span id="nested-dictionaries" class="anchor"></span>Nested Dictionaries<a class="fa fa-anchor" href="#nested-dictionaries" onclick="event.stopPropagation()"></a></h3>
+<p><strong>Dictionaries and lists can be nested in each other to create more complicated data structures.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This dictionary keeps track of assignments of each subject. Note how the value is a <code class="hljs inline no-lang" v-pre>list</code> rather than a simple value such as an <code class="hljs inline no-lang" v-pre>int</code> or a <code class="hljs inline no-lang" v-pre>string</code>.</p>
+<pre><code class="hljs python" v-pre><span>assignments = {<span class="hljs-string">&#x27;TE3201&#x27;</span>: [<span class="hljs-string">&#x27;do exercises&#x27;</span>, <span class="hljs-string">&#x27;submit project&#x27;</span>],
+</span><span>               <span class="hljs-string">&#x27;CS2103&#x27;</span>: [],
+</span><span>               <span class="hljs-string">&#x27;CS3281&#x27;</span>: [<span class="hljs-string">&#x27;do presentation&#x27;</span>]}
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Python ignores line breaks and indentations in the middle of a dictionary/list definition <span class="dimmed">which allows you to structure the code into a more readable format (e.g., one key-value pair per line).</span></p>
+<p>As the values in this dictionary are lists, you can do list operations on them, e.g., <code class="hljs inline no-lang" v-pre>append()</code>, <code class="hljs inline no-lang" v-pre>len()</code></p>
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;CS3281 assignments:&#x27;</span>, assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
+</span><span>
+</span><span>assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>].append(<span class="hljs-string">&#x27;study for exams&#x27;</span>)
+</span><span>print(assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
+</span><span>
+</span><span>print(<span class="hljs-string">&#x27;How many things to do in TE3201?&#x27;</span>, <span class="hljs-built_in">len</span>(assignments[<span class="hljs-string">&#x27;TE3201&#x27;</span>]))
+</span><span>
+</span><span><span class="hljs-comment"># calculate total assignments</span>
+</span><span>total = <span class="hljs-number">0</span>
+</span><span><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> assignments.values():
+</span><span>  total = total + <span class="hljs-built_in">len</span>(a)
+</span><span>print(<span class="hljs-string">&#x27;total tasks to do:&#x27;</span>, total)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>CS3281 assignments: ['do presentation']
+</span><span>['do presentation', 'study for exams']
+</span><span>How many things to do in TE3201? 2
+</span><span>total tasks to do: 4
+</span></code></pre></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Inning-Scores</p></template>
+  <div>
+<h4 id="exercise-inning-scores"><span id="exercise-inning-scores" class="anchor"></span>Exercise: Inning-Scores<a class="fa fa-anchor" href="#exercise-inning-scores" onclick="event.stopPropagation()"></a></h4>
+<p>Assume the game has three innings and a player can play in 0-3 innings. For each inning, a player will have a inning-score which is an integer <span class="dimmed">e.g., player <code class="hljs inline no-lang" v-pre>amy</code> scored <code class="hljs inline no-lang" v-pre>5</code>, <code class="hljs inline no-lang" v-pre>5</code>, and <code class="hljs inline no-lang" v-pre>10</code> for the three innings (in order)</span>.</p>
+<p>Update the <code class="hljs inline no-lang" v-pre>get_detailed_scores</code> functions in the code below such that it returns a dictionary that stores inning scores of each player as a <mark>list of integers for each player</mark>. Inning-scores of each player is given below.</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Player</th>
+<th>Scores in different innings</th></tr></thead>
+<tbody>
+<tr>
+<td>amy</td>
+<td>5, 5, 10</td></tr>
+<tr>
+<td>betty</td>
+<td>10</td></tr>
+<tr>
+<td>charile</td>
+<td>(did not play any innings)</td></tr></tbody></table></div><pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_detailed_scores</span>():</span>
+</span><span>  <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">30</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>} <span class="hljs-comment">#REPLACE WITH YOUR CODE! </span>
+</span><span>
+</span><span>print(get_detailed_scores())
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>{'amy': [5, 5, 10], 'betty': [10], 'charlie': []}
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_detailed_scores</span>():</span>
+</span><span>  <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;amy&#x27;</span>: [<span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">10</span>],
+</span><span>          ...}
+</span></code></pre></panel></div></panel><p></p></div>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This dictionary uses dictionaries as values (i.e., nesting dictionaries inside dictionaries). It stores details of a group of persons.</p>
+<pre><code class="hljs python" v-pre><span>friends = {<span class="hljs-string">&#x27;john&#x27;</span>: {<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;John Doe&#x27;</span>, <span class="hljs-string">&#x27;birthday&#x27;</span>: <span class="hljs-string">&#x27;Jan 12&#x27;</span>},
+</span><span>           <span class="hljs-string">&#x27;sara&#x27;</span>: {<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Sara Parker&#x27;</span>, <span class="hljs-string">&#x27;birthday&#x27;</span>: <span class="hljs-string">&#x27;Jun 30&#x27;</span>},
+</span><span>           <span class="hljs-string">&#x27;betty&#x27;</span>: {<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Betsy Sims&#x27;</span>, <span class="hljs-string">&#x27;birthday&#x27;</span>: <span class="hljs-string">&#x27;Jan 12&#x27;</span>}}
+</span><span>           
+</span><span>print(friends[<span class="hljs-string">&#x27;john&#x27;</span>][<span class="hljs-string">&#x27;birthday&#x27;</span>])
+</span><span>
+</span><span><span class="hljs-comment"># print friends whose birthday is Jan 12</span>
+</span><span>
+</span><span><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> friends.keys():
+</span><span>  details = friends[f]
+</span><span>  <span class="hljs-keyword">if</span> details[<span class="hljs-string">&#x27;birthday&#x27;</span>] == <span class="hljs-string">&#x27;Jan 12&#x27;</span>:
+</span><span>    print(details[<span class="hljs-string">&#x27;name&#x27;</span>])
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Jan 12
+</span><span>John Doe
+</span><span>Betsy Sims
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> As <code class="hljs inline no-lang" v-pre>friends['john']</code> evaluates to a dictionary, you can use the <code class="hljs inline no-lang" v-pre>['birthday']</code> notation to find the birthday of that person.<br>
+<code class="hljs inline no-lang" v-pre>friends['john']['birthday']</code><br>
+→ <code class="hljs inline no-lang" v-pre>{'name': 'John Doe', 'birthday': 'Jan 12'}['birthday']</code><br>
+→ <code class="hljs inline no-lang" v-pre>'Jan 12'</code></p></box>
+<div>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/dictionaries-nested?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Player Stats</p></template>
+  <div>
+<h4 id="exercise-player-stats"><span id="exercise-player-stats" class="anchor"></span>Exercise: Player Stats<a class="fa fa-anchor" href="#exercise-player-stats" onclick="event.stopPropagation()"></a></h4>
+<p>Assume in each inning a player gets to bat a number of times and each hit can score 0, 1, 4, or 6, which are known as <em>hit sizes</em>. There is a need to keep track of how many times a player achieved each hit size in an inning.</p>
+<p>Note how the <code class="hljs inline no-lang" v-pre>player_stats</code> dictionary in the code below uses lists which contain dictionaries to store, for each player, how many times the player scored a certain hit size, for each inning. For example, the player <code class="hljs inline no-lang" v-pre>amy</code> scored hit size of 0 x 0 times; hit size of 1 x 1 times; hit size of 4 x 1 times; hit size of 6 x 0 time in the first inning (which adds up to a score of <code class="hljs inline no-lang" v-pre>0*0 + 1*1 + 4*1 + 6*0 = 10</code> for her first inning).</p>
+<pre><code class="hljs python" v-pre><span>player_stats = {<span class="hljs-string">&#x27;amy&#x27;</span>: [{<span class="hljs-number">0</span>:<span class="hljs-number">0</span>, <span class="hljs-number">1</span>:<span class="hljs-number">1</span>, <span class="hljs-number">4</span>:<span class="hljs-number">1</span>, <span class="hljs-number">6</span>:<span class="hljs-number">0</span>},  <span class="hljs-comment"># amy&#x27;s first inning stats</span>
+</span><span>                        {<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, <span class="hljs-number">1</span>:<span class="hljs-number">5</span>, <span class="hljs-number">4</span>:<span class="hljs-number">0</span>, <span class="hljs-number">6</span>:<span class="hljs-number">0</span>},  <span class="hljs-comment"># amy&#x27;s second inning stats</span>
+</span><span>                        {<span class="hljs-number">0</span>:<span class="hljs-number">0</span>, <span class="hljs-number">1</span>:<span class="hljs-number">0</span>, <span class="hljs-number">4</span>:<span class="hljs-number">1</span>, <span class="hljs-number">6</span>:<span class="hljs-number">1</span>}], <span class="hljs-comment"># amy&#x27;s third inning stats</span>
+</span><span>                <span class="hljs-string">&#x27;betty&#x27;</span>: [{<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, <span class="hljs-number">1</span>:<span class="hljs-number">2</span>, <span class="hljs-number">4</span>:<span class="hljs-number">2</span>, <span class="hljs-number">6</span>:<span class="hljs-number">0</span>}],
+</span><span>                <span class="hljs-string">&#x27;charlie&#x27;</span>: []}
+</span></code></pre><p>Update the <code class="hljs inline no-lang" v-pre>get_player_hit_count(player_stats, player, inning, hit_size)</code> functions in the code such that it uses the <code class="hljs inline no-lang" v-pre>player_stats</code> dictionary to return the hit count for the <code class="hljs inline no-lang" v-pre>player</code> in the <code class="hljs inline no-lang" v-pre>inning</code> for the given <code class="hljs inline no-lang" v-pre>hit_size</code>.<br>
+e.g., <code class="hljs inline no-lang" v-pre>get_player_hit_count(player_stats, 'amy', 2, 6)</code> should return how many times <code class="hljs inline no-lang" v-pre>amy</code>'s hits in her second inning (i.e., <code class="hljs inline no-lang" v-pre>inning = 2</code>) scored <code class="hljs inline no-lang" v-pre>6</code>s; the return value should be <code class="hljs inline no-lang" v-pre>0</code>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_player_hit_count</span>(<span class="hljs-params">stats, player, inning, hit_size</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-comment">#REPLACE WITH YOUR CODE!</span>
+</span><span>  
+</span><span>print(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;amy&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
+</span><span>print(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;betty&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>5
+</span><span>2
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_player_hit_count</span>(<span class="hljs-params">player_stats, player, inning, hit_size</span>):</span>
+</span><span>  <span class="hljs-keyword">return</span> player_stats[...][inning-<span class="hljs-number">1</span>][...]
+</span></code></pre></panel></div></panel><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Grade Report</p></template>
+  <div>
+<h4 id="exercise-grade-report"><span id="exercise-grade-report" class="anchor"></span>Exercise: Grade Report<a class="fa fa-anchor" href="#exercise-grade-report" onclick="event.stopPropagation()"></a></h4>
+<p>Write a program that reads student grades one entry at a time and print a consolidated grade report at the end. Follow the sample output given below.</p>
+<pre><code class="hljs" v-pre><span>-----------------------------------------------------
+</span><span>     ~ Welcome to Grade Report System ~
+</span><span>* Enter one entry at a time in the format NAME GRADE
+</span><span>* NAME should be one word
+</span><span>* Enter an empty line to proceed to printing report
+</span><span>-----------------------------------------------------
+</span><span>Student name and grade? amy A
+</span><span>Student name and grade? ben B
+</span><span>Student name and grade? ben 
+</span><span>Invalid input! Entry rejected.
+</span><span>Student name and grade? ben C D
+</span><span>Invalid input! Entry rejected.
+</span><span>Student name and grade? ben A
+</span><span>Student name and grade? charlie F
+</span><span>Student name and grade? amy A+
+</span><span>Student name and grade? amy D
+</span><span>Student name and grade? 
+</span><span>============ Grade Report ===============
+</span><span>amy : A A+ D
+</span><span>ben : B A
+</span><span>charlie : F
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Python hints</span></p></template>
+<ul>
+<li>use a dictionary of this format to store grades:<pre><code class="hljs python" v-pre><span>{<span class="hljs-string">&#x27;amy&#x27;</span>: [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;A+&#x27;</span>, <span class="hljs-string">&#x27;D&#x27;</span>],
+</span><span> <span class="hljs-string">&#x27;ben&#x27;</span>: [<span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;A&#x27;</span>],
+</span><span> <span class="hljs-string">&#x27;charlie&#x27;</span>: [<span class="hljs-string">&#x27;F&#x27;</span>]}
+</span></code></pre></li>
+<li>The string method <code class="hljs inline no-lang" v-pre>split()</code> can be useful to break the user entry into name and grade.<br>
+As you know,<code class="hljs inline no-lang" v-pre>'aaa bbb ccc'.split()</code> evaluates to a list <code class="hljs inline no-lang" v-pre>['aaa', 'bbb', 'ccc']</code></li>
+<li>The string method <code class="hljs inline no-lang" v-pre>join()</code> can be useful when printing grades.<br>
+As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'ccc'])</code> evaluates to <code class="hljs inline no-lang" v-pre>'aaa bbb ccc'</code></li></ul></panel></div></panel><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Inventory Report</p></template>
+  <div>
+<h4 id="exercise-inventory-report"><span id="exercise-inventory-report" class="anchor"></span>Exercise : Inventory Report<a class="fa fa-anchor" href="#exercise-inventory-report" onclick="event.stopPropagation()"></a></h4>
+<p>Write a function that prints an inventory report like the examples given below, when the report title (a string), print-width (an int), and list of items (as a suitable data structure, e.g., dictionary) is given to the function.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Kitchen Inventory Report:</p>
+<ul>
+<li>Title: Kitchen</li>
+<li>Width: 15</li></ul>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Item</th>
+<th>count</th></tr></thead>
+<tbody>
+<tr>
+<td>pots</td>
+<td>5</td></tr>
+<tr>
+<td>eggs</td>
+<td>100</td></tr></tbody></table></div></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>###############
+</span><span>### KITCHEN ###
+</span><span>###############
+</span><span>eggs.......:100
+</span><span>pots.......:  5
+</span><span>            ---
+</span><span>total......:105
+</span><span>            ===
+</span></code></pre></td></tr></table></div></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Bookshop Inventory Report:</p>
+<ul>
+<li>Title: Book Shop</li>
+<li>Width: 25</li></ul>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Item</th>
+<th>count</th></tr></thead>
+<tbody>
+<tr>
+<td>pens</td>
+<td>85</td></tr>
+<tr>
+<td>books</td>
+<td>3</td></tr>
+<tr>
+<td>pencils</td>
+<td>22</td></tr></tbody></table></div></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>#########################
+</span><span>####### BOOK SHOP #######
+</span><span>#########################
+</span><span>books................:  3
+</span><span>pencils..............: 22
+</span><span>pens.................: 85
+</span><span>                      ---
+</span><span>total................:110
+</span><span>                      ===
+</span></code></pre></td></tr></table></div></box>
+<ul>
+<li>Title should be centered and in upper case.</li>
+<li>Items should be in alphabetical order.</li>
+<li>Width of the number column is 3. Numbers should be right-justified.</li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 (Python) Partial solution</span></p></template>
+<p>This exercise requires string formatting methods you learned in an earlier lesson.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_inventory</span>(<span class="hljs-params">items, title, width</span>):</span>
+</span><span>  print_header(width, title)
+</span><span>  <span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(items.keys()):
+</span><span>    print_item(k, items[k], width)
+</span><span>  print_total(calculate_total(items), width)
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_header</span>(<span class="hljs-params">width, title</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot; print the given title in the format of a banner.</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Example: print_header(10, &#x27;hi&#x27;)</span>
+</span><span><span class="hljs-string">  ##########</span>
+</span><span><span class="hljs-string">  ### HI ###</span>
+</span><span><span class="hljs-string">  ##########</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  * The title is center aligned and in upper case</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Arguments:</span>
+</span><span><span class="hljs-string">  word -- (type:string) the title of the banner</span>
+</span><span><span class="hljs-string">  width -- (type:int) the width of the banner</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  print(<span class="hljs-string">&#x27;#&#x27;</span>*width)
+</span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_total</span>(<span class="hljs-params">total, width</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot; print the given total in the following format</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Example: print_total(5, 12)</span>
+</span><span><span class="hljs-string">           ---</span>
+</span><span><span class="hljs-string">  total...:  5</span>
+</span><span><span class="hljs-string">           ===</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  * The total is right-justified</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Arguments:</span>
+</span><span><span class="hljs-string">  total -- (type:int) the total to print</span>
+</span><span><span class="hljs-string">  width -- (type:int) the width to use for printing</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  print(<span class="hljs-string">&#x27;---&#x27;</span>.rjust(width, <span class="hljs-string">&#x27; &#x27;</span>))
+</span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_item</span>(<span class="hljs-params">name, count, width</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot; Print the name and count as a row in the inventory listing.</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Example: print_item(&#x27;pins&#x27;, 2, 12)</span>
+</span><span><span class="hljs-string">  pins....:  2</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  * The count is right-justified in a column that is 3 characters wide.</span>
+</span><span><span class="hljs-string"></span>
+</span><span><span class="hljs-string">  Arguments:</span>
+</span><span><span class="hljs-string">  name -- (type:string) name of the item</span>
+</span><span><span class="hljs-string">  count -- (type:int) number of items</span>
+</span><span><span class="hljs-string">  width -- (type:int) the width to use for printing</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment">#  REPLACE WITH YOUR CODE</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_total</span>(<span class="hljs-params">items</span>):</span>
+</span><span>  total = <span class="hljs-number">0</span>
+</span><span>  <span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> items.values():
+</span><span>    total = total + v
+</span><span>  <span class="hljs-keyword">return</span> total
+</span><span>
+</span><span>print_inventory({<span class="hljs-string">&#x27;pots&#x27;</span>:<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;eggs&#x27;</span>:<span class="hljs-number">100</span>}, <span class="hljs-string">&#x27;Kitchen&#x27;</span>, <span class="hljs-number">15</span>)
+</span><span>print(<span class="hljs-string">&#x27;\n&#x27;</span>)
+</span><span>print_inventory({<span class="hljs-string">&#x27;pens&#x27;</span>: <span class="hljs-number">85</span>, <span class="hljs-string">&#x27;books&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;pencils&#x27;</span>: <span class="hljs-number">22</span>}, <span class="hljs-string">&#x27;Book Shop&#x27;</span>, <span class="hljs-number">25</span>)
+</span></code></pre></panel></div></panel><p></p></div></div></div></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-7-fri-sep-18th-programming-topics">Week 7 [Fri, Sep 18th] - Programming Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#dictionaries">Dictionaries&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#the-dictionary-data-structure">The Dictionary Data Structure&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-get-subject-info">Exercise: Get Subject Info&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#working-with-dictionaries">Working with Dictionaries&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-get-set-delete-score">Exercise: Get, Set, Delete Score&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-get-score-with-error-handling">Exercise: Get Score with Error Handling&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-print-scorecard">Exercise: Print Scorecard&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-add-bonus">Exercise: Add Bonus&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#nested-dictionaries">Nested Dictionaries&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-inning-scores">Exercise: Inning-Scores&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-player-stats">Exercise: Player Stats&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-grade-report">Exercise: Grade Report&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-inventory-report">Exercise : Inventory Report&#x200E;</a>
+</nav>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

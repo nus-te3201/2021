@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Python Basics: Unit Testing</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/admin.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/expressions-types-variables.html">Expressions, Data Types, Variables</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/programs.html">Python Programs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/flowcontrol.html">Program Flow Control</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/functions.html">Functions</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/lists.html">Lists</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/errors.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/strings.html">Strings</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/files.html">Files</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/dictionaries.html">Dictionaries</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/oop.html">Object-Oriented Programming</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/gui.html">GUIs</a></div></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0">
+<hr></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0"><span class="dimmed"><strong>Appendices</strong></span></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/thirdparty.html"><strong>A.</strong> Installing 3rd Party Modules</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/ide.html"><strong>B.</strong> Using an IDE</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/organizing.html"><strong>C.</strong> Organizing Python Code</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/unittesting.html" class="current"><strong>D.</strong> Unit Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/monty.html"><strong>E.</strong> The Monty Project</a></div></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<div class="website-content" id="main">
+<div id="toc"></div>
+<div id="main">
+<div>
+<h2 id="appendix-d-unit-testing"><span id="appendix-d-unit-testing" class="anchor"></span>Appendix D: Unit Testing<a class="fa fa-anchor" href="#appendix-d-unit-testing" onclick="event.stopPropagation()"></a></h2>
+<p>The built-in module <code class="hljs inline no-lang" v-pre>unittest</code> supports automation of unit testing in an object-oriented way.</p>
+<p>Let's assume you have a file called <code class="hljs inline no-lang" v-pre>search.py</code> which has the following two functions.</p>
+<div class="code-block"><div class="code-block-heading inline-markdown-heading"><span>in <a href="http://search.py">search.py</a></span></div><div class="code-block-content"><pre><code heading="in search.py" class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_first_name</span>(<span class="hljs-params">name</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return the first part of the parameter &#x27;name&#x27;&quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">return</span> name.split()[<span class="hljs-number">0</span>]
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_same_person</span>(<span class="hljs-params">person, keyword</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return True if the parameter &#x27;person&#x27; (type: dictionary)</span>
+</span><span><span class="hljs-string">  contains a key &#x27;name&#x27; whose value contains the </span>
+</span><span><span class="hljs-string">  parameter &#x27;keyword&#x27; (type: string)</span>
+</span><span><span class="hljs-string">  e.g., </span>
+</span><span><span class="hljs-string">  * is_same_person({&#x27;name&#x27;: &#x27;jackie&#x27;}, &#x27;jack&#x27;) returns True</span>
+</span><span><span class="hljs-string">  * is_same_person({&#x27;name&#x27;: &#x27;jackie&#x27;}, &#x27;jackie-chan&#x27;) returns False</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">return</span> keyword <span class="hljs-keyword">in</span> person[<span class="hljs-string">&#x27;name&#x27;</span>]
+</span></code></pre></div></div><p>This is how we can write some unit tests for the two functions.</p>
+<div class="code-block"><div class="code-block-heading"><span>in test_search.py</span></div><div class="code-block-content"><pre><code heading="in test_search.py" class="hljs python" v-pre><span><span class="hljs-keyword">import</span> search, unittest
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestSearch</span>(<span class="hljs-params">unittest.TestCase</span>):</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_is_same_person</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    jack = {<span class="hljs-string">&#x27;name&#x27;</span>:<span class="hljs-string">&#x27;jack&#x27;</span>}
+</span><span>    self.assertTrue(search.is_same_person(jack, <span class="hljs-string">&#x27;jack&#x27;</span>))
+</span><span>    self.assertTrue(search.is_same_person(jack, <span class="hljs-string">&#x27;ack&#x27;</span>))
+</span><span>    self.assertTrue(search.is_same_person(jack, <span class="hljs-string">&#x27;ac&#x27;</span>))
+</span><span>    self.assertTrue(search.is_same_person(jack, <span class="hljs-string">&#x27;j&#x27;</span>))
+</span><span>    self.assertTrue(search.is_same_person(jack, <span class="hljs-string">&#x27;k&#x27;</span>))
+</span><span>    self.assertFalse(search.is_same_person(jack, <span class="hljs-string">&#x27;jackie&#x27;</span>))
+</span><span>    self.assertFalse(search.is_same_person(jack, <span class="hljs-string">&#x27;blackjack&#x27;</span>))
+</span><span>    self.assertFalse(search.is_same_person({<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;x&#x27;</span>, <span class="hljs-string">&#x27;other&#x27;</span>: <span class="hljs-string">&#x27;jack&#x27;</span>}, <span class="hljs-string">&#x27;jack&#x27;</span>))
+</span><span>    <span class="hljs-keyword">with</span> self.assertRaises(KeyError):
+</span><span>      search.is_same_person({}, <span class="hljs-string">&#x27;jack&#x27;</span>)
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_get_first_name</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.assertEqual(search.get_first_name(<span class="hljs-string">&#x27;Amy&#x27;</span>), <span class="hljs-string">&#x27;Amy&#x27;</span>)
+</span><span>    self.assertEqual(search.get_first_name(<span class="hljs-string">&#x27;Amy Bernice&#x27;</span>), <span class="hljs-string">&#x27;Amy&#x27;</span>)
+</span><span>    self.assertEqual(search.get_first_name(<span class="hljs-string">&#x27;Amy-Bernice&#x27;</span>), <span class="hljs-string">&#x27;Amy-Bernice&#x27;</span>)
+</span><span>    <span class="hljs-keyword">with</span> self.assertRaises(IndexError):
+</span><span>      search.get_first_name(<span class="hljs-string">&#x27;&#x27;</span>)
+</span><span>
+</span><span><span class="hljs-comment"># activate the test runner</span>
+</span><span><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+</span><span>    unittest.main()
+</span></code></pre></div></div><p>When you run the above code, each method in the test class will be executed by a built-in <em>test runner</em> and the result will be reported. An example is given below:</p>
+<pre><code class="no-line-numbers hljs" v-pre><span>...
+</span><span>----------------------------------------------------------------------
+</span><span>Ran 2 tests in 0.019s
+</span><span>
+</span><span>OK
+</span></code></pre><p>Things to note:</p>
+<ul>
+<li>A class containing unit tests should inherit from <code class="hljs inline no-lang" v-pre>unittest.TestCase</code></li>
+<li>Names of functions containing test code should start with <code class="hljs inline no-lang" v-pre>test</code> e.g., <code class="hljs inline no-lang" v-pre>test_is_same_person()</code></li>
+<li>These methods (inherited from the parent class) can be used to compare actual with the expected value:
+<ul>
+<li><code class="hljs inline no-lang" v-pre>assertTrue(actual)</code> : test passes if <code class="hljs inline no-lang" v-pre>actual == True</code></li>
+<li><code class="hljs inline no-lang" v-pre>assertFalse(actual)</code> : test passes if <code class="hljs inline no-lang" v-pre>actual == False</code></li>
+<li><code class="hljs inline no-lang" v-pre>assertEquals(actual, expected)</code> : test passes if <code class="hljs inline no-lang" v-pre>actual == expected</code></li>
+<li><code class="hljs inline no-lang" v-pre>with self.assertRaises(Exception):</code> passes if the code block it contains raises the specified exception.</li></ul></li></ul>
+<p>If the expected value is not as same as the actual, the test runner will report the test failure. For example, if we were to insert this statement into <code class="hljs inline no-lang" v-pre>test_get_first_name</code> method,</p>
+<pre><code class="no-line-numbers hljs python" v-pre><span>self.assertEqual(search.get_first_name(<span class="hljs-string">&#x27;Amy Foo&#x27;</span>), <span class="hljs-string">&#x27;Foo&#x27;</span>)
+</span></code></pre><p>the output will be something like this:</p>
+<pre><code class="no-line-numbers hljs" v-pre><span>F.
+</span><span>======================================================================
+</span><span>FAIL: test_get_first_name (__main__.TestSearch)
+</span><span>----------------------------------------------------------------------
+</span><span>Traceback (most recent call last):
+</span><span>  File &quot;main.py&quot;, line 19, in test_get_first_name
+</span><span>    self.assertEqual(search.get_first_name('Amy Foo'), 'Foo')
+</span><span>AssertionError: 'Amy' != 'Foo'
+</span><span>- Amy
+</span><span>+ Foo
+</span><span>
+</span><span>
+</span><span>----------------------------------------------------------------------
+</span><span>Ran 2 tests in 0.001s
+</span><span>
+</span><span>FAILED (failures=1)
+</span></code></pre><p>📎 Resources:</p>
+<ul>
+<li>More on unit testing: <a href="https://docs.python.org/3/library/unittest.html">https://docs.python.org/3/library/unittest.html</a></li>
+<li>Unit testing in the PyCharm IDE: <a href="https://www.youtube.com/watch?v=-VzJvNLooj4">https://www.youtube.com/watch?v=-VzJvNLooj4</a></li></ul></div><hr style="border-top: 3px double #c5c5c5;"></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#appendix-d-unit-testing">Appendix D: Unit Testing&#x200E;</a>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 1 - Programming Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item disabled"><a class="page-link" href="/2021/schedule/week1"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week1/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week2"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-1-mon-aug-10th-programming-topics"><span id="week-1-mon-aug-10th-programming-topics" class="anchor"></span>Week 1 <small><small><span class="dimmed">[Mon, Aug 10th]</span> - Programming Topics</small></small><a class="fa fa-anchor" href="#week-1-mon-aug-10th-programming-topics" onclick="event.stopPropagation()"></a></h1>
+<box type="info" dismissible>
+<p>Programming topics allocated to the week will appear in this tab.
+</p></box><p></p>
+<div>
+<div id="week1-toc">
+<ul>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#expressions-data-types-variables"><strong>Expressions, Data Types, Variables</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#computer-programs">Computer Programs</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#setting-up-the-programming-environment">Setting up the Programming Environment</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#working-with-an-interactive-shell">Working with an Interactive Shell</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#operators">Operators</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#data-types">Data Types</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#variables">Variables</a></li></ul></li>
+<li><a href="/2021/programming/chapters/programs.html#python-programs"><strong>Python Programs</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/programs.html#scripts-programs">Scripts (Programs)</a></li>
+<li><a href="/2021/programming/chapters/programs.html#comments">Comments</a></li>
+<li><a href="/2021/programming/chapters/programs.html#using-functions">Using Functions</a></li></ul></li></ul></div>
+<h2 id="expressions-data-types-variables"><span id="expressions-data-types-variables" class="anchor"></span><strong>Expressions, Data Types, Variables</strong><a class="fa fa-anchor" href="#expressions-data-types-variables" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="computer-programs"><span id="computer-programs" class="anchor"></span>Computer Programs<a class="fa fa-anchor" href="#computer-programs" onclick="event.stopPropagation()"></a></h3>
+<p><strong>A <em>computer program</em> is a collection of instructions that a computer can follow to perform a specific task.</strong> A <em>software</em> is a collection of programs wrapped up as a product that can be used <span class="dimmed"> e.g. Microsoft Office</span>. A software <em>application</em> is a software that is meant to be used by an end user, <span class="dimmed"> as opposed to software used by other software (e.g. the software that drives a hard disk)</span>. <em>Programming</em> is the task of writing programs. <em>Software Engineering</em> is the task of creating software.</p>
+<p>Points to note:</p>
+<ul>
+<li>A computer can simply follow instructions exactly. It cannot think for itself although there are software that can simulate thinking-like behavior (in which case it is the software that is doing the 'thinking', not the computer).</li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> What is programming (a 2-minute intro from Khan Academy):</span></p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/FCMxA3m_Imc" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="setting-up-the-programming-environment"><span id="setting-up-the-programming-environment" class="anchor"></span>Setting up the Programming Environment<a class="fa fa-anchor" href="#setting-up-the-programming-environment" onclick="event.stopPropagation()"></a></h3>
+<p><strong>Programming requires certain specialized tools</strong> most of which are specific to the programming language being used. While some of these tools may come pre-installed in your computer, often you need to install and configure them yourself.</p>
+<div class="alt-python">
+<p>Some options for setting up the Python programming environment</p>
+<p><strong>Option 1. use an online python programming environment</strong></p>
+<p>In the initial stages you can use an online programming environment to practice Python.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example online Python programming tool you can use is <a href="https://repl.it/repls">repl.it</a>:</p>
+<ol>
+<li>Go to <a href="https://repl.it/repls">repl.it</a> and signup for a free account</li>
+<li>Go to <a href="https://repl.it/languages/python3">https://repl.it/languages/python3</a> (or choose <em>Python 3</em> from the options in the web page) to enter the online Python environment</li></ol></box>
+<p><strong>Option 2. install python on your computer</strong></p>
+<span id="install-python">
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> We recommend installing the latest Python <code class="hljs inline no-lang" v-pre>3.*</code> version (not the <code class="hljs inline no-lang" v-pre>2.*</code> version)</p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> How to install Python on Windows</p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/dX2-V2BocqQ" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></span></div>
+<div class="alt-java">
+<p>Programming in Java requires minimally the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html"><em>Java Development Kit (JDK)</em></a> to be installed in your computer. The JDK includes tools useful for developing and testing programs written in the Java programming language and running on the Java platform.</p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="working-with-an-interactive-shell"><span id="working-with-an-interactive-shell" class="anchor"></span>Working with an Interactive Shell<a class="fa fa-anchor" href="#working-with-an-interactive-shell" onclick="event.stopPropagation()"></a></h3>
+<p><strong>Some programming environments provide an <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a tool which allows you to type commands in, and get back output for each command</span>interactive shell</span></em>.</strong> In the python interactive shell you can type in a python <em>expression</em> and get the shell to evaluate the expression.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span>
+</span><span><span class="hljs-number">5</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">4</span> * <span class="hljs-number">3</span>
+</span><span><span class="hljs-number">24</span>
+</span><span>&gt;&gt;&gt;
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Python interactive shell in action:</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7qHMXu99d88?rel=0&showinfo=0&end=128&version=3" frameborder="0" allowfullscreen></iframe></panel></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="operators"><span id="operators" class="anchor"></span>Operators<a class="fa fa-anchor" href="#operators" onclick="event.stopPropagation()"></a></h3>
+<p><strong>An expression normally contains <em>operators</em> that combine with values.</strong> Here are some common operators used in Python:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th style="text-align:center">Operator</th>
+<th style="text-align:left">Operation</th>
+<th style="text-align:center">Example</th>
+<th style="text-align:center">Evaluates to...</th></tr></thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>+</code></td>
+<td style="text-align:left">Addition</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>2 + 2</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>4</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>-</code></td>
+<td style="text-align:left">Subtraction</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>5 - 2</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>3</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>*</code></td>
+<td style="text-align:left">Multiplication</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>3 * 5</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>15</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>/</code></td>
+<td style="text-align:left">Division</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>22 / 8</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>2.75</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>**</code></td>
+<td style="text-align:left">Exponent</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>2 ** 3</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>8</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>%</code></td>
+<td style="text-align:left">Modulus/remainder</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>22 % 8</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>6</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>//</code></td>
+<td style="text-align:left">Integer division</td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>22 // 8</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>2</code></td></tr></tbody></table></div><p>When there are multiple operators in an expression, normal operator precedence apply. You can force a different precedence using parentheses.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">4</span> * <span class="hljs-number">5</span>
+</span><span><span class="hljs-number">22</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-number">2</span> + <span class="hljs-number">4</span>) * <span class="hljs-number">5</span>
+</span><span><span class="hljs-number">30</span>
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Operators</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7qHMXu99d88?rel=0&showinfo=0&start=128&end=316&version=3" frameborder="0" allowfullscreen></iframe></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try some expressions using an online interactive shell</span></p></template>
+<p>Type an expression in the shell below and press enter. You can reload the previous expression using the up arrow key.</p>
+<iframe src="https://trinket.io/embed/python3/7b27e216a7?toggleCode=true&amp;runOption=console&start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="data-types"><span id="data-types" class="anchor"></span>Data Types<a class="fa fa-anchor" href="#data-types" onclick="event.stopPropagation()"></a></h3>
+<p><strong>A data value has a <em>type</em>.</strong> Here is a summary of three basic data types used in Python often:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Type name</th>
+<th>Description</th>
+<th>Examples</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>int</code></td>
+<td>whole numbers (integers)</td>
+<td><code class="hljs inline no-lang" v-pre>-23</code>, <code class="hljs inline no-lang" v-pre>-22</code>, <code class="hljs inline no-lang" v-pre>-1</code>, <code class="hljs inline no-lang" v-pre>0</code>, <code class="hljs inline no-lang" v-pre>1</code>, <code class="hljs inline no-lang" v-pre>65</code>, <code class="hljs inline no-lang" v-pre>66</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>float</code></td>
+<td>numbers with decimal points (floating point numbers)</td>
+<td><code class="hljs inline no-lang" v-pre>-34.576</code>, <code class="hljs inline no-lang" v-pre>436.0</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>str</code></td>
+<td>sequence of characters (strings)</td>
+<td><code class="hljs inline no-lang" v-pre>adam</code> <code class="hljs inline no-lang" v-pre>What can it be?</code>, <code class="hljs inline no-lang" v-pre>x</code></td></tr></tbody></table></div><p>String values are denoted by enclosing them in double quotes or single quotes.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-string">&#x27;Hello&#x27;</span>
+</span><span><span class="hljs-string">&quot;What&#x27;s going on?&quot;</span>
+</span></code></pre><p>Some operators can be used on strings as well.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;hello&#x27;</span>
+</span><span><span class="hljs-string">&#x27;hello&#x27;</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello&#x27;</span> + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-string">&#x27;World!&#x27;</span>
+</span><span><span class="hljs-string">&#x27;Hello World!&#x27;</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Bye&#x27;</span> + (<span class="hljs-string">&#x27;!&#x27;</span> * <span class="hljs-number">10</span>)
+</span><span><span class="hljs-string">&#x27;Bye!!!!!!!!!!&#x27;</span>
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Data types</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7qHMXu99d88?rel=0&start=317&end=416&version=3" frameborder="0" allowfullscreen></iframe></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe src="https://trinket.io/embed/python3/7b27e216a7?toggleCode=true&amp;runOption=console&start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="variables"><span id="variables" class="anchor"></span>Variables<a class="fa fa-anchor" href="#variables" onclick="event.stopPropagation()"></a></h3>
+<blockquote>
+<p><strong>Variables are used to store information to be referenced and manipulated in a computer program.</strong> They also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves. It is helpful to think of variables as containers that hold information. Their sole purpose is to label and store data in memory. This data can then be used throughout your program. <sub>--<a href="https://launchschool.com/books/ruby/read/variables">https://launchschool.com/books/ruby/read/variables</a> (emphasis added)</sub></p></blockquote>
+<p>The following statement <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">creates</span>declares</span></em> a variable named <code class="hljs inline no-lang" v-pre>v</code> and <em>assigns</em> it a value <code class="hljs inline no-lang" v-pre>5</code> (the operator <code class="hljs inline no-lang" v-pre>=</code> is called the <em>assignment operator</em>):</p>
+<pre><code class="hljs python" v-pre><span>v = <span class="hljs-number">5</span>
+</span></code></pre><tip-box> 
+<p><strong>Statements</strong></p>
+<p>Note that we called <code class="hljs inline no-lang" v-pre>v = 5</code> a <em>statement</em>. <strong>Unlike expressions that evaluates to a single value, a statement does not evaluates to a value.</strong> However, a statement can contain an expression e.g. <code class="hljs inline no-lang" v-pre>v = 5 + 8</code>.
+</p></tip-box><p></p>
+<p>If you enter the above statement in the interactive shell, it causes the shell to remember the variable name <code class="hljs inline no-lang" v-pre>v</code> and its value.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v = <span class="hljs-number">5</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>
+</span></code></pre><p>Now, you can ask the shell to recall the value by simply typing in the variable name as an expression.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v
+</span><span><span class="hljs-number">5</span>
+</span></code></pre><p>You can even use the variable in expressions.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v * <span class="hljs-number">4</span>
+</span><span><span class="hljs-number">20</span>
+</span></code></pre><tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are some examples of variables being declared, assigned, and being used:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>max_bag_count = <span class="hljs-number">2</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>max_bag_count
+</span><span><span class="hljs-number">2</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>price = <span class="hljs-number">10.0</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>discount_percentage = <span class="hljs-number">5</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>discount = price * discount_percentage / <span class="hljs-number">100</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>price - discount
+</span><span><span class="hljs-number">9.5</span>
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe src="https://trinket.io/embed/python/3d7b1ae52f?outputOnly=true&runOption=console&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></tip-box>
+<p><strong>Python variable names (by convention) use lower case letters with <code class="hljs inline no-lang" v-pre>_</code> separating words.</strong></p>
+<pre><code class="hljs python" v-pre><span>long_variable_name = <span class="hljs-number">56</span>
+</span></code></pre><p><strong>Variable names are case sensitive.</strong> In the example below, you can see how Python prints an error message if you try to access the variable <code class="hljs inline no-lang" v-pre>height</code> using the name <code class="hljs inline no-lang" v-pre>Height</code></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">12.0</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height
+</span><span><span class="hljs-number">12.0</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>Height
+</span><span>Traceback (most recent call last):
+</span><span> File <span class="hljs-string">&quot;&lt; pyshell#5 &gt;&quot;</span>, line <span class="hljs-number">1</span>, <span class="hljs-keyword">in</span> &lt; module &gt;
+</span><span>   Height
+</span><span>NameError: name <span class="hljs-string">&#x27;Height&#x27;</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
+</span></code></pre><p><strong>Variables can be overwritten</strong>. In the example below, <code class="hljs inline no-lang" v-pre>height</code> was initially <code class="hljs inline no-lang" v-pre>5</code> but the value is reassigned later to be <code class="hljs inline no-lang" v-pre>1</code> more than the previous value.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height
+</span><span><span class="hljs-number">5</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = height + <span class="hljs-number">1</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height
+</span><span><span class="hljs-number">6</span>
+</span></code></pre><p><strong>The value of one variable can be assigned to another variable.</strong></p>
+<tip-box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, the value of variable <code class="hljs inline no-lang" v-pre>height</code> is assigned to the variable <code class="hljs inline no-lang" v-pre>width</code>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>width = height
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>width
+</span><span><span class="hljs-number">5</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height + width
+</span><span><span class="hljs-number">10</span>
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">10</span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>width
+</span><span><span class="hljs-number">5</span>
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe src="https://trinket.io/embed/python/900dbf4e77?outputOnly=true&runOption=console&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></tip-box>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Variables</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7qHMXu99d88?rel=0&start=417&end=614&version=3" frameborder="0" allowfullscreen></iframe>
+<p></p></panel><p></p><p></p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Circle Circumference</p></template>
+  <div>
+<h4 id="exercise-circle-circumference"><span id="exercise-circle-circumference" class="anchor"></span>Exercise: Circle Circumference<a class="fa fa-anchor" href="#exercise-circle-circumference" onclick="event.stopPropagation()"></a></h4>
+<ol>
+<li>Declare a variable <code class="hljs inline no-lang" v-pre>r</code> to represent the radius of a circle, and assign it value <code class="hljs inline no-lang" v-pre>7</code>.</li>
+<li>Declare a variable <code class="hljs inline no-lang" v-pre>pi</code> to represent PI and assign it <code class="hljs inline no-lang" v-pre>3.14</code></li>
+<li>Use the above two variables to calculate and the circumference of the circle and assign it to a new variable <code class="hljs inline no-lang" v-pre>c</code>.</li>
+<li>Show the value of <code class="hljs inline no-lang" v-pre>c</code> (which should be <code class="hljs inline no-lang" v-pre>43.96</code>).</li></ol></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<h2 id="python-programs"><span id="python-programs" class="anchor"></span><strong>Python Programs</strong><a class="fa fa-anchor" href="#python-programs" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="scripts-programs"><span id="scripts-programs" class="anchor"></span>Scripts (Programs)<a class="fa fa-anchor" href="#scripts-programs" onclick="event.stopPropagation()"></a></h3>
+<p>While the interactive shell is good for testing out small code bits, longer Python programs (also called <em>scripts</em>) are written as text files with the <code class="hljs inline no-lang" v-pre>.py</code> extension. Python <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">the tool that interprets the code and executes it</span>interpreter</span></em> reads the program and executes statements from top to bottom.</p>
+<p>Let's create and run a Python program:</p>
+<tabs> 
+  <tab><template slot="_header">Using <a href="http://Repl.it">Repl.it</a> (no need to save as a file)</template>
+<p>Press the <span aria-hidden="true" class="fas fa-play"></span> button to run the code <span class="dimmed"> (don't worry about the meaning of the code)</span>. You can edit the code and run again!</p>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/helloworld?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">Using IDLE (need to save as a <code class="hljs inline no-lang" v-pre>.py</code> file)</template><p></p>
+<ol>
+<li><trigger trigger="click" for="modal:scripts-openIdle">Open the IDLE tool</trigger>.</li>
+<li>Choose <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>New File</code></li>
+<li>In the new window that opens up, enter the following code <span class="dimmed"> (don't worry about the meaning of the code)</span>.<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Hello world!&#x27;</span>)
+</span><span>print(<span class="hljs-string">&#x27;Bye!&#x27;</span>)
+</span></code></pre></li>
+<li>Save the file by choosing <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Save as</code>. You can give a name such as <code class="hljs inline no-lang" v-pre>hello.py</code></li>
+<li><code class="hljs inline no-lang" v-pre>Run</code> → <code class="hljs inline no-lang" v-pre>Run Module (F5)</code>. The output will show up in the IDLE shell.</li></ol>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Writing your first Python program</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/buMTH6ICnqk?rel=0&showinfo=0&start=2&end=168&version=3" frameborder="0" allowfullscreen></iframe></panel>
+<p></p></tab></tabs><p></p>
+<b-modal id="modal:scripts-openIdle" hide-footer size modal-class="mb-zoom" ref="modal:scripts-openIdle" class="algolia-no-index"><template slot="modal-title"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Opening IDEL in Windows 10</template>
+  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dX2-V2BocqQ?rel=0&showinfo=0&start=247&end=270&version=3" frameborder="0" allowfullscreen></iframe></b-modal></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="comments"><span id="comments" class="anchor"></span>Comments<a class="fa fa-anchor" href="#comments" onclick="event.stopPropagation()"></a></h3>
+<p>You can use comments to provide more information about the code to the reader. Any text that follows <code class="hljs inline no-lang" v-pre>#</code> (until the end of the line) is considered as a comment by the Python interpreter, and is ignored.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-comment"># this is a simple hello world program</span>
+</span><span>
+</span><span>print(<span class="hljs-string">&#x27;Hello&#x27;</span>) <span class="hljs-comment"># start with a greeting</span>
+</span><span>
+</span><span><span class="hljs-comment"># read user&#x27;s name from the keyboard</span>
+</span><span>print(<span class="hljs-string">&#x27;What is your name?&#x27;</span>)
+</span><span>name = <span class="hljs-built_in">input</span>()
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Blank lines too are ignored by the Python interpreter. You can use blank lines to improve the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">ease of reading</span>readability</span> of the code <span class="dimmed"> e.g., by using a blank line to separate one group of statements from another</span></p></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="using-functions"><span id="using-functions" class="anchor"></span>Using Functions<a class="fa fa-anchor" href="#using-functions" onclick="event.stopPropagation()"></a></h3>
+<p><strong>A <em>function</em> is like a small program that you can execute from another program. A function has a name. Some functions take inputs</strong> (called <em>arguments</em>). The statement to <em>execute</em> (other names: <em>call</em>, <em>invoke</em>) a function takes the form <code class="hljs inline no-lang" v-pre>function_name(arguments)</code> <span class="dimmed"> e.g., <code class="hljs inline no-lang" v-pre>foo(1, 'hello')</code> calls a function named <code class="hljs inline no-lang" v-pre>foo</code> with arguments <code class="hljs inline no-lang" v-pre>1</code> and <code class="hljs inline no-lang" v-pre>'hello'</code></span></p>
+<p>Python comes with many built-in functions you can use right away.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> To print some text, you can use the <code class="hljs inline no-lang" v-pre>print</code> function which can take one or more arguments:</p>
+<tabs> 
+  <tab><template slot="_header">Using the shell</template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
+</span><span>Hello World
+</span><span>
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
+</span><span>Bye my friend
+</span></code></pre><p></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">Running as a script</template><p></p>
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
+</span><span>print(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Hello World
+</span><span>Bye my friend
+</span></code></pre><p></p></tab></tabs><p></p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/helloworld?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p>
+<p><strong>Some functions return a value.</strong></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>int</code>, <code class="hljs inline no-lang" v-pre>float</code>, <code class="hljs inline no-lang" v-pre>str</code> functions can be used to convert a data value of one type to another. The built-in function <code class="hljs inline no-lang" v-pre>type</code> tells you the type of a value.</p>
+<pre><code class="hljs python" v-pre><span>age = <span class="hljs-number">25</span> <span class="hljs-comment"># age is of integer type</span>
+</span><span>print(<span class="hljs-string">&#x27;My age is &#x27;</span> + <span class="hljs-built_in">str</span>(age)) <span class="hljs-comment"># convert age to a string before printing</span>
+</span><span>
+</span><span>print(<span class="hljs-built_in">type</span>(-<span class="hljs-number">4</span>)) <span class="hljs-comment"># print the type of value -4</span>
+</span><span>print(<span class="hljs-built_in">type</span>(<span class="hljs-string">&#x27;-4&#x27;</span>)) <span class="hljs-comment"># print the type of value &#x27;-4&#x27;</span>
+</span><span>print(<span class="hljs-built_in">type</span>(<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;5.0&#x27;</span>))) <span class="hljs-comment"># convert string &#x27;5.0&#x27; to a float and print the type</span>
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>My age is 25
+</span><span>&lt;class 'int'&gt;
+</span><span>&lt;class 'str'&gt;
+</span><span>&lt;class 'float'&gt;
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/return-values?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<p></p></panel><p></p><p></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>input</code> function can be used to read input from the keyboard. It waits for user input (until the user hits <kbd>Enter</kbd>) and returns all text entered by the user <mark>as a string</mark>. <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how a call to the <code class="hljs inline no-lang" v-pre>print</code> without any arguments (i.e. <code class="hljs inline no-lang" v-pre>print()</code>) prints an empty line.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-comment"># read current price</span>
+</span><span>print(<span class="hljs-string">&#x27;What is the current price?&#x27;</span>)
+</span><span>price = <span class="hljs-built_in">input</span>() <span class="hljs-comment"># price is of type string because input() always return a string</span>
+</span><span>
+</span><span><span class="hljs-comment"># print current price</span>
+</span><span>print() <span class="hljs-comment"># print an empty line</span>
+</span><span>print(<span class="hljs-string">&#x27;Current price is $&#x27;</span> + price) <span class="hljs-comment"># no need to convert; price is already a string</span>
+</span><span>
+</span><span><span class="hljs-comment"># calculate and show discounted price</span>
+</span><span>discounted_price = <span class="hljs-built_in">float</span>(price)*<span class="hljs-number">0.5</span> <span class="hljs-comment"># convert to float type first</span>
+</span><span>print(<span class="hljs-string">&#x27;Price after 50% discount is $&#x27;</span> + <span class="hljs-built_in">str</span>(discounted_price)) <span class="hljs-comment"># convert back to string</span>
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
+<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/discounted?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Explanation of a similar Python program</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/buMTH6ICnqk?rel=0&showinfo=0&start=169&version=3" frameborder="0" allowfullscreen></iframe></panel>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Length of Names</p></template>
+  <div>
+<h4 id="exercise-length-of-name"><span id="exercise-length-of-name" class="anchor"></span>Exercise : Length of Name<a class="fa fa-anchor" href="#exercise-length-of-name" onclick="event.stopPropagation()"></a></h4>
+<p>Write a program to read a name from the keyboard and print the length of the name. Follow the example below:</p>
+<pre><code class="hljs" v-pre><span>What is your name?
+</span><span>John Doe
+</span><span>The length of your name is 8
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> In addition to functions <code class="hljs inline no-lang" v-pre>print</code> and <code class="hljs inline no-lang" v-pre>input</code>, you may need the <code class="hljs inline no-lang" v-pre>len</code> function <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>len('abc')</code> returns <code class="hljs inline no-lang" v-pre>3</code></span>.</p></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;"></div></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-1-mon-aug-10th-programming-topics">Week 1 [Mon, Aug 10th] - Programming Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#expressions-data-types-variables">Expressions, Data Types, Variables&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#computer-programs">Computer Programs&#x200E;</a>
+<a class="nav-link py-1" href="#setting-up-the-programming-environment">Setting up the Programming Environment&#x200E;</a>
+<a class="nav-link py-1" href="#working-with-an-interactive-shell">Working with an Interactive Shell&#x200E;</a>
+<a class="nav-link py-1" href="#operators">Operators&#x200E;</a>
+<a class="nav-link py-1" href="#data-types">Data Types&#x200E;</a>
+<a class="nav-link py-1" href="#variables">Variables&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-circle-circumference">Exercise: Circle Circumference&#x200E;</a>
+</nav>
+</nav>
+<a class="nav-link py-1" href="#python-programs">Python Programs&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#scripts-programs">Scripts (Programs)&#x200E;</a>
+<a class="nav-link py-1" href="#comments">Comments&#x200E;</a>
+<a class="nav-link py-1" href="#using-functions">Using Functions&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-length-of-name">Exercise : Length of Name&#x200E;</a>
+</nav>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

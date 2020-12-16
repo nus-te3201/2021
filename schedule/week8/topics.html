@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 8 - SE Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week7"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week8/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week9"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-8-fri-oct-2nd-se-topics"><span id="week-8-fri-oct-2nd-se-topics" class="anchor"></span>Week 8 <small><small><span class="dimmed">[Fri, Oct 2nd]</span> - SE Topics</small></small><a class="fa fa-anchor" href="#week-8-fri-oct-2nd-se-topics" onclick="event.stopPropagation()"></a></h1>
+<div>
+</div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p></template>
+<span id="toc">
+<ul>
+<li>[<a href="/2021/schedule/week8/topics.html#W8-1">W8.1</a>] <strong>OOP: Basics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-1a">W8.1a</a>] <span>Paradigms → OOP → Classes →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul></small></div>
+<p></p>
+<ul>
+<li>[<a href="/2021/schedule/week8/topics.html#W8-2">W8.2</a>] <strong>Reuse: APIs, Frameworks, Libraries, Platforms</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<p>   <strong>Reuse</strong></p>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2a">W8.2a</a>] <span>Implementation → Reuse → Introduction →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2b">W8.2b</a>] <span>Implementation → Reuse → Introduction →
+</span></span> <span>When</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
+<p>   <strong>APIs</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2c">W8.2c</a>] <span>Implementation → Reuse → APIs →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<p>   <strong>Libraries</strong></p>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2d">W8.2d</a>] <span>Implementation → Reuse → Libraries →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2e">W8.2e</a>] <span>Implementation → Reuse → Libraries →
+</span></span> <span>How</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
+<p>   <strong>Frameworks</strong></p>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2f">W8.2f</a>] <span>Implementation → Reuse → Frameworks →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2g">W8.2g</a>] <span>Implementation → Reuse → Frameworks →
+</span></span> <span>Frameworks versus libraries</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
+<p>   <strong>Platforms</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-2h">W8.2h</a>] <span>Implementation → Reuse → Platforms →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul></small></div>
+<ul>
+<li>[<a href="/2021/schedule/week8/topics.html#W8-3">W8.3</a>] <strong>Cloud Computing</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-3a">W8.3a</a>] <span>Implementation → Reuse → Cloud Computing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week8/topics.html#W8-3b">W8.3b</a>] <span>Implementation → Reuse → Cloud Computing →
+</span></span> <span>Iaas, PaaS, and SaaS</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p></span></panel>
+<hr style="border: 1px dotted #cccccc;">
+<p><span id="W8-1"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Given below is a general OOP concept of <em>classes</em></strong>, as you will be writing Python classes this week.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w8-1-oop-basics">
+<span slot="header" class="card-title"><div><h2 id="w8-1-oop-basics"><span id="w8-1-oop-basics" class="anchor"></span><span class="dimmed">[W8.1]</span> <strong>OOP: Basics</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w8-1-oop-basics" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W8-1a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/classes/what" id="paradigms-oop-classes-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.1a</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-classes-what"><span id="paradigms-oop-classes-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Classes →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#paradigms-oop-classes-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the relationship between classes and objects </span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Writing an OOP program is essentially writing instructions that the computer will use to,</strong></p>
+<ol>
+<li><strong>create the virtual world of the object network, and</strong></li>
+<li><strong>provide it the inputs to produce the outcome you want.</strong></li></ol>
+<p><strong>A <mark><em>class</em></mark> contains instructions for creating a specific kind of objects</strong>. It turns out sometimes multiple objects keep the same type of data and have the same behavior because they are of the <em>same kind</em>. Instructions for creating a 'kind' (or ‘class’) of objects can be done once and those same instructions can be used to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e. create instances of</span><em>instantiate</em></span> objects of that kind. You call such instructions a <em>Class</em>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Classes and objects in an example scenario</p>
+<p>Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.</p>
+<p>Instructions for creating objects <code class="hljs inline no-lang" v-pre>Adam</code>, <code class="hljs inline no-lang" v-pre>Beth</code>, <code class="hljs inline no-lang" v-pre>Charlie</code>, and <code class="hljs inline no-lang" v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code class="hljs inline no-lang" v-pre>name</code>, <code class="hljs inline no-lang" v-pre>dateOfBirth</code>, etc.), and the same kind of behavior (i.e. <code class="hljs inline no-lang" v-pre>getAge(Date)</code>, <code class="hljs inline no-lang" v-pre>getName()</code>, etc.). Therefore, you can have a class called <code class="hljs inline no-lang" v-pre>Person</code> containing instructions on how to create <code class="hljs inline no-lang" v-pre>Person</code> objects and use that class to instantiate objects <code class="hljs inline no-lang" v-pre>Adam</code>, <code class="hljs inline no-lang" v-pre>Beth</code>, <code class="hljs inline no-lang" v-pre>Charlie</code>, and <code class="hljs inline no-lang" v-pre>Daisy</code>.</p>
+<p>Similarly, you need classes <code class="hljs inline no-lang" v-pre>AgeList</code>, <code class="hljs inline no-lang" v-pre>Calculator</code>, and <code class="hljs inline no-lang" v-pre>Main</code> classes to instantiate one each of <code class="hljs inline no-lang" v-pre>AgeList</code>, <code class="hljs inline no-lang" v-pre>Calculator</code>, and <code class="hljs inline no-lang" v-pre>Main</code> objects.</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Class</th>
+<th>Objects</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Person</code></td>
+<td>objects representing Adam, Beth, Charlie, Daisy</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>AgeList</code></td>
+<td>an object to represent the age list</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Calculator</code></td>
+<td>an object to do the calculations</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Main</code></td>
+<td>an object to represent you (i.e., the one who manages the whole operation)</td></tr></tbody></table></div></box></div>
+<div>
+  <div>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Identify Classes and Objects</p></template>
+<question>
+<p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?</p>
+<box>
+<p>A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p></box>
+<div slot="answer" class="algolia-no-index">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Class</th>
+<th>Objects</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Customer</code></td>
+<td><code class="hljs inline no-lang" v-pre>john</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Book</code></td>
+<td><code class="hljs inline no-lang" v-pre>LoTR</code>, <code class="hljs inline no-lang" v-pre>GoT</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Cheque</code></td>
+<td><code class="hljs inline no-lang" v-pre>chequeJohnGave</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>Cashier</code></td>
+<td><code class="hljs inline no-lang" v-pre>peter</code></td></tr></tbody></table></div></div></question></panel></div>
+<div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Classes for CityConnect app</p></template>
+<question has-input="true">
+<p>Assume you are writing a CLI program called <strong><code class="hljs inline no-lang" v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
+<pre><code class="hljs" v-pre><span>Welcome to CityConnect!
+</span><span>
+</span><span>Enter command: addroute Clementi BuonaVista 12
+</span><span>Route from Clementi to BuonaVista with distance 12km added
+</span><span>
+</span><span>Enter command: getdistance Clementi BuonaVista
+</span><span>Distance from Clementi to BuonaVista is 12
+</span><span>
+</span><span>Enter command: getdistance Clementi JurongWest
+</span><span>No route exists from Clementi to JurongWest!
+</span><span>
+</span><span>Enter command: addroute Clementi JurongWest 24
+</span><span>Route from Clementi to JurongWest with distance 24km added
+</span><span>
+</span><span>Enter command: getdistance Clementi JurongWest
+</span><span>Distance from Clementi to JurongWest is 24
+</span><span>
+</span><span>Enter command: exit
+</span><span>
+</span></code></pre><p>What classes would you have in your code if you write your program based on the OOP paradigm?</p>
+<div slot="hint" class="algolia-no-index">
+<p>One class you can have is <code class="hljs inline no-lang" v-pre>Route</code></p></div></question></panel></div></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p>
+<p><span id="W8-2"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Next, let us learn about various means of reuse</strong>, as you will be learning about installing third-party Python libraries this week.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=e47e8dfe-2550-41a6-9566-ab7a0095e5e7&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w8-2-reuse-apis-frameworks-libraries-platforms">
+<span slot="header" class="card-title"><div><h2 id="w8-2-reuse-apis-frameworks-libraries-platforms"><span id="w8-2-reuse-apis-frameworks-libraries-platforms" class="anchor"></span><span class="dimmed">[W8.2]</span> <strong>Reuse: APIs, Frameworks, Libraries, Platforms</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w8-2-reuse-apis-frameworks-libraries-platforms" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<br>
+<div></div>
+<h3 id="reuse"><span id="reuse" class="anchor"></span><span class="dimmed"><strong>Reuse</strong></span><a class="fa fa-anchor" href="#reuse" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W8-2a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/introduction/what" id="implementation-reuse-introduction-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2a</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-introduction-what"><span id="implementation-reuse-introduction-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Introduction →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-introduction-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain software reuse</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Reuse is a major theme in software engineering practices. <strong>By reusing tried-and-tested components, the robustness of a new software system can be enhanced while reducing the manpower and time requirement.</strong> Reusable components come in many forms; it can be reusing a piece of code, a subsystem, or a whole software.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W8-2b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/introduction/when" id="implementation-reuse-introduction-when">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-introduction-when"><span id="implementation-reuse-introduction-when" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Introduction →</span></span></small> <strong><span>When</span></strong><a class="fa fa-anchor" href="#implementation-reuse-introduction-when" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the costs and benefits of reuse</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>While you may be tempted to use many libraries/frameworks/platforms that seem to crop up on a regular basis and promise to bring great benefits, note that <strong>there are costs associated with reuse</strong>. Here are some:</p>
+<ul>
+<li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>), increasing the size of, and/or degrading the performance of, your software.</li>
+<li>The reused software <strong>may not be mature/stable enough</strong> to be used in an important product. That means the software can change drastically and rapidly, possibly in ways that break your software.</li>
+<li>Non-mature software has the <strong>risk of dying off</strong> as fast as they emerged, leaving you with a dependency that is no longer maintained.</li>
+<li>The license of the reused software (or its dependencies) <strong>restrict how you can use/develop your software</strong>.</li>
+<li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product, but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
+<li><strong>Malicious code can sneak into your product</strong> via compromised dependencies.</li></ul></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Using a cool UI framework</p></template>
+<question has-input="true">
+<p>One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.</p>
+<div slot="answer" class="algolia-no-index">
+<p>Pros</p>
+<ul>
+<li>The potential to create a much better product by reusing the framework.</li>
+<li>Learning a new framework is good for future job prospects.</li></ul>
+<p>Cons</p>
+<ul>
+<li>Learning curve may be steep.</li>
+<li>May not be stable (as it was recently released).</li>
+<li>May not allow you to do exactly what you want. While frameworks allow customization, such customization can be limited.</li>
+<li>Performance penalties.</li>
+<li>Might interfere with the learning objectives of the module.</li></ul>
+<p>Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="apis"><span id="apis" class="anchor"></span><span class="dimmed"><strong>APIs</strong></span><a class="fa fa-anchor" href="#apis" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W8-2c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/apis/what" id="implementation-reuse-apis-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-apis-what"><span id="implementation-reuse-apis-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → APIs →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-apis-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain APIs</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code class="hljs inline no-lang" v-pre>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code class="hljs inline no-lang" v-pre>str</code> class</a>) which is a collection of public methods that you can invoke to make use of the class.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of web request formats that the GitHub server accepts and their corresponding responses. You can write a program that interacts with GitHub through that API.</p></box>
+<p>When developing large systems, if you define the API of each component early, the development team can develop the components in parallel <span class="dimmed">because the future behavior of the other components are now more predictable</span>.</p></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about APIs</p></template>
+<question>
+<p>Choose the correct statements.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A software component can have an API.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Any method of a class is part of its API.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Private methods of a class are not part of its API.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The API forms the contract between the component developer and the component user.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Sequence diagrams can be used to show how components interact with each other via APIs.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a) (c) (d) (e)</p>
+<p>Explanation: (b) is incorrect because private methods cannot be a part of the API.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> True or False?</p></template>
+<question>
+<p>Defining component APIs early is useful for developing components in parallel.</p>
+<ul radio-group="9bd8a" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> False</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>True</p>
+<p>Explanation: Yes, once you know the precise behavior expected of each component, you can start developing them in parallel.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="libraries"><span id="libraries" class="anchor"></span><span class="dimmed"><strong>Libraries</strong></span><a class="fa fa-anchor" href="#libraries" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W8-2d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/libraries/what" id="implementation-reuse-libraries-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2d</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-libraries-what"><span id="implementation-reuse-libraries-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Libraries →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-libraries-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain libraries</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>A library is a collection of modular code that is general and can be used by other programs.</p>
+<box>
+<div class="alt-java">
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Java classes you get with the JDK (such as <code class="hljs inline no-lang" v-pre>String</code>, <code class="hljs inline no-lang" v-pre>ArrayList</code>, <code class="hljs inline no-lang" v-pre>HashMap</code>, etc.) are library classes that are provided in the default Java distribution.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://github.com/joestelmach/natty">Natty</a> is a Java library that can be used for parsing strings that represent dates e.g. <code class="hljs inline no-lang" v-pre>The 31st of April in the year 2008</code></p></div>
+<div class="alt-python">
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> built-in modules you get with Python (such as <code class="hljs inline no-lang" v-pre>csv</code>, <code class="hljs inline no-lang" v-pre>random</code>, <code class="hljs inline no-lang" v-pre>sys</code>, etc.) are libraries that are provided in the default Python distribution. Classes such as <code class="hljs inline no-lang" v-pre>list</code>, <code class="hljs inline no-lang" v-pre>str</code>, <code class="hljs inline no-lang" v-pre>dict</code> are built-in library classes that you get with Python.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <a href="https://pypi.python.org/pypi/colorama">Colorama</a> is a Python library that can be used for colorizing text in a CLI.</p></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W8-2e"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/libraries/how" id="implementation-reuse-libraries-how">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2e</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-libraries-how"><span id="implementation-reuse-libraries-how" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Libraries →</span></span></small> <strong><span>How</span></strong><a class="fa fa-anchor" href="#implementation-reuse-libraries-how" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can make use of a library</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>These are the typical steps required to use a library:</p>
+<ol>
+<li>Read the documentation to confirm that its functionality fits your needs.</li>
+<li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
+<li>Download the library and make it accessible to your project. Alternatively, you can configure your <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g. <em>Gradle</em> (for Java) and <em>Pipenv</em> (for Python)</span>dependency management tool</span> to do it for you.</li>
+<li>Call the library API from your code where you need to use the library's functionality.</li></ol></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="frameworks"><span id="frameworks" class="anchor"></span><span class="dimmed"><strong>Frameworks</strong></span><a class="fa fa-anchor" href="#frameworks" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W8-2f"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/frameworks/what" id="implementation-reuse-frameworks-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2f</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-frameworks-what"><span id="implementation-reuse-frameworks-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Frameworks →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-frameworks-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain frameworks</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>The overall structure and execution flow of a specific category of software systems can be very similar. The similarity is an opportunity to reuse at a high scale.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
+<p>IDEs for different programming languages are similar in how they support editing code, organizing project files, debugging, etc.</p></box>
+<p><strong>A <em>software framework</em> is a reusable implementation of a software (or part thereof) providing <em>generic</em> functionality that can be selectively customized to produce a <em>specific</em> application.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
+<p>Eclipse is an IDE framework that can be used to create IDEs for different programming languages.</p></box>
+<p><strong>Some frameworks provide a complete implementation of a <em>default</em> behavior which makes them immediately usable.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
+<p>Eclipse is a fully functional Java IDE out-of-the-box.</p></box>
+<p><strong>A framework facilitates the adaptation and customization of some desired functionality.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
+<p>The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.</p>
+<p>E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p></box>
+<p>Some frameworks cover only a specific component or an aspect.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.</p></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> More examples of frameworks</p>
+<ul>
+<li>Frameworks for web-based applications: Drupal (PHP), Django (Python), Ruby on Rails (Ruby), Spring (Java)</li>
+<li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (JavaScript)</li></ul></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W8-2g"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/frameworks/frameworksVsLibraries" id="implementation-reuse-frameworks-frameworks-versus-libraries">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2g</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-frameworks-frameworks-versus-libraries"><span id="implementation-reuse-frameworks-frameworks-versus-libraries" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Frameworks →</span></span></small> <strong><span>Frameworks versus libraries</span></strong><a class="fa fa-anchor" href="#implementation-reuse-frameworks-frameworks-versus-libraries" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can differentiate between frameworks and libraries</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Although both frameworks and libraries are reuse mechanisms, there are notable differences:</p>
+<ul>
+<li>
+<p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong>
+<span class="dimmed">e.g., writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules and themes to Drupal, and adding test cases to JUnit</span>.</p></li>
+<li>
+<p><strong>Your code calls the library code while the framework code calls your code.</strong>
+<strong>Frameworks use a technique called <em>inversion of control</em>, aka the “Hollywood principle”</strong> (i.e. don’t call us, we’ll call you!). That is, you write code that will be called by the framework, <span class="dimmed">e.g. writing test methods that will be called by the JUnit framework.</span> In the case of libraries, your code calls libraries.</p></li></ul></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about software frameworks</p></template>
+<question>
+<p>Choose the correct statements about software frameworks.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementations.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+<p>Explanation: While both libraries and frameworks are reuse mechanisms, and both are more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p></template>
+<question>
+<p>Which of these are frameworks?</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Drupal</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)(c)(d)</p>
+<p>Explanation: These are all frameworks.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="platforms"><span id="platforms" class="anchor"></span><span class="dimmed"><strong>Platforms</strong></span><a class="fa fa-anchor" href="#platforms" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W8-2h"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/platforms/what" id="implementation-reuse-platforms-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.2h</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-platforms-what"><span id="implementation-reuse-platforms-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Platforms →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-platforms-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain platforms</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software platform is the presence of a runtime environment.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile applications.</p></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above the operating systems layer, and are used to develop <trigger for="modal:enterprise-application" trigger="click">enterprise applications</trigger>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+<ul>
+<li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
+<li>.NET is a similar platform and framework. Its runtime is called CLR (Common Language Runtime) and it is usually used on Windows machines.</li></ul></box>
+<b-modal id="modal:enterprise-application" hide-footer size modal-class="mb-zoom" ref="modal:enterprise-application" class="algolia-no-index"><template slot="modal-title"><strong>Enterprise Applications</strong></template>
+  <div>
+<p><strong>Enterprise application</strong>: ‘enterprise applications’ refer to software applications used by organizations and therefore have to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p></div></b-modal></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W8-3"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>A brief introduction to cloud computing is given below</strong> as it is too a means of reuse in some sense. Given <em>cloud computing</em> is a popular concept today, it may be useful for you to know a little bit about it.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w8-3-cloud-computing">
+<span slot="header" class="card-title"><div><h2 id="w8-3-cloud-computing"><span id="w8-3-cloud-computing" class="anchor"></span><span class="dimmed">[W8.3]</span> <strong>Cloud Computing</strong> <small><small><span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w8-3-cloud-computing" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W8-3a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/cloudComputing/what" id="implementation-reuse-cloud-computing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.3a</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-cloud-computing-what"><span id="implementation-reuse-cloud-computing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Cloud Computing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-reuse-cloud-computing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain cloud computing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Cloud computing is the delivery of computing as a service over the network</strong>, rather than a product running on a local machine. This means the actual hardware and software is located at a remote location, typically, at a large server farm, while users access them over the network. Maintenance of the hardware and software is managed by the cloud provider while users typically pay for only the amount of services they use. This model is similar to the consumption of electricity; the power company manages the power plant, while the consumers pay them only for the electricity used. The cloud computing model optimizes hardware and software utilization and reduces the cost to consumers. Furthermore, users can scale up/down their utilization at will without having to upgrade their hardware and software. The traditional non-cloud model of computing is similar to everyone buying their own generators to create electricity for their own use.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W8-3b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/reuse/cloudComputing/services" id="implementation-reuse-cloud-computing-iaas-paas-and-saas">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W8.3b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-reuse-cloud-computing-iaas-paas-and-saas"><span id="implementation-reuse-cloud-computing-iaas-paas-and-saas" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Cloud Computing →</span></span></small> <strong><span>Iaas, PaaS, and SaaS</span></strong><a class="fa fa-anchor" href="#implementation-reuse-cloud-computing-iaas-paas-and-saas" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can distinguish between IaaS, PaaS, and SaaS</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500"><br></p>
+<p><sub>source: <a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
+<p>Cloud computing can deliver computing services at three levels:</p>
+<ol>
+<li>
+<p><strong>Infrastructure as a service (IaaS) delivers computer infrastructure as a service.</strong> For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on them. Another example would be a customer using storage space on the cloud for off-site storage of data. <span class="dimmed">Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</span></p></li>
+<li>
+<p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed">A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy applications written in any language on their virtual servers.</span></p></li>
+<li>
+<p><strong>Software as a service (SaaS) allows applications to be accessed over the network</strong> instead of installing them on a local machine. <span class="dimmed">For example, Google Docs is a SaaS word processing software, while Microsoft Word is a traditional word processing software.</span></p></li></ol></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar is in which category?</p></template>
+<question>
+<p>Google Calendar belongs to which category of cloud computing services?</p>
+<ul radio-group="7ed92" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ed92" type="radio"> a. IaaS</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ed92" type="radio"> b. PaaS</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ed92" type="radio"> c. SaaS</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(c)</p>
+<p>Explanation: It is a <em>software</em> as a service. Instead of installing a calendar software on your desktop, you can use the Google Calendar software that lives ‘on the cloud’.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p></div>
+<div id="notices" class="d-none">
+</div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-8-fri-oct-2nd-se-topics">Week 8 [Fri, Oct 2nd] - SE Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#w8-1-oop-basics">[W8.1] OOP: Basics &#x200E;</a>
+<a class="nav-link py-1" href="#w8-2-reuse-apis-frameworks-libraries-platforms">[W8.2] Reuse: APIs, Frameworks, Libraries, Platforms &#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#reuse">Reuse&#x200E;</a>
+<a class="nav-link py-1" href="#apis">APIs&#x200E;</a>
+<a class="nav-link py-1" href="#libraries">Libraries&#x200E;</a>
+<a class="nav-link py-1" href="#frameworks">Frameworks&#x200E;</a>
+<a class="nav-link py-1" href="#platforms">Platforms&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#w8-3-cloud-computing">[W8.3] Cloud Computing &#x200E;</a>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

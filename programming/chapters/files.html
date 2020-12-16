@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Python Basics: Files</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/admin.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/expressions-types-variables.html">Expressions, Data Types, Variables</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/programs.html">Python Programs</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/flowcontrol.html">Program Flow Control</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/functions.html">Functions</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/lists.html">Lists</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/errors.html">Error Handling</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/strings.html">Strings</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/files.html" class="current">Files</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/dictionaries.html">Dictionaries</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/oop.html">Object-Oriented Programming</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/gui.html">GUIs</a></div></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0">
+<hr></li>
+<li class="site-nav-custom-list-item site-nav-list-item-0"><span class="dimmed"><strong>Appendices</strong></span></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/thirdparty.html"><strong>A.</strong> Installing 3rd Party Modules</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/ide.html"><strong>B.</strong> Using an IDE</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/organizing.html"><strong>C.</strong> Organizing Python Code</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/unittesting.html"><strong>D.</strong> Unit Testing</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/2021/programming/chapters/monty.html"><strong>E.</strong> The Monty Project</a></div></li></ul></div></nav>
+
+
+
+<div id="content-wrapper">
+<div class="website-content" id="main">
+<div id="toc">
+<ul>
+<li><a href="#files"><strong>Files</strong></a>
+<ul>
+<li><a href="#file-paths">File Paths</a></li>
+<li><a href="#reading-from-files">Reading from Files</a></li>
+<li><a href="#writing-to-files">Writing to Files</a></li>
+<li><a href="#csv-files">CSV Files</a></li></ul></li></ul></div>
+<div id="main">
+<h1 id="files"><span id="files" class="anchor"></span>Files<a class="fa fa-anchor" href="#files" onclick="event.stopPropagation()"></a></h1>
+<div>
+<h3 id="file-paths"><span id="file-paths" class="anchor"></span>File Paths<a class="fa fa-anchor" href="#file-paths" onclick="event.stopPropagation()"></a></h3>
+<p>A file has a <em>filename</em> and a <em>path</em>. <strong>The <em>path</em> specifies the location of a file on the computer</strong>, as a hierarchy of <em>folders</em> (also called <em>directories</em>).</p>
+<box>
+<tabs> 
+  <tab><template slot="_header">Windows</template>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> File <code class="hljs inline no-lang" v-pre>C:\photos\2018\home.jpg</code></p>
+<ul>
+<li>Filename: <code class="hljs inline no-lang" v-pre>home.jpg</code></li>
+<li>Path: <code class="hljs inline no-lang" v-pre>C:\photos\2018</code> (Windows uses the back slash <code class="hljs inline no-lang" v-pre>\</code> as the <em>separator</em> symbol in paths )</li>
+<li>Folders in the path (<code class="hljs inline no-lang" v-pre>C:</code> is called the <em>root folder</em>):<pre><code class="hljs" v-pre><span>C: {root}
+</span><span>  └── photos
+</span><span>       └── 2018
+</span></code></pre></li></ul>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Windows file names and paths are not case sensitive: <code class="hljs inline no-lang" v-pre>C:\photos\2018\home.jpg</code> is same as <code class="hljs inline no-lang" v-pre>C:\PHOTOS\2018\HOME.JPG</code>.
+  </p></tab>
+  <tab class="algolia-no-index"><template slot="_header">OS-X/Linux</template><p></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> File <code class="hljs inline no-lang" v-pre>/Users/john/home.jpg</code></p>
+<ul>
+<li>Filename: <code class="hljs inline no-lang" v-pre>home.jpg</code></li>
+<li>Path: <code class="hljs inline no-lang" v-pre>/Users/john</code> (OS-X/Linux uses the forward slash <code class="hljs inline no-lang" v-pre>/</code> as the <em>separator</em> symbol in paths )</li>
+<li>Folders in the path (the <code class="hljs inline no-lang" v-pre>/</code> at the start of the path is considered the <em>root folder</em>):<pre><code class="hljs" v-pre><span>/ {root}
+</span><span>    └── Users
+</span><span>          └── john
+</span></code></pre></li></ul>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> OS-X/Linux file names and paths are case sensitive. <code class="hljs inline no-lang" v-pre>/Users/john/home.jpg</code> is NOT the same as <code class="hljs inline no-lang" v-pre>/USERS/JOHN/HOME.JPG</code></p>
+<p></p></tab></tabs><p></p></box>
+<p>The Python module <code class="hljs inline no-lang" v-pre>os</code> contains functions for dealing with files and folders. For example, you can use <code class="hljs inline no-lang" v-pre>os.getcwd()</code> to get the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">A program has a <em>working directory</em> at any time; it can change over time</span>current working directory</span> and <code class="hljs inline no-lang" v-pre>os.chdir()</code> to change the working directory to a different location.</p>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code shows how to print/change current working directory</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> os
+</span><span>
+</span><span>cwd = os.getcwd() <span class="hljs-comment"># store current working dir</span>
+</span><span>print(cwd) <span class="hljs-comment"># print current working dir</span>
+</span><span>os.chdir(<span class="hljs-string">&#x27;C:\\temp\\python&#x27;</span>) <span class="hljs-comment"># change dir</span>
+</span><span>print(os.getcwd()) <span class="hljs-comment"># print current working dir</span>
+</span><span>os.chdir(cwd) <span class="hljs-comment"># change working dir back to original</span>
+</span><span>print(os.getcwd())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>C:\photos\vaction
+</span><span>C:\temp\python
+</span><span>C:\photos\vaction
+</span></code></pre></td></tr></table></div>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how the path <code class="hljs inline no-lang" v-pre>'C:\\temp\\python'</code> uses double slash to <trigger trigger="click" for="modal:filePaths-stringsEscape">escape</trigger> the <code class="hljs inline no-lang" v-pre>\</code>. In OS-X or Linux, it can be something like <code class="hljs inline no-lang" v-pre>/user/john/python</code> (no need for double slash).</p>
+<b-modal id="modal:filePaths-stringsEscape" hide-footer size="lg" modal-class="mb-zoom" ref="modal:filePaths-stringsEscape" class="algolia-no-index"><template slot="modal-title"><strong>Escape Sequences</strong> <span class="dimmed">(extrat from Strings → String Literals)</span></template>
+  <div>
+<p>An escape sequence is a sequence of characters in a string literal that is taken together and interpreted in a special way. You can <strong>use an <em>escape sequence</em>  to include a special character in a string literal</strong> without interpreting it as a special character.  Given below are some examples:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Output</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\'</code></td>
+<td>single quote</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;How\&#x27;s Life&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>How's Life?</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\&quot;</code></td>
+<td>double quote</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&quot;Say \&quot;wow\&quot;&quot;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>Say &quot;wow&quot;</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\\</code></td>
+<td>back slash</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;files\\text&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>files\text</code></td></tr></tbody></table></div><p>Another use of escape sequences is to give a special meaning to a character that normally does not have a special meaning. Here are some examples:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Escape Sequence</th>
+<th>Meaning</th>
+<th>Example</th>
+<th>Output</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\t</code></td>
+<td>horizontal tab</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;aaa\tbbb&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>aaa</code> <code class="hljs inline no-lang" v-pre>  </code> <code class="hljs inline no-lang" v-pre>bbb</code></td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>\n</code></td>
+<td>line break</td>
+<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;hi\nthere!&#x27;</span>)</code></td>
+<td><code class="hljs inline no-lang" v-pre>hi</code><br><code class="hljs inline no-lang" v-pre>there!</code></td></tr></tbody></table></div></div></b-modal></tip-box>
+<p><strong>A path that specifies all folders starting from the root is an <em>absolute path</em>. A path that is specified relative to the current working directory is a <em>relative</em> path.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Assume the current working directory is <code class="hljs inline no-lang" v-pre>C:\modules\te3201</code> and you created a new folder inside it named <code class="hljs inline no-lang" v-pre>exercises</code> and put a <code class="hljs inline no-lang" v-pre>ex.txt</code> file in that folder.</p>
+<ul>
+<li>Absolute path of the file: <code class="hljs inline no-lang" v-pre>C:\modules\te3201\exercises\ex1.txt</code></li>
+<li>Relative path of the file: <code class="hljs inline no-lang" v-pre>exercises\ex1.txt</code></li></ul></box>
+<p>In a path, you can use the  dot <code class="hljs inline no-lang" v-pre>.</code> as a shorthand to refer to the current working directory. Similarly, <code class="hljs inline no-lang" v-pre>..</code> can be used to refer to the parent directory.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the current working directory is <code class="hljs inline no-lang" v-pre>C:\modules\te3201</code>, you can use any of the following to refer to <code class="hljs inline no-lang" v-pre>C:\modules\te3201\exercises\ex1.txt</code>.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>exercises\ex1.txt</code></li>
+<li><code class="hljs inline no-lang" v-pre>.\exercises\ex1.txt</code></li>
+<li><code class="hljs inline no-lang" v-pre>..\te3201\exercises\ex1.txt</code></li>
+<li><code class="hljs inline no-lang" v-pre>..\..\modules\te3201\exercises\ex1.txt</code></li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">another example</span></p></template>
+<p><a href="https://automatetheboringstuff.com/images/000032.jpg" target="_self"><img src="https://automatetheboringstuff.com/images/000032.jpg" alt class="img-fluid"></a></p></panel><p></p></box>
+<p>You can use <code class="hljs inline no-lang" v-pre>os.mkdirs()</code> function to create folders and <code class="hljs inline no-lang" v-pre>os.removedirs()</code> to delete folders.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example code showing how to create/delete directories</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(os.getcwd())
+</span><span>os.makedirs(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
+</span><span>os.chdir(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
+</span><span>print(os.getcwd())
+</span><span>os.chdir(<span class="hljs-string">&#x27;..&#x27;</span>) <span class="hljs-comment"># go to parent dir</span>
+</span><span>print(os.getcwd())
+</span><span>os.chdir(<span class="hljs-string">&#x27;..&#x27;</span>)
+</span><span>os.removedirs(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>C:\repos\nus-te3201\sample-code
+</span><span>C:\repos\nus-te3201\sample-code\ex\w1
+</span><span>C:\repos\nus-te3201\sample-code\ex
+</span></code></pre></td></tr></table></div></box>
+<p><code class="hljs inline no-lang" v-pre>os.path</code> module has many functions that can help with paths. For example, <code class="hljs inline no-lang" v-pre>os.paths.join()</code> function can be used to generate file path that matches the current operating system.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below:</p>
+<pre><code class="hljs python" v-pre><span>cwd = os.getcwd()
+</span><span>print(os.path.join(cwd, <span class="hljs-string">&#x27;ex&#x27;</span>, <span class="hljs-string">&#x27;w2&#x27;</span>))
+</span></code></pre><p>If you run it on a Windows computer in the folder <code class="hljs inline no-lang" v-pre>C:\modules\te3201</code>, it prints <code class="hljs inline no-lang" v-pre>C:\modules\te3201\ex\w2</code>.<br>
+If your run it on a OS-X computer in the folder <code class="hljs inline no-lang" v-pre>/Users/john</code>, it prints <code class="hljs inline no-lang" v-pre>/Users/john/ex/w2</code>.</p></box>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> To ensure that your code can work on any OS, you are advised to use <code class="hljs inline no-lang" v-pre>os.path.join()</code> function instead of hard-coding the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., <code class="hljs inline no-lang" v-pre>\\</code> on Windows and <code class="hljs inline no-lang" v-pre>/</code> on OS-X/Linux</span>path separators</span>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> contrasting hard-coding the separator vs using <code class="hljs inline no-lang" v-pre>os.path.join()</code>:</p>
+<ul>
+<li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (Works only on Windows):<br>
+<code class="hljs inline no-lang" v-pre>os.makedirs('ex\\w1')</code></li>
+<li><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> (Works on both Windows and OS-X):<br>
+<code class="hljs inline no-lang" v-pre>os.makedirs(os.path.join('ex', 'w1'))</code></li></ul></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Create Directory</p></template>
+  <div>
+<h4 id="exercise-create-directory"><span id="exercise-create-directory" class="anchor"></span>Exercise : Create Directory<a class="fa fa-anchor" href="#exercise-create-directory" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the functions given below, to behave as described by their docstrings, so that the code produces the given output.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> os
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_dir</span>(<span class="hljs-params">dir_name</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Create a directory dir_name in the current working directory</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the current directory is c:/foo/, create_dir(&#x27;bar&#x27;) creates </span>
+</span><span><span class="hljs-string">  a c:/foo/bar directory.</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE HERE</span>
+</span><span>  
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">change_dir</span>(<span class="hljs-params">relative_path</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Change to the directory dir_name relative to the current working directory</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the current directory is c:/foo/, change_dir(&#x27;bar&#x27;) changes </span>
+</span><span><span class="hljs-string">  current working directory to c:/foo/bar</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE HERE</span>
+</span><span>  
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_current</span>():</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Print current working directory&quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE HERE </span>
+</span><span>  
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">change_to_parent_dir</span>():</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Change to the parent directry of the current working directory</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the current directory is c:/foo/bar, change_to_parent_dir() changes </span>
+</span><span><span class="hljs-string">  the working directory to c:/foo/</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE HERE</span>
+</span><span>  
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">check</span>(<span class="hljs-params">dir_name</span>):</span>
+</span><span>  create_dir(dir_name)
+</span><span>  print_current()
+</span><span>  change_dir(dir_name)
+</span><span>  print_current()
+</span><span>  change_to_parent_dir()
+</span><span>  print_current()
+</span><span>  
+</span><span>check(<span class="hljs-string">&#x27;foo&#x27;</span>)
+</span><span>check(<span class="hljs-string">&#x27;bar&#x27;</span>)
+</span><span>
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> output when run in <a href="http://REPL.it">REPL.it</a></p>
+<pre><code class="hljs" v-pre><span>/home/runner
+</span><span>/home/runner/foo
+</span><span>/home/runner
+</span><span>/home/runner
+</span><span>/home/runner/bar
+</span><span>/home/runner
+</span></code></pre><p></p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> os
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">create_dir</span>(<span class="hljs-params">dir_name</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Create a directory dir_name in the current working directory</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the current directory is c:/foo/, create_dir(&#x27;bar&#x27;) creates </span>
+</span><span><span class="hljs-string">  a c:/foo/bar directory.</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  os.makedirs(dir_name)
+</span><span>
+</span><span>...
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_current</span>():</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Print current working directory&quot;&quot;&quot;</span>
+</span><span>  print(os.getcwd())
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="reading-from-files"><span id="reading-from-files" class="anchor"></span>Reading from Files<a class="fa fa-anchor" href="#reading-from-files" onclick="event.stopPropagation()"></a></h3>
+<p>This section focuses on reading from text-based files (i.e., not binary files).</p>
+<p><strong>There are three steps to reading files in Python:</strong></p>
+<ul>
+<li>Call the <strong><code class="hljs inline no-lang" v-pre>open()</code></strong> function to receive a <code class="hljs inline no-lang" v-pre>File</code> object.</li>
+<li>Call the <strong><code class="hljs inline no-lang" v-pre>read()</code></strong> method on the <code class="hljs inline no-lang" v-pre>File</code> object to receive file content.</li>
+<li>Close the file by calling the <strong><code class="hljs inline no-lang" v-pre>close()</code></strong> method on the <code class="hljs inline no-lang" v-pre>File</code> object.</li></ul>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to read from a text file.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>file_path = os.path.join(<span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;items.txt&#x27;</span>)
+</span><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-comment"># open in read mode</span>
+</span><span>items = f.read()
+</span><span>print(items)
+</span><span>f.close()
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<p>Output (contents of the <code class="hljs inline no-lang" v-pre>items.txt</code>):</p>
+<pre><code class="hljs" v-pre><span>first line
+</span><span>second line
+</span><span>third line
+</span></code></pre></td></tr></table></div>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The <code class="hljs inline no-lang" v-pre>'r'</code> argument in <code class="hljs inline no-lang" v-pre>open(file_path, 'r')</code> indicates that the file should be opened <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">when a file is open in read mode, you can read from it but cannot write to it</span>in read mode</span>.</p></tip-box>
+<p>It is also possible to read the file content as a list of lines, using the <code class="hljs inline no-lang" v-pre>readlines()</code> method.</p>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to read file content as a list of lines.</p>
+<pre><code class="hljs python" v-pre><span>file_path = os.path.join(<span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;items.txt&#x27;</span>)
+</span><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;r&#x27;</span>)
+</span><span>items = f.readlines()
+</span><span>print(items) <span class="hljs-comment"># print as a list</span>
+</span><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> items: <span class="hljs-comment"># print each item</span>
+</span><span>  print(i.strip()) <span class="hljs-comment"># use strip() to remove linebreak at the end of each line</span>
+</span><span>f.close()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>['first line\n', 'second line\n', 'third line\n']
+</span><span>first line
+</span><span>second line
+</span><span>third line
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how each line ends with a <code class="hljs inline no-lang" v-pre>\n</code> which represents the line break. It can be removed using the <code class="hljs inline no-lang" v-pre>strip()</code> method.</p></tip-box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: File Stats</p></template>
+  <div>
+<h4 id="exercise-file-stats"><span id="exercise-file-stats" class="anchor"></span>Exercise : File Stats<a class="fa fa-anchor" href="#exercise-file-stats" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the functions given below, to behave as described by their docstrings, so that the code produces the given output.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_file_content_as_list</span>(<span class="hljs-params">filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return content of the file as a list of lines</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  The file is expected to be in the current working directory.</span>
+</span><span><span class="hljs-string">  The lines in the list contains trailing line breaks.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the a.txt has two lines &#x27;aaa&#x27; and &#x27;bbb&#x27;, </span>
+</span><span><span class="hljs-string">  get_file_content_as_list(&#x27;a.txt&#x27;) returns [&#x27;aaa\n&#x27;, &#x27;bbb&#x27;]</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">return</span> [] <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_file_stats</span>(<span class="hljs-params">contents</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Given a list of lines, return line count and letter count as a dictionary</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Trailing line breaks (if any) are not counted for letter count.</span>
+</span><span><span class="hljs-string">  Spaces, even trailing spaces, are counted for letter count.</span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  get_stats([&#x27;aaa\n&#x27;, &#x27;bbb&#x27;]) returns {&#x27;lines&#x27;: 2, &#x27;letters&#x27;: 6}</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  stats = []
+</span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
+</span><span>  <span class="hljs-keyword">return</span> stats
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze_file</span>(<span class="hljs-params">filename</span>):</span>
+</span><span>  contents_as_list = get_file_content_as_list(filename)
+</span><span>  print(<span class="hljs-string">&#x27;lines in file:&#x27;</span>, contents_as_list)
+</span><span>  stats = get_file_stats(contents_as_list)
+</span><span>  print(<span class="hljs-string">&#x27;It has&#x27;</span>, stats[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;lines containing&#x27;</span>, stats[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;letters&#x27;</span>)
+</span><span>
+</span><span>analyze_file(<span class="hljs-string">&#x27;file1.txt&#x27;</span>)
+</span><span>analyze_file(<span class="hljs-string">&#x27;file2.txt&#x27;</span>)
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>file1.txt</code> (2 lines, 22 letters):</p>
+<pre><code class="hljs" v-pre><span>aaa bbb ccc
+</span><span>ddd eee fff
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>file2.txt</code> (4 lines, 10 letters -- note: the <mark>last line has a trailing space</mark>, which adds up to 10 letters):</p>
+<pre><code class="hljs" v-pre><span>a
+</span><span>bb
+</span><span>ccc
+</span><span>ddd 
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>lines in file: ['aaa bbb ccc\n', 'ddd eee fff']
+</span><span>It has 2 lines containing 22 letters
+</span><span>lines in file: ['a\n', 'bb\n', 'ccc\n', 'ddd ']
+</span><span>It has 4 lines containing 10 letters
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Tips</span></p></template>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>strip()</code> removes trailing line breaks but also trailing spaces. <code class="hljs inline no-lang" v-pre>replace('\n', '')</code> will remove the trailing line break but will keep the trailing spaces.</li></ul></panel>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_file_content_as_list</span>(<span class="hljs-params">filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return content of the file as a list of lines</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  The file is expected to be in the current working directory.</span>
+</span><span><span class="hljs-string">  The lines in the list contains trailing line breaks.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the a.txt has two lines &#x27;aaa&#x27; and &#x27;bbb&#x27;, </span>
+</span><span><span class="hljs-string">  get_file_content_as_list(&#x27;a.txt&#x27;) returns [&#x27;aaa\n&#x27;, &#x27;bbb&#x27;]</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  f = <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;r&#x27;</span>)
+</span><span>  lines = f.readlines()
+</span><span>  f.close()
+</span><span>  <span class="hljs-keyword">return</span> lines
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="writing-to-files"><span id="writing-to-files" class="anchor"></span>Writing to Files<a class="fa fa-anchor" href="#writing-to-files" onclick="event.stopPropagation()"></a></h3>
+<p><strong>Similar to reading from a file, writing to a file too is a three step process. One main difference is the file needs to be opened in the <em>write mode</em>.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to write to a text file.</p>
+<pre><code class="hljs python" v-pre><span>file_path = os.path.join(<span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;items.txt&#x27;</span>)
+</span><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;w&#x27;</span>)  <span class="hljs-comment"># open in write mode</span>
+</span><span>f.write(<span class="hljs-string">&#x27;first line\n&#x27;</span>)
+</span><span>f.write(<span class="hljs-string">&#x27;second line\n&#x27;</span>)
+</span><span>f.close()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> contents of the <code class="hljs inline no-lang" v-pre>items.txt</code>:</p>
+<pre><code class="hljs" v-pre><span>first line
+</span><span>second line
+</span></code></pre><ul>
+<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The <code class="hljs inline no-lang" v-pre>'w'</code> argument indicates that the file should be opened in write mode.</li>
+<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Unlike the <code class="hljs inline no-lang" v-pre>print()</code> function that prints content in a new line every time, the <code class="hljs inline no-lang" v-pre>write</code> function does not add an automatic line break at the end. You need to add a <code class="hljs inline no-lang" v-pre>\n</code> at each place you want a line break to appear in the file.</li></ul></box>
+<p><strong>To preserve original content and add to it, open the file in <em>append mode</em>.</strong> That is because opening a file in write mode and writing to it results in overwriting the content of the file contained before it was opened.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to append to a file.</p>
+<pre><code class="hljs python" v-pre><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;a&#x27;</span>)  <span class="hljs-comment"># open in append mode</span>
+</span><span>f.write(<span class="hljs-string">&#x27;third line\n&#x27;</span>)
+</span><span>f.close()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> contents of the <code class="hljs inline no-lang" v-pre>items.txt</code>:</p>
+<pre><code class="hljs" v-pre><span>first line
+</span><span>second line
+</span><span>third line
+</span></code></pre></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Add Line Numbers</p></template>
+  <div>
+<h4 id="exercise-add-line-numbers"><span id="exercise-add-line-numbers" class="anchor"></span>Exercise : Add Line Numbers<a class="fa fa-anchor" href="#exercise-add-line-numbers" onclick="event.stopPropagation()"></a></h4>
+<p>Complete the functions given below, to behave as described by their docstrings, so that the code produces the given output. Only one function needs to be modified.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_file_content_as_list</span>(<span class="hljs-params">filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return content of the file as a list of lines</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  The file is expected to be in the current working directory.</span>
+</span><span><span class="hljs-string">  The lines in the list contains trailing line breaks.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  If the a.txt has two lines &#x27;aaa&#x27; and &#x27;bbb&#x27;, </span>
+</span><span><span class="hljs-string">  get_file_content_as_list(&#x27;a.txt&#x27;) returns [&#x27;aaa\n&#x27;, &#x27;bbb&#x27;]</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  f = <span class="hljs-built_in">open</span>(filename, <span class="hljs-string">&#x27;r&#x27;</span>)
+</span><span>  lines = f.readlines()
+</span><span>  f.close()
+</span><span>  <span class="hljs-keyword">return</span> lines
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_with_line_numbers</span>(<span class="hljs-params">lines, filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Write the strings in lines to the file filename, after adding a line number to each line.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  write_with_line_numbers([&#x27;aaa\n&#x27;, &#x27;bbb&#x27;], &#x27;out.txt&#x27;) writes the following content to out.txt</span>
+</span><span><span class="hljs-string">  1. aaa</span>
+</span><span><span class="hljs-string">  2. bbb</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process_file</span>(<span class="hljs-params">sourcefile, targetfile</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Copy the text in sourcefile to targetfile, but also add line numbers to each line.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  Assume a.txt has the following text:</span>
+</span><span><span class="hljs-string">  aaa</span>
+</span><span><span class="hljs-string">  bbb</span>
+</span><span><span class="hljs-string">  process_file(&#x27;a.txt&#x27;, &#x27;b.txt&#x27;) results in b.txt having the following text:</span>
+</span><span><span class="hljs-string">  1. aaa</span>
+</span><span><span class="hljs-string">  2. bbb</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  contents = get_file_content_as_list(sourcefile)
+</span><span>  write_with_line_numbers(contents, targetfile)
+</span><span>  print(get_file_content_as_list(targetfile))
+</span><span>  
+</span><span>process_file(<span class="hljs-string">&#x27;file1a.txt&#x27;</span>, <span class="hljs-string">&#x27;file1b.txt&#x27;</span>)
+</span><span>process_file(<span class="hljs-string">&#x27;file2a.txt&#x27;</span>, <span class="hljs-string">&#x27;file2b.txt&#x27;</span>)
+</span><span>
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>file1a.txt</code>:</p>
+<pre><code class="hljs" v-pre><span>first line
+</span><span>
+</span><span>second line
+</span><span>third line
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>file2a.txt</code>:</p>
+<pre><code class="hljs" v-pre><span>hang in there
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>['1. first line\n', '2. \n', '3. second line\n', '4. third line']
+</span><span>['1. hang in there']
+</span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_with_line_numbers</span>(<span class="hljs-params">lines, filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Write the strings in lines to the file filename, after adding a line number to each line.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  write_with_line_numbers([&#x27;aaa\n&#x27;, &#x27;bbb&#x27;], &#x27;out.txt&#x27;) writes the following content to out.txt</span>
+</span><span><span class="hljs-string">  1. aaa</span>
+</span><span><span class="hljs-string">  2. bbb</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">for</span> n,line <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(lines):
+</span><span>    f.write(<span class="hljs-built_in">str</span>(n+<span class="hljs-number">1</span>) ... ) <span class="hljs-comment"># COMPLETE THIS LINE</span>
+</span><span>  f.close()
+</span><span>
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<div>
+<h3 id="csv-files"><span id="csv-files" class="anchor"></span>CSV files<a class="fa fa-anchor" href="#csv-files" onclick="event.stopPropagation()"></a></h3>
+<p><strong>CSV files are often used as a simple way to save spreadsheet-like data.</strong> Each line in a CSV file represents a row in the spreadsheet, and commas separate the cells in the row. They usually have the <code class="hljs inline no-lang" v-pre>.csv</code> extension and can be opened in spreadsheet programs such as Excel or in any text editor.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the content of a simple CSV file <span class="dimmed">(click <a href="/2021/programming/files-csv/deliveries.csv">here</a> to download a copy)</span> and how it looks like when opened in Excel.</p>
+<table> 
+<tr>
+  <td>
+<pre><code class="hljs" v-pre><span>4/11/2017,Alice Bee,4
+</span><span>5/11/2017,Chris Ding,12
+</span><span>5/11/2017,Brenda Chew,13
+</span><span>6/11/2017,Dan Pillai,5
+</span></code></pre><p></p></td>
+  <td> → </td>
+  <td><p></p>
+<p><a href="/2021/files-csv/images/deliveries.png" target="_self"><img src="/2021/files-csv/images/deliveries.png" alt class="img-fluid"></a></p></td><p></p></tr></table></box>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If a value itself contains a comma <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>Foo, Emily</code></span>, it can be enclosed in double quotes <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>&quot;Foo, Emily&quot;</code></span>, to prevent it being misinterpreted as multiple values.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows how to use double quotes to handle commas inside a value:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>7/11/2017,&quot;Foo, Emily&quot;,5</code> interpreted as three values: <code class="hljs inline no-lang" v-pre>7/11/2017</code> and <code class="hljs inline no-lang" v-pre>Foo, Emily</code> and <code class="hljs inline no-lang" v-pre>5</code></li>
+<li><code class="hljs inline no-lang" v-pre>7/11/2017,Foo, Emily,5</code> interpreted as four values: <code class="hljs inline no-lang" v-pre>7/11/2017</code> and <code class="hljs inline no-lang" v-pre>Foo</code> and <code class="hljs inline no-lang" v-pre> Emily</code> and <code class="hljs inline no-lang" v-pre>5</code></li></ul></box>
+<p><strong>Python has an in-built module named <code class="hljs inline no-lang" v-pre>csv</code> that provides functions to deal with CSV files more conveniently</strong>, although CSV files are text files that can be read/written using normal file access techniques covered earlier. For example, Python provides a way to read a CSV file as a <code class="hljs inline no-lang" v-pre>Reader</code> object that knows how to interpret a CSV file.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below shows how to use the <code class="hljs inline no-lang" v-pre>csv</code> module to read contents of a CSV file named <code class="hljs inline no-lang" v-pre>deliveries.csv</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> csv 
+</span><span>
+</span><span>deliveries_file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;deliveries.csv&#x27;</span>) <span class="hljs-comment"># open file</span>
+</span><span>deliveries_reader = csv.reader(deliveries_file) <span class="hljs-comment"># create a Reader</span>
+</span><span><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> deliveries_reader: <span class="hljs-comment"># access each line using the Reader</span>
+</span><span>  print(row)
+</span><span>deliveries_file.close() <span class="hljs-comment"># close file</span>
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>['4/11/2017', 'Alice Bee', '4']
+</span><span>['5/11/2017', 'Chris Ding', '12']
+</span><span>['5/11/2017', 'Brenda Chew', '13']
+</span><span>['6/11/2017', 'Dan Pillai', '5']
+</span></code></pre><p>As you can see, <code class="hljs inline no-lang" v-pre>Reader</code> object returns content of a line as a list object with the value of each cell as an item in the list. Replacing the line,</p>
+<pre><code class="hljs python" v-pre><span>...
+</span><span>print(row)
+</span><span>...
+</span></code></pre><p>... with the following line,</p>
+<pre><code class="hljs python" v-pre><span>...
+</span><span>print(<span class="hljs-string">&#x27;Date:&#x27;</span>, row[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;\tRecipient:&#x27;</span>, row[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;\tQuantity:&#x27;</span>, row[<span class="hljs-number">2</span>] )
+</span><span>...
+</span></code></pre><p>... will give you the output shown below:</p>
+<pre><code class="hljs" v-pre><span>Date: 4/11/2017 	Recipient: Alice Bee 	Quantity: 4
+</span><span>Date: 5/11/2017 	Recipient: Chris Ding 	Quantity: 12
+</span><span>Date: 5/11/2017 	Recipient: Brenda Chew 	Quantity: 13
+</span><span>Date: 6/11/2017 	Recipient: Dan Pillai 	Quantity: 5
+</span></code></pre></box>
+<p>Note that all values read from a CSV files come as strings. If they are meant to represent other types, you need to convert the string to the correct type first.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example the 3rd value of each row is converted to an <code class="hljs inline no-lang" v-pre>int</code> before adding them up.</p>
+<pre><code class="hljs python" v-pre><span>deliveries_file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;deliveries.csv&#x27;</span>) 
+</span><span>deliveries_reader = csv.reader(deliveries_file) 
+</span><span>total = <span class="hljs-number">0</span>
+</span><span><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> deliveries_reader:
+</span><span>  <span class="hljs-comment"># convert 3rd cell to an int and add to total</span>
+</span><span>  total = total + <span class="hljs-built_in">int</span>(row[<span class="hljs-number">2</span>]) 
+</span><span>
+</span><span>print(<span class="hljs-string">&#x27;Total quantity delivered:&#x27;</span>, total)
+</span><span>deliveries_file.close()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Total quantity delivered: 34
+</span></code></pre></box>
+<p><strong>The <code class="hljs inline no-lang" v-pre>csv</code> module also provide an easy way to write to CSV files, one row at a time, using a <code class="hljs inline no-lang" v-pre>Writer</code> object.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below writes two rows to the <code class="hljs inline no-lang" v-pre>pricelist.csv</code> file.</p>
+<pre><code class="hljs python" v-pre><span>output_file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;pricelist.csv&#x27;</span>, <span class="hljs-string">&#x27;w&#x27;</span>, newline=<span class="hljs-string">&#x27;&#x27;</span>) <span class="hljs-comment"># open file in write mode</span>
+</span><span>output_writer = csv.writer(output_file) <span class="hljs-comment"># get a Writer object</span>
+</span><span>output_writer.writerow([<span class="hljs-string">&#x27;apples&#x27;</span>, <span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;1.5&#x27;</span>, <span class="hljs-string">&#x27;True&#x27;</span>]) <span class="hljs-comment"># write one row</span>
+</span><span>output_writer.writerow([<span class="hljs-string">&#x27;bananas&#x27;</span>, <span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;2.0&#x27;</span>, <span class="hljs-string">&#x27;False&#x27;</span>]) <span class="hljs-comment"># write another row</span>
+</span><span>output_file.close() <span class="hljs-comment"># close file</span>
+</span></code></pre><p>The <code class="hljs inline no-lang" v-pre>pricelist.csv</code> file will now contain:</p>
+<pre><code class="hljs" v-pre><span>apples,1,1.5,True
+</span><span>bananas,3,2.0,False
+</span></code></pre><ul>
+<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can open a file in append mode if you want to append to it instead of overwriting current content. <br> e.g., <code class="hljs inline no-lang" v-pre>output_file = open('pricelist.csv', </code><mark><code class="hljs inline no-lang" v-pre>'a',</code></mark><code class="hljs inline no-lang" v-pre> newline='')</code></li>
+<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The keyword argument <code class="hljs inline no-lang" v-pre>newline=''</code> need to be used when opening a CSV file in Windows. The reasoning behind it is too complicated to explain here.
+</li></ul></box>
+
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Calcluate GST</p></template>
+  <div>
+<h4 id="exercise-calculate-gst"><span id="exercise-calculate-gst" class="anchor"></span>Exercise : Calculate GST<a class="fa fa-anchor" href="#exercise-calculate-gst" onclick="event.stopPropagation()"></a></h4>
+<p>Suppose there is a CSV file in this format:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<p><code class="hljs inline no-lang" v-pre>itemlist1.csv</code>:</p>
+<pre><code class="hljs" v-pre><span>item,price
+</span><span>book,10.0
+</span><span>bag,50.0
+</span><span>&quot;pens, pencils&quot;, 5.0
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>item</th>
+<th>price</th></tr></thead>
+<tbody>
+<tr>
+<td>book</td>
+<td>10.0</td></tr>
+<tr>
+<td>bag</td>
+<td>50.0</td></tr>
+<tr>
+<td>pens, pencils</td>
+<td>5.0</td></tr></tbody></table></div></td></tr></table></div>
+<p>Write a program to calculate GST for each item at 7% and give the value as an additional column. The ouput should be in a new file.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<p><code class="hljs inline no-lang" v-pre>updated_itemlist1.csv</code>:</p>
+<pre><code class="hljs" v-pre><span>item,price,GST
+</span><span>book,10.0,0.7
+</span><span>bag,50.0,3.5
+</span><span>&quot;pens, pencils&quot;, 5.0,0.35
+</span></code></pre></td>
+  <td valign="middle">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>item</th>
+<th>price</th>
+<th>GST</th></tr></thead>
+<tbody>
+<tr>
+<td>book</td>
+<td>10.0</td>
+<td>0.7</td></tr>
+<tr>
+<td>bag</td>
+<td>50.0</td>
+<td>3.5</td></tr>
+<tr>
+<td>pens, pencils</td>
+<td>5.0</td>
+<td>0.35</td></tr></tbody></table></div></td></tr></table></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Python hints</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> csv
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_GST</span>(<span class="hljs-params">source_file, target_file</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Read the data from the CSV file source_file and write </span>
+</span><span><span class="hljs-string">  the data, including the calculated GST values, to the CSV file target_file</span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  input_lines = read_csv_lines(source_file)
+</span><span>  updated_lines = []
+</span><span>  
+</span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
+</span><span>  
+</span><span>  write_to_csv_file(updated_lines, target_file)
+</span><span>   
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read_csv_lines</span>(<span class="hljs-params">filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Return the values in the csv file (specified by the filename) as a list of lists</span>
+</span><span><span class="hljs-string">  each list representing a row of the file.</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example: If the file file1.csv has the following contents,</span>
+</span><span><span class="hljs-string">  item,price</span>
+</span><span><span class="hljs-string">  book,10.0</span>
+</span><span><span class="hljs-string">  read_csv_lines(&#x27;file1.csv&#x27;) returns [[&#x27;item&#x27;, &#x27;price&#x27;][&#x27;book&#x27;, &#x27;10.0&#x27;]]</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">return</span> [] <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>  
+</span><span>  
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_to_csv_file</span>(<span class="hljs-params">lines, filename</span>):</span>
+</span><span>  <span class="hljs-string">&quot;&quot;&quot;Write the given lines (a list of lists) to the CSV file (specified by filename)</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  Example:</span>
+</span><span><span class="hljs-string">  write_to_csv_file([[&#x27;item&#x27;, &#x27;price&#x27;, &#x27;GST&#x27;][&#x27;book&#x27;, &#x27;10.0&#x27;, &#x27;0.7&#x27;]], &#x27;file2.txt&#x27;)</span>
+</span><span><span class="hljs-string">  </span>
+</span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE WITH YOUR CODE</span>
+</span><span>  
+</span><span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process</span>(<span class="hljs-params">source_file, target_file</span>):</span>
+</span><span>  
+</span><span>  calculate_GST(source_file, target_file)
+</span><span>  print(read_csv_lines(target_file))
+</span><span>  
+</span><span>  
+</span><span>process(<span class="hljs-string">&#x27;itemlist1.csv&#x27;</span>, <span class="hljs-string">&#x27;updated_itemlist1.csv&#x27;</span>)
+</span><span>process(<span class="hljs-string">&#x27;itemlist2.csv&#x27;</span>, <span class="hljs-string">&#x27;updated_itemlist2.csv&#x27;</span>)
+</span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;"></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#files">Files&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#file-paths">File Paths&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-create-directory">Exercise : Create Directory&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#reading-from-files">Reading from Files&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-file-stats">Exercise : File Stats&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#writing-to-files">Writing to Files&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-add-line-numbers">Exercise : Add Line Numbers&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#csv-files">CSV files&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-calculate-gst">Exercise : Calculate GST&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

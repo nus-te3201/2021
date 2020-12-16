@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 11 - Programming Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week10"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week11/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week11/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week11/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week11/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week12"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-11-fri-oct-23rd-programming-topics"><span id="week-11-fri-oct-23rd-programming-topics" class="anchor"></span>Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Programming Topics</small></small><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-programming-topics" onclick="event.stopPropagation()"></a></h1>
+<div>
+<div id="week11-toc">
+<ul>
+<li><a href="/2021/programming/chapters/gui.html"><strong>GUIs</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/gui.html#gui-basics">GUI Basics</a></li></ul></li></ul></div>
+<h2 id="guis"><span id="guis" class="anchor"></span><strong>GUIs</strong><a class="fa fa-anchor" href="#guis" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="gui-basics"><span id="gui-basics" class="anchor"></span>GUI Basics<a class="fa fa-anchor" href="#gui-basics" onclick="event.stopPropagation()"></a></h3>
+<box type="warning">
+<p>Writing <em>Graphical User Interfaces (GUIs)</em> is relatively more complicated than writing regular code. Here, we give a very small peek into GUI programming in Python.
+</p></box><p></p>
+<p><strong>There are different frameworks that you can use to write Python graphical user interfaces (GUIs)</strong> <span class="dimmed">e.g., Tkinter, KIVY, PyQT, WxPython</span>. The one we'll be using here is Tkinter, which is a way to use the popular Tk GUI framework <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Tk can be used via other languages too</span>via Python</span>.</p>
+<p><strong>Tkinter comes with the Python installation</strong>; you can start writing Tkinter GUIs right away without having to install anything extra.</p>
+<p>Here is the code for the simplest GUI:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
+</span><span>
+</span><span><span class="hljs-comment"># create a Window</span>
+</span><span>window = Tk()
+</span><span>
+</span><span><span class="hljs-comment"># set Window title</span>
+</span><span>window.title(<span class="hljs-string">&#x27;Hello World!&#x27;</span>)
+</span><span>
+</span><span><span class="hljs-comment"># start the Window</span>
+</span><span>window.mainloop()
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<img src="/2021/programming/gui/images/helloworld.png"></td></tr></table></div>
+<p></p>
+<p><strong>A GUI typically contains <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">elements on a GUI such as buttons, labels, text boxes are called <em>widgets</em></span><em>widgets</em></span>.</strong> The example GUI below not only has some widgets but also has some dynamic behavior i.e., clicking the button increments the displayed number by the amount in the text box.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<img src="/2021/programming/gui/images/increment1.png"></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<img src="/2021/programming/gui/images/increment2.png"></td></tr></table></div>
+<p></p>
+<p>Here's the full code for the above example:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">from</span> tkinter <span class="hljs-keyword">import</span> *
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># create a window</span></span>
+</span><span>window = Tk()
+</span><span>window.title(<span class="hljs-string">&#x27;Increment!&#x27;</span>)
+</span><span>window.geometry(<span class="hljs-string">&#x27;250x150&#x27;</span>)
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># create a label</span></span>
+</span><span>label = Label(window, text=<span class="hljs-string">&#x27;0&#x27;</span>, font=(<span class="hljs-string">&quot;Arial Bold&quot;</span>, <span class="hljs-number">50</span>))
+</span><span>label.grid(column=<span class="hljs-number">0</span>, row=<span class="hljs-number">0</span>)
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># create a text box</span></span>
+</span><span>textbox = Entry(window, width=<span class="hljs-number">2</span>)
+</span><span>textbox.grid(column=<span class="hljs-number">0</span>, row=<span class="hljs-number">1</span>)
+</span><span>textbox.insert(<span class="hljs-number">0</span>, <span class="hljs-string">&#x27;2&#x27;</span>)
+</span><span>
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># define a function to be called when the button is clicked</span></span>
+</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">button_clicked</span>():</span>
+</span><span>    label_value = <span class="hljs-built_in">int</span>(label[<span class="hljs-string">&#x27;text&#x27;</span>])  <span class="hljs-comment"># get int value of the label text</span>
+</span><span>    textbox_value = <span class="hljs-built_in">int</span>(textbox.get())  <span class="hljs-comment"># get int value of the textbox text</span>
+</span><span>    label.configure(text=<span class="hljs-built_in">str</span>(label_value + textbox_value))  <span class="hljs-comment"># set label text to the sum of above two</span>
+</span><span>
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># add a button, bind it to the function</span></span>
+</span><span>button_ok = Button(window, text=<span class="hljs-string">&quot;Add&quot;</span>, command=button_clicked)
+</span><span>button_ok.grid(column=<span class="hljs-number">1</span>, row=<span class="hljs-number">1</span>)
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-comment"># start the window</span></span>
+</span><span>window.mainloop()
+</span></code></pre><p>Let's go through the code to see how it works.</p>
+<ul>
+<li>
+<pre><code style="counter-reset: line 5;" class="hljs python" v-pre><span>window.geometry(<span class="hljs-string">&#x27;250x150&#x27;</span>)
+</span></code></pre><p>Sets the size of the Window.</p><p></p><p></p></li>
+<li>
+<pre><code style="counter-reset: line 8;" class="hljs python" v-pre><span>label = Label(window, text=<span class="hljs-string">&#x27;0&#x27;</span>, font=(<span class="hljs-string">&quot;Arial Bold&quot;</span>, <span class="hljs-number">50</span>))
+</span><span>label.grid(column=<span class="hljs-number">0</span>, row=<span class="hljs-number">0</span>)
+</span></code></pre><ul>
+<li><strong>Creates a <a href="https://www.python-course.eu/tkinter_labels.php"><em>Label</em> widget</a></strong> to show the current total. Sets its value to <code class="hljs inline no-lang" v-pre>0</code>. Sets the font to <code class="hljs inline no-lang" v-pre>Arial Bold</code> and font size to <code class="hljs inline no-lang" v-pre>50</code>.</li>
+<li>There are <a href="https://www.python-course.eu/tkinter_layout_management.php">different ways to define the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., where widgets are placed</span>layout</span> of the GUI</a>. In this case we are using a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">It places the widgets in a 2-dimensional table, which consists of a number of rows and columns. The position of a widget is defined by a row and a column number.</span><em>grid</em> approach</span>. This statement places the label at <code class="hljs inline no-lang" v-pre>0,0</code> cell of the grid.<p></p></li></ul></li>
+<li>
+<pre><code style="counter-reset: line 12;" class="hljs python" v-pre><span>textbox = Entry(window, width=<span class="hljs-number">2</span>)
+</span><span>textbox.grid(column=<span class="hljs-number">0</span>, row=<span class="hljs-number">1</span>)
+</span><span>textbox.insert(<span class="hljs-number">0</span>, <span class="hljs-string">&#x27;2&#x27;</span>)
+</span></code></pre><ul>
+<li><strong>Creates an <a href="https://www.python-course.eu/tkinter_entry_widgets.php"><em>Entry</em> widget</a></strong> for the user to enter the increment size. Sets its width to <code class="hljs inline no-lang" v-pre>2</code> characters.</li>
+<li>Places it at the <code class="hljs inline no-lang" v-pre>0,1</code> cell <span class="dimmed">(i.e., first column, 2nd row)</span>.</li>
+<li>Sets the initial value of the widget to <code class="hljs inline no-lang" v-pre>2</code>. The value it placed at the <code class="hljs inline no-lang" v-pre>0</code>th character position.<p></p></li></ul></li>
+<li>
+<pre><code style="counter-reset: line 18;" class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">button_clicked</span>():</span>
+</span><span>    label_value = <span class="hljs-built_in">int</span>(label[<span class="hljs-string">&#x27;text&#x27;</span>])
+</span><span>    textbox_value = <span class="hljs-built_in">int</span>(textbox.get())
+</span><span>    label.configure(text=<span class="hljs-built_in">str</span>(label_value + textbox_value))
+</span></code></pre><p><strong>Creats a function to be called when the button is clicked.</strong> It will increment the value shown in the label by the amount shown in the entry widget.</p>
+<ul>
+<li>line <span class="dimmed">#20</span>: Reads the <code class="hljs inline no-lang" v-pre>text</code> property of the label widget and converts it to an <code class="hljs inline no-lang" v-pre>int</code></li>
+<li>line <span class="dimmed">#21</span>: Reads the value of the entry widget and converts it to an <code class="hljs inline no-lang" v-pre>int</code></li>
+<li>line <span class="dimmed">#22</span>: Sums the two values, converts the sum into a <code class="hljs inline no-lang" v-pre>str</code>, and sets it as the value of the label widget.<p></p></li></ul></li>
+<li>
+<pre><code style="counter-reset: line 25;" class="hljs python" v-pre><span>button_ok = Button(window, text=<span class="hljs-string">&quot;Add&quot;</span>, command=button_clicked)
+</span><span>button_ok.grid(column=<span class="hljs-number">1</span>, row=<span class="hljs-number">1</span>)
+</span></code></pre><ul>
+<li><strong>Creates a <a href="https://www.python-course.eu/tkinter_buttons.php"><em>Button</em> widget</a></strong> for the user to click. Sets its display text to <code class="hljs inline no-lang" v-pre>Add</code>. Sets its command to the function <code class="hljs inline no-lang" v-pre>button_clicked</code> i.e., when the button is clicked, the specified function will be called.</li>
+<li>Places the button in the <code class="hljs inline no-lang" v-pre>1,1</code> cell of the grid.</li></ul></li></ul>
+<p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
+<ul>
+<li><a href="https://techsore.com/best-python-gui/">Best Python GUI Framework/Toolkits 2019</a></li>
+<li><a href="https://www.python-course.eu/python_tkinter.php">Python Tkinter Course</a> from <a href="http://python-course.eu">python-course.eu</a></li></ul></div></div></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-11-fri-oct-23rd-programming-topics">Week 11 [Fri, Oct 23rd] - Programming Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#guis">GUIs&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#gui-basics">GUI Basics&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

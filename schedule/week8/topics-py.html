@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 8 - Programming Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week7"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week8/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week8/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week9"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-8-fri-oct-2nd-programming-topics"><span id="week-8-fri-oct-2nd-programming-topics" class="anchor"></span>Week 8 <small><small><span class="dimmed">[Fri, Oct 2nd]</span> - Programming Topics</small></small><a class="fa fa-anchor" href="#week-8-fri-oct-2nd-programming-topics" onclick="event.stopPropagation()"></a></h1>
+<div>
+<div id="week8-toc">
+<ul>
+<li>
+<p><a href="/2021/programming/chapters/oop.html#object-oriented-programming"><strong>Object-Oriented Programing - Part I</strong></a></p>
+<ul>
+<li><a href="/2021/programming/chapters/oop.html#classes">Classes</a>
+<br>
+<br></li></ul></li>
+<li>
+<p><a href="/2021/programming/chapters/thirdparty.html#appendix-a-installing-3rd-party-modules"><strong>Installing 3rd Party Modules</strong></a></p></li></ul></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>So far, we have been using simple objects provided by Python (e.g., str, int, bool) and putting them into lists, dictionaries (which are objects themselves), and combinations of the two (e.g., a list of dictionaries) to arrange our data.</p>
+<p><strong>It is now time to learn how to define our own classes</strong> so that we can create objects that match our needs e.g., to use <code class="hljs inline no-lang" v-pre>Task</code> objects to represent a task in Monty, instead of using a list such as <code class="hljs inline python" v-pre>[<span class="hljs-string">&quot;read book&quot;</span>, <span class="hljs-literal">True</span>]</code>.</p>
+<p><mark>Before reading the section below which explains how to write Python classes, read the SE topic <a href="/2021/book/oop/classes/what/index.html">OOP: Basics</a> get a general idea about classes.</mark></p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=c24f1e47-7974-4b75-bf5e-ab7a00a201fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div>
+<h2 id="object-oriented-programming"><span id="object-oriented-programming" class="anchor"></span><strong>Object-Oriented Programming</strong><a class="fa fa-anchor" href="#object-oriented-programming" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="classes"><span id="classes" class="anchor"></span>Classes<a class="fa fa-anchor" href="#classes" onclick="event.stopPropagation()"></a></h3>
+<p><strong>You can define your own <em>classes</em> (i.e., object types)</strong> in Python, which can then be used alongside the built-in classes such as <code class="hljs inline no-lang" v-pre>list</code>, <code class="hljs inline no-lang" v-pre>int</code>, <code class="hljs inline no-lang" v-pre>str</code>, etc.</p>
+<p>The syntax for defining a class:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClassName</span>:</span>
+</span><span>  <span class="hljs-comment"># &lt;statement-1&gt;</span>
+</span><span>  .
+</span><span>  .
+</span><span>  .
+</span><span>  <span class="hljs-comment"># &lt;statement-N&gt;</span>
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> It is customary to use <trigger trigger="click" for="modal:classes-camelcase">Upper Camel Case</trigger> for class names.</p>
+<p>The syntax for <strong>creating (also called <em>instantiating</em>) an object</strong> of the class is <code class="hljs inline no-lang" v-pre>ClassName()</code>.</p>
+<b-modal id="modal:classes-camelcase" hide-footer size modal-class="mb-zoom" ref="modal:classes-camelcase" class="algolia-no-index"><template slot="modal-title">CamelCase</template>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" target="_self"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" alt class="img-fluid"></a><br></p>
+<p>Camel Case refers to a styling text writing compound words or phrases such that each word or abbreviation in the middle of the phrase begins with a capital letter, with no intervening spaces or punctuation e.g., <code class="hljs inline no-lang" v-pre>freshAppleJuice</code>. <em>Upper Camel Case</em> (also called <em>Pascal Case</em>) is similar to Camel Case except the first letter is capitalized as well e.g., <code class="hljs inline no-lang" v-pre>FreshAppleJuice</code>.</p>
+<p><sub>[source: <a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia</a>]</sub></p></b-modal><p></p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below defines a class named <code class="hljs inline no-lang" v-pre>Employee</code>, creates two employee objects, and prints the class/type of each object.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Employee</span>:</span>
+</span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># an empty class</span>
+</span><span>
+</span><span>john = Employee() <span class="hljs-comment"># create an Employee object</span>
+</span><span>print(<span class="hljs-built_in">type</span>(john)) <span class="hljs-comment"># print type of the john object</span>
+</span><span>alice = Employee()
+</span><span>print(<span class="hljs-built_in">type</span>(alice))
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> <span class="dimmed">Note how the type of each object is given as <code class="hljs inline no-lang" v-pre>&lt;class 'Employee'&gt;</code> i.e., a class with name <code class="hljs inline no-lang" v-pre>Employee</code>.</span></p>
+<pre><code class="hljs" v-pre><span>&lt;class 'Employee'&gt;
+</span><span>&lt;class 'Employee'&gt;
+</span></code></pre></box>
+<p><strong>You can add methods to the class by defining them inside the class definition.</strong> Note that a method of a class always take <code class="hljs inline no-lang" v-pre>self</code> as the first parameter. <code class="hljs inline no-lang" v-pre>self</code> refers to the object itself. When calling the method, there is no need to supply an argument for the <code class="hljs inline no-lang" v-pre>self</code> parameter as the target object is implicitly taken as the argument for that parameter.</p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below:</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pen</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span>(<span class="hljs-params">self, text</span>):</span>
+</span><span>    print(<span class="hljs-string">&#x27;writing:&#x27;</span>, text)
+</span><span>    
+</span><span>p = Pen()
+</span><span>p.write(<span class="hljs-string">&#x27;It was a dark night ...&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>writing: It was a dark night ...
+</span></code></pre></td></tr></table></div>
+<p><code class="hljs inline no-lang" v-pre>write(self, text)</code> method is called as <code class="hljs inline no-lang" v-pre>p.write('It was a dark night ...')</code>.<br>
+This is how the arguments are matched with the parameters:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>self</code> → <code class="hljs inline no-lang" v-pre>p</code></li>
+<li><code class="hljs inline no-lang" v-pre>text</code> → <code class="hljs inline no-lang" v-pre>'It was a dark night ...'</code></li></ul></box>
+<p><strong>You can specify how to initialize an object of a class by defining an <code class="hljs inline no-lang" v-pre>__init__()</code> method in the class.</strong> Here are the important things to note about the <code class="hljs inline no-lang" v-pre>__init__()</code> method:</p>
+<ol>
+<li>There are two underscores in front and two behind the word <code class="hljs inline no-lang" v-pre>init</code>.<br>
+<span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <code class="hljs inline no-lang" v-pre>_init_(self)</code><br>
+<span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> <code class="hljs inline no-lang" v-pre>__init__(self)</code></li>
+<li>It will be called every time you create an instance of the class.</li>
+<li>If it has parameters, you need to provide arguments for those parameters when you instantiate an object of that class.</li></ol>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows an <code class="hljs inline no-lang" v-pre>__init__</code> method added to a <code class="hljs inline no-lang" v-pre>Person</code> class.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, name</span>):</span>
+</span><span>    print(name, <span class="hljs-string">&#x27;initialized!&#x27;</span>)
+</span><span>    
+</span><span>tom = Person(<span class="hljs-string">&#x27;Tom&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>Tom initialized!
+</span></code></pre></td></tr></table></div></box>
+<p><strong>An object can have <em>attributes</em></strong> i.e., values attached to the object, just as an object can have methods. Attributes and methods of an object can be accessed using the <code class="hljs inline no-lang" v-pre>objectname.</code> syntax, as you did with objects of built-in classes.</p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows accessing the <code class="hljs inline no-lang" v-pre>get_age()</code> method and the <code class="hljs inline no-lang" v-pre>birthday</code> attribute of an object <code class="hljs inline no-lang" v-pre>x</code>.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(x.get_age())
+</span><span>print(x.birthday)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="hljs" v-pre><span>12
+</span><span>01/11/2000
+</span></code></pre></td></tr></table></div></box>
+<p><strong>The code within a class needs to use the <code class="hljs inline no-lang" v-pre>self.</code> to refer to its own attributes and methods.</strong> Furthermore, the best place to initialize attributes is the <code class="hljs inline no-lang" v-pre>__init__()</code> method.</p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the <code class="hljs inline no-lang" v-pre>__init__()</code> method of the <code class="hljs inline no-lang" v-pre>Book</code> class initializes its two attributes and calls another of its own methods i.e., <code class="hljs inline no-lang" v-pre>self.describe()</code>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Book</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, book_title, book_author</span>):</span>
+</span><span>    self.title = book_title <span class="hljs-comment"># initialize attribute title</span>
+</span><span>    self.author = book_author <span class="hljs-comment"># initialize attribute author</span>
+</span><span>    self.describe() <span class="hljs-comment"># call another method of the class</span>
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-comment"># print attributes of the object</span>
+</span><span>    print(<span class="hljs-string">&#x27;Book info:&#x27;</span>, self.title, <span class="hljs-string">&#x27;/by&#x27;</span>, self.author) 
+</span><span>    
+</span><span>book1 = Book(<span class="hljs-string">&#x27;The Jungle Book&#x27;</span>, <span class="hljs-string">&#x27;Leo Tolstoy&#x27;</span>)
+</span><span>book2 = Book(<span class="hljs-string">&#x27;The Art of War&#x27;</span>, <span class="hljs-string">&#x27;Sun Tzu&#x27;</span>)
+</span><span>
+</span><span>print()  <span class="hljs-comment"># print a blank line</span>
+</span><span>print(<span class="hljs-string">&#x27;Title:&#x27;</span>, book1.title) 
+</span><span>print(<span class="hljs-string">&#x27;Author:&#x27;</span>, book1.author)
+</span><span>book1.describe()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Book info: The Jungle Book /by Leo Tolstoy
+</span><span>Book info: The Art of War /by Sun Tzu
+</span><span>
+</span><span>Title: The Jungle Book
+</span><span>Author: Leo Tolstoy
+</span><span>Book info: The Jungle Book /by Leo Tolstoy
+</span></code></pre></box>
+<p><strong>You can get your classes to work with each other.</strong></p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example we define a <code class="hljs inline no-lang" v-pre>ReadingList</code> class that can store a list of <code class="hljs inline no-lang" v-pre>Book</code> objects.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ReadingList</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, initial_list</span>):</span>
+</span><span>    self.books = initial_list
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_book</span>(<span class="hljs-params">self, book</span>):</span>
+</span><span>    self.books.append(book)
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_authors</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> self.books:
+</span><span>      print(b.author)
+</span><span>      
+</span><span>my_list = ReadingList([book1]) <span class="hljs-comment"># book1 defined in a previous example </span>
+</span><span>my_list.add_book(book2) <span class="hljs-comment"># book2 defined in a previous example</span>
+</span><span>my_list.show_authors()
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Leo Tolstoy
+</span><span>Sun Tzu
+</span></code></pre></box>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Create <code class="hljs inline no-lang" v-pre>StockItem</code> Class</p></template>
+  <div>
+<h4 id="exercise-create-stockitem-class"><span id="exercise-create-stockitem-class" class="anchor"></span>Exercise : Create <code class="hljs inline no-lang" v-pre>StockItem</code> Class<a class="fa fa-anchor" href="#exercise-create-stockitem-class" onclick="event.stopPropagation()"></a></h4>
+<p>Define the <code class="hljs inline no-lang" v-pre>StockItem</code> class missing in the code below so that the code produces the output given on the right.</p>
+<table>
+<tr>
+  <td>
+<pre><code class="hljs python" v-pre><span><span class="hljs-comment"># ADD StockItem class here</span>
+</span><span><span class="hljs-comment"># It should have an attribute: name</span>
+</span><span><span class="hljs-comment"># It should have a method: info() </span>
+</span><span>    
+</span><span>a = StockItem(<span class="hljs-string">&#x27;Apple&#x27;</span>)
+</span><span>print(a.info())
+</span><span>print(a.name)
+</span><span>b = StockItem(<span class="hljs-string">&#x27;Bag of Beans&#x27;</span>)
+</span><span>print(b.info())
+</span><span>b.name = <span class="hljs-string">&#x27;Bananas&#x27;</span>
+</span><span>print(b.info())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom"> 
+<pre><code class="hljs" v-pre><span>Item info: Apple
+</span><span>Apple
+</span><span>Item info: Bag of Beans
+</span><span>Item info: Bananas
+</span></code></pre></td></tr></table>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StockItem</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, name</span>):</span>
+</span><span>    self.name = ...
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-keyword">return</span> ...
+</span></code></pre></panel></div></panel><p></p></div></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Next, let's learn how to install and use third-party libraries</strong> so that you can use even more functionality than those Python provides by default.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=e579523f-89cb-4e39-a315-ab7a00a8bc8b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div>
+<div>
+<h2 id="appendix-a-installing-3rd-party-modules"><span id="appendix-a-installing-3rd-party-modules" class="anchor"></span>Appendix A: Installing 3rd-Party Modules<a class="fa fa-anchor" href="#appendix-a-installing-3rd-party-modules" onclick="event.stopPropagation()"></a></h2>
+<p>In addition to built-in modules you get with Python by default, there are many modules written by others that you can make use of. <strong>You can install third-party modules using Python’s <code class="hljs inline no-lang" v-pre>pip</code> tool</strong>. This tool downloads and installs Python modules onto your computer from <a href="https://pypi.python.org/">https://pypi.python.org/</a> (aka <em>PyPi</em> or <em>Python Package Index</em>).</p>
+<p>First, ensure that you have <code class="hljs inline no-lang" v-pre>pip</code> installed by running this command in a command shell (not Python interpreter shell), which should print out the version of the pip tool you have.</p>
+<pre><code class="hljs" v-pre><span>pip --version
+</span></code></pre><p>After that, to install a third-party module (or <em>packages</em> as they are sometimes called), you can run the <code class="hljs inline no-lang" v-pre>pip install {packagename}</code> command.</p>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The example below shows how to install the <code class="hljs inline no-lang" v-pre>colorama</code> module that allows you to colorize text printed out to the console.</p>
+<pre><code class="hljs bash" v-pre><span>pip install colorama
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Collecting colorama
+</span><span>  Downloading colorama-0.3.9-py2.py3-none-any.whl
+</span><span>Installing collected packages: colorama
+</span><span>Successfully installed colorama-0.3.9
+</span></code></pre><p>After installing colorama, you can import it into your code and use its features to print colorized text.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> colorama
+</span><span>
+</span><span>colorama.init()  <span class="hljs-comment"># one-time initialization</span>
+</span><span>
+</span><span>print(colorama.Fore.YELLOW + <span class="hljs-string">&#x27; Some yellow text&#x27;</span>)
+</span><span>print(colorama.Fore.BLUE + colorama.Back.WHITE + <span class="hljs-string">&#x27; Some blue text in a white background&#x27;</span>)
+</span><span>print(colorama.Style.RESET_ALL + <span class="hljs-string">&#x27; Back to normal now&#x27;</span>)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span><br></p>
+<p><img src="/2021/programming/thirdparty/images/coloramaOutput.png"></p><p></p><p></p></tip-box>
+<tip-box> 
+<p><strong><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some useful third-party modules:</strong></p>
+<ul>
+<li><a href="https://pypi.python.org/pypi/colorama"><code class="hljs inline no-lang" v-pre>colorama</code></a>: For colorizing text printed in the console</li>
+<li><a href="https://pypi.python.org/pypi/selenium"><code class="hljs inline no-lang" v-pre>selenium</code></a>: For automating the Browser</li>
+<li><a href="http://www.magiksys.net/pyzmail/"><code class="hljs inline no-lang" v-pre>pyzmail</code></a>: For sending emails</li>
+<li><a href="https://www.twilio.com/docs/libraries/python"><code class="hljs inline no-lang" v-pre>twilio</code></a>: For sending SMS</li>
+<li><a href="https://pythonhosted.org/PyPDF2/"><code class="hljs inline no-lang" v-pre>PyPDF2</code></a>: For working with PDF files</li>
+<li><a href="https://pypi.python.org/pypi/pyperclip/1.6.0"><code class="hljs inline no-lang" v-pre>pyperclip</code></a>: To access the clipboard of the operating system</li>
+<li><a href="https://pypi.python.org/pypi/dateparser/0.7.0"><code class="hljs inline no-lang" v-pre>dateparser</code></a>: To parse natural language repsentation of dates e.g., <code class="hljs inline no-lang" v-pre>in 2 days</code>, <code class="hljs inline no-lang" v-pre>tomorrow</code></li></ul></tip-box>
+<p><strong><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</strong>:</p>
+<ul>
+<li><a href="https://automatetheboringstuff.com/appendixa/">More about installing 3rd-party modules</a></li></ul>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Print Errors in Red</p></template>
+  <div>
+<h4 id="exercise-print-errors-in-red"><span id="exercise-print-errors-in-red" class="anchor"></span>Exercise : Print Errors In Red<a class="fa fa-anchor" href="#exercise-print-errors-in-red" onclick="event.stopPropagation()"></a></h4>
+<p>Update a CLI program you have written in the past to print error messages in red color.</p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Colorama module does not work in <a href="http://Repl.io">Repl.io</a>, or inside PyCharm. You'll need to run the program in a normal command shell to see the colors.</p></div></panel><p></p></div></div></div></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-8-fri-oct-2nd-programming-topics">Week 8 [Fri, Oct 2nd] - Programming Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#object-oriented-programming">Object-Oriented Programming&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#classes">Classes&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-create-stockitem-class">Exercise : Create StockItem Class&#x200E;</a>
+</nav>
+</nav>
+<a class="nav-link py-1" href="#appendix-a-installing-3rd-party-modules">Appendix A: Installing 3rd-Party Modules&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-print-errors-in-red">Exercise : Print Errors In Red&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

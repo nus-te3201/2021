@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 6 - SE Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week5"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week6/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week6/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week6/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week6/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-6-fri-sep-11th-se-topics"><span id="week-6-fri-sep-11th-se-topics" class="anchor"></span>Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - SE Topics</small></small><a class="fa fa-anchor" href="#week-6-fri-sep-11th-se-topics" onclick="event.stopPropagation()"></a></h1>
+<div></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p></template>
+<span id="toc">
+<ul>
+<li>[<a href="/2021/schedule/week6/topics.html#W6-1">W6.1</a>] <strong>IDEs: Basic Features</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-1a">W6.1a</a>] <span>Implementation → IDEs →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-1b">W6.1b</a>] <span>Implementation → IDEs → Debugging →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p>
+<ul>
+<li>[<a href="/2021/schedule/week6/topics.html#W6-2">W6.2</a>] <strong>Project Mgt: Scheduling and Tracking</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2a">W6.2a</a>] <span>Project Management → Project Planning →
+</span></span> <span>Milestones</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2b">W6.2b</a>] <span>Project Management → Project Planning →
+</span></span> <span>Buffers</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2c">W6.2c</a>] <span>Project Management → Project Planning →
+</span></span> <span>Issue trackers</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2d">W6.2d</a>] <span>Project Management → Project Planning →
+</span></span> <span>Work breakdown structure</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2e">W6.2e</a>] <span>Project Management → Project Planning →
+</span></span> <span>Gantt charts</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2f">W6.2f</a>] <span>Project Management → Project Planning →
+</span></span> <span>PERT charts</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week6/topics.html#W6-2g">W6.2g</a>] <span>Project Management → Teamwork →
+</span></span> <span>Team structures</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p></span></panel>
+<hr style="border: 1px dotted #cccccc;">
+<p><span id="W6-1"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>IDEs are code editors used by programmers.</strong> Read the following sections to learn what IDEs are and what they can do.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-1-ides-basic-features">
+<span slot="header" class="card-title"><div><h2 id="w6-1-ides-basic-features"><span id="w6-1-ides-basic-features" class="anchor"></span><span class="dimmed">[W6.1]</span> <strong>IDEs: Basic Features</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w6-1-ides-basic-features" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W6-1a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/ides/introduction/what" id="implementation-ides-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-ides-what"><span id="implementation-ides-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → IDEs →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-ides-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain IDEs</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Professional software engineers often write code using <em>Integrated Development Environments (IDEs)</em>. IDEs support most development-related work within the same tool</strong> (hence, the term <em>integrated</em>).</p>
+<p>An IDE generally consists of:</p>
+<ul>
+<li>A source code editor that includes features such as syntax coloring, auto-completion, easy code navigation, error highlighting, and code-snippet generation.</li>
+<li>A compiler and/or an interpreter (together with other build automation support) that facilitates the compilation/linking/running/deployment of a program.</li>
+<li>A debugger that allows the developer to execute the program one step at a time to observe the run-time behavior in order to locate bugs.</li>
+<li>Other tools that aid various aspects of coding e.g. support for automated testing, drag-and-drop construction of UI components, version management support, simulation of the target runtime platform, and modeling support.</li></ul>
+<p>Examples of popular IDEs:</p>
+<ul>
+<li>Java: Eclipse, Intellij IDEA, NetBeans</li>
+<li>C#, C++: Visual Studio</li>
+<li>Swift: XCode</li>
+<li>Python: PyCharm</li></ul>
+<p>Some web-based IDEs have appeared in recent times too e.g., Amazon's <a href="https://aws.amazon.com/cloud9/">Cloud9 IDE</a>.</p>
+<p>Some experienced developers, in particular those with a UNIX background, prefer lightweight yet powerful text editors with scripting capabilities (e.g. <a href="http://www.gnu.org/software/emacs/">Emacs</a>) over heavier IDEs.</p></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these are features available in IDEs?</p></template>
+<question>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Compiling</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Syntax error highlighting</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Debugging</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Code navigation <span class="dimmed">e.g., to navigate from a method call to the method implementation</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Simulation <span class="dimmed">e.g., run a mobile app in a simulator</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. Code analysis <span class="dimmed">e.g. to find unreachable code</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> g. Reverse engineering design/documentation <span class="dimmed">e.g. generate diagrams from code</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> h. Visual programming <span class="dimmed">e.g. write programs using ‘drag and drop’ actions instead of typing code</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> i. Syntax assistance <span class="dimmed">e.g., show hints as you type</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> j. Code generation <span class="dimmed">e.g., to generate the code required by simply specifying which component/structure you want to implement</span></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> k. Extension <span class="dimmed">i.e., ability to add more functionality to the IDE using plugins</span></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>All.</p>
+<p>Explanation: While all of these features may not be present in some IDEs, most do have these features in some form or other.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-1b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/ides/debugging/what" id="implementation-ides-debugging-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-ides-debugging-what"><span id="implementation-ides-debugging-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Implementation → IDEs → Debugging →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#implementation-ides-debugging-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain debugging</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
+<ul>
+<li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code class="hljs inline no-lang" v-pre>Exiting process() method, x is 5.347</code>. This approach is not recommended due to these reasons:
+<ul>
+<li>Incurs extra effort when inserting and removing the print statements.</li>
+<li>These extraneous program modifications increase the risk of introducing errors into the program.</li>
+<li>These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version.</li></ul></li>
+<li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:
+<ul>
+<li>It is a difficult, time consuming, and error-prone technique.</li>
+<li>If you didn't spot the error while writing the code, you might not spot the error when reading the code either.</li></ul></li>
+<li><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> -- <strong>Using a debugger</strong>:  A debugger tool allows you to pause the execution, then step through the code one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</li></ul></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pr-1 border-top-0 rounded-bottom" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-up"></span></strong> Follow up notes for the item(s) above:</small></span><br></p>
+<div class="indented">
+<p>You are already familiar with <a href="http://repl.it">repl.it</a>, which can be considered an <em>online IDE</em> with limited functionality. Now it it time for you to try a proper IDE. More about that will be covered under Python topics.</p></div></div></div></div></div>
+<p></p>
+<p><span id="W6-2"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>Next, we cover some basic (almost common sense) guidelines to follow managing a software project (applies to other types of projects too). While these are not strictly necessary for the module project, knowing them can help you communicate better with software project teams.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-2-project-mgt-scheduling-and-tracking">
+<span slot="header" class="card-title"><div><h2 id="w6-2-project-mgt-scheduling-and-tracking"><span id="w6-2-project-mgt-scheduling-and-tracking" class="anchor"></span><span class="dimmed">[W6.2]</span> <strong>Project Mgt: Scheduling and Tracking</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w6-2-project-mgt-scheduling-and-tracking" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W6-2a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/projectPlanning/milestones" id="project-management-project-planning-milestones">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-project-planning-milestones"><span id="project-management-project-planning-milestones" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>Milestones</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-milestones" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain milestones</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>milestone</em> is the end of a stage which indicates significant progress.</strong> You should take into account dependencies and priorities when deciding on the features to be delivered at a certain milestone.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Each intermediate product release is a milestone.</p></box>
+<p>In some projects, it is not practical to have a very detailed plan for the whole project due to the uncertainty and unavailability of required information. In such cases, you can use a high-level plan for the whole project and a detailed plan for the next few milestones.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Milestones for the Minesweeper project, iteration 1</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Day</th>
+<th>Milestones</th></tr></thead>
+<tbody>
+<tr>
+<td>Day 1</td>
+<td>Architecture skeleton completed</td></tr>
+<tr>
+<td>Day 3</td>
+<td>‘new game’ feature implemented</td></tr>
+<tr>
+<td>Day 4</td>
+<td>‘new game’ feature tested</td></tr></tbody></table></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/projectPlanning/buffers" id="project-management-project-planning-buffers">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-project-planning-buffers"><span id="project-management-project-planning-buffers" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>Buffers</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-buffers" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain buffers</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>buffer</em> is time set aside to absorb any unforeseen delays.</strong> It is very important to include buffers in a software project schedule because effort/time estimations for software development are notoriously hard. However, <strong>do not inflate task estimates to create hidden buffers</strong>; have explicit buffers instead. <span class="dimmed">Reason: With explicit buffers, it is easier to detect incorrect effort estimates which can serve as feedback to improve future effort estimates.</span></p>
+<img src="/2021/book/projectPlanning/buffers/images/schedule.png" height="120"></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/projectPlanning/issueTrackers" id="project-management-project-planning-issue-trackers">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-project-planning-issue-trackers"><span id="project-management-project-planning-issue-trackers" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>Issue trackers</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-issue-trackers" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain issue trackers</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Keeping track of project tasks <span class="dimmed">(who is doing what, which tasks are ongoing, which tasks are done etc.)</span> is an essential part of project management. In small projects, it may be possible to keep track of tasks using simple tools such as online spreadsheets or general-purpose/light-weight task tracking tools such as Trello. Bigger projects need more sophisticated task tracking tools.</p>
+<p><strong>Issue trackers (sometimes called bug trackers) are commonly used to track task assignment and progress.</strong> Most online project management software such as GitHub, SourceForge, and BitBucket come with an integrated issue tracker.</p>
+<div v-closeable alt="Jira screenshot">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A screenshot from the Jira Issue tracker software <span class="dimmed">(Jira is part of the BitBucket project management tool suite)</span>:</p>
+<img src="/2021/book/projectPlanning/issueTrackers/images/xjira.png" height="350">
+<p></p></box></div></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/projectPlanning/workBreakdownStructure" id="project-management-project-planning-work-breakdown-structure">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-project-planning-work-breakdown-structure"><span id="project-management-project-planning-work-breakdown-structure" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>Work breakdown structure</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-work-breakdown-structure" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain work breakdown structures</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>Work Breakdown Structure (WBS)</em> depicts information about tasks and their details in terms of subtasks.</strong> When managing projects, it is useful to divide the total work into smaller, well-defined units. Relatively complex tasks can be further split into subtasks. In complex projects, a WBS can also include prerequisite tasks and effort estimates for each task.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The high level tasks for a single iteration of a small project could look like the following:</p>
+<div class="text-monospace">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Task ID</th>
+<th>Task</th>
+<th>Estimated Effort</th>
+<th>Prerequisite Task</th></tr></thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>Analysis</td>
+<td>1 man day</td>
+<td>-</td></tr>
+<tr>
+<td>B</td>
+<td>Design</td>
+<td>2 man day</td>
+<td>A</td></tr>
+<tr>
+<td>C</td>
+<td>Implementation</td>
+<td>4.5 man day</td>
+<td>B</td></tr>
+<tr>
+<td>D</td>
+<td>Testing</td>
+<td>1 man day</td>
+<td>C</td></tr>
+<tr>
+<td>E</td>
+<td>Planning for next version</td>
+<td>1 man day</td>
+<td>D</td></tr></tbody></table></div></div></box>
+<p><strong>The effort is traditionally measured in <em>man hour/day/month</em></strong> i.e. work that can be done by one person in one hour/day/month. The <em>Task ID</em> is a label for easy reference to a task. Simple labeling is suitable for a small project, while a more informative labeling system can be adopted for bigger projects.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example WBS for a game development project.</p>
+ <div class="text-monospace">
+ <table class="table">
+   <tr>
+     <th>Task ID</th>
+     <th>Task</th>
+     <th>Estimated Effort</th>
+     <th>Prerequisite Task</th></tr>
+   <tr>
+     <td>A</td>
+     <td>High level design</td>
+     <td>1 man day</td>
+     <td>-</td></tr>
+   <tr>
+     <td>B</td>
+     <td>
+       Detail design
+       <ol>
+         <li>User Interface</li>
+         <li>Game Logic</li>
+         <li>Persistency Support</li></ol></td>
+     <td>
+       2 man day
+       <ul>
+         <li>0.5 man day</li>
+         <li>1 man day</li>
+         <li>0.5 man day</li></ul></td>
+     <td>A</td></tr>
+   <tr>
+     <td>C</td>
+     <td>
+       Implementation
+       <ol>
+         <li>User Interface</li>
+         <li>Game Logic</li>
+         <li>Persistency Support</li></ol></td>
+     <td>
+       4.5 man day
+       <ul>
+         <li>1.5 man day</li>
+         <li>2 man day</li>
+         <li>1 man day</li></ul></td>
+     <td>
+       <ul>
+         <li>B.1</li>
+         <li>B.2</li>
+         <li>B.3</li></ul></td></tr>
+   <tr>
+     <td>D</td>
+     <td>System Testing</td>
+     <td>1 man day</td>
+     <td>C</td></tr>
+   <tr>
+     <td>E</td>
+     <td>Planning for next version</td>
+     <td>1 man day</td>
+     <td>D</td></tr></table></div></box>
+<p><strong>All tasks should be well-defined.</strong> In particular, it should be clear as to when the task will be considered <em>done</em>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of ill-defined tasks and their better-defined counterparts:</p>
+<div class="text-monospace">
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font></th>
+<th><span class="text-success"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Better </span></th></tr></thead>
+<tbody>
+<tr>
+<td>more coding</td>
+<td>implement component X</td></tr>
+<tr>
+<td>do research on UI testing</td>
+<td>find a suitable tool for testing the UI</td></tr></tbody></table></div></div></box></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which one is not a well-defined task?</p></template>
+<question>
+<p>Which one these project tasks is not well-defined?</p>
+<ul radio-group="9211e" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> a. Implement the 'delete' feature.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> b. Fix bug #12315.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> c. Do some more testing.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> d. Choose a tool to draw UML diagrams.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="9211e" type="radio"> e. Clarify submission requirements with the customer.</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(c)</p>
+<p>Explanation: ‘More testing’ is not well-defined. How much is ‘more’? ‘Test the delete functionality’ is a better-defined task.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2e"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/projectPlanning/ganttCharts" id="project-management-project-planning-gantt-charts" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2e</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="project-management-project-planning-gantt-charts"><span id="project-management-project-planning-gantt-charts" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>Gantt charts</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-gantt-charts" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain Gantt charts</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>Gantt chart</em> is a 2-D bar-chart, drawn as <em>time vs tasks</em></strong> (represented by horizontal bars).</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A sample Gantt chart:</p>
+<img src="/2021/book/projectPlanning/ganttCharts/images/gantt.png" height="360">
+<p></p></box>
+<p>In a Gantt chart, a solid bar represents the main task, which is generally composed of a number of subtasks, shown as grey bars. The diamond shape indicates an important deadline/deliverable/milestone.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2f"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/projectPlanning/pertCharts" id="project-management-project-planning-pert-charts" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2f</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="project-management-project-planning-pert-charts"><span id="project-management-project-planning-pert-charts" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Project Planning →</span></span></small> <strong><span>PERT charts</span></strong><a class="fa fa-anchor" href="#project-management-project-planning-pert-charts" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain PERT charts</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A PERT (Program Evaluation Review Technique) chart uses a graphical technique to show the order/sequence of tasks.</strong> It is based on the simple idea of drawing a directed graph in which:</p>
+<ul>
+<li>Nodes or vertices capture the effort estimations of tasks, and</li>
+<li>Arrows depict the precedence between tasks</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example PERT chart for a simple software project</p>
+<p><img src="/2021/book/projectPlanning/pertCharts/images/pert.jpg" height="320"><br>
+<code class="hljs inline no-lang" v-pre>md</code> = man days</p></box>
+<p>A PERT chart can help determine the following important information:</p>
+<ul>
+<li>The order of tasks. <span class="dimmed">In the example above, <code class="hljs inline no-lang" v-pre>Final Testing</code> cannot begin until all coding of individual subsystems have been completed.</span></li>
+<li>Which tasks can be done concurrently. <span class="dimmed">In the example above, the various subsystem designs can start independently once the <code class="hljs inline no-lang" v-pre>High level design</code> is completed.</span></li>
+<li>The shortest possible completion time. <span class="dimmed">In the example above, there is a path (indicated by the shaded boxes) from start to end that determines the shortest possible completion time.</span></li>
+<li>The Critical Path. <span class="dimmed">In the example above, the shortest possible path is also the critical path</span>.</li></ul>
+<box type="definition" seamless>
+<p><strong>Critical path</strong> is the path in which any delay can directly affect the project duration. It is important to ensure tasks on the critical path are completed on time.</p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2g"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/teamwork/teamStructures" id="project-management-teamwork-team-structures">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2g</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-teamwork-team-structures"><span id="project-management-teamwork-team-structures" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → Teamwork →</span></span></small> <strong><span>Team structures</span></strong><a class="fa fa-anchor" href="#project-management-teamwork-team-structures" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain common team structures</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Given below are three commonly used team structures in software development. Irrespective of the team structure, it is a good practice to assign roles and responsibilities to different team members so that someone is clearly in charge of each aspect of the project. In comparison, the ‘everybody is responsible for everything’ approach can result in more chaos and hence slower progress.</p>
+<img src="/2021/book/teamwork/teamStructures/images/diagram.png" height="150">
+<p></p>
+<p><strong>Egoless team</strong></p>
+<p>In this structure, <strong>every team member is equal in terms of responsibility and accountability</strong>. When any decision is required, consensus must be reached. This team structure is also known as a <em>democratic</em> team structure.  This team structure usually finds a good solution to a relatively hard problem as all team members contribute ideas.</p>
+<p>However, the democratic nature of the team structure bears a higher risk of falling apart due to the absence of an authority figure to manage the team and resolve conflicts.</p>
+<p><strong>Chief programmer team</strong></p>
+<p>Frederick Brooks proposed that software engineers learn from the medical surgical team in an operating room. In such a team, there is always a chief surgeon, assisted by experts in other areas. Similarly, in a chief programmer team structure, <strong>there is a single authoritative figure, the chief programmer</strong>. Major decisions, e.g. system architecture, are made solely by him/her and obeyed by all other team members. The chief programmer directs and coordinates the effort of other team members. When necessary, the chief will be assisted by domain specialists e.g. business specialists, database experts, network technology experts, etc. This allows individual group members to concentrate solely on the areas in which they have sound knowledge and expertise.</p>
+<p>The success of such a team structure relies heavily on the chief programmer. Not only must he/she be a superb technical hand, he/she also needs good managerial skills. Under a suitably qualified leader, such a team structure is known to produce successful work.</p>
+<p><strong>Strict hierarchy team</strong></p>
+<p>At the opposite extreme of an egoless team, a strict hierarchy team has <strong>a strictly defined organization among the team members</strong>, reminiscent of the military or a bureaucratic government. Each team member only works on his/her assigned tasks and reports to a single “boss”.</p>
+<p>In a large, resource-intensive, complex project, this could be a good team structure to reduce communication overhead.</p></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which team structure is the most suitable for a school project?</p></template>
+<question>
+<p>Which team structure is the most suitable for a school project?</p>
+<ul radio-group="8ee7d" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> a. Egoless</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> b. Chief programmer</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> c. Strict hierarchy</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)</p>
+<p>Explanation: Given that students are all peers and beginners, the egoless team structure seems most suitable for a school project. However, since school projects are low-stakes, short-lived, and small, even the other two team structures can be used for them.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-6-fri-sep-11th-se-topics">Week 6 [Fri, Sep 11th] - SE Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#w6-1-ides-basic-features">[W6.1] IDEs: Basic Features &#x200E;</a>
+<a class="nav-link py-1" href="#w6-2-project-mgt-scheduling-and-tracking">[W6.2] Project Mgt: Scheduling and Tracking &#x200E;</a>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

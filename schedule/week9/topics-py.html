@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 9 - Programming Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week8"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week9/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week10"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-9-fri-oct-9th-programming-topics"><span id="week-9-fri-oct-9th-programming-topics" class="anchor"></span>Week 9 <small><small><span class="dimmed">[Fri, Oct 9th]</span> - Programming Topics</small></small><a class="fa fa-anchor" href="#week-9-fri-oct-9th-programming-topics" onclick="event.stopPropagation()"></a></h1>
+<div>
+<div id="week9-toc">
+<ul>
+<li><a href="/2021/programming/chapters/oop.html#object-oriented-programming"><strong>Object-Oriented Programing - Part II</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/oop.html#class-level-members">Class-Level Members</a></li>
+<li><a href="/2021/programming/chapters/oop.html#visibility">Visibility</a></li></ul></li>
+<li><a href="/2021/programming/chapters/organizing.html#appendix-c-organizing-python-code"><strong>Organizing Python Code</strong></a></li></ul></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>This week, we continue to learn more about Python classes.</strong> Let's start with <em>class-level</em> variables and methods.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=37c74051-6261-4d0b-a517-ab8100a9c87d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div>
+<h2 id="object-oriented-programming"><span id="object-oriented-programming" class="anchor"></span><strong>Object-Oriented Programming</strong><a class="fa fa-anchor" href="#object-oriented-programming" onclick="event.stopPropagation()"></a></h2>
+<div>
+<h3 id="class-level-members"><span id="class-level-members" class="anchor"></span>Class-Level Members<a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h3>
+<p><strong>Attributes initialized inside a class but outside of its methods are considered class-level attributes</strong> (attributes are also called <em>data</em> or <em>variables</em>) i.e., they are shared among all objects of that class whereas attributes initialized inside the <code class="hljs inline no-lang" v-pre>__init__()</code> method are instance-level attributes i.e., their values vary from instance-to-instance. A class-level attribute is accessed using the <code class="hljs inline no-lang" v-pre>ClassName.</code> syntax.</p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Student</code> class below has one class-level attribute <code class="hljs inline no-lang" v-pre>total_students</code>. As it is meant to track the total number of <code class="hljs inline no-lang" v-pre>Student</code> objects created, it is incremented in the <code class="hljs inline no-lang" v-pre>__init__()</code> method. <code class="hljs inline no-lang" v-pre>course_count</code> and <code class="hljs inline no-lang" v-pre>name</code> are instance-level attributes.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Student</span>:</span>
+</span><span>  
+</span><span>  <span class="highlighted">total_students = <span class="hljs-number">0</span> <span class="hljs-comment"># class-level attribute</span></span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, student_name</span>):</span>
+</span><span>    self.name = student_name <span class="hljs-comment"># instance-level attribute</span>
+</span><span>    <span class="highlighted">Student.total_students = Student.total_students + <span class="hljs-number">1</span> <span class="hljs-comment"># update class-level attribute</span></span>
+</span><span>    self.course_count = <span class="hljs-number">0</span> <span class="hljs-comment"># instance-level attribute</span>
+</span></code></pre><p>The code below creates two <code class="hljs inline no-lang" v-pre>Student</code> objects. Note how the class-level attribute <code class="hljs inline no-lang" v-pre>total_students</code>,</p>
+<ul>
+<li>can be accessed using the class name (i.e., <code class="hljs inline no-lang" v-pre>Student.total_students</code>) or the object (i.e., <code class="hljs inline no-lang" v-pre>amy.total_students</code>) and both give the same value.</li>
+<li>is shared among all objects and correctly gives <code class="hljs inline no-lang" v-pre>2</code> after another <code class="hljs inline no-lang" v-pre>Student</code> object has been created.</li></ul>
+<pre><code class="hljs python" v-pre><span>amy = Student(<span class="hljs-string">&quot;Amy&quot;</span>)
+</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students) <span class="hljs-comment"># access via class name</span></span>
+</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, amy.total_students) <span class="hljs-comment"># access via object</span>
+</span><span>print(<span class="hljs-string">&#x27;Amy course count:&#x27;</span>, amy.course_count)
+</span><span>
+</span><span>ben = Student(<span class="hljs-string">&quot;Ben&quot;</span>)
+</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students)</span>
+</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, ben.total_students) 
+</span><span>print(<span class="hljs-string">&#x27;Ben course count:&#x27;</span>, ben.course_count)
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="no-line-numbers hljs" v-pre><span>total students: 1
+</span><span>total students: 1
+</span><span>Amy course count: 0
+</span><span>total students: 2
+</span><span>total students: 2
+</span><span>Ben course count: 0
+</span></code></pre></box>
+<p><strong>It is possible to have class-level methods too.</strong> A class-level method definition should be annotated using a <code class="hljs inline no-lang" v-pre>@classmethod</code> annotation. In addition, <strong>a class-level method's first parameter should be <code class="hljs inline no-lang" v-pre>cls</code> which represents the class itself</strong> <span class="dimmed">(similar to instance level methods' first parameter needing to be <code class="hljs inline no-lang" v-pre>self</code>)</span>.</p>
+<box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Printer</code> class below has a class-level attribute <code class="hljs inline no-lang" v-pre>enabled</code> and class-level methods <code class="hljs inline no-lang" v-pre>enable()</code> and <code class="hljs inline no-lang" v-pre>disable()</code>.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Printer</span>:</span>
+</span><span>
+</span><span>  <span class="highlighted">enabled = <span class="hljs-literal">True</span></span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, new_text</span>):</span>
+</span><span>    self.text = new_text
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_text</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-keyword">if</span> Printer.enabled:
+</span><span>      print(self.text)
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
+</span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disable</span>(<span class="hljs-params">cls</span>):</span></span>
+</span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">False</span>  <span class="hljs-comment"># cls here is same as Printer</span></span>
+</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers disabled&#x27;</span>)</span>
+</span><span>
+</span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
+</span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">enable</span>(<span class="hljs-params">cls</span>):</span></span>
+</span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">True</span></span>
+</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers enabled&#x27;</span>)</span>
+</span></code></pre><p>The code below uses the class-level method to enable/disable printing for all <code class="hljs inline no-lang" v-pre>Printer</code> objects.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>Printer.disable()
+</span><span>p1 = Printer(<span class="hljs-string">&#x27;blah blah&#x27;</span>)
+</span><span>p2 = Printer(<span class="hljs-string">&#x27;yak yak&#x27;</span>)
+</span><span>p1.print_text() <span class="hljs-comment"># will not print</span>
+</span><span>p2.print_text() <span class="hljs-comment"># will not print</span>
+</span><span>
+</span><span>Printer.enable() 
+</span><span>p1.print_text()
+</span><span>p2.print_text()
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>All Printers disabled
+</span><span>All Printers enabled
+</span><span>blah blah
+</span><span>yak yak
+</span></code></pre></td></tr></table></div>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> As you can see from the above code, class-level methods can be called even before any objects of that class have been created.
+</p></box><p></p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Add Class-Level Members to <code class="hljs inline no-lang" v-pre>Subject</code> Class</p></template>
+  <div>
+<h4 id="exercise-add-class-level-members-to-subject-class"><span id="exercise-add-class-level-members-to-subject-class" class="anchor"></span>Exercise : Add Class Level Members to <code class="hljs inline no-lang" v-pre>Subject</code> class<a class="fa fa-anchor" href="#exercise-add-class-level-members-to-subject-class" onclick="event.stopPropagation()"></a></h4>
+<p>Add the following members to the <code class="hljs inline no-lang" v-pre>Subject</code> class in the code below so that the code produces the output given on the right.</p>
+<ul>
+<li>a class-level attribute <code class="hljs inline no-lang" v-pre>total</code> (type: <code class="hljs inline no-lang" v-pre>int</code>) that tracks the total number of <code class="hljs inline no-lang" v-pre>Subject</code> objects created</li>
+<li>a class-level method <code class="hljs inline no-lang" v-pre>limit_reached(limit)</code> that returns <code class="hljs inline no-lang" v-pre>True</code> (type: <code class="hljs inline no-lang" v-pre>bool</code>) if the <code class="hljs inline no-lang" v-pre>total</code> is greater than or equal to the specified <code class="hljs inline no-lang" v-pre>limit</code>.</li></ul>
+<table>
+<tr>
+  <td>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subject</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, code, name</span>):</span>
+</span><span>    self.name = name
+</span><span>    self.code = code
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    
+</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span>s1 = Subject(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>) 
+</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span>print(Subject.limit_reached(<span class="hljs-number">1</span>))
+</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span>s2 = Subject(<span class="hljs-string">&#x27;TEE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>)
+</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span>print(Subject.limit_reached(<span class="hljs-number">3</span>))
+</span><span>Subject.total = <span class="hljs-number">100</span>
+</span><span>print(Subject.limit_reached(<span class="hljs-number">100</span>))
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom"> 
+<pre><code class="hljs" v-pre><span>total subjects: 0
+</span><span>total subjects: 1
+</span><span>True
+</span><span>False
+</span><span>total subjects: 2
+</span><span>True
+</span><span>False
+</span><span>True
+</span></code></pre></td></tr></table>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution and hints</span></p></template>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Subject</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-comment"># ADD `total` attribute here</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, code, name</span>):</span>
+</span><span>    self.name = name
+</span><span>    self.code = code
+</span><span>    Subject.total = Subject.total + <span class="hljs-number">1</span> <span class="hljs-comment"># Note this line</span>
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    
+</span><span><span class="hljs-meta">  @classmethod</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">limit_reached</span>(<span class="hljs-params">cls, limit</span>):</span>
+</span><span>    ... <span class="hljs-comment"># ADD implementation</span>
+</span></code></pre></panel></div></panel><p></p></div></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>Next, let us learn to to control access to variables and methods of an object.</p></div></div></div>
+<div>
+<h3 id="visibility"><span id="visibility" class="anchor"></span>Visibility<a class="fa fa-anchor" href="#visibility" onclick="event.stopPropagation()"></a></h3>
+<p>The <em>encapsulation</em> aspect of OOP requires that an object should only allow controlled access to its members. For example, it should be able to make some of its attributes visible to other object while keeping others hidden. As a consequence of Python's aim to be a very flexible and versatile language, it does not enforce encapsulation as strictly as some other OOP languages. However, it recommends some conventions, if followed, will maintain a reasonable level of encapsulation in objects.</p>
+<ul>
+<li>
+<p><strong><em>Private</em> members: An attribute/method whose name has at least two leading underscores and at most one trailing underscore (e.g., <code class="hljs inline no-lang" v-pre>__foo</code>, <code class="hljs inline no-lang" v-pre>__bar_()</code>) cannot be accessed using its name by code outside the class.</strong></p></li>
+<li>
+<p><strong><em>Protected</em> members: a name prefixed with a single underscore (e.g. <code class="hljs inline no-lang" v-pre>_foo</code>, <code class="hljs inline no-lang" v-pre>_bar()</code>) are -- by convention -- should not be accessed by code outside of the owner class</strong> as they are not meant to be part of the object's public interface.</p></li>
+<li>
+<p><strong><em>Public</em> members: other members are considered public and OK to be accessed by code outside the class.</strong></p></li></ul>
+<tip-box> 
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Account</code> class below.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span>:</span>
+</span><span>  currency = <span class="hljs-string">&#x27;$&#x27;</span>   <span class="hljs-comment"># public</span>
+</span><span>  _min = <span class="hljs-number">10.</span>       <span class="hljs-comment"># protected</span>
+</span><span>  __max = <span class="hljs-number">1000.0</span>   <span class="hljs-comment"># private</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, person, amount</span>):</span>
+</span><span>    self.__balance = amount <span class="hljs-comment"># private</span>
+</span><span>    self._owner = person    <span class="hljs-comment"># protected</span>
+</span><span>    self.status = <span class="hljs-string">&#x27;OK&#x27;</span>      <span class="hljs-comment"># public</span>
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_info</span>(<span class="hljs-params">self</span>):</span>       <span class="hljs-comment"># public</span>
+</span><span>    <span class="hljs-keyword">return</span> [self.status]
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_loan_limit</span>(<span class="hljs-params">self</span>):</span> <span class="hljs-comment"># public</span>
+</span><span>    <span class="hljs-keyword">return</span> self.__get_income()*<span class="hljs-number">5</span>
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_get_more_info</span>(<span class="hljs-params">self</span>):</span> <span class="hljs-comment"># protected</span>
+</span><span>    <span class="hljs-keyword">return</span> self.get_info() + [self._owner]
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__get_income</span>(<span class="hljs-params">self</span>):</span>   <span class="hljs-comment"># private</span>
+</span><span>    <span class="hljs-keyword">return</span> self.__balance + <span class="hljs-number">100</span>
+</span></code></pre><p><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> The following code works fine because the members being accessed are public.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;currency:&#x27;</span>, Account.currency)
+</span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
+</span><span>print(<span class="hljs-string">&#x27;status:&#x27;</span>, a.status)
+</span><span>print(<span class="hljs-string">&#x27;info:&#x27;</span>, a.get_info())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>currency: $
+</span><span>status: OK
+</span><span>info: ['OK']
+</span></code></pre></td></tr></table></div>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> The following code works too. But they access protected members which is <mark>not a recommended practice</mark>.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;minimum allowed:&#x27;</span>, Account._min) 
+</span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
+</span><span>print(<span class="hljs-string">&#x27;owner:&#x27;</span>, a._owner) 
+</span><span>print(<span class="hljs-string">&#x27;more info:&#x27;</span>, a._get_more_info())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>minimum allowed: 10.0
+</span><span>owner: Adam
+</span><span>more info: ['OK', 'Adam']
+</span></code></pre></td></tr></table></div>
+<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> The following code will not work because they try to access private members.</p>
+<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;maximum allowed:&#x27;</span>, Account.__max) <span class="hljs-comment"># error</span>
+</span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
+</span><span>print(<span class="hljs-string">&#x27;balance:&#x27;</span>, a.__balance) <span class="hljs-comment"># error</span>
+</span><span>print(<span class="hljs-string">&#x27;income:&#x27;</span>, a.__get_income()) <span class="hljs-comment"># error</span>
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="no-line-numbers hljs" v-pre><span>AttributeError: type object 'Account' has no attribute '__max'...
+</span><span>AttributeError: 'Account' object has no attribute '__balance'...
+</span><span>AttributeError: 'Account' object has no attribute '__get_income'...
+</span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although this example does not have class-level methods, note that the same visibility conventions apply to them as well.
+</p></tip-box><p></p>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Change Visibility of <code class="hljs inline no-lang" v-pre>School</code> Class Members</p></template>
+  <div>
+<h4 id="exercise-change-visibility-of-school-class-members"><span id="exercise-change-visibility-of-school-class-members" class="anchor"></span>Exercise : Change Visibility of <code class="hljs inline no-lang" v-pre>School</code> Class Members<a class="fa fa-anchor" href="#exercise-change-visibility-of-school-class-members" onclick="event.stopPropagation()"></a></h4>
+<p>Change the visibility of the members of the <code class="hljs inline no-lang" v-pre>School</code> class from private to public in the code below so that the code produces the output given on the right.</p>
+<table>
+<tr>
+  <td>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">School</span>:</span>
+</span><span>  
+</span><span>  __target = <span class="hljs-number">0.99</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, capital</span>):</span>
+</span><span>    self.__budget = capital
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__max_expenditure</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-keyword">return</span> self.__budget * School.__target
+</span><span>    
+</span><span>print(School.__target)
+</span><span>s = School(<span class="hljs-number">100000</span>)
+</span><span>print(s.__budget)
+</span><span>print(s.__max_expenditure())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom"> 
+<pre><code class="no-line-numbers hljs" v-pre><span>0.99
+</span><span>100000
+</span><span>99000.0
+</span></code></pre></td></tr></table>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Hint</span></p></template>
+<p>Remove the leading underscores of the member names e.g., <code class="hljs inline no-lang" v-pre>__target</code> → <code class="hljs inline no-lang" v-pre>target</code></p></panel></div></panel><p></p></div></div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>As your project code gets bigger, it becomes cumbersome to have all code in one file. <strong>Let's learn how to organize Python code into files and folders.</strong></p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=bb9cc539-a07b-4d66-ad2b-ab82009e5eed&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div>
+<div>
+<h2 id="appendix-c-organizing-python-code"><span id="appendix-c-organizing-python-code" class="anchor"></span>Appendix C: Organizing Python Code<a class="fa fa-anchor" href="#appendix-c-organizing-python-code" onclick="event.stopPropagation()"></a></h2>
+<p><strong>You can organize the code as multiple files.</strong> Python considers each file as a <em>module</em>. To use a function/class in one file from another, you need to <code class="hljs inline no-lang" v-pre>import</code> it first.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following two files residing in the same directory.</p>
+<p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
+</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> student
+</span><span>
+</span><span>student.describe(<span class="hljs-string">&#x27;Adam&#x27;</span>)
+</span></code></pre><p>Notice how the <code class="hljs inline no-lang" v-pre>course.py</code> imports the <code class="hljs inline no-lang" v-pre>student</code> module and uses the <code class="hljs inline no-lang" v-pre>student.describe</code> function defined in the <code class="hljs inline no-lang" v-pre>student.py</code> file.</p></box>
+<p><strong>You can organize files into sub-directories too.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following two files.</p>
+<p><code class="hljs inline no-lang" v-pre>[project_root]/misc/print_utils/misc.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_as_list</span>(<span class="hljs-params">text</span>):</span>
+</span><span>    print(<span class="hljs-built_in">list</span>(text))
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">from</span> utils.print_utils <span class="hljs-keyword">import</span> misc 
+</span><span>
+</span><span>misc.print_as_list(<span class="hljs-string">&#x27;Adam&#x27;</span>)
+</span></code></pre><p>Notice how the <code class="hljs inline no-lang" v-pre>import</code> statement uses a slightly different syntax and uses <code class="hljs inline no-lang" v-pre>.</code> to indicate directory nesting (i.e., <code class="hljs inline no-lang" v-pre>misc/print_utils</code> → <code class="hljs inline no-lang" v-pre>misc.print_utils</code>). In fact, there are <a href="https://docs.python.org/3/tutorial/modules.html">other variations of the <code class="hljs inline no-lang" v-pre>import</code> syntax</a>.</p></box>
+<p>When you import a module, Python will interpret and execute any code in it.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this <code class="hljs inline no-lang" v-pre>student</code> module being imported into the <code class="hljs inline no-lang" v-pre>course</code> module.</p>
+<p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
+</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>
+</span><span>describe(<span class="hljs-string">&#x27;Betty&#x27;</span>)
+</span></code></pre><div>
+<table>
+<tr>
+  <td valign="top">
+<p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> student
+</span><span>
+</span><span>student.describe(<span class="hljs-string">&#x27;Adam&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>Betty is a student
+</span><span>Adam is a student
+</span></code></pre></td></tr></table></div>
+<p>Notice how the output contains <code class="hljs inline no-lang" v-pre>Betty is a student</code>. That is because the line <code class="hljs inline no-lang" v-pre>describe('Betty')</code> in <code class="hljs inline no-lang" v-pre>student.py</code> is being executed as the <code class="hljs inline no-lang" v-pre>student</code> module is being imported.</p></box>
+<p>To prevent execution of statements in an imported module, nest such statements under a <code class="hljs inline python" v-pre><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:</code> block.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code class="hljs inline no-lang" v-pre>student</code> module can be executed to get the following output.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
+</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>
+</span><span><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
+</span><span>    describe(<span class="hljs-string">&#x27;Betty&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>Betty is a student
+</span></code></pre></td></tr></table></div>
+<p>When the <code class="hljs inline no-lang" v-pre>student</code> module is imported to another module, <code class="hljs inline no-lang" v-pre>describe('Betty')</code> line is no longer executed.</p>
+<div>
+<table>
+<tr>
+  <td valign="top">
+<p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> student
+</span><span>
+</span><span>student.describe(<span class="hljs-string">&#x27;Adam&#x27;</span>)
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom">
+<pre><code class="no-line-numbers hljs" v-pre><span>Adam is a student
+</span></code></pre></td></tr></table></div></box></div></div></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-9-fri-oct-9th-programming-topics">Week 9 [Fri, Oct 9th] - Programming Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#object-oriented-programming">Object-Oriented Programming&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#class-level-members">Class-Level Members&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-add-class-level-members-to-subject-class">Exercise : Add Class Level Members to Subject class&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#visibility">Visibility&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#exercise-change-visibility-of-school-class-members">Exercise : Change Visibility of School Class Members&#x200E;</a>
+</nav>
+</nav>
+<a class="nav-link py-1" href="#appendix-c-organizing-python-code">Appendix C: Organizing Python Code&#x200E;</a>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

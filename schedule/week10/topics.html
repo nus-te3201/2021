@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 10 - SE Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week9"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week10/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week10/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week10/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week10/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week11"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-10-fri-oct-16th-se-topics"><span id="week-10-fri-oct-16th-se-topics" class="anchor"></span>Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - SE Topics</small></small><a class="fa fa-anchor" href="#week-10-fri-oct-16th-se-topics" onclick="event.stopPropagation()"></a></h1>
+<div></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p></template>
+<span id="toc">
+<ul>
+<li>[<a href="/2021/schedule/week10/topics.html#W10-1">W10.1</a>] <strong>OOP and UML Class/Object Diagrams: Inheritance</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-1a">W10.1a</a>] <span>Paradigms → OOP → Inheritance →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-1b">W10.1b</a>] <span>Tools → UML → Class Diagrams → Inheritance →
+</span></span> <span>Inheritance</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-1c">W10.1c</a>] <span>Paradigms → OOP → Inheritance →
+</span></span> <span>Overloading</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-1d">W10.1d</a>] <span>Paradigms → OOP → Inheritance →
+</span></span> <span>Overriding</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<ul>
+<li>[<a href="/2021/schedule/week10/topics.html#W10-2">W10.2</a>] <strong>UML Class/Object Diagrams: Composition, Aggregation, Dependencies</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2a">W10.2a</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Composition</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2b">W10.2b</a>] <span>Tools → UML → Class Diagrams → Composition →
+</span></span> <span>Composition</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2c">W10.2c</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Aggregation</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2d">W10.2d</a>] <span>Tools → UML → Class Diagrams → Aggregation →
+</span></span> <span>Aggregation</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2e">W10.2e</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Dependencies</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-2f">W10.2f</a>] <span>Tools → UML → Class Diagrams → Dependencies →
+</span></span> <span>Dependencies</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p>
+<ul>
+<li>[<a href="/2021/schedule/week10/topics.html#W10-3">W10.3</a>] <strong>Types of Testing</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<p>   <strong>Developer Testing</strong></p>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3a">W10.3a</a>] <span>Quality Assurance → Testing → Developer Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3b">W10.3b</a>] <span>Quality Assurance → Testing → Developer Testing →
+</span></span> <span>Why</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li></ul>
+<p>   <strong>Unit Testing</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3c">W10.3c</a>] <span>Quality Assurance → Testing → Unit Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<p>   <strong>Integration Testing</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3d">W10.3d</a>] <span>Quality Assurance → Testing → Integration Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<p>   <strong>System Testing</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3e">W10.3e</a>] <span>Quality Assurance → Testing → System Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<p>   <strong>Acceptance Testing</strong></p>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3f">W10.3f</a>] <span>Quality Assurance → Testing → Acceptance Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3g">W10.3g</a>] <span>Quality Assurance → Testing → Acceptance Testing →
+</span></span> <span>Acceptance versus system testing</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
+<p>   <strong>Alpha/Beta Testing</strong></p>
+<ul>
+<li><span class="dimmed">[<a href="/2021/schedule/week10/topics.html#W10-3h">W10.3h</a>] <span>Quality Assurance → Testing → Alpha/Beta Testing →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul></small></div>
+<p></p></span></panel>
+<hr style="border: 1px dotted #cccccc;">
+<p><span id="W10-1"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Let's learn the important OOP concept of <em>inheritance</em></strong> this week, together with how to show it in UML class diagrams.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=1c82c417-5378-4b7c-84c0-ab88009b476b&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w10-1-oop-and-uml-class-object-diagrams-inheritance">
+<span slot="header" class="card-title"><div><h2 id="w10-1-oop-and-uml-class-object-diagrams-inheritance"><span id="w10-1-oop-and-uml-class-object-diagrams-inheritance" class="anchor"></span><span class="dimmed">[W10.1]</span> <strong>OOP and UML Class/Object Diagrams: Inheritance</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w10-1-oop-and-uml-class-object-diagrams-inheritance" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W10-1a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/inheritance/what" id="paradigms-oop-inheritance-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.1a</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-inheritance-what"><span id="paradigms-oop-inheritance-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Inheritance →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#paradigms-oop-inheritance-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of inheritance</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>The OOP concept <em>Inheritance</em> allows you to define a new class based on an existing class.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> For example, you can use inheritance to define an <code class="hljs inline no-lang" v-pre>EvaluationReport</code> class based on an existing <code class="hljs inline no-lang" v-pre>Report</code> class so that the <code class="hljs inline no-lang" v-pre>EvaluationReport</code> class does not have to duplicate data/behaviors that are already implemented in the <code class="hljs inline no-lang" v-pre>Report</code> class. The <code class="hljs inline no-lang" v-pre>EvaluationReport</code> can inherit the <code class="hljs inline no-lang" v-pre>wordCount</code> attribute and the <code class="hljs inline no-lang" v-pre>print()</code> method from the <em>base class</em> <code class="hljs inline no-lang" v-pre>Report</code>.</p></box>
+<ul>
+<li>Other names for Base class: <em>Parent</em> class, <em>Superclass</em></li>
+<li>Other names for Derived class: <em>Child</em> class, <em>Subclass</em>, <em>Extended</em> class</li></ul>
+<p><strong>A superclass is said to be <em>more general</em> than the subclass.</strong> Conversely, a subclass is said to be more <em>specialized</em> than the superclass.</p>
+<p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>Man</code> and <code class="hljs inline no-lang" v-pre>Woman</code> behave the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code class="hljs inline no-lang" v-pre>Person</code> because of the need to distinguish between <code class="hljs inline no-lang" v-pre>Man</code> and <code class="hljs inline no-lang" v-pre>Woman</code> for certain other things. A solution is to add the <code class="hljs inline no-lang" v-pre>Person</code> class as a superclass (to contain the code common to men and women) and let <code class="hljs inline no-lang" v-pre>Man</code> and <code class="hljs inline no-lang" v-pre>Woman</code> inherit from <code class="hljs inline no-lang" v-pre>Person</code> class.</p></box>
+<p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
+<p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</span></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> To continue the previous example,</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>Woman</code> <em>is a</em> <code class="hljs inline no-lang" v-pre>Person</code></li>
+<li><code class="hljs inline no-lang" v-pre>Man</code> <em>is a</em> <code class="hljs inline no-lang" v-pre>Person</code></li></ul></box>
+<p><strong>Inheritance relationships through a chain of classes can result in inheritance <em>hierarchies</em> (aka inheritance <em>trees</em>).</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Two inheritance hierarchies/trees are given below. <span class="dimmed">Note that the triangle points to the parent class.</span> Observe how the <code class="hljs inline no-lang" v-pre>Parrot</code> <em>is a</em> <code class="hljs inline no-lang" v-pre>Bird</code> as well as it <em>is an</em> <code class="hljs inline no-lang" v-pre>Animal</code>.</p>
+<img src="/2021/book/oop/inheritance/what/images/inheritanceTreesExamples.png" width="500">
+<p></p></box>
+<p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>Honey</code> class inherits from the <code class="hljs inline no-lang" v-pre>Food</code> class <em>and</em> the <code class="hljs inline no-lang" v-pre>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>. Similarly, a <code class="hljs inline no-lang" v-pre>Car</code> is a <code class="hljs inline no-lang" v-pre>Vehicle</code>, an <code class="hljs inline no-lang" v-pre>Asset</code> and a <code class="hljs inline no-lang" v-pre>Liability</code>.</p>
+<img src="/2021/book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></box></div>
+<div>
+ <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statements are correct?</p></template>
+<question>
+<p>Which of these are correct?</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Superclass is more general than the subclass.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Child class is more specialized than the parent class.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A class can inherit behavior from its ancestor classes (ancestor classes = classes above it in the inheritance hierarchy).</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the superclass will not affect its subclasses.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a) (b) (c) (d)</p>
+<p>Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-1b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/classInheritance/what" id="tools-uml-class-diagrams-inheritance-inheritance">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.1b</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-inheritance-inheritance"><span id="tools-uml-class-diagrams-inheritance-inheritance" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Inheritance →</span></span></small> <strong><span>Inheritance</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-inheritance-inheritance" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret class inheritance in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>You can use a triangle and a solid line (not to be confused with an arrow) to indicate class inheritance.</p>
+<p>Notation:</p>
+<img src="/2021/book/uml/classDiagrams/classInheritance/what/images/notation.png" height="120">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples: The <code class="hljs inline no-lang" v-pre>Car</code> class <em>inherits</em> from the <code class="hljs inline no-lang" v-pre>Vehicle</code> class. The <code class="hljs inline no-lang" v-pre>Cat</code> and <code class="hljs inline no-lang" v-pre>Dog</code> classes <em>inherit</em> from the <code class="hljs inline no-lang" v-pre>Pet</code> class.</p>
+<img src="/2021/book/uml/classDiagrams/classInheritance/what/images/examples.png" height="120">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-1c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/inheritance/overloading" id="paradigms-oop-inheritance-overloading">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.1c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-inheritance-overloading"><span id="paradigms-oop-inheritance-overloading" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Inheritance →</span></span></small> <strong><span>Overloading</span></strong><a class="fa fa-anchor" href="#paradigms-oop-inheritance-overloading" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain method overloading</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+<box type="definition" seamless>
+<div>
+<p><strong>Type signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Type Signature</th></tr></thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>int add(int X, int Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, int)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void add(int A, int B)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, int)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void m(int X, double Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, double)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void m(double X, int Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(double, int)</code></td></tr></tbody></table></div></box></div></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code class="hljs inline no-lang" v-pre>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code class="hljs inline no-lang" v-pre>(String)</code> and <code class="hljs inline no-lang" v-pre>(int)</code>.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>calculate(String): void</code></li>
+<li><code class="hljs inline no-lang" v-pre>calculate(int): void</code></li></ul></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-1d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/inheritance/overriding" id="paradigms-oop-inheritance-overriding">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.1d</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-inheritance-overriding"><span id="paradigms-oop-inheritance-overriding" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Inheritance →</span></span></small> <strong><span>Overriding</span></strong><a class="fa fa-anchor" href="#paradigms-oop-inheritance-overriding" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div>
+<p><panel src="/2021/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/2021/book/oop/inheritance/what" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</span></p></template></panel></p></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain method overriding</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Method <em>overriding</em> is when a sub-class changes the behavior inherited from the parent class</strong> by re-implementing the method. Overridden methods have the same name, same type signature, and same return type.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following case of <code class="hljs inline no-lang" v-pre>EvaluationReport</code> class inheriting the <code class="hljs inline no-lang" v-pre>Report</code> class:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th><code class="hljs inline no-lang" v-pre>Report</code> methods</th>
+<th><code class="hljs inline no-lang" v-pre>EvaluationReport</code> methods</th>
+<th>Overrides?</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>print()</code></td>
+<td><code class="hljs inline no-lang" v-pre>print()</code></td>
+<td>Yes</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>write(String)</code></td>
+<td><code class="hljs inline no-lang" v-pre>write(String)</code></td>
+<td>Yes</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>read():String</code></td>
+<td><code class="hljs inline no-lang" v-pre>read(int):String</code></td>
+<td>No. <span class="dimmed">Reason: the two methods have different signatures; This is a case of <trigger trigger="click" for="modal:overriding-overloading"> <em>overloading</em></trigger> (rather than overriding).</span></td></tr></tbody></table></div><b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
+  <div>
+<div></div><p></p>
+<p><span class="dimmed"><strong><span>Paradigms → OOP → Inheritance →
+</span></strong></span></p>
+<div id="title-and-body">
+<div><h4 id="overloading"><span id="overloading" class="anchor"></span><span>Overloading</span><a class="fa fa-anchor" href="#overloading" onclick="event.stopPropagation()"></a></h4></div>
+<div id="main">
+<div>
+<p><strong>Method overloading is when there are multiple methods with the same name but different type signatures.</strong> Overloading is used to indicate that multiple operations do similar things but take different parameters.</p>
+<box type="definition" seamless>
+<div>
+<p><strong>Type signature</strong>: The <em>type signature</em> of an operation is the type sequence of the parameters. The return type and parameter names are not part of the type signature. However, the parameter order is significant.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th style="text-align:center">Method</th>
+<th style="text-align:center">Type Signature</th></tr></thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>int add(int X, int Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, int)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void add(int A, int B)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, int)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void m(int X, double Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(int, double)</code></td></tr>
+<tr>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>void m(double X, int Y)</code></td>
+<td style="text-align:center"><code class="hljs inline no-lang" v-pre>(double, int)</code></td></tr></tbody></table></div></box></div></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the case below, the <code class="hljs inline no-lang" v-pre>calculate</code> method is overloaded because the two methods have the same name but different type signatures <code class="hljs inline no-lang" v-pre>(String)</code> and <code class="hljs inline no-lang" v-pre>(int)</code>.</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>calculate(String): void</code></li>
+<li><code class="hljs inline no-lang" v-pre>calculate(int): void</code></li></ul></box></div>
+<div></div></div></div></div></b-modal></box></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p></template>
+<question>
+<p>Which of these methods override another method? <span class="dimmed"><code class="hljs inline no-lang" v-pre>A</code> is the parent class. <code class="hljs inline no-lang" v-pre>B</code> inherits <code class="hljs inline no-lang" v-pre>A</code>.</span></p>
+<img src="/2021/book/oop/inheritance/overriding/images/overriding.png" height="220">
+<p></p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>d</p>
+<p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Next, we cover some additional class/object diagram notations</strong> used to show different types of relationships in class/object diagrams.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=b29faf7d-b575-4ad9-a43b-ab880073e127&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w10-2-uml-class-object-diagrams-composition-aggregation-dependencies">
+<span slot="header" class="card-title"><div><h2 id="w10-2-uml-class-object-diagrams-composition-aggregation-dependencies"><span id="w10-2-uml-class-object-diagrams-composition-aggregation-dependencies" class="anchor"></span><span class="dimmed">[W10.2]</span> <strong>UML Class/Object Diagrams: Composition, Aggregation, Dependencies</strong> <small><small><span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w10-2-uml-class-object-diagrams-composition-aggregation-dependencies" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W10-2a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/composition" id="paradigms-oop-associations-composition">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2a</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-composition"><span id="paradigms-oop-associations-composition" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Composition</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-composition" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of composition</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A composition is an association that represents a strong <em>whole-part</em> relationship.</strong> When the <em>whole</em> is destroyed, <em>parts</em> are destroyed too i.e., the <em>part</em> should not exist without being attached to a <em>whole</em>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Board</code> (used for playing board games) consists of <code class="hljs inline no-lang" v-pre>Square</code> objects.</p></box>
+<p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code class="hljs inline no-lang" v-pre>Folder</code> objects is a composition type association. That means if the <code class="hljs inline no-lang" v-pre>Folder</code> object <code class="hljs inline no-lang" v-pre>foo</code> is a sub-folder of <code class="hljs inline no-lang" v-pre>Folder</code> object <code class="hljs inline no-lang" v-pre>bar</code>, <code class="hljs inline no-lang" v-pre>bar</code> cannot be a sub-folder of <code class="hljs inline no-lang" v-pre>foo</code>.</p></box>
+<p><strong>Whether a relationship is a composition can depend on the context</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Is the relationship between <code class="hljs inline no-lang" v-pre>Email</code> and <code class="hljs inline no-lang" v-pre>EmailSubject</code> composition? That is, is the email subject <em>part</em> of an email to the extent that an email subject cannot exist without an email?</p>
+<ul>
+<li>When modeling an application that sends emails, the answer is 'yes'.</li>
+<li>When modeling an application that gather analytics about email traffic, the answer may be 'no' <span class="dimmed">(e.g., the application might collect just the email subjects for text analysis)</span>.</li></ul></box>
+<p><strong>A common use of composition is when parts of a big class are carved out as smaller classes</strong> for the ease of managing the internal design. In such cases, the classes extracted out still act as <em>parts</em> of the bigger class and the outside world has no business knowing about them.</p>
+<p><strong>Cascading deletion alone is not sufficient for composition.</strong> Suppose there is a design in which <code class="hljs inline no-lang" v-pre>Person</code> objects are attached to <code class="hljs inline no-lang" v-pre>Task</code> objects and the former get deleted whenever the latter is deleted. This fact alone does not mean there is a composition relationship between the two classes. For it to be composition, a <code class="hljs inline no-lang" v-pre>Person</code> must be an integral <em>part</em> of a <code class="hljs inline no-lang" v-pre>Task</code> in the context of that association, at the concept level (not simply at implementation level).</p>
+<p><strong>Identifying and keeping track of composition relationships in the design has benefits</strong> such as helping to maintain the data integrity of the system. For example, when you know that a certain relationship is a composition, you can take extra care in your implementation to ensure that when the <em>whole</em> object is deleted, all its <em>parts</em> are deleted too.</p>
+<h5 id="implementing-composition"><span id="implementing-composition" class="anchor"></span>Implementing composition<a class="fa fa-anchor" href="#implementing-composition" onclick="event.stopPropagation()"></a></h5>
+<p><strong>Composition is implemented using a normal variable.</strong> If correctly implemented, the ‘part’ object will be deleted when the ‘whole’ object is deleted. Ideally, the ‘part’ object may not even be visible to clients of the ‘whole’ object.</p>
+<box>
+<div class="alt-java float-right ml-5">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> Subject subject;
+</span><span>  ...
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python  float-right ml-5">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Email</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.__subject = Subject()
+</span></code></pre></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this code, the <code class="hljs inline no-lang" v-pre>Email</code> has a composition type relationship with the <code class="hljs inline no-lang" v-pre>Subject</code> class, in the sense that the subject is part of the email.</p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/composition/what" id="tools-uml-class-diagrams-composition-composition">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-composition-composition"><span id="tools-uml-class-diagrams-composition-composition" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Composition →</span></span></small> <strong><span>Composition</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-composition-composition" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret composition in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML uses a solid diamond symbol to denote composition.</strong></p>
+<p>Notation:</p>
+<img src="/2021/book/uml/classDiagrams/composition/what/images/notation.png" width="220">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Book</code> consists of <code class="hljs inline no-lang" v-pre>Chapter</code> objects. When the <code class="hljs inline no-lang" v-pre>Book</code> object is destroyed, its <code class="hljs inline no-lang" v-pre>Chapter</code> objects are destroyed too.</p>
+<img src="/2021/book/uml/classDiagrams/composition/what/images/bookChapter.png" width="220">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/aggregation" id="paradigms-oop-associations-aggregation">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2c</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-aggregation"><span id="paradigms-oop-associations-aggregation" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Aggregation</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-aggregation" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of aggregations</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Aggregation</em> represents a <em>container-contained</em> relationship.</strong> It is a weaker relationship than composition.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>SportsClub</code> can act as a <em>container</em> for <code class="hljs inline no-lang" v-pre>Person</code> objects who are members of the club. <code class="hljs inline no-lang" v-pre>Person</code> objects can survive without a <code class="hljs inline no-lang" v-pre>SportsClub</code> object.</p></box>
+<h5 id="implementing-aggregation"><span id="implementing-aggregation" class="anchor"></span>Implementing aggregation<a class="fa fa-anchor" href="#implementing-aggregation" onclick="event.stopPropagation()"></a></h5>
+<p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, there is an aggregation association between the <code class="hljs inline no-lang" v-pre>Team</code> class and the <code class="hljs inline no-lang" v-pre>Person</code> class in that a <code class="hljs inline no-lang" v-pre>Team</code> contains a <code class="hljs inline no-lang" v-pre>Person</code> object who is the leader of the team.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{
+</span><span>    Person leader;
+</span><span>    ...
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setLeader</span><span class="hljs-params">(Person p)</span> </span>{
+</span><span>        leader = p;
+</span><span>    }
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.__leader = <span class="hljs-literal">None</span>
+</span><span>    
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_leader</span>(<span class="hljs-params">self, person</span>):</span>
+</span><span>    self.__leader = person
+</span></code></pre></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/aggregation/what" id="tools-uml-class-diagrams-aggregation-aggregation">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-aggregation-aggregation"><span id="tools-uml-class-diagrams-aggregation-aggregation" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Aggregation →</span></span></small> <strong><span>Aggregation</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-aggregation-aggregation" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret aggregation in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML uses a hollow diamond to indicate an aggregation.</strong></p>
+<p>Notation:</p>
+<img src="/2021/book/uml/classDiagrams/aggregation/what/images/notation.png" height="45">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<img src="/2021/book/uml/classDiagrams/aggregation/what/images/clubPerson.png" height="85">
+<p></p></box>
+<box>
+<p><strong>Aggregation vs Composition</strong></p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The distinction between composition (◆) and aggregation (◇) is rather blurred. Martin Fowler’s famous book <em>UML Distilled</em> advocates omitting the aggregation symbol altogether because using it adds more confusion than clarity.</p></box></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which one is not recommended to use?</p></template>
+<question>
+<p>Which one of these is not recommended to use in UML diagrams because it adds more confusion than clarity?</p>
+<ul radio-group="91d6f" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="91d6f" type="radio"> a. Composition symbol</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="91d6f" type="radio"> b. Aggregation symbol</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(b)</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2e"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/dependencies" id="paradigms-oop-associations-dependencies">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2e</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-dependencies"><span id="paradigms-oop-associations-dependencies" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Dependencies</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-dependencies" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain dependencies among classes</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>In the context of OOP associations, <strong>a <em>dependency</em> is a need for one class to depend on another without having a direct association with it.</strong> One cause of dependencies is interactions between objects that do not have a long-term link between them.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Course</code> object can have a dependency on a <code class="hljs inline no-lang" v-pre>Registrar</code> object to obtain the maximum number of students it can support.</p></box>
+<h5 id="implementing-dependencies"><span id="implementing-dependencies" class="anchor"></span>Implementing dependencies<a class="fa fa-anchor" href="#implementing-dependencies" onclick="event.stopPropagation()"></a></h5>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code class="hljs inline no-lang" v-pre>Foo</code> has a dependency on <code class="hljs inline no-lang" v-pre>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code class="hljs inline no-lang" v-pre>Foo</code> object and a <code class="hljs inline no-lang" v-pre>Bar</code> object. <span class="dimmed">i.e. the <code class="hljs inline no-lang" v-pre>Foo</code> object does not keep the <code class="hljs inline no-lang" v-pre>Bar</code> object it receives as a parameter</span>.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> bar.getValue();
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> value;
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> value;
+</span><span>    }
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span>(<span class="hljs-params">self, bar</span>):</span>
+</span><span>        <span class="hljs-keyword">return</span> bar.value;
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, value</span>):</span>
+</span><span>      self.value = value
+</span></code></pre></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-2f"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/dependencies/what" id="tools-uml-class-diagrams-dependencies-dependencies">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.2f</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-dependencies-dependencies"><span id="tools-uml-class-diagrams-dependencies-dependencies" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Dependencies →</span></span></small> <strong><span>Dependencies</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-dependencies-dependencies" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use dependencies in a class diagram</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML uses a dashed arrow to show dependencies.</strong></p>
+<img src="/2021/book/uml/classDiagrams/dependencies/what/images/notation.png" width="350">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Two examples of dependencies:</p>
+<img src="/2021/book/uml/classDiagrams/dependencies/what/images/examples.png" width="450">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pr-1 border-top-0 rounded-bottom" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-up"></span></strong> Follow up notes for the item(s) above:</small></span><br></p>
+<div class="indented">
+<p>After learning the UML syntax in the section above, you can try this worked example:<br></p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=7a17fb5c-3b1f-4315-8d0e-ab8e00d2cbe9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p>
+<p><span id="W10-3"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>Let's also have a brief look at various types of testing</strong> that is done in software projects, as you will be learning how to do one of them using Python in this week too.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=f978d66a-214b-487d-8731-ab880081c9ef&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w10-3-types-of-testing">
+<span slot="header" class="card-title"><div><h2 id="w10-3-types-of-testing"><span id="w10-3-types-of-testing" class="anchor"></span><span class="dimmed">[W10.3]</span> <strong>Types of Testing</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w10-3-types-of-testing" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<br>
+<div></div>
+<h3 id="developer-testing"><span id="developer-testing" class="anchor"></span><span class="dimmed"><strong>Developer Testing</strong></span><a class="fa fa-anchor" href="#developer-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/developerTesting/what" id="quality-assurance-testing-developer-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-developer-testing-what"><span id="quality-assurance-testing-developer-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Developer Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-developer-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain developer testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-3b"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/testing/testingTypes/developerTesting/why" id="quality-assurance-testing-developer-testing-why" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3b</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="quality-assurance-testing-developer-testing-why"><span id="quality-assurance-testing-developer-testing-why" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Developer Testing →</span></span></small> <strong><span>Why</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-developer-testing-why" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for early developer testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
+<ul>
+<li><strong>Locating the cause of a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
+<li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated from the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+<li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+<li><strong>The delivery may have to be delayed</strong> if too many bugs are found during testing.</li></ul>
+<p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+<blockquote>
+<p>The earlier a bug is found, the easier and cheaper to have it fixed.</p></blockquote>
+<img src="/2021/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+<p></p>
+<p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implications of developers testing their own code</p></template>
+<question has-input="true">
+<p>Discuss the pros and cons of developers testing their own code.</p>
+<div slot="answer" class="algolia-no-index">
+<p>Pros:</p>
+<ul>
+<li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+<li>Can be done at lower levels, for example, at the operation and class levels (testers usually test the system at the UI level).</li>
+<li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
+<li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li></ul>
+<p>Cons:</p>
+<ul>
+<li>A developer may subconsciously only test situations that he knows to work (i.e. test it too 'gently').</li>
+<li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing the code, it is possible for him to miss it again during testing).</li>
+<li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+<li>A developer may lack the testing expertise.</li></ul></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Cost of bug fixing over time</p></template>
+<question>
+<p>The cost of fixing a bug goes down as we reach the product release.</p>
+<ul radio-group="37242" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>False. The cost goes up over time.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Why early testing?</p></template>
+<question has-input="true">
+<p>Explain why early testing by developers is important.</p></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="unit-testing"><span id="unit-testing" class="anchor"></span><span class="dimmed"><strong>Unit Testing</strong></span><a class="fa fa-anchor" href="#unit-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/unitTesting/what" id="quality-assurance-testing-unit-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3c</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-unit-testing-what"><span id="quality-assurance-testing-unit-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Unit Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-unit-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain unit testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<box type="definition" seamless>
+<div>
+<p><strong>Unit testing</strong>: testing individual units (methods, classes, subsystems, ...) to ensure each piece works correctly.</p></div></box>
+<p>In OOP code, it is common to write one or more unit tests for each public method of a class.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are the code skeletons for a <code class="hljs inline no-lang" v-pre>Foo</code> class containing two methods and a <code class="hljs inline no-lang" v-pre>FooTest</code> class that contains unit tests for those two methods.</p>
+<div class="alt-java">
+  <div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+</span><span>    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span> </span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>    
+</span><span>}
+</span></code></pre><pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span> </span>{
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// a unit test for Foo#read() method</span>
+</span><span>    }
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// a unit tests for Foo#write(String) method</span>
+</span><span>    }  
+</span><span>    
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// another unit tests for Foo#write(String) method</span>
+</span><span>    }
+</span><span>}
+</span></code></pre></div></div>
+<div class="alt-python">
+  <div>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> unittest
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span>(<span class="hljs-params">self</span>):</span>
+</span><span>      <span class="hljs-comment"># ...</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span>(<span class="hljs-params">self, <span class="hljs-built_in">input</span></span>):</span>
+</span><span>      <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span>(<span class="hljs-params">unittest.TestCase</span>):</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span>(<span class="hljs-params">self</span>):</span>
+</span><span>      <span class="hljs-comment"># a unit test for read() method</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span>(<span class="hljs-params">self</span>):</span>
+</span><span>      <span class="hljs-comment"># a unit test for write(string) method</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span>(<span class="hljs-params">self</span>):</span>
+</span><span>      <span class="hljs-comment"># another unit test for write(string) method</span>
+</span></code></pre></div></div></box></div>
+<div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+<p><strong>Side readings:</strong></p>
+<ul>
+<li>[Web article] <a href="http://blog.goyello.com/2011/10/06/three-pillars-of-unit-tests">The three pillars of unit testing</a> -
+A short article about what makes a good unit test.</li>
+<li><a href="http://avandeursen.com/2014/02/22/gotofail-security/">Learning from Apple’s #gotofail Security Bug</a> -
+How unit testing (and other good coding practices) could have prevented a major security bug.</li></ul></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="integration-testing"><span id="integration-testing" class="anchor"></span><span class="dimmed"><strong>Integration Testing</strong></span><a class="fa fa-anchor" href="#integration-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/integrationTesting/what" id="quality-assurance-testing-integration-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3d</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-integration-testing-what"><span id="quality-assurance-testing-integration-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Integration Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-integration-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div>
+<p><panel src="/2021/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/2021/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p></template></panel></p></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain integration testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a class <code class="hljs inline no-lang" v-pre>Car</code> uses classes <code class="hljs inline no-lang" v-pre>Engine</code> and <code class="hljs inline no-lang" v-pre>Wheel</code>. If the <code class="hljs inline no-lang" v-pre>Car</code> class assumed a <code class="hljs inline no-lang" v-pre>Wheel</code> can support a speed of up to 200 mph but the actual <code class="hljs inline no-lang" v-pre>Wheel</code> can only support a speed of up to 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="system-testing"><span id="system-testing" class="anchor"></span><span class="dimmed"><strong>System Testing</strong></span><a class="fa fa-anchor" href="#system-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3e"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/systemTesting/what" id="quality-assurance-testing-system-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3e</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-system-testing-what"><span id="quality-assurance-testing-system-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → System Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-system-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain system testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<box type="definition" seamless>
+<div>
+<p><strong><em>System testing</em>: take the <em>whole system</em> and test it <em>against the system specification</em>.</strong></p></div></box>
+<p>System testing is typically done by a testing team (also called a QA team).</p>
+<p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' when pushed beyond its limits.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the SUT is a browser that is supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
+<pre><code class="hljs" v-pre><span>Test case: load a web page that is too big
+</span><span>* Input: load a web page containing more than 5000 characters. 
+</span><span>* Expected behavior: abort the loading of the page and show a meaningful error message. 
+</span></code></pre><p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p></box>
+<p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples:</p>
+<ul>
+<li><em>Performance testing</em> –  to ensure the system responds quickly.</li>
+<li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
+<li><em>Security testing</em> – to test how secure the system is.</li>
+<li><em>Compatibility testing, interoperability testing</em> – to check whether the system can work with other systems.</li>
+<li><em>Usability testing</em> – to test how easy it is to use the system.</li>
+<li><em>Portability testing</em> – to test whether the system works on different platforms.</li></ul></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="acceptance-testing"><span id="acceptance-testing" class="anchor"></span><span class="dimmed"><strong>Acceptance Testing</strong></span><a class="fa fa-anchor" href="#acceptance-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3f"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/acceptanceTesting/what" id="quality-assurance-testing-acceptance-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3f</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-acceptance-testing-what"><span id="quality-assurance-testing-acceptance-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Acceptance Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-acceptance-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain acceptance testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<box type="definition" seamless>
+<div>
+<p><strong><em>Acceptance testing</em> (aka <em>User Acceptance Testing (UAT)</em>: test the system to ensure it meets the user requirements.</strong></p></div></box>
+<p>Acceptance tests give an assurance to the customer that the system does what it is intended to do. Acceptance test cases are often defined at the beginning of the project, usually based on the use case specification. Successful completion of UAT is often a prerequisite to the project sign-off.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W10-3g"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/acceptanceTesting/acceptanceVsSystemTesting" id="quality-assurance-testing-acceptance-testing-acceptance-versus-system-testing">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3g</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-acceptance-testing-acceptance-versus-system-testing"><span id="quality-assurance-testing-acceptance-testing-acceptance-versus-system-testing" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Acceptance Testing →</span></span></small> <strong><span>Acceptance versus system testing</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-acceptance-testing-acceptance-versus-system-testing" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the differences between system testing and acceptance testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
+<p>Some differences between system testing and acceptance testing:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th style="text-align:left">System Testing</th>
+<th style="text-align:left">Acceptance Testing</th></tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">Done against the system specification</td>
+<td style="text-align:left">Done against the requirements specification</td></tr>
+<tr>
+<td style="text-align:left">Done by testers of the project team</td>
+<td style="text-align:left">Done by a team that represents the customer</td></tr>
+<tr>
+<td style="text-align:left">Done on the development environment or a test bed</td>
+<td style="text-align:left">Done on the deployment site or on a close simulation of the deployment site</td></tr>
+<tr>
+<td style="text-align:left">Both negative and positive test cases</td>
+<td style="text-align:left">More focus on positive test cases</td></tr></tbody></table></div><p><span class="dimmed">Note: <em>negative</em> test cases: cases where the SUT is not expected to work normally e.g. incorrect inputs; <em>positive</em> test cases: cases where the SUT is expected to work normally</span></p>
+<box>
+<p><strong>Requirement specification versus system specification</strong></p>
+<p>The requirement specification need not be the same as the system specification. Some example differences:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th style="text-align:left">Requirements specification</th>
+<th style="text-align:left">System specification</th></tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">limited to how the system behaves in normal working conditions</td>
+<td style="text-align:left">can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification</td></tr>
+<tr>
+<td style="text-align:left">written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)</td>
+<td style="text-align:left">written in terms of how the system solves those problems (e.g. explain the email search feature)</td></tr>
+<tr>
+<td style="text-align:left">specifies the interface available for intended end-users</td>
+<td style="text-align:left">could contain additional APIs not available for end-users (for the use of developers/testers)</td></tr></tbody></table></div><p>However, <strong>in many cases one document serves as both a requirement specification and a system specification.</strong></p></box>
+<p><strong>Passing system tests does not necessarily mean passing acceptance testing.</strong> Some examples:</p>
+<ul>
+<li>The system might work on the testbed environments but might not work the same way in the deployment environment, due to subtle differences between the two environments.</li>
+<li>The system might conform to the system specification but could fail to solve the problem it was supposed to solve for the user, due to flaws in the system design.</li></ul></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about system testing and acceptance testing</p></template>
+<question>
+<p>Choose the correct statements about system testing and acceptance testing.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Both system testing and acceptance testing typically involve the whole system.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. System testing is typically more extensive than acceptance testing.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. System testing can include testing for non-functional qualities.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Acceptance testing typically has more user involvement than system testing.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+<p>Explanation:</p>
+<p>(b) is correct because system testing can aim to cover all specified behaviors and can even go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
+<p>(f) is incorrect because it is possible for a system to pass system tests but fail acceptance tests.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<br>
+<div></div>
+<h3 id="alpha-beta-testing"><span id="alpha-beta-testing" class="anchor"></span><span class="dimmed"><strong>Alpha/Beta Testing</strong></span><a class="fa fa-anchor" href="#alpha-beta-testing" onclick="event.stopPropagation()"></a></h3>
+<p><span id="W10-3h"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/testing/testingTypes/alphaBetaTesting/what" id="quality-assurance-testing-alpha-beta-testing-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W10.3h</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="quality-assurance-testing-alpha-beta-testing-what"><span id="quality-assurance-testing-alpha-beta-testing-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Alpha/Beta Testing →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#quality-assurance-testing-alpha-beta-testing-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain alpha and beta testing</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</strong></p>
+<p><strong><em>Beta testing</em> is performed by a selected subset of target users of the system in their natural work setting.</strong></p>
+<p>An <em>open beta release</em> is the release of not-yet-production-quality-but-almost-there software to the general population.  For example, Google’s Gmail was in 'beta' for many years before the label was finally removed.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-10-fri-oct-16th-se-topics">Week 10 [Fri, Oct 16th] - SE Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#w10-1-oop-and-uml-class-object-diagrams-inheritance">[W10.1] OOP and UML Class/Object Diagrams: Inheritance &#x200E;</a>
+<a class="nav-link py-1" href="#w10-2-uml-class-object-diagrams-composition-aggregation-dependencies">[W10.2] UML Class/Object Diagrams: Composition, Aggregation, Dependencies &#x200E;</a>
+<a class="nav-link py-1" href="#w10-3-types-of-testing">[W10.3] Types of Testing &#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#developer-testing">Developer Testing&#x200E;</a>
+<a class="nav-link py-1" href="#unit-testing">Unit Testing&#x200E;</a>
+<a class="nav-link py-1" href="#integration-testing">Integration Testing&#x200E;</a>
+<a class="nav-link py-1" href="#system-testing">System Testing&#x200E;</a>
+<a class="nav-link py-1" href="#acceptance-testing">Acceptance Testing&#x200E;</a>
+<a class="nav-link py-1" href="#alpha-beta-testing">Alpha/Beta Testing&#x200E;</a>
+</nav>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>

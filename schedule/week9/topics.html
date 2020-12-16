@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.17.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TE3201 - Week 9 - SE Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/2021/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/2021/book/css/textbook.css">
+    <link rel="stylesheet" href="/2021/css/main.css">
+    <link rel="stylesheet" href="/2021/css/schedule.css"><link rel="icon" href="/2021/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
+    <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021 Jan-Apr</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/2021/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/2021/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/2021/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/2021/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/2021/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/2021/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/2021/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/2021/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/2021/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/2021/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/2021/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/2021/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/2021/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/2021/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Textbook**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Textbook</strong></template>
+    <li><a href="/2021/se-book-adapted/index.html" class="dropdown-item">SE Textbook</a></li>
+    <li><a href="/2021/programming/index.html" class="dropdown-item">Programming Textbook</a></li></dropdown>
+  <li><a href="/2021/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    
+    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    
+    <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files (handouts, submissions etc.)</span></a></li>
+    
+    <li tags="m--tic2002 m--te3201"><a href="/2021/admin/index.html#project" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project Info</span></a></li>
+    <li tags="m--cs2113 m--tic2002 m--te3201"><a href="https://repl.it/classroom/invite/szXDJN4" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> <code class="hljs inline no-lang" v-pre>repl.it</code> link</span></a></li>
+    
+    
+    
+    <li><a href="https://nus-te3201-2021 jan-apr.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+    
+    </dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+
+
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week8"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week9/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week9/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week10"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-9-fri-oct-9th-se-topics"><span id="week-9-fri-oct-9th-se-topics" class="anchor"></span>Week 9 <small><small><span class="dimmed">[Fri, Oct 9th]</span> - SE Topics</small></small><a class="fa fa-anchor" href="#week-9-fri-oct-9th-se-topics" onclick="event.stopPropagation()"></a></h1>
+<div></div>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p></template>
+<span id="toc">
+<ul>
+<li>[<a href="/2021/schedule/week9/topics.html#W9-1">W9.1</a>] <strong>UML Class Diagrams: Basics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1a">W9.1a</a>] <span>Tools → UML → Class Diagrams → Introduction →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1b">W9.1b</a>] <span>Tools → UML → Class Diagrams → Classes →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1c">W9.1c</a>] <span>Paradigms → OOP → Classes →
+</span></span> <span>Class-level members</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1d">W9.1d</a>] <span>Tools → UML → Class Diagrams → Class-Level Members →
+</span></span> <span>Class-level members</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1e">W9.1e</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Basic</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1f">W9.1f</a>] <span>Tools → UML → Class Diagrams → Associations →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1g">W9.1g</a>] <span>Tools → UML → Class Diagrams → Associations →
+</span></span> <span>Labels</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1h">W9.1h</a>] <span>Tools → UML → Class Diagrams → Associations →
+</span></span> <span>Roles</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1i">W9.1i</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Multiplicity</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1j">W9.1j</a>] <span>Tools → UML → Class Diagrams → Associations →
+</span></span> <span>Multiplicity</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1k">W9.1k</a>] <span>Paradigms → OOP → Associations →
+</span></span> <span>Navigability</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1l">W9.1l</a>] <span>Tools → UML → Class Diagrams → Associations →
+</span></span> <span>Navigability</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-1m">W9.1m</a>] <span>Tools → UML → Class Diagrams →
+</span></span> <span>Associations as attributes</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<ul>
+<li>[<a href="/2021/schedule/week9/topics.html#W9-2">W9.2</a>] <strong>UML Object Diagrams</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2a">W9.2a</a>] <span>Tools → UML → Object Diagrams →
+</span></span> <span>Introduction</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2b">W9.2b</a>] <span>Tools → UML → Object Diagrams →
+</span></span> <span>Objects</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2c">W9.2c</a>] <span>Tools → UML → Object Diagrams →
+</span></span> <span>Associations</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2d">W9.2d</a>] <span>Tools → UML →
+</span></span> <span>Object versus class diagrams</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2e">W9.2e</a>] <span>Tools → UML →
+</span></span> <span>Notes</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-2f">W9.2f</a>] <span>Tools → UML →
+</span></span> <span>Constraints</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li></ul></small></div>
+<p></p>
+<ul>
+<li>[<a href="/2021/schedule/week9/topics.html#W9-3">W9.3</a>] <strong>SDLC Process Models</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3a">W9.3a</a>] <span>Project Management → SDLC Process Models → Introduction →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3b">W9.3b</a>] <span>Project Management → SDLC Process Models → Introduction →
+</span></span> <span>Sequential models</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3c">W9.3c</a>] <span>Project Management → SDLC Process Models → Introduction →
+</span></span> <span>Iterative models</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3d">W9.3d</a>] <span>Project Management → SDLC Process Models → Introduction →
+</span></span> <span>Agile models</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3e">W9.3e</a>] <span>Project Management → SDLC Process Models →
+</span></span> <span>Scrum</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3f">W9.3f</a>] <span>Project Management → SDLC Process Models →
+</span></span> <span>XP</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3g">W9.3g</a>] <span>Project Management → SDLC Process Models →
+</span></span> <span>Unified process</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3h">W9.3h</a>] <span>Project Management → SDLC Process Models →
+</span></span> <span>CMMI</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/2021/schedule/week9/topics.html#W9-3i">W9.3i</a>] <span>Project Management → SDLC Process Models →
+</span></span> <span>Recap</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p></span></panel>
+<hr style="border: 1px dotted #cccccc;">
+<p><span id="W9-1"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>This week, <strong>we start learning a UML diagram called <em>Class Diagrams</em>.</strong></p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=c9727e98-4bb6-4de3-b3ec-ab81009c3af2&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w9-1-uml-class-diagrams-basics">
+<span slot="header" class="card-title"><div><h2 id="w9-1-uml-class-diagrams-basics"><span id="w9-1-uml-class-diagrams-basics" class="anchor"></span><span class="dimmed">[W9.1]</span> <strong>UML Class Diagrams: Basics</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w9-1-uml-class-diagrams-basics" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W9-1a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/introduction/what" id="tools-uml-class-diagrams-introduction-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1a</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-introduction-what"><span id="tools-uml-class-diagrams-introduction-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Introduction →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-introduction-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML <em>class diagrams</em> describe the structure (but not the behavior) of an OOP solution.</strong> These are possibly the most often used diagrams in the industry and are an indispensable tool for an OO programmer.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram:</p>
+<img src="/2021/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600"></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/classes/what" id="tools-uml-class-diagrams-classes-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1b</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-classes-what"><span id="tools-uml-class-diagrams-classes-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Classes →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-classes-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw UML classes</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>The basic UML notations used to represent a <em>class</em>:<br></p>
+<img src="/2021/book/uml/classDiagrams/classes/what/images/basicNotation.png" height="130">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code class="hljs inline no-lang" v-pre>Table</code> class shown in UML notation:</p>
+<div class="alt-java">
+<img src="/2021/book/uml/classDiagrams/classes/what/images/operations.png" height="150"></div>
+<div class="alt-python">
+<pic src="/2021/book/uml/classDiagrams/classes/what/7955b802860949dbd1c562a5b8913660.png"></pic></div>
+<p></p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p>The equivalent code</p></template>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span> </span>{
+</span><span>
+</span><span>    Integer number;
+</span><span>    Chair[] chairs = <span class="hljs-keyword">null</span>;
+</span><span>    
+</span><span>    <span class="hljs-function">Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span> </span>{
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.number = <span class="hljs-number">0</span>
+</span><span>    self.chairs = []
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_number</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_number</span>(<span class="hljs-params">self, n</span>):</span>
+</span><span>    <span class="hljs-comment"># ...</span>
+</span></code></pre></div></panel></box>
+<p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.</p>
+<box>
+<img src="/2021/book/uml/classDiagrams/classes/what/images/classes.png" height="100"></box>
+<p><strong>The <em>visibility</em> of attributes and operations is used to indicate the level of access allowed for each attribute or operation.</strong> The types of visibility and their exact meanings depend on the programming language used. Here are some common visibilities and how they are indicated in a class diagram:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>+</code> : public</li>
+<li><code class="hljs inline no-lang" v-pre>-</code> : private</li>
+<li><code class="hljs inline no-lang" v-pre>#</code> : protected</li>
+<li><code class="hljs inline no-lang" v-pre>~</code> : package private</li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p>How visibilities map to programming language features</p></template>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Visibility</th>
+<th>Java</th>
+<th>Python</th></tr></thead>
+<tbody>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>-</code> private</td>
+<td><code class="hljs inline no-lang" v-pre>private</code></td>
+<td>at least two leading underscores (and at most one trailing underscores) in the name</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>#</code> protected</td>
+<td><code class="hljs inline no-lang" v-pre>protected</code></td>
+<td>one leading underscore in the name</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>+</code> public</td>
+<td><code class="hljs inline no-lang" v-pre>public</code></td>
+<td>all other cases</td></tr>
+<tr>
+<td><code class="hljs inline no-lang" v-pre>~</code> package private</td>
+<td>default visibility</td>
+<td>not applicable</td></tr></tbody></table></div><p></p></panel><p></p><p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>Table</code> class with visibilities shown:</p>
+<div class="alt-java">
+<img src="/2021/book/uml/classDiagrams/classes/what/images/operationsVisibility.png" height="150"></div>
+<div class="alt-python">
+<pic src="/2021/book/uml/classDiagrams/classes/what/a1fc57ed7b16ae0837fcdb38fa9d5653.png"></pic></div>
+<p></p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p>The equivalent code</p></template>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">private</span> Integer number;
+</span><span>    <span class="hljs-keyword">private</span> Chair[] chairs = <span class="hljs-keyword">null</span>;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span> </span>{
+</span><span>        <span class="hljs-comment">//...</span>
+</span><span>    }
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.__number = <span class="hljs-number">0</span>
+</span><span>    self.__chairs = []
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_number</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_number</span>(<span class="hljs-params">self, n</span>):</span>
+</span><span>    <span class="hljs-comment"># ...</span>
+</span></code></pre></div></panel></box></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which classes are correct?</p></template>
+<question>
+<p>Which of these follow the correct UML notation?</p>
+<img src="/2021/book/uml/classDiagrams/classes/what/images/chooseNotation.jpg" height="130">
+<p></p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 2</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 3</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 4</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 5</li></ul>
+<div slot="answer" class="algolia-no-index">
+<ol>
+<li>Incorrect: <em>Attributes</em> compartment should be above the <em>Methods</em> compartment.</li>
+<li>Incorrect: All attributes should be inside the same compartment.</li>
+<li>Correct</li>
+<li>Correct: Both <em>Attributes</em> and <em>Methods</em> compartments can be omitted.</li>
+<li>Correct: The <em>Attributes</em> and <em>Methods</em> compartments can be empty.</li></ol></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Car class</p></template>
+<question>
+<p>Draw a UML diagram to represent the <code class="hljs inline no-lang" v-pre>Car</code> class as given below. Include visibilities.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+</span><span>
+</span><span>    Engine engine;
+</span><span>    <span class="hljs-keyword">private</span> List&lt;Wheel&gt; wheels = <span class="hljs-keyword">null</span>;
+</span><span>    <span class="hljs-keyword">public</span> String model;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">drive</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span> </span>{
+</span><span>        move(speed);
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">move</span><span class="hljs-params">(<span class="hljs-keyword">int</span> speed)</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may omit <code class="hljs inline no-lang" v-pre>self</code> from method signatures in the class diagram.</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, model</span>):</span>
+</span><span>    self._engine = <span class="hljs-literal">None</span> <span class="hljs-comment"># type: Engine</span>
+</span><span>    self.__wheels = []  <span class="hljs-comment"># type: a list of Wheel objects</span>
+</span><span>    self.model = model  <span class="hljs-comment"># type: string</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">drive</span>(<span class="hljs-params">self, speed</span>):</span> <span class="hljs-comment"># speed is an int</span>
+</span><span>      self.move(speed)
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__move</span>(<span class="hljs-params">self, speed</span>):</span>
+</span><span>      <span class="hljs-keyword">pass</span>
+</span></code></pre></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/classes/classLevelMembers" id="paradigms-oop-classes-class-level-members">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-classes-class-level-members"><span id="paradigms-oop-classes-class-level-members" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Classes →</span></span></small> <strong><span>Class-level members</span></strong><a class="fa fa-anchor" href="#paradigms-oop-classes-class-level-members" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain class-level members</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code class="hljs inline no-lang" v-pre>Person</code> objects have the <code class="hljs inline no-lang" v-pre>name</code> attribute but the value of that attribute varies between <code class="hljs inline no-lang" v-pre>Person</code> objects.</p></box>
+<p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code class="hljs inline no-lang" v-pre>totalPersons</code> should be maintained centrally and shared by all <code class="hljs inline no-lang" v-pre>Person</code> objects rather than copied at each <code class="hljs inline no-lang" v-pre>Person</code> object.</p></box>
+<p>Similarly, when a normal method is being called, a message is being sent to the receiving object and the result may depend on the receiving object.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Sending the <code class="hljs inline no-lang" v-pre>getName()</code> message to the <code class="hljs inline no-lang" v-pre>Adam</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Adam&quot;</code> while sending the same message to the <code class="hljs inline no-lang" v-pre>Beth</code> object results in the response <code class="hljs inline no-lang" v-pre>&quot;Beth&quot;</code>.</p></box>
+<p>However, there can be methods related to a specific class but not suitable for sending messages to a specific object of that class. Such <strong>methods that are called using the class instead of a specific instance are called <mark><em>class-level methods</em></mark></strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The method <code class="hljs inline no-lang" v-pre>getTotalPersons()</code> is not suitable to send to a specific <code class="hljs inline no-lang" v-pre>Person</code> object <span class="dimmed">because a specific object of the <code class="hljs inline no-lang" v-pre>Person</code> class should not have to know about the total number of <code class="hljs inline no-lang" v-pre>Person</code> objects</span>.</p></box>
+<p><strong>Class-level attributes and methods are collectively called <mark><em>class-level members</em></mark></strong> (also called <em>static members</em> sometimes because some programming languages use the keyword <code class="hljs inline no-lang" v-pre>static</code> to identify class-level members). <strong>They are to be accessed using the class name rather than an instance of the class</strong>.</p></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p></template>
+<question>
+<p>Which of these are suitable as class-level variables?</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. system: multi-player Pac Man game, Class: <code class="hljs inline no-lang" v-pre>Player</code>,  variable: <code class="hljs inline no-lang" v-pre>totalScore</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. system: eLearning system, class: <code class="hljs inline no-lang" v-pre>Course</code>, variable: <code class="hljs inline no-lang" v-pre>totalStudents</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code class="hljs inline no-lang" v-pre>Task</code>, variable: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code></li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code class="hljs inline no-lang" v-pre>ArrayList</code>, variable: <code class="hljs inline no-lang" v-pre>total</code> (i.e., total items in a given <code class="hljs inline no-lang" v-pre>ArrayList</code> object)</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(c)</p>
+<p>Explanation: <code class="hljs inline no-lang" v-pre>totalPendingTasks</code> should not be managed by individual <code class="hljs inline no-lang" v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code class="hljs inline no-lang" v-pre>totalStudents</code> for one <code class="hljs inline no-lang" v-pre>Course</code> object will differ from <code class="hljs inline no-lang" v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/classLevelMembers/what" id="tools-uml-class-diagrams-class-level-members-class-level-members">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-class-level-members-class-level-members"><span id="tools-uml-class-diagrams-class-level-members-class-level-members" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Class-Level Members →</span></span></small> <strong><span>Class-level members</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-class-level-members-class-level-members" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret class-level members in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>In UML class diagrams, <strong>underlines denote class-level attributes and variables.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the class diagram below, the <code class="hljs inline no-lang" v-pre>totalStudents</code> attribute and the <code class="hljs inline no-lang" v-pre>getTotalStudents</code> method are class-level.</p>
+<img src="/2021/book/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1e"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/what" id="paradigms-oop-associations-basic">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1e</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-basic"><span id="paradigms-oop-associations-basic" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Basic</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-basic" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain associations</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Objects in an OO solution need to be connected to each other to form a network so that they can interact with each other. Such <strong>connections between objects are called <em>associations</em>.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose an OOP program for managing a learning management system creates an object structure to represent the related objects. In that object structure you can expect to have associations between a <code class="hljs inline no-lang" v-pre>Course</code> object that represents a specific course and <code class="hljs inline no-lang" v-pre>Student</code> objects that represent students taking that course.</p></box>
+<p><strong>Associations in an object structure can change over time</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> To continue the previous example, the associations between a <code class="hljs inline no-lang" v-pre>Course</code> object and <code class="hljs inline no-lang" v-pre>Student</code> objects can change as students enroll in the module or drop the module over time.</p></box>
+<p><strong>Associations among objects can be generalized as associations between the corresponding classes too.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In our example, as some <code class="hljs inline no-lang" v-pre>Course</code> objects can have associations with some <code class="hljs inline no-lang" v-pre>Student</code> objects, you can view it as an association between the <code class="hljs inline no-lang" v-pre>Course</code> class and the <code class="hljs inline no-lang" v-pre>Student</code> class.</p></box>
+<h5 id="implementing-associations"><span id="implementing-associations" class="anchor"></span>Implementing associations<a class="fa fa-anchor" href="#implementing-associations" onclick="event.stopPropagation()"></a></h5>
+<p><strong>You use instance level variables to implement associations.</strong></p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1f"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associations/what" id="tools-uml-class-diagrams-associations-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1f</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-what"><span id="tools-uml-class-diagrams-associations-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Associations →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations in a class diagram</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>You should use a solid line to show an association between two classes.</p>
+<img src="/2021/book/uml/classDiagrams/associations/what/images/notation.png" width="300">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows an association between the <code class="hljs inline no-lang" v-pre>Admin</code> class and the <code class="hljs inline no-lang" v-pre>Student</code> class:<br>
+<img src="/2021/book/uml/classDiagrams/associations/what/images/example.png" width="300"></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1g"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associations/labels" id="tools-uml-class-diagrams-associations-labels">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1g</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-labels"><span id="tools-uml-class-diagrams-associations-labels" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Associations →</span></span></small> <strong><span>Labels</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-labels" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association labels in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Association labels</em> describe the meaning of the association.</strong> The arrow head indicates the direction in which the label is to be read.</p>
+<img src="/2021/book/uml/classDiagrams/associations/labels/images/notation.png" width="400">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, the same association is described using two different labels.</p>
+<img src="/2021/book/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600">
+<p></p>
+<ul>
+<li>Diagram on the left:  <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because an <code class="hljs inline no-lang" v-pre>Admin</code> object <em>uses</em> a <code class="hljs inline no-lang" v-pre>Student</code> object.</li>
+<li>Diagram on the right: <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because a <code class="hljs inline no-lang" v-pre>Student</code> object is <em>used by</em> an <code class="hljs inline no-lang" v-pre>Admin</code> object.</li></ul></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1h"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associations/roles" id="tools-uml-class-diagrams-associations-roles">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1h</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-roles"><span id="tools-uml-class-diagrams-associations-roles" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Associations →</span></span></small> <strong><span>Roles</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-roles" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association roles in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Association Role</em> labels are used to indicate the role played by the classes in the association.</strong></p>
+<img src="/2021/book/uml/classDiagrams/associations/roles/images/notation.png" height="60">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This association represents a marriage between a <code class="hljs inline no-lang" v-pre>Man</code> object and a <code class="hljs inline no-lang" v-pre>Woman</code> object. The respective roles played by objects of these two classes are <code class="hljs inline no-lang" v-pre>husband</code> and <code class="hljs inline no-lang" v-pre>wife</code>.</p>
+<img src="/2021/book/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300">
+<p></p>
+<p>Note how the variable names match closely with the association roles.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
+</span><span>    Woman wife;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
+</span><span>    Man husband;
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.wife = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Woman object</span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span>:</span>
+</span><span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>     self.husband = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Man object</span>
+</span></code></pre></div></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The role of <code class="hljs inline no-lang" v-pre>Student</code> objects in this association is <code class="hljs inline no-lang" v-pre>charges</code> <span class="dimmed">(i.e. Admin is in charge of students)</span></p>
+<img src="/2021/book/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70">
+<p></p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> </span>{
+</span><span>    List&lt;Student&gt; charges;
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span>:</span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.charges = [] <span class="hljs-comment"># list of Student objects</span>
+</span></code></pre></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1i"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/multiplicity" id="paradigms-oop-associations-multiplicity">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1i</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-multiplicity"><span id="paradigms-oop-associations-multiplicity" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Multiplicity</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-multiplicity" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of multiplicity</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Multiplicity</em> is the aspect of an OOP solution that dictates how many objects take part in each association.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The multiplicity of the association between <code class="hljs inline no-lang" v-pre>Course</code> objects and <code class="hljs inline no-lang" v-pre>Student</code> objects tells you how many <code class="hljs inline no-lang" v-pre>Course</code> objects can be associated with one <code class="hljs inline no-lang" v-pre>Student</code> object and vice versa.</p></box>
+<h5 id="implementing-multiplicity"><span id="implementing-multiplicity" class="anchor"></span>Implementing multiplicity<a class="fa fa-anchor" href="#implementing-multiplicity" onclick="event.stopPropagation()"></a></h5>
+<p><strong>A normal instance-level variable gives us a <code class="hljs inline no-lang" v-pre>0..1</code> multiplicity</strong> (also called <em>optional associations</em>) because a variable can hold a reference to a single object or <code class="hljs inline no-lang" v-pre>null</code>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code class="hljs inline no-lang" v-pre>Logic</code> class has a variable that can hold <code class="hljs inline no-lang" v-pre>0..1</code> <span class="dimmed">i.e., zero or one</span> <code class="hljs inline no-lang" v-pre>Minefield</code> objects.</p>
+<div>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+</span><span>    Minefield minefield;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+</span><span>    ...
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, minefield</span>):</span>
+</span><span>    self.minefield = minefield
+</span><span>    
+</span><span>  <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+</span><span>  <span class="hljs-comment"># ...</span>
+</span></code></pre></div></div></box>
+<p><strong>A variable can be used to implement a <code class="hljs inline no-lang" v-pre>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code class="hljs inline no-lang" v-pre>Logic</code> class will always have a <code class="hljs inline no-lang" v-pre>ConfigGenerator</code> object, provided the variable is not set to <code class="hljs inline no-lang" v-pre>null</code> at some point.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+</span><span>    ConfigGenerator cg = <span class="hljs-keyword">new</span> ConfigGenerator();
+</span><span>    ...
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.config_gen = ConfigGenerator()
+</span></code></pre></div></box>
+<p><strong>Bi-directional associations require matching variables in both classes.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code class="hljs inline no-lang" v-pre>Foo</code> class has a variable to hold a <code class="hljs inline no-lang" v-pre>Bar</code> object and vice versa <span class="dimmed">i.e., each object can have an association with an object of the other type</span>.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+</span><span>    Bar bar;
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+</span><span>    Foo foo;
+</span><span>    <span class="hljs-comment">//...</span>
+</span><span>}
+</span><span>
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, bar</span>):</span>
+</span><span>    self.bar = bar;
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, foo</span>):</span>
+</span><span>    self.foo = foo;
+</span><span>    
+</span></code></pre></div></box>
+<p><strong>To implement other multiplicities, choose a suitable data structure</strong> such as Arrays, ArrayLists, HashMaps, Sets, etc.</p>
+<box>
+<div class="alt-java">
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This code uses a two-dimensional array to implement a 1-to-many association from the <code class="hljs inline no-lang" v-pre>Minefield</code> to <code class="hljs inline no-lang" v-pre>Cell</code>.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+</span><span>    Cell[][] cell;
+</span><span>    ...
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>    self.cells = {<span class="hljs-number">1</span>:[], <span class="hljs-number">2</span>:[], <span class="hljs-number">3</span>:[]}
+</span></code></pre></div></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1j"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associations/multiplicity" id="tools-uml-class-diagrams-associations-multiplicity">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1j</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-multiplicity"><span id="tools-uml-class-diagrams-associations-multiplicity" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Associations →</span></span></small> <strong><span>Multiplicity</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-multiplicity" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain what is the multiplicity of an association</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<img src="/2021/book/uml/classDiagrams/associations/multiplicity/images/notation.png" height="120">
+<p></p>
+<p>Commonly used multiplicities:</p>
+<ul>
+<li><code class="hljs inline no-lang" v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
+<li><code class="hljs inline no-lang" v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
+<li><code class="hljs inline no-lang" v-pre>*</code> : can be linked to 0 or more objects.</li>
+<li><code class="hljs inline no-lang" v-pre>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" v-pre>n</code> to <code class="hljs inline no-lang" v-pre>m</code> inclusive.</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code class="hljs inline no-lang" v-pre>Admin</code> object administers (is in charge of) any number of students but a <code class="hljs inline no-lang" v-pre>Student</code> object must always be under the charge of exactly one <code class="hljs inline no-lang" v-pre>Admin</code> object.</p>
+<img src="/2021/book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300"></box>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below,</p>
+<ul>
+<li>Each student must be supervised by exactly one professor. i.e. There cannot be a student who doesn't have a supervisor or has multiple supervisors.</li>
+<li>A professor cannot supervise more than 5 students but can have no students to supervise.</li>
+<li>An admin can handle any number of professors and any number of students, including none.</li>
+<li>A professor/student can be handled by any number of admins, including none.</li></ul>
+<img src="/2021/book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70"></box></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statement agrees with the  multiplicity shown in this diagram?</p></template>
+<question>
+<img src="/2021/book/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100">
+<p></p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object can be linked to any number of <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object must be linked to 1, 2, 3 or 4 <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code class="hljs inline no-lang" v-pre>Unit</code> object must be linked to 1, 2, 3, or 4 <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code class="hljs inline no-lang" v-pre>Item</code> object can be linked to 0 or more <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(c)(d)</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1k"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/oop/associations/navigability" id="paradigms-oop-associations-navigability">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1k</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="paradigms-oop-associations-navigability"><span id="paradigms-oop-associations-navigability" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Paradigms → OOP → Associations →</span></span></small> <strong><span>Navigability</span></strong><a class="fa fa-anchor" href="#paradigms-oop-associations-navigability" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of navigability</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>When two classes are linked by an association, it does not necessarily mean both classes know about each other. <strong>The concept of which class in the association knows about the other class is called <em>navigability</em>.</strong></p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1l"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associations/navigability" id="tools-uml-class-diagrams-associations-navigability">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1l</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-navigability"><span id="tools-uml-class-diagrams-associations-navigability" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams → Associations →</span></span></small> <strong><span>Navigability</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-navigability" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association navigabilities in class diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>You should use arrow heads to indicate the navigability of an association.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>Logic</code> is aware of <code class="hljs inline no-lang" v-pre>Minefield</code>, but <code class="hljs inline no-lang" v-pre>Minefield</code> is not aware of <code class="hljs inline no-lang" v-pre>Logic</code>.</p>
+<img src="/2021/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
+<div>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
+</span><span>    Minefield minefield;
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
+</span><span>    ...
+</span><span>}
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
+</span><span>  
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, minefield</span>):</span>
+</span><span>    self.minefield = minefield
+</span><span>    
+</span><span>  <span class="hljs-comment"># ...</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
+</span><span>  <span class="hljs-comment"># ...</span>
+</span></code></pre></div></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a bidirectional navigability; each class is aware of the other.</p><p></p>
+<img src="/2021/book/uml/classDiagrams/associations/navigability/images/manDog.png" height="40"><p></p></box>
+<p><strong>Navigability can be shown in class diagrams as well as object diagrams</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> According to this object diagram, the given <code class="hljs inline no-lang" v-pre>Logic</code> object is associated with and aware of two <code class="hljs inline no-lang" v-pre>MineField</code> objects.</p>
+<img src="/2021/book/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80"></box></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p></template>
+<question>
+<img src="/2021/book/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100">
+<p></p>
+<ul radio-group="7ce6c" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ce6c" type="radio"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object knows about the <code class="hljs inline no-lang" v-pre>Item</code> object it is linked to</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ce6c" type="radio"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object knows about the <code class="hljs inline no-lang" v-pre>Unit</code> object it is linked to</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="7ce6c" type="radio"> c. Depends on the programming language</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)</p>
+<p>Explanation: The diagram indicates that the <code class="hljs inline no-lang" v-pre>Unit</code> object should know about the <code class="hljs inline no-lang" v-pre>Item</code> object. In the implementation, the <code class="hljs inline no-lang" v-pre>Unit</code> object will hold an <code class="hljs inline no-lang" v-pre>Item</code> object in one of its variables.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-1m"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/classDiagrams/associationsAsAttributes/what" id="tools-uml-class-diagrams-associations-as-attributes">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.1m</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-class-diagrams-associations-as-attributes"><span id="tools-uml-class-diagrams-associations-as-attributes" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Class Diagrams →</span></span></small> <strong><span>Associations as attributes</span></strong><a class="fa fa-anchor" href="#tools-uml-class-diagrams-associations-as-attributes" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show an association as an attribute</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>An association can be shown as an attribute instead of a line.</strong></p>
+<p>Association multiplicities and the default value can be shown as part of the attribute using the following notation. Both are optional.</p>
+<p><code class="hljs inline no-lang" v-pre>name: type [multiplicity]  = default value</code></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The diagram below depicts a multi-player <em>Square Game</em> being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player.</p>
+<p>A <code class="hljs inline no-lang" v-pre>Piece</code> may or may not be on a <code class="hljs inline no-lang" v-pre>Square</code>.  Note how that association can be replaced by an <code class="hljs inline no-lang" v-pre>isOn</code> attribute of the <code class="hljs inline no-lang" v-pre>Piece</code> class. The <code class="hljs inline no-lang" v-pre>isOn</code> attribute can either be <code class="hljs inline no-lang" v-pre>null</code> or hold a reference to a <code class="hljs inline no-lang" v-pre>Square</code> object, matching the <code class="hljs inline no-lang" v-pre>0..1</code> multiplicity of the association it replaces. The default value is <code class="hljs inline no-lang" v-pre>null</code>.</p>
+<img src="/2021/book/uml/classDiagrams/associationsAsAttributes/what/images/squareMultiplicity.png" width="600">
+<p></p>
+<p>The association that a <code class="hljs inline no-lang" v-pre>Board</code> has 100 <code class="hljs inline no-lang" v-pre>Square</code>s can be shown in either of these two ways:</p>
+<img src="/2021/book/uml/classDiagrams/associationsAsAttributes/what/images/board.png" height="70">
+<p></p></box>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Show each association as <strong>either an attribute or a line but not both</strong>. A line is preferred as it is easier to spot.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>As we learn about class diagrams, we should also learn about <em>object diagrams</em></strong> as they complement each other.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w9-2-uml-object-diagrams">
+<span slot="header" class="card-title"><div><h2 id="w9-2-uml-object-diagrams"><span id="w9-2-uml-object-diagrams" class="anchor"></span><span class="dimmed">[W9.2]</span> <strong>UML Object Diagrams</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w9-2-uml-object-diagrams" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W9-2a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/objectDiagrams/introduction" id="tools-uml-object-diagrams-introduction">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-object-diagrams-introduction"><span id="tools-uml-object-diagrams-introduction" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Object Diagrams →</span></span></small> <strong><span>Introduction</span></strong><a class="fa fa-anchor" href="#tools-uml-object-diagrams-introduction" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify object diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>An object diagram shows an object structure at a given point of time.</strong></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example object diagram:</p>
+<img src="/2021/book/modeling/modelingStructures/ooStructures/images/objectDiagram.png" height="120"></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/objectDiagrams/objects" id="tools-uml-object-diagrams-objects">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2b</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-object-diagrams-objects"><span id="tools-uml-object-diagrams-objects" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Object Diagrams →</span></span></small> <strong><span>Objects</span></strong><a class="fa fa-anchor" href="#tools-uml-object-diagrams-objects" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw UML objects</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Notation:</p>
+<img src="/2021/book/uml/objectDiagrams/objects/images/notation.png" height="85">
+<p></p>
+<p>Notes:</p>
+<ul>
+<li>The class name and object name e.g. <code class="hljs inline no-lang" v-pre>car1:Car</code> are underlined.</li>
+<li><code class="hljs inline no-lang" v-pre>objectName:ClassName</code> is meant to say 'an instance of <code class="hljs inline no-lang" v-pre>ClassName</code> identified as <code class="hljs inline no-lang" v-pre>objectName</code>'.</li>
+<li>Unlike classes, there is no compartment for methods.</li>
+<li><em>Attributes</em> compartment can be omitted if it is not relevant to the task at hand.</li>
+<li>Object name can be omitted too e.g. <code class="hljs inline no-lang" v-pre>:Car</code> which is meant to say 'an <em>unnamed</em> instance of a Car object'.</li></ul>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example objects:</p>
+<img src="/2021/book/uml/objectDiagrams/objects/images/professorStudent.png" height="65">
+<p></p></box></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Car object</p></template>
+<question>
+<p>Draw a UML diagram to represent the <code class="hljs inline no-lang" v-pre>Car</code> object created by the following code.</p>
+<div class="alt-java">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> </span>{
+</span><span>
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">double</span> price;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> speed;
+</span><span>
+</span><span>    Car(<span class="hljs-keyword">double</span> price, <span class="hljs-keyword">int</span> speed) {
+</span><span>        <span class="hljs-comment">// ...</span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-comment">// somewhere else in the code</span>
+</span><span>
+</span><span>Car myCar = <span class="hljs-keyword">new</span> Car(<span class="hljs-number">13.5</span>, <span class="hljs-number">200</span>);
+</span></code></pre></div>
+<div class="alt-python">
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span>:</span>
+</span><span>
+</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, price, speed</span>):</span>
+</span><span>    self.__price = price <span class="hljs-comment"># type: float</span>
+</span><span>    self.__speed = speed <span class="hljs-comment"># type: int</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-comment"># somewhere else in the code</span>
+</span><span>my_car = Car(<span class="hljs-number">13.5</span>, <span class="hljs-number">200</span>)
+</span></code></pre></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/objectDiagrams/associations" id="tools-uml-object-diagrams-associations">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-object-diagrams-associations"><span id="tools-uml-object-diagrams-associations" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML → Object Diagrams →</span></span></small> <strong><span>Associations</span></strong><a class="fa fa-anchor" href="#tools-uml-object-diagrams-associations" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations among objects</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>A solid line indicates an association between two objects.</p>
+<img src="/2021/book/uml/objectDiagrams/associations/images/notation.png" width="300">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example object diagram showing two associations:<br>
+<img src="/2021/book/uml/objectDiagrams/associations/images/example.png" width="300"></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/miscellaneous/objectVsClassDiagrams" id="tools-uml-object-versus-class-diagrams">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2d</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-object-versus-class-diagrams"><span id="tools-uml-object-versus-class-diagrams" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML →</span></span></small> <strong><span>Object versus class diagrams</span></strong><a class="fa fa-anchor" href="#tools-uml-object-versus-class-diagrams" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can distinguish between class diagrams and object diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Compared to the notation for class diagrams, object diagrams differ in the following ways:</p>
+<ul>
+<li>Show objects instead of classes:
+<ul>
+<li>Instance name may be shown</li>
+<li>There is a <code class="hljs inline no-lang" v-pre>:</code> before the class name</li>
+<li>Instance and class names are underlined</li></ul></li>
+<li>Methods are omitted</li>
+<li>Multiplicities are omitted</li></ul>
+<p>Furthermore, <strong>multiple object diagrams can correspond to a single class diagram</strong>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Both object diagrams are derived from the same class diagram shown earlier. In other words, each of these object diagrams shows ‘an instance of’ the same class diagram.</p>
+<img src="/2021/book/uml/miscellaneous/objectVsClassDiagrams/images/professorStudentAdmin.png" height="85">
+<p></p>
+<img src="/2021/book/uml/miscellaneous/objectVsClassDiagrams/images/professorStudent.png" height="150">
+<p></p></box></div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class diagrams match the object diagram?</p></template>
+<question>
+<p>Which of these class diagrams match the given object diagram?</p>
+<img src="/2021/book/uml/miscellaneous/objectVsClassDiagrams/images/exerciseDiagram.png" height="330">
+<p></p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 2</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(1) (2)</p>
+<p>Explanation: Both class diagrams allow one <code class="hljs inline no-lang" v-pre>Unit</code> object to be linked to one <code class="hljs inline no-lang" v-pre>Item</code> object.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2e"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p><strong>UML has a way to add additional notes to any UML diagram</strong>, as shown below.</p></div></div></div></div>
+<panel type="seamless" expanded popup-url="/2021/book/uml/notes/notes" id="tools-uml-notes">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2e</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-notes"><span id="tools-uml-notes" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML →</span></span></small> <strong><span>Notes</span></strong><a class="fa fa-anchor" href="#tools-uml-notes" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use UML notes</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML notes can augment UML diagrams with additional information.</strong> These notes can be shown connected to a particular element in the diagram or can be shown without a connection. The diagram below shows examples of both.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<img src="/2021/book/uml/notes/notes/images/adminProfessor.png" height="120">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-2f"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/uml/notes/constraints" id="tools-uml-constraints" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.2f</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="tools-uml-constraints"><span id="tools-uml-constraints" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Tools → UML →</span></span></small> <strong><span>Constraints</span></strong><a class="fa fa-anchor" href="#tools-uml-constraints" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div>
+<p><panel src="/2021/book/uml/notes/notes/unit-inElsewhere-asFlat._include_.html" popup-url="/2021/book/uml/notes/notes" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Notes</span></p></template></panel></p></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can specify constraints in UML diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>A <em>constraint</em>  can be given inside a note, within curly braces</strong>. Natural language or a formal notation such as <em>OCL (Object Constraint Language)</em> may be used to specify constraints.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+<img src="/2021/book/uml/notes/constraints/images/playerTurn.png" height="120">
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pr-1 border-top-0 rounded-bottom" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-up"></span></strong> Follow up notes for the item(s) above:</small></span><br></p>
+<div class="indented">
+<p>After learning the UML notations above, you can attempt the exercise in the following video:</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=dab3bb0f-c0cd-40af-8e39-ab88005aa195&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p>
+<p><span id="W9-3"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>Given below is a brief introduction to the some <em>processes</em> (i.e., approaches for running the project) by software projects. As you are not required to follow these in your project, we only aim to get an awareness of these processes in this module.</p>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=a1bfa255-292f-4ee6-8e65-ab8200837d82&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w9-3-sdlc-process-models">
+<span slot="header" class="card-title"><div><h2 id="w9-3-sdlc-process-models"><span id="w9-3-sdlc-process-models" class="anchor"></span><span class="dimmed">[W9.3]</span> <strong>SDLC Process Models</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#w9-3-sdlc-process-models" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W9-3a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/introduction/what" id="project-management-sdlc-process-models-introduction-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-introduction-what"><span id="project-management-sdlc-process-models-introduction-what" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models → Introduction →</span></span></small> <strong><span>What</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-introduction-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain SDLC process models</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Software development goes through different stages such as <em>requirements, analysis, design, implementation</em> and <em>testing</em>. These stages are collectively known as the <em>software development life cycle</em> (SDLC).</strong> There are several approaches, known as <em>software development life cycle models</em> (also called <em>software process models</em>), that describe different ways to go through the SDLC. Each process model prescribes a &quot;roadmap&quot; for the software developers to manage the development effort. The roadmap describes the aims of the development stage(s), the artifacts or outcome of each stage, as well as the workflow i.e. the relationship between stages.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/introduction/sequentialModels" id="project-management-sdlc-process-models-introduction-sequential-models">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3b</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-introduction-sequential-models"><span id="project-management-sdlc-process-models-introduction-sequential-models" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models → Introduction →</span></span></small> <strong><span>Sequential models</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-introduction-sequential-models" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain sequential process models</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>The <em>sequential model</em>, also called the <em>waterfall</em> model, models software development as a linear process</strong>, in which the project is seen as progressing steadily in one direction through the development stages. The name <em>waterfall</em> stems from how the model is drawn to look like a waterfall (see below).</p>
+<img src="/2021/book/processModels/introduction/sequentialModels/images/diagram.png" height="180">
+<p></p>
+<p><strong>When one stage of the process is completed, it should produce some artifacts to be used in the next stage.</strong> For example, upon completion of the requirements stage, a comprehensive list of requirements is produced that will see no further modifications. A strict application of the sequential model would require each stage to be completed before starting the next.</p>
+<p><strong>This could be a useful model when the problem statement is well-understood and stable.</strong> In such cases, using the sequential model should result in a timely and systematic development effort, provided that all goes well. As each stage has a well-defined outcome, the progress of the project can be tracked with relative ease.</p>
+<p><strong>The major problem with this model is that the requirements of a real-world project are rarely well-understood at the beginning and keep changing over time.</strong> One reason for this is that users are generally not aware of how a software application can be used without prior experience in using a similar application.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/introduction/iterativeModels" id="project-management-sdlc-process-models-introduction-iterative-models">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-introduction-iterative-models"><span id="project-management-sdlc-process-models-introduction-iterative-models" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models → Introduction →</span></span></small> <strong><span>Iterative models</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-introduction-iterative-models" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain iterative process models</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>The iterative model (sometimes called <em>iterative</em> and <em>incremental</em>) advocates having several <em>iterations</em> of SDLC.</strong> Each of the iterations could potentially go through all the development stages, from requirements gathering to testing &amp; deployment. Roughly, it appears to be similar to several cycles of the sequential model.</p>
+<img src="/2021/book/processModels/introduction/iterativeModels/images/diagram.png" height="300">
+<p></p>
+<p><strong>In this model, each of the iterations produces a new version of the product.</strong> Feedback on the new version can then be fed to the next iteration. Taking the Minesweeper game as an example, the iterative model will deliver a fully playable version from the early iterations. However, the first iteration will have primitive functionality, for example, a clumsy text based UI, fixed board size, limited randomization, etc. These functionalities will then be improved in later releases.</p>
+<p><strong>The iterative model can take a <em>breadth-first</em> or a <em>depth-first</em> approach to iteration planning.</strong></p>
+<ul>
+<li><strong>breadth-first</strong>: an iteration evolves all major components in parallel <span class="dimmed">e.g., add a new feature fully, or enhance an existing feature</span>.</li>
+<li><strong>depth-first</strong>: an iteration focuses on fleshing out only some components <span class="dimmed">e.g., update the backend to support a new feature that will be added in a future iteration</span>.</li></ul>
+<p><strong>Most projects use a mixture of breadth-first and depth-first iterations</strong> <span class="dimmed">i.e., an iteration can contain some breadth-first work as well as some depth-first work</span>.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/introduction/agileModels" id="project-management-sdlc-process-models-introduction-agile-models">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-introduction-agile-models"><span id="project-management-sdlc-process-models-introduction-agile-models" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models → Introduction →</span></span></small> <strong><span>Agile models</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-introduction-agile-models" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain agile process models</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>In 2001, a group of prominent software engineering practitioners met and brainstormed for an alternative to documentation-driven, heavyweight software development processes that were used in most large projects at the time. This resulted in something called the <em>agile manifesto</em> (a vision statement of what they were looking to do).</p>
+<blockquote>
+<p>You are uncovering better ways of developing software by doing it and helping others do it.</p>
+<p>Through this work you have come to value:</p>
+<ul>
+<li><strong>Individuals and interactions</strong> over processes and tools</li>
+<li><strong>Working software</strong> over comprehensive documentation</li>
+<li><strong>Customer collaboration</strong> over contract negotiation</li>
+<li><strong>Responding to change</strong> over following a plan</li></ul>
+<p>That is, while there is value in the items on the right, you value the items on the left more.<br>
+<sub>-- Extract from the <a href="http://agilemanifesto.org/">Agile Manifesto</a></sub></p></blockquote>
+<p>Subsequently, some of the signatories of the manifesto went on to create process models that try to follow it. These processes are collectively called agile processes. Some of the key features of agile approaches are:</p>
+<ul>
+<li>Requirements are prioritized based on the needs of the user, are clarified regularly (at times almost on a daily basis) with the entire project team, and are factored into the development schedule as appropriate.</li>
+<li>Instead of doing a very elaborate and detailed design and a project plan for the whole project, the team works based on a rough project plan and a high level design that evolves as the project goes on.</li>
+<li>There is a strong emphasis on complete transparency and responsibility sharing among the team members. The team is responsible together for the delivery of the product. Team members are accountable, and regularly and openly share progress with each other and with the user.</li></ul>
+<p><strong>There are a number of agile processes in the development world today. <em>eXtreme Programming (XP)</em> and <em>Scrum</em> are two of the well-known ones.</strong></p></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about agile processes</p></template>
+<question>
+<p>Choose the correct statements about agile processes.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They value working software over comprehensive documentation.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They value responding to change over following a plan.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They may not be suitable for some type of projects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. XP and Scrum are agile processes.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)(c)(d)</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3e"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/exampleProcessModels/scrum" id="project-management-sdlc-process-models-scrum">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3e</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-scrum"><span id="project-management-sdlc-process-models-scrum" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models →</span></span></small> <strong><span>Scrum</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-scrum" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain scrum</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>This description of Scrum was adapted from Wikipedia [retrieved on 18/10/2011], emphasis added:</p>
+<box>
+<p><strong>Scrum is a process skeleton that contains sets of practices and predefined roles. The main roles in Scrum are:</strong></p>
+<ul>
+<li><strong>The Scrum Master</strong>, who maintains the processes (typically in lieu of a project manager)</li>
+<li><strong>The Product Owner</strong>, who represents the stakeholders and the business</li>
+<li><strong>The Team</strong>, a cross-functional group who do the actual analysis, design, implementation, testing, etc.</li></ul>
+<p><strong>A Scrum project is divided into iterations called Sprints.</strong> A sprint is the basic unit of development in Scrum. Sprints tend to last between one week and one month, and are a timeboxed (i.e. restricted to a specific duration) effort of a constant length.</p>
+<p><strong>Each sprint is preceded by a planning meeting</strong>, where the tasks for the sprint are identified and an estimated commitment for the sprint goal is made, and followed by a review or retrospective meeting, where the progress is reviewed and lessons for the next sprint are identified.</p>
+<p><strong>During each sprint, the team creates a potentially deliverable product increment</strong> (for example, working and tested software). The set of features that go into a sprint come from the product backlog, which is a prioritized set of high level requirements of work to be done. Which backlog items go into the sprint is determined during the sprint planning meeting. During this meeting, the Product Owner informs the team of the items in the product backlog that he or she wants completed. The team then determines how much of this they can commit to complete during the next sprint, and records this in the sprint backlog. During a sprint, no one is allowed to change the sprint backlog, which means that the requirements are frozen for that sprint. Development is timeboxed such that the sprint must end on time; if requirements are not completed for any reason they are left out and returned to the product backlog. After a sprint is completed, the team demonstrates the use of the software.</p>
+<p><strong>Scrum enables the creation of self-organizing teams by encouraging co-location of all team members</strong>, and verbal communication between all team members and disciplines in the project.</p>
+<p><strong>A key principle of Scrum is its recognition that during a project the customers can change their minds about what they want and need</strong> (often called requirements churn), and that unpredicted challenges cannot be easily addressed in a traditional predictive or planned manner. As such, Scrum adopts an empirical approach—accepting that the problem cannot be fully understood or defined, focusing instead on maximizing the team’s ability to deliver quickly and respond to emerging requirements.</p>
+<img src="/2021/book/processModels/exampleProcessModels/scrum/images/diagram.png" height="250">
+<p></p></box>
+<p><strong><em>Daily Scrum</em> is another key scrum practice</strong>. The description below was adapted from <a href="https://www.mountaingoatsoftware.com/agile/scrum/meetings/daily-scrum">https://www.mountaingoatsoftware.com</a> (emphasis added):</p>
+<box>
+<p><strong>In Scrum, on each day of a sprint, the team holds a daily scrum meeting called the &quot;daily scrum.”</strong> Meetings are typically held in the same location and at the same time each day. Ideally, a daily scrum meeting is held in the morning, as it helps set the context for the coming day's work. These scrum meetings are strictly time-boxed to 15 minutes. This keeps the discussion brisk but relevant.</p>
+<p>...</p>
+<p><strong>During the daily scrum, each team member answers the following three questions:</strong></p>
+<ul>
+<li>What did you do yesterday?</li>
+<li>What will you do today?</li>
+<li>Are there any impediments in your way?</li></ul>
+<p>...</p>
+<p>The daily scrum meeting is not used as a problem-solving or issue resolution meeting. <strong>Issues that are raised are taken offline and usually dealt with by the relevant subgroup immediately after the meeting.</strong></p>
+<panel type="seamless" class="non-printable algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Intro to Scrum in Under 10 Minutes</p></template>
+<p><sub>(This is not an endorsement of the product mentioned in the video)</sub></p>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/XU0llRltyFM" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3f"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/exampleProcessModels/xp" id="project-management-sdlc-process-models-xp">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3f</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-xp"><span id="project-management-sdlc-process-models-xp" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models →</span></span></small> <strong><span>XP</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-xp" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain XP</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>The following description was adapted from the <a href="http://www.extremeprogramming.org">XP home page</a>, emphasis added:</p>
+<box>
+<p><strong>Extreme Programming (XP) stresses customer satisfaction.</strong> Instead of delivering everything you could possibly want on some date far in the future, this process delivers the software you need as you need it.</p>
+<p><strong>XP aims to empower developers to confidently respond to changing customer requirements</strong>, even late in the life cycle.</p>
+<p><strong>XP emphasizes teamwork.</strong> Managers, customers, and developers are all equal partners in a collaborative team. XP implements a simple, yet effective environment enabling teams to become highly productive. The team self-organizes around the problem to solve it as efficiently as possible.</p>
+<p><strong>XP aims to improve a software project in five essential ways: communication, simplicity, feedback, respect, and courage.</strong> Extreme Programmers constantly communicate with their customers and fellow programmers. They keep their design simple and clean. They get feedback by testing their software starting on day one. Every small success deepens their respect for the unique contributions of each and every team member. With this foundation, Extreme Programmers are able to courageously respond to changing requirements and technology.</p>
+<p><strong>XP has a set of simple rules.</strong> XP is a lot like a jig saw puzzle with many small pieces. Individually the pieces make no sense, but when combined together a complete picture can be seen. This flow chart shows how Extreme Programming's rules work together.</p>
+<img src="/2021/book/processModels/exampleProcessModels/xp/images/diagram.png" height="200">
+<p></p></box>
+<p><strong><em>Pair programming, CRC cards, project velocity</em>, and <em>standup meetings</em> are some interesting topics related to XP.</strong> Refer to <a href="http://extremeprogramming.org">extremeprogramming.org</a> to find out more about XP.</p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3g"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/processModels/exampleProcessModels/unifiedProcess" id="project-management-sdlc-process-models-unified-process" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3g</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="project-management-sdlc-process-models-unified-process"><span id="project-management-sdlc-process-models-unified-process" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models →</span></span></small> <strong><span>Unified process</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-unified-process" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Unified Process</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>The <em>unified process</em> is developed by the Three Amigos - Ivar Jacobson, Grady Booch and James Rumbaugh (the creators of UML).</p>
+<p>The unified process consists of four phases: <em>inception, elaboration, construction and transition</em>. The main purpose of each phase can be summarized as follows:</p>
+<table class="table">
+  <tr>
+    <th>Phase</th>
+    <th>Activities</th>
+    <th>Typical Artifacts</th></tr>
+  <tr>
+    <td>Inception</td>
+    <td>
+      <ul>
+        <li>Understand the problem and requirements</li>
+        <li>Communicate with customer</li>
+        <li>Plan the development effort</li></ul></td>
+    <td>
+      <ul>
+        <li>Basic use case model</li>
+        <li>Rough project plan</li>
+        <li>Project vision and scope</li></ul></td></tr>
+  <tr>
+    <td>Elaboration</td>
+    <td>
+      <ul>
+        <li>Refine and expand requirements</li>
+        <li>Determine a high-level design e.g. system architecture</li></ul></td>
+    <td>
+      <ul>
+        <li>System architecture</li>
+        <li>Various design models</li>
+        <li>Prototype</li></ul></td></tr>
+  <tr>
+    <td>Construction</td>
+    <td>
+      <ul>
+        <li>Major implementation effort to support the use cases identified</li>
+        <li>Design models are refined and fleshed out</li>
+        <li>Testing of all levels are carried out</li>
+        <li>Multiple releases of the system</li></ul></td>
+    <td>
+      <ul>
+        <li>Test cases of all levels</li>
+        <li>System release</li></ul></td></tr>
+  <tr>
+    <td>Transition</td>
+    <td>
+      <ul>
+        <li>Ready the system for actual production use</li>
+        <li>Familiarize end users with the system</li></ul></td>
+    <td>
+      <ul>
+        <li>Final system release</li>
+        <li>Instruction manual</li></ul></td></tr></table>
+<img src="/2021/book/processModels/exampleProcessModels/unifiedProcess/images/diagram.png" height="280">
+<p></p>
+<p>Given above is a visualization of a project done using the Unified process (source: Wikipedia). As the diagram shows, a phase can consist of several iterations. Each vertical column (labeled “I1” “E1”, “E2”, “C1”, etc.) represents a single iteration. Each of the iterations consists of a set of ‘workflows’ such as ‘Business modeling’, ‘Requirements’, ‘Analysis &amp; Design’, etc. The shaded region indicates the amount of resources and effort spent on a particular workflow in a particular iteration.</p>
+<p><strong>Unified process is a flexible and customizable process model framework rather than a single fixed process.</strong> For example, the number of iterations in each phase, definition of workflows, and the intensity of a given workflow in a given iteration can be adjusted according to the nature of the project. Take the Construction Phase: to develop a simple system, one or two iterations would be sufficient. For a more complicated system, multiple iterations will be more helpful. Therefore, the diagram above simply records a particular application of the UP rather than prescribe how the UP is to be applied. However, this record can be refined and reused for similar future projects.</p></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about the unified process</p></template>
+<question>
+<p>Choose the correct statements about the unified process.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. It was conceived by the three amigos who also created UML.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The Unified process requires the use of UML.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The Unified process is actually a process framework rather than a fixed process.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The Unified process can be iterative and incremental.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)<s>(b)</s>(c)(d)</p>
+<p>Explanation: Although UP was created by the same three amigos who created UML, the UP does not require UML.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3h"></span></p>
+<div></div>
+<panel type="seamless" popup-url="/2021/book/processModels/more/cmmi" id="project-management-sdlc-process-models-cmmi" class="algolia-no-index">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3h</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
+<h4 id="project-management-sdlc-process-models-cmmi"><span id="project-management-sdlc-process-models-cmmi" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models →</span></span></small> <strong><span>CMMI</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-cmmi" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain CMMI</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<box type="definition" seamless>
+<p>CMMI (Capability Maturity Model Integration) is a process improvement approach defined by Software Engineering Institute at Carnegie Melon University. CMMI provides organizations with the essential elements of effective processes, which will improve their performance. <sub>-- adapted from <a href="http://www.sei.cmu.edu/cmmi/">http://www.sei.cmu.edu/cmmi/</a></sub></p></box>
+<p><strong>CMMI defines five maturity levels for a process and provides criteria to determine if the process of an organization is at a certain maturity level.</strong> The diagram below [taken from Wikipedia] gives an overview of the five levels.</p>
+<img src="/2021/book/processModels/more/cmmi/images/diagram.png" height="250">
+<p></p></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W9-3i"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/2021/book/processModels/summary/recap" id="project-management-sdlc-process-models-recap">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W9.3i</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="project-management-sdlc-process-models-recap"><span id="project-management-sdlc-process-models-recap" class="anchor"></span><small><span class="font-weight-bold text-muted"><span>Project Management → SDLC Process Models →</span></span></small> <strong><span>Recap</span></strong><a class="fa fa-anchor" href="#project-management-sdlc-process-models-recap" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain process models at a higher level</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>This section has some exercises that cover multiple topics related to SDLC process models.</p></div>
+<div>
+ <div>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Sequential vs iterative approach</p></template>
+<question has-input="true">
+<p>Discuss how a sequential approach and an iterative approach can affect the following aspects of a project.</p>
+<p>a) Quality of the final product.</p>
+<p>b) Risk of overshooting the deadline.</p>
+<p>c) Total project cost.</p>
+<p>d) Customer satisfaction.</p>
+<p>e) Monitoring the project progress.</p>
+<p>f) Suitability for a school project.</p>
+<div slot="answer" class="algolia-no-index">
+<p>a) Quality of the final product:</p>
+<ul>
+<li>Iterative: Frequent reworking can deteriorate the design. Frequent refactoring should be used to prevent this. Frequent customer feedback can help to improve the quality (i.e. quality as seen by the customer).</li>
+<li>Sequential: Final quality depends on the quality of each phase. Any quality problems in any phase could result in a low quality product.</li></ul>
+<p>b) Risk of overshooting the deadline.</p>
+<ul>
+<li>Iterative: Less risk. If the last iteration got delayed, we can always deliver the previous version. However, this does not guarantee that all features promised at the beginning will be delivered by the deadline.</li>
+<li>Sequential: High risk. Any delay in any phase can result in overshooting the deadline with nothing to deliver.</li></ul>
+<p>c) Total project cost.</p>
+<ul>
+<li>Iterative: We can always stop before the project budget is exceeded. However, this does not guarantee that all features promised at the beginning will be delivered under the estimated cost.</li>
+<li>Sequential: The sequential model requires us to carry on even if the budget is exceeded because there is no intermediate version to fall back on.</li></ul>
+<p>Iterative reworking of existing artifacts could add to the cost. However, this is “cheaper” than finding at the end that we built the wrong product.</p>
+<p>d) Customer satisfaction</p>
+<ul>
+<li>Iterative: The customer gets many opportunities to guide the product in the direction he/she wants. The customer gets to change requirements even in the middle of the product's development. Both of these can increase the probability of customer satisfaction.</li>
+<li>Sequential: Customer satisfaction is guaranteed only if the product was delivered as promised and if the initial requirements proved to be accurate. However, the customer is not required to do the extra work of giving frequent feedback during the project's development.</li></ul>
+<p>e) Monitoring project progress</p>
+<ul>
+<li>Iterative: Hard to measure progress against a plan, as the plan itself keeps changing.</li>
+<li>Sequential: Easier to measure progress against the plan, although this does not ensure eventual success.</li></ul>
+<p>f) Suitability for a school project:</p>
+<p>Reasons to use iterative:</p>
+<ul>
+<li>Requirements are not fixed.</li>
+<li>Overshooting the deadline is not an option.</li>
+<li>Gives a chance to learn lessons from one iteration and apply them in the next.</li></ul>
+<p>Sequential:</p>
+<ul>
+<li>Can save time because we minimize rework.</li></ul></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Agile processes, Pair programming, Test-driven development</p></template>
+<question has-input="true">
+<p>Find out more about the following three topics and give at least three arguments for and three arguments against each.</p>
+<p>(a) Agile processes</p>
+<p>(b) Pair programming</p>
+<p>(c) Test-driven development</p>
+<div slot="answer" class="algolia-no-index">
+<p>(a) Arguments in favor of agile processes:</p>
+<ul>
+<li>More focus on customer satisfaction.</li>
+<li>Less chance of building the wrong product (because of frequent customer feedback).</li>
+<li>Less resources wasted on bureaucracy, over-documenting, contract negotiations.</li></ul>
+<p>Arguments against agile processes (not necessarily true):</p>
+<ul>
+<li>It is ‘just hacking’. Not very systematic. No discipline.</li>
+<li>It is hard to know in advance the exact final product.</li>
+<li>It does not give enough attention to documentation.</li>
+<li>Lack of management control (too much freedom given to developers).</li></ul>
+<p>(b) Arguments in favor of pair programming:</p>
+<ul>
+<li>It could produce better quality code.</li>
+<li>It is good to have more than one person know about any piece of code.</li>
+<li>It is a way to learn from each other.</li>
+<li>It can be used to train new programmers.</li>
+<li>Better discipline and better time management (e.g. less likely to play Farmville while working).</li>
+<li>Better morale due to more interactions with co-workers.</li></ul>
+<p>Arguments against pair programming:</p>
+<ul>
+<li>Increase in total man hours required.</li>
+<li>Personality clashes between pair-members.</li>
+<li>Workspaces need to be adapted to suit two developers working at one computer.</li>
+<li>If pairs are rotated, one needs to know more parts of the system than in solo programming.</li></ul>
+<p>(c) Arguments in favor of TDD:</p>
+<ul>
+<li>Testing will not be neglected due to time pressure (because it is done first).</li>
+<li>Forces the developer to think about what the component should be before jumping into implementing it.</li>
+<li>Optimizes programmer effort (i.e. if all tests pass, there is no need to add any more functionality).</li>
+<li>Forces us to automate all tests.</li></ul>
+<p>Arguments against TDD (not necessarily true):</p>
+<ul>
+<li>Since tests can be seen as ‘executable specifications’, programmers tend to neglect other forms of documentation.</li>
+<li>Promotes ‘trial-and-error’ coding instead of making programmers think through their algorithms (i.e. ‘just keep hacking until all tests pass’).</li>
+<li>Gives a false sense of security. (What if you forgot to test certain scenarios?)</li></ul>
+<p>Not intuitive. Some programmers might resist adopting TDD.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> The two basic process models</p></template>
+<question>
+<p>The sequential model and the waterfall model are the two most basic process models.</p>
+<ul radio-group="44ac6" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="44ac6" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="44ac6" type="radio"> False</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>False</p>
+<p>Explanation: The sequential model and the waterfall model are the same thing. The second basic model is the iterative model.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about sequential and iterative process models</p></template>
+<question>
+<p>Choose the correct statements about the sequential and iterative process models.</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. The sequential model organizes the project based on activities.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The iterative and incremental model organizes the project based on functionality.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The iterative model can be breadth-first or depth-first.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The iterative model is always better than the sequential model.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Compared to the sequential model, the iterative model is better at adapting to changing requirements.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)(c)<s>(d)</s>(e)</p>
+<p>Explanation: Both models have pros and cons. There is no definitive ‘better’ choice between the two. However, the iterative model works better in typical software projects than a purely sequential approach.</p></div></question></panel></div>
+  <div>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Risk of overshooting a deadline</p></template>
+<question>
+<p>In general, which has a higher risk of overshooting a deadline?</p>
+<ul radio-group="2ba69" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ba69" type="radio"> a. The iterative process.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ba69" type="radio"> b. The sequential process.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ba69" type="radio"> c. The risk is similar.</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(b)</p>
+<p>Explanation: An iterative process can meet a deadline better than a sequential process. If the last iteration got delayed, we can always deliver the previous version. However, this does not guarantee that all features promised at the beginning will be delivered on the deadline.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-9-fri-oct-9th-se-topics">Week 9 [Fri, Oct 9th] - SE Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#w9-1-uml-class-diagrams-basics">[W9.1] UML Class Diagrams: Basics &#x200E;</a>
+<a class="nav-link py-1" href="#w9-2-uml-object-diagrams">[W9.2] UML Object Diagrams &#x200E;</a>
+<a class="nav-link py-1" href="#w9-3-sdlc-process-models">[W9.3] SDLC Process Models &#x200E;</a>
+</nav>
+
+</nav>
+</div>
+</nav>
+</div>
+    <footer>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+</body>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = '/2021'
+  MarkBind.setup()
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "29bf21caddc74372e5c75f9a557715ec",
+        indexName: "te3201_2019",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10,"facetFilters":[["tags:admin","tags:programming","tags:se-book-adapted","tags:schedule"]]},
+        debug: false,
+      });
+    }
+    initAlgolia();
+  </script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+</html>
