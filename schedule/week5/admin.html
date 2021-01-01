@@ -47,7 +47,7 @@
   <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
   <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
     
-    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/forum" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
     
     <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
     <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
@@ -91,10 +91,10 @@
 <span id="week5-project">
 <div>
 <div class="indented-level2">
-<panel type="primary" no-close class="algolia-no-index">
+<panel type="info" no-close class="algolia-no-index">
 <div slot="header" class="text-white"><span>Programming <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span>  <strong>Level 5. Mark Tasks as Done</strong> <span class="badge badge-pill badge-warning"></span></span></div>
 <div>
-<h3 id="level-5-mark-tasks-as-done"><span id="level-5-mark-tasks-as-done" class="anchor"></span><span class="badge badge-primary">Level 5</span> <span class="text-primary">Mark Tasks as Done</span><a class="fa fa-anchor" href="#level-5-mark-tasks-as-done" onclick="event.stopPropagation()"></a></h3>
+<h3 id="level-5-mark-tasks-as-done"><span id="level-5-mark-tasks-as-done" class="anchor"></span><span class="badge badge-info">Level 5</span> <span class="text-info">Mark Tasks as Done</span><a class="fa fa-anchor" href="#level-5-mark-tasks-as-done" onclick="event.stopPropagation()"></a></h3>
 <p>Enhance the <a href="/2021/programming/chapters/monty.html#monty4">Monty Level 4 code</a> in the following ways:</p>
 <ul>
 <li>Add a <code class="hljs inline no-lang" v-pre>done</code> command so that the user can mark a task as done. e.g., <code class="hljs inline no-lang" v-pre>done 2</code> marks the task at index 2 as 'done'.</li>
@@ -114,9 +114,9 @@
 </span><span>
 </span><span>list
 </span><span>&gt;&gt;&gt; List of items:
-</span><span>     [✗] 1. borrow book
-</span><span>     [✗] 2. read book
-</span><span>     [✗] 3. return book
+</span><span>     [ ] 1. borrow book
+</span><span>     [ ] 2. read book
+</span><span>     [ ] 3. return book
 </span><span>&gt;&gt;&gt; What can I do for you?
 </span><span>
 </span><span>done 1
@@ -124,9 +124,9 @@
 </span><span>
 </span><span>list
 </span><span>&gt;&gt;&gt; List of items:
-</span><span>     [✓] 1. borrow book
-</span><span>     [✗] 2. read book
-</span><span>     [✗] 3. return book
+</span><span>     [X] 1. borrow book
+</span><span>     [ ] 2. read book
+</span><span>     [ ] 3. return book
 </span><span>&gt;&gt;&gt; What can I do for you?
 </span><span>
 </span><span>done abc
@@ -156,9 +156,9 @@
 </span><span>print(<span class="hljs-string">&#x27;Description of the first task:&#x27;</span>, tasks[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
 </span><span>
 </span><span><span class="hljs-keyword">if</span> tasks[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]:
-</span><span>    print(<span class="hljs-string">&#x27;✓&#x27;</span>)
+</span><span>    print(<span class="hljs-string">&#x27;X&#x27;</span>)
 </span><span><span class="hljs-keyword">else</span>:
-</span><span>    print(<span class="hljs-string">&#x27;✗&#x27;</span>)
+</span><span>    print(<span class="hljs-string">&#x27;-&#x27;</span>)
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use exceptions to identify and handle errors in the command.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
 </span><span>    print_greeting()
@@ -224,10 +224,10 @@
 </span></code></pre></panel></div></panel></div></div>
 <div>
 <div class="indented-level2">
-<panel type="primary" no-close class="algolia-no-index">
+<panel type="info" no-close class="algolia-no-index">
 <div slot="header" class="text-white"><span>Programming <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span>  <strong>Level 6. Give Help</strong> <span class="badge badge-pill badge-warning">optional</span></span></div>
 <div>
-<h3 id="level-6-give-help"><span id="level-6-give-help" class="anchor"></span><span class="badge badge-primary">Level 6</span> <span class="text-primary">Give Help</span><a class="fa fa-anchor" href="#level-6-give-help" onclick="event.stopPropagation()"></a></h3>
+<h3 id="level-6-give-help"><span id="level-6-give-help" class="anchor"></span><span class="badge badge-info">Level 6</span> <span class="text-info">Give Help</span><a class="fa fa-anchor" href="#level-6-give-help" onclick="event.stopPropagation()"></a></h3>
 <p>Enhance the <a href="/2021/programming/chapters/monty.html#monty5">Monty Level 5 code</a> in the following ways:</p>
 <ul>
 <li>Add a <code class="hljs inline no-lang" v-pre>help</code> command so that the user can view how to use the app.</li>
@@ -284,8 +284,8 @@
 </span><span>==================================================
 </span><span>STATUS | INDEX | DESCRIPTION                
 </span><span>--------------------------------------------------
-</span><span>  ✓    |   1   | read book                  
-</span><span>  ✗    |   2   | return book                
+</span><span>  X    |   1   | read book
+</span><span>  -    |   2   | return book
 </span><span>--------------------------------------------------
 </span><span>&gt;&gt;&gt; What can I do for you?
 </span></code></pre><box>
@@ -329,7 +329,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Sat, 2 Jan 2021, 1:44:19 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>

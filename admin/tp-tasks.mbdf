@@ -136,7 +136,7 @@ As we are still at the early stages of identifying a problem to solve, do not th
 {{ embed_topic("tp-constraints.md#main", "Admin " + icon_embedding + " **tP: Constraints**", "3", indent="2") }}
 {{ embed_topic("tp-grading.md#criteria-productDesign", "Admin " + icon_embedding + " **tP: Grading → ==Criteria Used for Grading the Product Design==**", "3", indent="2") }}
 
-* <span class="text-danger">**Submission**:</span> Submit your product name, target user profile, the value proposition, and the public link to your collaborative project notes via TEAMMATES. You'll receive an email from TEAMMATES with the submission link. Only one member needs to submit on behalf of the team. All members can view/update the submission.{% if cs2103 or tic4001 %}<br>
+* <span class="text-danger">**Submission**:</span> Submit your product name, target user profile, the value proposition, and the public link to your collaborative project notes via TEAMMATES. You'll receive an email from TEAMMATES with the submission link. Only one member needs to submit on behalf of the team. All members can view/update the submission.{% if cs2103 or tic4001 or tic4002 %}<br>
   {{ icon_info }} Submission link will be sent to you by {{ date_w4_start | date(format_normal, 3) }} %%(reason: we need a few days to set up the submission system _after_ teams have been finalized)%%.{% endif %}
 
 
@@ -145,8 +145,8 @@ As we are still at the early stages of identifying a problem to solve, do not th
 <span id="heading_start_project_notes">{{ icon_team }} Start a collaborative doc to take project notes</span>
 <span id="desc_start_project_notes">
 
-* Keep project notes in easy-to-use collaborative docs (Recommended: use a GoogleDoc). This document will be checked by the tutor at various points.<br>
-  Remember to choose a tool that ==allow public _view_ access== (not write access) e.g., GoogleDoc can be shared via a public link so that the document can be viewed by others. You'll be asked to submit this link to us in the next week.<br>
+* Keep project notes in easy-to-use collaborative docs (Recommended: use a GoogleDoc). This document will be checked by the instructors at various points.<br>
+  Remember to choose a tool that ==allow public _view_ access== e.g., GoogleDoc can be shared via a public link so that the document can be viewed by others. You'll be asked to submit this link to us in the next week.<br>
   {{ icon_important_big_red }} Make sure all you current and future project notes (if split into in multiple documents) are reachable via links given in this document and are viewable by the public.
 
 </span>
@@ -162,7 +162,7 @@ As we are still at the early stages of identifying a problem to solve, do not th
 * **Learn** [**the _recipe for brainstorming user stories_** in the textbook → Specifying Requirements → UserStories →  Usage]({{ baseUrl }}/se-book-adapted/chapters/specifyingRequirements.html#a-recipe-for-brainstorming-user-stories).<br>
   Also learn about <trigger trigger="click" for="modal:v10-brainstorming">brainstorming</trigger> and <trigger trigger="click" for="modal:v10-userstories">user stories</trigger>.
 
-* **Follow the steps in the recipe mentioned above to arrive at user stories for the the product**, with your team members. <span tags="m--cs2103">If you didn't attend the lecture, please watch the lecture recording to learn more about this step.</span>
+* **Follow the steps in the recipe mentioned above to arrive at user stories for the the product**, with your team members. <span tags="m--cs2103 m--tic4002">If you didn't attend the lecture, please watch the lecture recording to learn more about this step.</span>
 
 * **How many user stories?** Aim to collect more user stories than you can deliver in the project. %%Aim to create at least 30 user stories. Include all 'obvious' ones you can think of but also look for 'non obvious' ones that you think are likely to be missed by other competing products.%%
 
@@ -191,7 +191,7 @@ As we are still at the early stages of identifying a problem to solve, do not th
 </modal>
 
 
-<div tags="m--cs2103" class="indented-level2">
+<div tags="m--cs2103 m--tic4002" class="indented-level2">
 
 {{ icon_tip }} **If you choose to use the GitHub issue tracker to manage user stories**, you need to set up your team's GitHub organization, team repo, and its issue tracker first. Instructions for doing those steps are in the panel below.
 
@@ -296,7 +296,7 @@ Suggested workflow:
   * As this is a very rough draft and the final version will be in a different format altogether %%(i.e., in Markdown format)%%, don't waste time in formatting, copy editing etc. It is fine as long as the tutor can get a rough idea of the features from this draft. You can also do just the 'Features' section and omit the other parts.
   * Do try to come up with concrete command syntax for the CLI commands that you will deliver at {{ version_first }}.
   * Include only features that will be delivered in {{ version_first }}.
-  * <span tags="m--cs2103">Consider including some UI mock-ups too %%(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or [Balsamiq](https://balsamiq.com/))%%</span><span tags="m--cs2113 m--tic4001">Consider including examples of expected outputs too</span>.
+  * <span tags="m--cs2103 m--tic4002">Consider including some UI mock-ups too %%(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or [Balsamiq](https://balsamiq.com/))%%</span><span tags="m--cs2113 m--tic4001">Consider including examples of expected outputs too</span>.
   * {{ icon_important_big_red }} **Submission** [one person per team]: Save the draft UG as a PDF file, name it `{team-id}.pdf` e.g., `{{ example_team_id }}.pdf`, and upload to LumiNUS.<br><br>
 
 <div id="divideDocs" class="indented">
@@ -575,7 +575,7 @@ Update the following pages in your project repo:
 <span id="heading_deliver_first_version">{{ icon_team }} Deliver {{ version_first }}</span>
 <span id="desc_deliver_first_version">
 
-<div tags="m--cs2103">
+<div tags="m--cs2103 m--tic4002">
 
 * The product must be working although the functionality is basic.
 
@@ -598,7 +598,7 @@ Update the following pages in your project repo:
 
 * **Wrap up the milestone** using a git tag `{{ version_first }}`. When the milestone deadline is near (e.g., 0.5 days before the deadline), if you think some of the ongoing work intended for the current milestone may not finish in time, reassign them to a future milestone.
 
-<div tags="m--cs2103">
+<div tags="m--cs2103 m--tic4002">
 
 * Do a release on GitHub. Uploading a JAR file to GitHub is optional.
 </div>
@@ -613,9 +613,9 @@ Update the following pages in your project repo:
 
 <!-- * **Do an informal demo** of the new features during the tutorial. To save time, we recommend that one member demos all new features, using the commit tagged as `{{ version_first }}` in the `master` branch %%i.e. only features included in the current release should be demoed%%.-->
 * As we don't have in-class tutorials this semester, do the following in lieu of a live demo:<br>
-  [one member] Run your app using the latest released version `{{ version_first }}` <span tags="m--cs2103">(or `{{ version_first }}b`, if applicable)</span>. Take screenshots of each available feature in action. Add those screenshots to your _collaborative project notes_ document with an appropriate heading e.g., `{{ version_first }} features demo`. Alternatively, you can screen-record a demo, upload it to somewhere, and post the link in the project notes document.
+  [one member] Run your app using the latest released version `{{ version_first }}` <span tags="m--cs2103 m--tic4002">(or `{{ version_first }}b`, if applicable)</span>. Take screenshots of each available feature in action. Add those screenshots to your _collaborative project notes_ document with an appropriate heading e.g., `{{ version_first }} features demo`. Alternatively, you can screen-record a demo, upload it to somewhere, and post the link in the project notes document.
 </div>
-<div tags="m--tic4001">
+<div tags="m--tic4001 m--tic4002">
 
 * During the lecture, do an informal demo of your {{ version_first }} to the profs.
 </div>
@@ -633,25 +633,21 @@ Update the following pages in your project repo:
 <span id="desc_start_on_the_penultimate_version">
 <div class="indented">
 
-<box type="tip" seamless>
+<box type="important" tags="m--cs2113 m--cs2103 m--tic4002" seamless>
 
-<div tags="m--cs2113 m--cs2103">
+{% if cs2113 or tic4002 %}==**This iteration is your last chance to add features.** You are strongly discouraged from adding new features in the following iteration (i.e., {{ version_final }}).== That iteration (which is shorter than usual) is best reserved for bug fixing and documentation work only.{% else %}==**This iteration is your last chance to add features.** You will <span class="text-danger">not be allowed to add features in the following iteration (i.e., {{ version_final }}).== That iteration (which is shorter than usual) is reserved for bug fixing and documentation work only.{% endif %}
 
-The version you deliver in this iteration (i.e., {{ version_penultimate }}) will be subjected a peer testing (aka [PE Dry Run](tp-pe.html#tp-practical-exam-dry-run-pe-d)) and you will be informed of the bugs they find (no penalty for those bugs). Hence, it is in your interest to ==finish implementing all your <tooltip content="features you want to include in your final version (i.e., {{ version_final }})">final features</tooltip> in this iteration itself== so that you can get them tested for _free_. You can use the final iteration for fixing the bugs found by peer testers.
-
-Furthermore, the final iteration (i.e., the one after this) will be shorter than usual and there'll be a lot of additional things to do during that iteration e.g., polishing up documentation; all the more reason to try and get all the implementation work done in this iteration itself.
-</div>
-<div tags="m--tic4001">
-
+The version you deliver in this iteration (i.e., {{ version_penultimate }}) will be subjected a peer testing (aka [PE Dry Run](tp-pe.html#tp-practical-exam-dry-run-pe-d)) and you will be informed of the bugs they find (no penalty for those bugs).
+</box>
+<box tags="m--tic4001" type="tip" seamless>
 In the final iteration (i.e., the one after this), you will be doing a lot of additional things e.g., adding documentation.
 Hence, it is in your interest to ==finish implementing all your <tooltip content="features you want to include in your final version (i.e., {{ version_final }})">final features</tooltip> in this iteration itself== so that you can use the final iteration for polishing up the functionalities and adding documentation.
-
-</div>
 </box>
+
 
 As you did in the previous iteration,
 * **Plan the next iteration** (steps are given below as a reminder):
-  * {{ icon_team }} Decide which enhancements will be added to the product in this iteration, if this is the last iteration.
+  * {{ icon_team }} Decide which enhancements will be added to the product in this iteration, assuming this is the last iteration.
   * {{ icon_team }} If possible, split that into two incremental versions.
   * {{ icon_team }} Divide the work among team members.
   * {{ icon_individual }} Reflect the above plan in the issue tracker.
@@ -663,11 +659,12 @@ In addition,
   {{ icon_important_big_red }} Remember to [enable assertions in your IDEA run configurations](https://se-education.org/guides/tutorials/intellijUsefulSettings.html) and [in the gradle file](https://se-education.org/guides/tutorials/gradle.html#enabling-assertions).
 * {{ icon_tip }} Recommend: **Each PR should also update the relevant parts of documentation and tests**. That way, your documentation/testing work will not pile up towards the end.
 
-<div tags="m--cs2103">
+<div tags="m--cs2103 m--tic4002">
 
 <box type="info" seamless>
 
-**Improve upon AB3, design, code, test etc.**{.text-info} While not very 'buggy', AB3 is not 'perfect' either (it is meant to be a realistic example rather than a 'model solution'). Feel free to improve it in any way you see fit. In particular, find and fix any bugs it may have. If you are not sure if something is a bug or an intended behavior, you can post in the forum to check.
+**Improve upon AB3, design, code, test etc.**{.text-info} While not very 'buggy', AB3 is not 'perfect' either (it is not meant to be a 'model solution'). Feel free to improve it in any way you see fit. In particular, find and fix any bugs it may have. If you are not sure if something is a bug or an intended behavior, you can post in the forum to check.<br>
+While we are on the topic, also note that the architecture of AB3 doesn't suite every kind of application either. As you gain more experience in other application domains, you will learn different types of architectures that you can add to the collection of different architectures that you can consider for future projects. The same goes for the tool chain and the tech stack of AB3. Therefore, **do not be tempted to apply AB3 as a template for every other application you come across in the future**.
 </box>
 </div>
 </div>
@@ -685,7 +682,7 @@ In addition,
 <span id="heading_update_dg_with_design_details">{{ icon_individual }} Update the DG with design details</span>
 <span id="desc_update_dg_with_design_details">
 
-<div class="indented-level2" tags="m--cs2103">
+<div class="indented-level2" tags="m--cs2103 m--tic4002">
 
 <panel type="info" header="Why the hurry to update documents? Why not wait till the implementation is finalized?" minimized>
 
@@ -747,7 +744,7 @@ In addition,
 <span id="heading_smoke_test_catcher">{{ icon_individual }} Smoke-test CATcher</span>
 <span id="desc_smoke_test_catcher">
 
-* **This activity is <span class="text-danger">compulsory</span> and counts for `3` participation points.** Please do it before the deadline.
+* **This activity is <span class="text-danger">compulsory</span> and counts for `3` participation points.** Please do it before the weekly deadline.{% if tic4002 %} This will be counted for next week's participation.{% endif %}
 <div class="indented-level2">
 
 <box dismissible>
@@ -797,7 +794,7 @@ This week, we would like you to smoke-test the CATcher app **to ensure it can ru
   * Clearly indicate which features are not implemented yet %%e.g. tag those features with a `Coming soon`%%.
   * For those features already implemented, ensure their descriptions match the exact behavior of the product %%e.g. replace mockups with actual screenshots%%
 
-<div tags="m--cs2103">
+<div tags="m--cs2103 m--tic4002">
 
 * **Landing page (`docs/index.md`)**: Update to look like a real product (rather than a project for learning SE) if you haven't done so already. In particular, ==update the `Ui.png` to match the current product (<trigger trigger="click" for="modal:v13-tipsForProductScreenshot">{{ icon_tip }} tips</trigger>)==.
 
@@ -821,9 +818,9 @@ This week, we would like you to smoke-test the CATcher app **to ensure it can ru
   * Take screenshots of each available feature in action (or screen-record a demo -- need not be polished).
   * Add those screenshots (or upload the demo video somewhere and give the link) to your _collaborative project notes_ document with an appropriate heading e.g., `{{ version_penultimate }} features demo`.
 </div>
-<div tags="m--tic4001">
+<div tags="m--tic4001 m--tic4002">
 
-* During the lecture, do an informal demo of your {{ version_first }} to the profs.
+* During the lecture, do an informal demo of your {{ version_penultimate }} to the profs.
 </div>
 </div>
 </span>
@@ -837,7 +834,7 @@ This week, we would like you to smoke-test the CATcher app **to ensure it can ru
 {#====================================================================================================================#}
 <span id="heading_deliver_penultimate_version">{{ icon_individual }} Deliver {{ version_penultimate }}</span>
 <span id="desc_deliver_penultimate_version">
-* As before, do a release on GitHub and upload the {{ version_penultimate }} jar file. <span tags="m--cs2113 m--cs2103" class="text-danger">Do this before the deadline as PE testers will start downloading jar files ahead of time.</span>
+* As before, do a release on GitHub and upload the {{ version_penultimate }} jar file. <span tags="m--cs2113 m--cs2103 m--tic4002" class="text-danger">Do this before the deadline as PE testers will start downloading jar files ahead of time.</span>
 * ==IMPORTANT: ensure your jar file was generated using Java 11 and can work on all major OS'es using JDK 11.==
 
 {{ embed_topic("tp-constraints.md#Constraint-Java-Version", "Admin " + icon_embedding + " tP Contstraints → Constraint-Java-Version", "2", indent="2") }}
@@ -878,11 +875,11 @@ This week, we would like you to smoke-test the CATcher app **to ensure it can ru
 {%- endmacro %}
 
 {% macro get_pr_link(team_id) -%}
-<a href="https://github.com/nus-{{ module | lower}}-{{ semester }}/tp/pulls?q=is%3Aopen+is%3Apr+{{ team_id }}+" class="badge badge-primary">PR</a>
+<a href="https://github.com/nus-{{ module | lower}}-{{ semester }}/{{ tp_repo_name }}/pulls?q=is%3Aopen+is%3Apr+{{ team_id }}+" class="badge badge-primary">PR</a>
 {%- endmacro  %}
 
 {% macro get_dg_link(team_id) -%}
-<a href="https://{{ semester }}-{{ team_id | lower}}.github.io/tp/DeveloperGuide.html" class="badge badge-primary">DG</a>
+<a href="https://{{ semester }}-{{ team_id | lower}}.github.io/{{ tp_repo_name }}/DeveloperGuide.html" class="badge badge-primary">DG</a>
 {%- endmacro  %}
 
 {% macro get_links(team_id) -%}
@@ -966,7 +963,7 @@ Also see:
 
 {{ embed_topic("tp-ped.mbdf#after-ped", "Admin " + icon_embedding + " tP → Deliverables → **After the PED**", "3", indent="2") }}
 
-* **Freeze features** around this time. Ensure the current product have all the features you intend to release at {{ version_final }}. Doing major changes after this point is risky. The remaining time is better spent fixing problems discovered late or on fine-tuning the product.
+* **Freeze features**. As mentioned earlier, you are {{ "not allowed to add" if cs2103 else "strongly discouraged from adding"}} new features in this iteration. The remaining time is to be spent fixing problems discovered late and wrapping up the final release.
 * **Update documentation** to match the product.
 * **Consider increasing test coverage** by adding more tests if it is lower than the level you would like it to be. Take note of our expectation on test code (given in the panel below).
 
@@ -1001,6 +998,13 @@ Not applicable this semester
 
 \{\{ embed_topic("tp-deliverables.md#tp-deliverables-demo", "Admin " + icon_embedding + " tP → Final Demo (extract)", "3", indent="2") }}
 -->
+</span>
+{#====================================================================================================================#}
+<span id="heading_prepare_final_deliverables">{{ icon_team }} Prepare final deliverables</span>
+<span id="desc_prepare_final_deliverables">
+
+* Final deliverables are due early next week. You are advised to start preparing them well in advance of the submission deadline as any deadline overruns can result in penalties.
+
 </span>
 {#====================================================================================================================#}
 <span id="heading_double_check_reposense_compatibility">{{ icon_team }} Double-check RepoSense compatibility</span>
@@ -1044,7 +1048,9 @@ Not applicable this semester
 <big>**Submissions:**</big>
 </div>
 
-<div class="indented-level2" id="tip-how-to-convert-to-pdf">
+<div class="indented">
+<div id="tip-how-to-convert-to-pdf">
+
 <box type="important" seamless>
 
 **To convert the UG/DG/PPP into PDF format**, go to the generated page in your project's github.io site and use [this technique](https://se-education.org/guides/tutorials/savingPdf.html) to save as a pdf file. ==Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.==
@@ -1053,6 +1059,7 @@ Not applicable this semester
 
 **Try the PDF conversion early**. If you do it at the last minute, you may not have time to fix any problems in the generated PDF files (such problems are more common than you think).
 </box>
+</div>
 
 <box type="info" seamless>
 
@@ -1097,7 +1104,7 @@ Not applicable this semester
 {{ embed_topic("tp-deliverables.md#tp-deliverables-ppp", "Admin " + icon_embedding + " tP → Deliverables → Project Portfolio Page", "3", indent="2") }}
 
 
-* {{ icon_team }} **Product Website**: Update website (home page,<span tags="m--cs2103"> `Ui.png`,</span> `AboutUs.md` etc.) on GitHub. Ensure the website is auto-published.
+* {{ icon_team }} **Product Website**: Update website (home page,<span tags="m--cs2103 m--tic4002"> `Ui.png`,</span> `AboutUs.md` etc.) on GitHub. Ensure the website is auto-published.
 
 {{ embed_topic("tp-deliverables.md#tp-deliverables-website", "Admin " + icon_embedding + " tP → Deliverables → Product Website", "3", indent="2") }}
 </span>

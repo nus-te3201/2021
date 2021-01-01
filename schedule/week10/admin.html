@@ -47,7 +47,7 @@
   <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
   <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
     
-    <li><a href="https://github.com/nus-te3201-2021 Jan-Apr/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/forum" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
     
     <li><a href="/2021/admin/index.html#instructors" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
     <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
@@ -91,10 +91,10 @@
 <span id="week10-project">
 <div>
 <div class="indented-level2">
-<panel type="primary" no-close class="algolia-no-index">
+<panel type="info" no-close class="algolia-no-index">
 <div slot="header" class="text-white"><span>Programming <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span>  <strong>Level 12. Use Inheritance</strong> <span class="badge badge-pill badge-warning"></span></span></div>
 <div>
-<h3 id="level-12-use-inheritance"><span id="level-12-use-inheritance" class="anchor"></span><span class="badge badge-primary">Level 12</span> <span class="text-primary">Use Inheritance</span><a class="fa fa-anchor" href="#level-12-use-inheritance" onclick="event.stopPropagation()"></a></h3>
+<h3 id="level-12-use-inheritance"><span id="level-12-use-inheritance" class="anchor"></span><span class="badge badge-info">Level 12</span> <span class="text-info">Use Inheritance</span><a class="fa fa-anchor" href="#level-12-use-inheritance" onclick="event.stopPropagation()"></a></h3>
 <p>Enhance the <a href="/2021/programming/chapters/monty.html#monty11">Monty Level 11 code</a> to make the <code class="hljs inline no-lang" v-pre>Deadline</code> class inherit from the <code class="hljs inline no-lang" v-pre>ToDo</code> class:</p>
 <panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToDo</span>:</span>
@@ -112,7 +112,7 @@
 </span><span>        self.is_done = <span class="hljs-literal">False</span>
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__status_as_icon</span>(<span class="hljs-params">self</span>):</span>
-</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;✓&#x27;</span> <span class="hljs-keyword">if</span> self.is_done <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;✗&#x27;</span>
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;X&#x27;</span> <span class="hljs-keyword">if</span> self.is_done <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;-&#x27;</span>
 </span><span>
 </span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
 </span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;(&#x27;</span> + self.__status_as_icon() + <span class="hljs-string">&#x27;) &#x27;</span> + self.description
@@ -137,10 +137,10 @@
 <li>Note how the <code class="hljs inline no-lang" v-pre>Deadline</code> class overrides some methods (e.g., <code class="hljs inline no-lang" v-pre>__init__</code>) but uses the parent class method inside the overridden method (e.g., <code class="hljs inline no-lang" v-pre>__init__</code> method of the <code class="hljs inline no-lang" v-pre>Deadline</code> class calls the <code class="hljs inline no-lang" v-pre>super().__init__()</code> method.</li></ul></panel></div></panel></div></div>
 <div>
 <div class="indented-level2">
-<panel type="primary" no-close class="algolia-no-index">
+<panel type="info" no-close class="algolia-no-index">
 <div slot="header" class="text-white"><span>Programming <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span>  <strong>Level 13. Add Unit Tests</strong> <span class="badge badge-pill badge-warning"></span></span></div>
 <div>
-<h3 id="level-13-add-unit-tests"><span id="level-13-add-unit-tests" class="anchor"></span><span class="badge badge-primary">Level 13</span> <span class="text-primary">Add Unit Tests</span><a class="fa fa-anchor" href="#level-13-add-unit-tests" onclick="event.stopPropagation()"></a></h3>
+<h3 id="level-13-add-unit-tests"><span id="level-13-add-unit-tests" class="anchor"></span><span class="badge badge-info">Level 13</span> <span class="text-info">Add Unit Tests</span><a class="fa fa-anchor" href="#level-13-add-unit-tests" onclick="event.stopPropagation()"></a></h3>
 <p>Add some unit tests to <a href="/2021/programming/chapters/monty.html#monty12">Monty Level 12 code</a>.</p></div></panel></div></div></span></div></div>
 <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
@@ -160,7 +160,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 16 Dec 2020, 17:40:07 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Sat, 2 Jan 2021, 1:44:19 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
