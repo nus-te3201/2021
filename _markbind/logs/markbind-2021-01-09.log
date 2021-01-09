@@ -1,0 +1,970 @@
+2021-01-09T02:42:55.844Z - info: Website generation (lazy) started at 10:42:51 AM
+2021-01-09T02:43:07.743Z - info: Building assets...
+2021-01-09T02:43:14.216Z - info: Assets built
+2021-01-09T02:43:14.217Z - info: Generating landing page...
+2021-01-09T02:43:15.241Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T02:43:15.721Z - info: Site data built
+2021-01-09T02:43:15.721Z - info: Website generation (lazy) complete! Total build time: 24.17s
+2021-01-09T02:43:16.888Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T02:43:16.889Z - info: Press CTRL+C to stop ...
+2021-01-09T02:44:04.297Z - info: [10:44:04 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\studentData.mbdf
+2021-01-09T02:44:05.326Z - info: Assets built
+2021-01-09T02:44:13.961Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\teamList as some of its dependencies were changed since the last visit
+2021-01-09T02:44:14.472Z - info: Site data built
+2021-01-09T02:44:14.472Z - info: Lazy website regeneration complete! Total build time: 0.512s
+2021-01-09T02:46:20.357Z - info: [10:46:20 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\studentData.mbdf
+2021-01-09T02:46:21.361Z - info: Rebuilding 1 pages
+2021-01-09T02:46:21.815Z - info: Site data built
+2021-01-09T02:46:21.815Z - info: Pages rebuilt
+2021-01-09T02:46:21.815Z - info: Website regeneration complete! Total build time: 0.456s
+2021-01-09T02:46:45.057Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials as some of its dependencies were changed since the last visit
+2021-01-09T02:46:45.522Z - info: Site data built
+2021-01-09T02:46:45.522Z - info: Lazy website regeneration complete! Total build time: 0.466s
+2021-01-09T02:47:34.673Z - info: [10:47:34 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\timetables.mbdf
+2021-01-09T02:47:34.682Z - info: [10:47:34 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\studentData.mbdf
+2021-01-09T02:47:35.676Z - info: Rebuilding 1 pages
+2021-01-09T02:47:36.247Z - info: Site data built
+2021-01-09T02:47:36.247Z - info: Pages rebuilt
+2021-01-09T02:47:36.247Z - info: Website regeneration complete! Total build time: 0.572s
+2021-01-09T02:57:05.086Z - info: [10:57:05 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\timetables.mbdf
+2021-01-09T02:57:06.100Z - info: Rebuilding 1 pages
+2021-01-09T02:57:06.996Z - info: Site data built
+2021-01-09T02:57:06.997Z - info: Pages rebuilt
+2021-01-09T02:57:06.997Z - info: Website regeneration complete! Total build time: 0.902s
+2021-01-09T03:00:22.018Z - info: [11:00:22 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\timetables.mbdf
+2021-01-09T03:00:23.022Z - info: Rebuilding 1 pages
+2021-01-09T03:00:23.479Z - info: Site data built
+2021-01-09T03:00:23.479Z - info: Pages rebuilt
+2021-01-09T03:00:23.480Z - info: Website regeneration complete! Total build time: 0.46s
+2021-01-09T03:02:25.887Z - info: [11:02:25 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-CS2103\timetables.mbdf
+2021-01-09T03:02:26.888Z - info: Rebuilding 1 pages
+2021-01-09T03:02:27.443Z - info: Site data built
+2021-01-09T03:02:27.444Z - info: Pages rebuilt
+2021-01-09T03:02:27.444Z - info: Website regeneration complete! Total build time: 0.557s
+2021-01-09T03:03:02.565Z - info: [11:03:02 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:03:03.570Z - info: Rebuilding 1 pages
+2021-01-09T03:03:03.973Z - info: Site data built
+2021-01-09T03:03:03.973Z - info: Pages rebuilt
+2021-01-09T03:03:03.973Z - info: Website regeneration complete! Total build time: 0.406s
+2021-01-09T03:03:20.984Z - info: [11:03:20 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:03:21.988Z - info: Rebuilding 1 pages
+2021-01-09T03:03:22.381Z - info: Site data built
+2021-01-09T03:03:22.381Z - info: Pages rebuilt
+2021-01-09T03:03:22.381Z - info: Website regeneration complete! Total build time: 0.397s
+2021-01-09T03:04:39.953Z - info: [11:04:39 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:04:40.957Z - info: Rebuilding 1 pages
+2021-01-09T03:04:41.347Z - info: Site data built
+2021-01-09T03:04:41.347Z - info: Pages rebuilt
+2021-01-09T03:04:41.347Z - info: Website regeneration complete! Total build time: 0.392s
+2021-01-09T03:05:07.140Z - info: [11:05:07 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:05:08.146Z - info: Rebuilding 1 pages
+2021-01-09T03:05:08.553Z - info: Site data built
+2021-01-09T03:05:08.554Z - info: Pages rebuilt
+2021-01-09T03:05:08.554Z - info: Website regeneration complete! Total build time: 0.411s
+2021-01-09T03:05:35.298Z - info: [11:05:35 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:05:36.302Z - info: Rebuilding 1 pages
+2021-01-09T03:05:36.672Z - info: Site data built
+2021-01-09T03:05:36.673Z - info: Pages rebuilt
+2021-01-09T03:05:36.673Z - info: Website regeneration complete! Total build time: 0.372s
+2021-01-09T03:05:40.475Z - info: [11:05:40 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tutorials.md
+2021-01-09T03:05:41.486Z - info: Rebuilding 1 pages
+2021-01-09T03:05:41.800Z - info: Site data built
+2021-01-09T03:05:41.800Z - info: Pages rebuilt
+2021-01-09T03:05:41.800Z - info: Website regeneration complete! Total build time: 0.32s
+2021-01-09T03:10:24.085Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\timeline as some of its dependencies were changed since the last visit
+2021-01-09T03:10:31.106Z - info: Site data built
+2021-01-09T03:10:31.107Z - info: Lazy website regeneration complete! Total build time: 7.023s
+2021-01-09T03:10:46.245Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\index as some of its dependencies were changed since the last visit
+2021-01-09T03:10:46.697Z - info: Site data built
+2021-01-09T03:10:46.697Z - info: Lazy website regeneration complete! Total build time: 0.452s
+2021-01-09T03:11:21.345Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics as some of its dependencies were changed since the last visit
+2021-01-09T03:11:25.829Z - info: Site data built
+2021-01-09T03:11:25.830Z - info: Lazy website regeneration complete! Total build time: 4.486s
+2021-01-09T03:11:26.071Z - debug:  
+2021-01-09T03:11:34.470Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin as some of its dependencies were changed since the last visit
+2021-01-09T03:11:35.670Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/admin/x' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md'
+2021-01-09T03:11:37.039Z - debug:  
+2021-01-09T03:11:37.050Z - info: Site data built
+2021-01-09T03:11:37.050Z - info: Lazy website regeneration complete! Total build time: 2.581s
+2021-01-09T03:13:10.232Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\project as some of its dependencies were changed since the last visit
+2021-01-09T03:13:10.476Z - info: Site data built
+2021-01-09T03:13:10.476Z - info: Lazy website regeneration complete! Total build time: 0.244s
+2021-01-09T03:13:15.581Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\tutorial as some of its dependencies were changed since the last visit
+2021-01-09T03:13:15.813Z - info: Site data built
+2021-01-09T03:13:15.813Z - info: Lazy website regeneration complete! Total build time: 0.232s
+2021-01-09T03:21:08.448Z - info: Website generation started at 11:21:05 AM
+2021-01-09T03:21:17.566Z - info: Building assets...
+2021-01-09T03:21:23.685Z - info: Assets built
+2021-01-09T03:21:23.686Z - info: Generating pages...
+2021-01-09T03:21:36.492Z - debug:  
+2021-01-09T03:21:36.492Z - debug:  
+2021-01-09T03:21:36.493Z - debug:  
+2021-01-09T03:21:36.493Z - debug:  
+2021-01-09T03:21:36.493Z - debug:  
+2021-01-09T03:21:37.956Z - debug:  
+2021-01-09T03:22:10.161Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/about/usage.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.163Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/softwareEngineering/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.164Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/oop/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.165Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/requirements/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.165Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/gatheringRequirements/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.166Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/specifyingRequirements/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.167Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/design/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.167Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/designFundamentals/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.168Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/modeling/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.168Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/architecture/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.169Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/designPatterns/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.169Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/designApproaches/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.170Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/ides/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.171Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/codeQuality/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.171Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/refactoring/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.172Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/documentation/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.173Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/errorHandling/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.173Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/integration/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.174Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/reuse/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.174Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/qualityAssurance/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.175Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/testing/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.175Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/testCaseDesign/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.176Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/revisionControl/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.177Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/projectPlanning/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.177Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/teamwork/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.178Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/processModels/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.179Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/uml/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.179Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/intellij/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.180Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/gitAndGithub/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.180Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/principles/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.181Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/cppToJava/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.182Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/common/definitions.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.182Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/common/references.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.183Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/common/outcomes.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:22:10.183Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/book/common/print.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\book\index.md'
+2021-01-09T03:23:44.260Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/admin/x' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md'
+2021-01-09T03:23:46.419Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/admin/x' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md'
+2021-01-09T03:23:52.931Z - debug:  
+2021-01-09T03:24:07.759Z - debug:  
+2021-01-09T03:24:07.759Z - debug:  
+2021-01-09T03:24:08.940Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/website/admin/x' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md'
+2021-01-09T03:24:16.471Z - info: Pages built
+2021-01-09T03:24:17.033Z - info: Site data built
+2021-01-09T03:24:17.034Z - info: Website generation complete! Total build time: 191.509s
+2021-01-09T03:24:17.034Z - info: Build success!
+2021-01-09T03:24:22.041Z - info: Deployed at https://nus-cs2103-ay2021s2.github.io/website!
+2021-01-09T03:31:17.334Z - info: Website generation (lazy) started at 11:31:12 AM
+2021-01-09T03:31:27.781Z - info: Building assets...
+2021-01-09T03:31:33.774Z - info: Assets built
+2021-01-09T03:31:33.775Z - info: Generating landing page...
+2021-01-09T03:31:35.070Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:31:35.072Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:31:35.074Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:31:35.078Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:31:35.856Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T03:31:36.300Z - info: Site data built
+2021-01-09T03:31:36.300Z - info: Website generation (lazy) complete! Total build time: 24.189s
+2021-01-09T03:31:37.102Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T03:31:37.102Z - info: Press CTRL+C to stop ...
+2021-01-09T03:34:27.729Z - info: [11:34:27 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T03:34:28.740Z - info: Rebuilding 1 pages
+2021-01-09T03:34:29.626Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:29.628Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:29.630Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:29.633Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:30.272Z - info: Site data built
+2021-01-09T03:34:30.279Z - info: Pages rebuilt
+2021-01-09T03:34:30.279Z - info: Website regeneration complete! Total build time: 1.545s
+2021-01-09T03:34:49.930Z - info: [11:34:49 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T03:34:50.949Z - info: Rebuilding 1 pages
+2021-01-09T03:34:51.790Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:51.792Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:51.794Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:51.797Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:34:52.378Z - info: Site data built
+2021-01-09T03:34:52.379Z - info: Pages rebuilt
+2021-01-09T03:34:52.379Z - info: Website regeneration complete! Total build time: 1.437s
+2021-01-09T03:42:21.961Z - info: [11:42:21 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T03:42:22.971Z - info: Rebuilding 1 pages
+2021-01-09T03:42:24.330Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:42:24.334Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:42:24.336Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:42:24.343Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:42:25.320Z - info: Site data built
+2021-01-09T03:42:25.321Z - info: Pages rebuilt
+2021-01-09T03:42:25.321Z - info: Website regeneration complete! Total build time: 2.357s
+2021-01-09T03:44:52.833Z - info: [11:44:52 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T03:44:52.846Z - info: [11:44:52 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md
+2021-01-09T03:44:53.849Z - info: Rebuilding 1 pages
+2021-01-09T03:44:54.452Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:44:54.454Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:44:54.456Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:44:54.458Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:44:55.085Z - info: Site data built
+2021-01-09T03:44:55.086Z - info: Pages rebuilt
+2021-01-09T03:44:55.086Z - info: Website regeneration complete! Total build time: 1.238s
+2021-01-09T03:45:28.922Z - info: [11:45:28 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\variables.md
+2021-01-09T03:45:29.926Z - info: Assets built
+2021-01-09T03:45:40.859Z - info: Website generation (lazy) started at 11:45:38 AM
+2021-01-09T03:45:49.481Z - info: Building assets...
+2021-01-09T03:45:55.981Z - info: Assets built
+2021-01-09T03:45:55.982Z - info: Generating landing page...
+2021-01-09T03:45:57.104Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:45:57.107Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:45:57.110Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:45:57.113Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:45:57.922Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T03:45:58.371Z - info: Site data built
+2021-01-09T03:45:58.371Z - info: Website generation (lazy) complete! Total build time: 20.04s
+2021-01-09T03:45:59.190Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T03:45:59.191Z - info: Press CTRL+C to stop ...
+2021-01-09T03:47:58.920Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\index as some of its dependencies were changed since the last visit
+2021-01-09T03:47:59.352Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:47:59.354Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:47:59.356Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:47:59.359Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:47:59.493Z - info: Site data built
+2021-01-09T03:47:59.494Z - info: Lazy website regeneration complete! Total build time: 0.577s
+2021-01-09T03:48:12.182Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics-py as some of its dependencies were changed since the last visit
+2021-01-09T03:48:12.487Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:12.490Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:12.492Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:12.496Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:12.908Z - info: Site data built
+2021-01-09T03:48:12.909Z - info: Lazy website regeneration complete! Total build time: 0.728s
+2021-01-09T03:48:37.269Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics as some of its dependencies were changed since the last visit
+2021-01-09T03:48:37.496Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:37.498Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:37.500Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:37.502Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:48:37.642Z - info: Site data built
+2021-01-09T03:48:37.642Z - info: Lazy website regeneration complete! Total build time: 0.373s
+2021-01-09T03:49:47.196Z - info: [11:49:47 AM] Reload for file add: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\commentary-te3201.mbdf
+2021-01-09T03:49:53.797Z - info: Assets built
+2021-01-09T03:49:56.761Z - info: [11:49:56 AM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\commentary-te3201.mbdf
+2021-01-09T03:49:57.797Z - info: Assets built
+2021-01-09T03:51:24.757Z - info: Website generation (lazy) started at 11:51:19 AM
+2021-01-09T03:51:42.948Z - info: Building assets...
+2021-01-09T03:51:53.557Z - info: Assets built
+2021-01-09T03:51:53.558Z - info: Generating landing page...
+2021-01-09T03:51:54.650Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:51:54.653Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:51:54.655Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:51:54.660Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:51:55.364Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T03:51:55.864Z - info: Site data built
+2021-01-09T03:51:55.865Z - info: Website generation (lazy) complete! Total build time: 36.568s
+2021-01-09T03:51:56.915Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T03:51:56.915Z - info: Press CTRL+C to stop ...
+2021-01-09T03:52:03.808Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics as some of its dependencies were changed since the last visit
+2021-01-09T03:52:06.265Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:06.267Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:06.268Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:06.270Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:07.118Z - info: Site data built
+2021-01-09T03:52:07.119Z - info: Lazy website regeneration complete! Total build time: 3.31s
+2021-01-09T03:52:33.449Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\index as some of its dependencies were changed since the last visit
+2021-01-09T03:52:33.763Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:33.769Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:33.772Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:33.780Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T03:52:33.890Z - info: Site data built
+2021-01-09T03:52:33.890Z - info: Lazy website regeneration complete! Total build time: 0.443s
+2021-01-09T04:00:19.474Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics-py as some of its dependencies were changed since the last visit
+2021-01-09T04:00:19.775Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:00:19.779Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:00:19.781Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:00:19.784Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:00:20.122Z - info: Site data built
+2021-01-09T04:00:20.123Z - info: Lazy website regeneration complete! Total build time: 0.677s
+2021-01-09T04:02:30.103Z - info: [12:02:30 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\programming\scripts\text.md
+2021-01-09T04:02:31.124Z - info: Rebuilding 1 pages
+2021-01-09T04:02:31.477Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:02:31.479Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:02:31.481Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:02:31.483Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:02:31.724Z - info: Site data built
+2021-01-09T04:02:31.724Z - info: Pages rebuilt
+2021-01-09T04:02:31.724Z - info: Website regeneration complete! Total build time: 0.605s
+2021-01-09T04:05:16.351Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin as some of its dependencies were changed since the last visit
+2021-01-09T04:05:17.024Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:05:17.029Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:05:17.031Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:05:17.033Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:05:17.361Z - info: Site data built
+2021-01-09T04:05:17.361Z - info: Lazy website regeneration complete! Total build time: 1.011s
+2021-01-09T04:08:43.946Z - info: [12:08:43 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-te3201.mbdf
+2021-01-09T04:08:44.973Z - info: Rebuilding 1 pages
+2021-01-09T04:08:45.748Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:45.753Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:45.755Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:45.758Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:46.025Z - info: Site data built
+2021-01-09T04:08:46.026Z - info: Pages rebuilt
+2021-01-09T04:08:46.026Z - info: Website regeneration complete! Total build time: 1.056s
+2021-01-09T04:08:55.103Z - info: [12:08:55 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-te3201.mbdf
+2021-01-09T04:08:56.114Z - info: Rebuilding 1 pages
+2021-01-09T04:08:56.528Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:56.530Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:56.532Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:56.534Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:08:56.739Z - info: Site data built
+2021-01-09T04:08:56.739Z - info: Pages rebuilt
+2021-01-09T04:08:56.739Z - info: Website regeneration complete! Total build time: 0.627s
+2021-01-09T04:13:38.521Z - info: [12:13:38 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-tic2002.mbdf
+2021-01-09T04:13:38.533Z - info: [12:13:38 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T04:13:39.545Z - info: Rebuilding 1 pages
+2021-01-09T04:13:39.941Z - error:  Error: No such segment 'repl-info' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-te3201.mbdf
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:136:53
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessPanel (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:136:39)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:345:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+2021-01-09T04:13:40.147Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:13:40.149Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:13:40.151Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:13:40.153Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:13:40.492Z - info: Assets built
+2021-01-09T04:13:40.496Z - info: Site data built
+2021-01-09T04:13:40.496Z - info: Pages rebuilt
+2021-01-09T04:13:40.496Z - info: Website regeneration complete! Total build time: 0.952s
+2021-01-09T04:15:34.878Z - info: [12:15:34 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-te3201.mbdf
+2021-01-09T04:15:34.885Z - info: [12:15:34 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:15:34.924Z - info: [12:15:34 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-tic2002.mbdf
+2021-01-09T04:15:35.890Z - info: Rebuilding 1 pages
+2021-01-09T04:15:36.439Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:15:36.441Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:15:36.442Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:15:36.444Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:15:36.644Z - info: Site data built
+2021-01-09T04:15:36.647Z - info: Pages rebuilt
+2021-01-09T04:15:36.648Z - info: Website regeneration complete! Total build time: 0.763s
+2021-01-09T04:15:36.648Z - info: Assets built
+2021-01-09T04:17:35.303Z - info: [12:17:35 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-te3201.mbdf
+2021-01-09T04:17:35.333Z - info: [12:17:35 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\admin-tasks.mbdf
+2021-01-09T04:17:36.317Z - info: Rebuilding 1 pages
+2021-01-09T04:17:37.306Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:17:37.308Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:17:37.309Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:17:37.312Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:17:37.632Z - info: Site data built
+2021-01-09T04:17:37.633Z - info: Pages rebuilt
+2021-01-09T04:17:37.633Z - info: Website regeneration complete! Total build time: 1.321s
+2021-01-09T04:26:10.061Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md
+2021-01-09T04:26:10.073Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\admin-tic2002.mbdf
+2021-01-09T04:26:10.076Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week9\admin-te3201.mbdf
+2021-01-09T04:26:10.077Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\programming\errors-syntax\text.md
+2021-01-09T04:26:10.096Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\programming\scripts\text.md
+2021-01-09T04:26:10.111Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-te3201.mbdf
+2021-01-09T04:26:10.111Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\admin-tasks.mbdf
+2021-01-09T04:26:10.114Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:26:10.117Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\programming\files-paths\e-createDir.md
+2021-01-09T04:26:10.124Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week7\notices-cs2113.mbdf
+2021-01-09T04:26:10.127Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\index-tic2002.mbdf
+2021-01-09T04:26:10.150Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\programming-topics.mbdf
+2021-01-09T04:26:10.181Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week6\commentary-te3201.mbdf
+2021-01-09T04:26:10.207Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\admin-te3201.mbdf
+2021-01-09T04:26:10.209Z - info: [12:26:10 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\ip-overview.md
+2021-01-09T04:26:11.093Z - info: Rebuilding 1 pages
+2021-01-09T04:26:11.643Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:26:11.645Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:26:11.647Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:26:11.650Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:26:11.890Z - info: Assets built
+2021-01-09T04:26:11.893Z - info: Site data built
+2021-01-09T04:26:11.893Z - info: Pages rebuilt
+2021-01-09T04:26:11.894Z - info: Website regeneration complete! Total build time: 0.807s
+2021-01-09T04:29:01.661Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics as some of its dependencies were changed since the last visit
+2021-01-09T04:29:02.348Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:02.351Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:02.354Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:02.357Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:02.611Z - info: Site data built
+2021-01-09T04:29:02.611Z - info: Lazy website regeneration complete! Total build time: 0.951s
+2021-01-09T04:29:08.544Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week1\topics-py as some of its dependencies were changed since the last visit
+2021-01-09T04:29:08.901Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:08.903Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:08.906Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:08.909Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:09.155Z - info: Site data built
+2021-01-09T04:29:09.156Z - info: Lazy website regeneration complete! Total build time: 0.613s
+2021-01-09T04:29:24.107Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\index as some of its dependencies were changed since the last visit
+2021-01-09T04:29:24.368Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:24.370Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:24.371Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:24.373Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:24.477Z - info: Site data built
+2021-01-09T04:29:24.477Z - info: Lazy website regeneration complete! Total build time: 0.37s
+2021-01-09T04:29:33.093Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\topics-py as some of its dependencies were changed since the last visit
+2021-01-09T04:29:33.373Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:33.375Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:33.381Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:33.383Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:29:33.799Z - info: Site data built
+2021-01-09T04:29:33.800Z - info: Lazy website regeneration complete! Total build time: 0.706s
+2021-01-09T04:33:05.559Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\topics as some of its dependencies were changed since the last visit
+2021-01-09T04:33:06.090Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:33:06.092Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:33:06.095Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:33:06.097Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:33:06.418Z - info: Site data built
+2021-01-09T04:33:06.418Z - info: Lazy website regeneration complete! Total build time: 0.86s
+2021-01-09T04:36:05.655Z - info: [12:36:05 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\tools.md
+2021-01-09T04:36:06.663Z - info: Assets built
+2021-01-09T04:36:35.310Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\admin as some of its dependencies were changed since the last visit
+2021-01-09T04:36:35.733Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:36:35.738Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:36:35.744Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:36:35.750Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:36:36.084Z - info: Site data built
+2021-01-09T04:36:36.084Z - info: Lazy website regeneration complete! Total build time: 0.775s
+2021-01-09T04:37:11.088Z - info: [12:37:11 PM] Reload for file add: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-te3201.mbdf
+2021-01-09T04:37:17.900Z - info: Assets built
+2021-01-09T04:39:15.011Z - info: [12:39:15 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-TE3201\weeklyTextbookTopics.mbdf
+2021-01-09T04:39:16.015Z - info: Rebuilding 1 pages
+2021-01-09T04:39:16.832Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:16.834Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:16.836Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:16.837Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:17.128Z - info: Site data built
+2021-01-09T04:39:17.132Z - info: Pages rebuilt
+2021-01-09T04:39:17.132Z - info: Website regeneration complete! Total build time: 1.119s
+2021-01-09T04:39:53.610Z - info: [12:39:53 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-te3201.mbdf
+2021-01-09T04:39:54.619Z - info: Rebuilding 1 pages
+2021-01-09T04:39:54.922Z - error:  Error: No such segment 'design-basics' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:39:55.351Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:55.353Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:55.355Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:55.358Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:39:55.647Z - info: Site data built
+2021-01-09T04:39:55.648Z - info: Pages rebuilt
+2021-01-09T04:39:55.648Z - info: Website regeneration complete! Total build time: 1.03s
+2021-01-09T04:40:21.695Z - info: [12:40:21 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-te3201.mbdf
+2021-01-09T04:40:22.703Z - info: Rebuilding 1 pages
+2021-01-09T04:40:23.170Z - error:  Error: No such segment 'design-basics' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:40:23.396Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:40:23.734Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:40:23.736Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:40:23.738Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:40:23.743Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:40:24.227Z - info: Site data built
+2021-01-09T04:40:24.230Z - info: Pages rebuilt
+2021-01-09T04:40:24.230Z - info: Website regeneration complete! Total build time: 1.531s
+2021-01-09T04:41:43.859Z - info: [12:41:43 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:41:44.876Z - info: Rebuilding 1 pages
+2021-01-09T04:41:45.445Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:41:45.726Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:41:45.728Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:41:45.729Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:41:45.731Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:41:45.967Z - info: Site data built
+2021-01-09T04:41:45.968Z - info: Pages rebuilt
+2021-01-09T04:41:45.968Z - info: Website regeneration complete! Total build time: 1.093s
+2021-01-09T04:51:38.337Z - info: [12:51:38 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:51:39.368Z - info: Rebuilding 1 pages
+2021-01-09T04:51:40.156Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:51:40.439Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:51:40.440Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:51:40.442Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:51:40.444Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:51:40.936Z - info: Site data built
+2021-01-09T04:51:40.938Z - info: Pages rebuilt
+2021-01-09T04:51:40.938Z - info: Website regeneration complete! Total build time: 1.573s
+2021-01-09T04:52:44.838Z - info: [12:52:44 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:52:45.847Z - info: Rebuilding 1 pages
+2021-01-09T04:52:46.323Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:52:46.565Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:52:46.571Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:52:46.572Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:52:46.574Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:52:46.806Z - info: Site data built
+2021-01-09T04:52:46.807Z - info: Pages rebuilt
+2021-01-09T04:52:46.807Z - info: Website regeneration complete! Total build time: 0.961s
+2021-01-09T04:53:04.210Z - info: [12:53:04 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:53:05.240Z - info: Rebuilding 1 pages
+2021-01-09T04:53:06.049Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:53:06.326Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:06.328Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:06.329Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:06.332Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:06.690Z - info: Site data built
+2021-01-09T04:53:06.693Z - info: Pages rebuilt
+2021-01-09T04:53:06.694Z - info: Website regeneration complete! Total build time: 1.456s
+2021-01-09T04:53:31.147Z - info: [12:53:31 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:53:32.153Z - info: Rebuilding 1 pages
+2021-01-09T04:53:32.624Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:53:32.893Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:32.895Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:32.896Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:32.898Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:53:33.127Z - info: Site data built
+2021-01-09T04:53:33.127Z - info: Pages rebuilt
+2021-01-09T04:53:33.127Z - info: Website regeneration complete! Total build time: 0.976s
+2021-01-09T04:54:51.395Z - info: [12:54:51 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:54:52.408Z - info: Rebuilding 1 pages
+2021-01-09T04:54:53.262Z - error:  Error: No such segment 'uml-activity-diagrams' in file: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+Missing reference in C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-box.md
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:285:23)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+    at Array.map (<anonymous>)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:45)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:57
+    at Array.map (<anonymous>)
+    at NodePreprocessor._preProcessInclude (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:319:43)
+    at NodePreprocessor.preProcessNode (C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:350:19)
+    at C:\Users\damithch\AppData\Roaming\npm\node_modules\markbind-cli\node_modules\@markbind\core\src\html\NodePreprocessor.js:357:59
+2021-01-09T04:54:53.538Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:54:53.540Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:54:53.541Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:54:53.544Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:54:53.896Z - info: Site data built
+2021-01-09T04:54:53.897Z - info: Pages rebuilt
+2021-01-09T04:54:53.897Z - info: Website regeneration complete! Total build time: 1.495s
+2021-01-09T04:56:06.848Z - info: [12:56:06 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\commentary-te3201.mbdf
+2021-01-09T04:56:06.860Z - info: [12:56:06 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_module-TE3201\weeklyTextbookTopics.mbdf
+2021-01-09T04:56:07.863Z - info: Rebuilding 1 pages
+2021-01-09T04:56:08.585Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:56:08.591Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:56:08.593Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:56:08.594Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:56:08.827Z - info: Site data built
+2021-01-09T04:56:08.827Z - info: Pages rebuilt
+2021-01-09T04:56:08.828Z - info: Website regeneration complete! Total build time: 0.967s
+2021-01-09T04:57:03.375Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\se-book-adapted\index as some of its dependencies were changed since the last visit
+2021-01-09T04:57:03.726Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:03.733Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:03.738Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:03.745Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:03.925Z - info: Site data built
+2021-01-09T04:57:03.926Z - info: Lazy website regeneration complete! Total build time: 0.552s
+2021-01-09T04:57:08.386Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\se-book-adapted\chapters\uml as some of its dependencies were changed since the last visit
+2021-01-09T04:57:09.355Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:09.364Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:09.369Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:09.381Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:57:11.787Z - info: Site data built
+2021-01-09T04:57:11.787Z - info: Lazy website regeneration complete! Total build time: 3.401s
+2021-01-09T04:57:11.830Z - debug:  
+2021-01-09T04:57:11.830Z - debug:  
+2021-01-09T04:59:33.816Z - info: [12:59:33 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\admin\common-commentary.mbdf
+2021-01-09T04:59:34.840Z - info: No pages needed to be rebuilt
+2021-01-09T04:59:44.773Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\topics as some of its dependencies were changed since the last visit
+2021-01-09T04:59:45.899Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:59:45.901Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:59:45.902Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:59:45.905Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T04:59:46.236Z - info: Site data built
+2021-01-09T04:59:46.237Z - info: Lazy website regeneration complete! Total build time: 1.465s
+2021-01-09T05:00:36.568Z - info: Building C:\repos\nus-cs2103-AY2021S1\cs2103-website\schedule\week2\admin as some of its dependencies were changed since the last visit
+2021-01-09T05:00:36.728Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:00:36.731Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:00:36.732Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:00:36.735Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:00:36.844Z - info: Site data built
+2021-01-09T05:00:36.845Z - info: Lazy website regeneration complete! Total build time: 0.276s
+2021-01-09T05:02:26.129Z - info: [1:02:26 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\variables.md
+2021-01-09T05:02:26.134Z - info: [1:02:26 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md
+2021-01-09T05:02:27.137Z - info: Assets built
+2021-01-09T05:02:27.141Z - info: Rebuilding 1 pages
+2021-01-09T05:02:27.488Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:02:27.490Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:02:27.491Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:02:27.497Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:02:27.601Z - info: Site data built
+2021-01-09T05:02:27.601Z - info: Pages rebuilt
+2021-01-09T05:02:27.602Z - info: Website regeneration complete! Total build time: 0.464s
+2021-01-09T05:03:55.534Z - info: [1:03:55 PM] Reload for file change: C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\variables.md
+2021-01-09T05:03:56.555Z - info: Assets built
+2021-01-09T05:04:19.655Z - info: Website generation (lazy) started at 1:04:16 PM
+2021-01-09T05:04:30.975Z - info: Building assets...
+2021-01-09T05:04:39.235Z - info: Assets built
+2021-01-09T05:04:39.235Z - info: Generating landing page...
+2021-01-09T05:04:40.326Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:04:40.329Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:04:40.332Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:04:40.337Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:04:41.053Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T05:04:42.161Z - info: Site data built
+2021-01-09T05:04:42.161Z - info: Website generation (lazy) complete! Total build time: 25.959s
+2021-01-09T05:04:43.253Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T05:04:43.253Z - info: Press CTRL+C to stop ...
+2021-01-09T05:16:16.944Z - info: Website generation (lazy) started at 1:16:13 PM
+2021-01-09T05:16:33.054Z - info: Building assets...
+2021-01-09T05:16:43.645Z - info: Assets built
+2021-01-09T05:16:43.646Z - info: Generating landing page...
+2021-01-09T05:16:45.011Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:16:45.013Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:16:45.015Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:16:45.019Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103-AY2021S1\cs2103-website\_markbind\headers\header.md'
+2021-01-09T05:16:45.911Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-01-09T05:16:46.533Z - info: Site data built
+2021-01-09T05:16:46.534Z - info: Website generation (lazy) complete! Total build time: 32.642s
+2021-01-09T05:16:47.521Z - info: Serving "C:\repos\nus-cs2103-AY2021S1\cs2103-website\_site" at http://127.0.0.1:8080
+2021-01-09T05:16:47.521Z - info: Press CTRL+C to stop ...
+2021-01-09T05:17:45.847Z - info: Website generation started at 1:17:42 PM
+2021-01-09T05:18:01.238Z - info: Building assets...
