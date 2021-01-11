@@ -130,7 +130,7 @@
 <div>
 <h3 id="working-with-an-interactive-shell"><span id="working-with-an-interactive-shell" class="anchor"></span>Working with an Interactive Shell<a class="fa fa-anchor" href="#working-with-an-interactive-shell" onclick="event.stopPropagation()"></a></h3>
 <p><strong>Some programming environments provide an <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a tool which allows you to type commands in, and get back output for each command</span>interactive shell</span></em>.</strong> In the python interactive shell you can type in a python <em>expression</em> and get the shell to evaluate the expression.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">3</span>
 </span><span><span class="hljs-number">5</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * <span class="hljs-number">4</span> * <span class="hljs-number">3</span>
 </span><span><span class="hljs-number">24</span>
@@ -182,7 +182,7 @@
 <td style="text-align:left">Integer division</td>
 <td style="text-align:center"><code class="hljs inline no-lang" v-pre>22 // 8</code></td>
 <td style="text-align:center"><code class="hljs inline no-lang" v-pre>2</code></td></tr></tbody></table></div><p>When there are multiple operators in an expression, normal operator precedence apply. You can force a different precedence using parentheses.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">4</span> * <span class="hljs-number">5</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> + <span class="hljs-number">4</span> * <span class="hljs-number">5</span>
 </span><span><span class="hljs-number">22</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>(<span class="hljs-number">2</span> + <span class="hljs-number">4</span>) * <span class="hljs-number">5</span>
 </span><span><span class="hljs-number">30</span>
@@ -212,10 +212,10 @@
 <td><code class="hljs inline no-lang" v-pre>str</code></td>
 <td>sequence of characters (strings)</td>
 <td><code class="hljs inline no-lang" v-pre>adam</code> <code class="hljs inline no-lang" v-pre>What can it be?</code>, <code class="hljs inline no-lang" v-pre>x</code></td></tr></tbody></table></div><p>String values are denoted by enclosing them in double quotes or single quotes.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-string">&#x27;Hello&#x27;</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-string">&#x27;Hello&#x27;</span>
 </span><span><span class="hljs-string">&quot;What&#x27;s going on?&quot;</span>
 </span></code></pre><p>Some operators can be used on strings as well.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;hello&#x27;</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;hello&#x27;</span>
 </span><span><span class="hljs-string">&#x27;hello&#x27;</span>
 </span><span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-string">&#x27;Hello&#x27;</span> + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-string">&#x27;World!&#x27;</span>
@@ -232,23 +232,23 @@
 <blockquote>
 <p><strong>Variables are used to store information to be referenced and manipulated in a computer program.</strong> They also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by the reader and ourselves. It is helpful to think of variables as containers that hold information. Their sole purpose is to label and store data in memory. This data can then be used throughout your program. <sub>--<a href="https://launchschool.com/books/ruby/read/variables">https://launchschool.com/books/ruby/read/variables</a> (emphasis added)</sub></p></blockquote>
 <p>The following statement <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">creates</span>declares</span></em> a variable named <code class="hljs inline no-lang" v-pre>v</code> and <em>assigns</em> it a value <code class="hljs inline no-lang" v-pre>5</code> (the operator <code class="hljs inline no-lang" v-pre>=</code> is called the <em>assignment operator</em>):</p>
-<pre><code class="hljs python" v-pre><span>v = <span class="hljs-number">5</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span>v = <span class="hljs-number">5</span>
 </span></code></pre><tip-box> 
 <p><strong>Statements</strong></p>
 <p>Note that we called <code class="hljs inline no-lang" v-pre>v = 5</code> a <em>statement</em>. <strong>Unlike expressions that evaluates to a single value, a statement does not evaluates to a value.</strong> However, a statement can contain an expression e.g. <code class="hljs inline no-lang" v-pre>v = 5 + 8</code>.
 </p></tip-box><p></p>
 <p>If you enter the above statement in the interactive shell, it causes the shell to remember the variable name <code class="hljs inline no-lang" v-pre>v</code> and its value.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v = <span class="hljs-number">5</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v = <span class="hljs-number">5</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>
 </span></code></pre><p>Now, you can ask the shell to recall the value by simply typing in the variable name as an expression.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v
 </span><span><span class="hljs-number">5</span>
 </span></code></pre><p>You can even use the variable in expressions.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v * <span class="hljs-number">4</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>v * <span class="hljs-number">4</span>
 </span><span><span class="hljs-number">20</span>
 </span></code></pre><tip-box> 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are some examples of variables being declared, assigned, and being used:</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>max_bag_count = <span class="hljs-number">2</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>max_bag_count = <span class="hljs-number">2</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>max_bag_count
 </span><span><span class="hljs-number">2</span>
 </span><span>
@@ -260,9 +260,9 @@
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe src="https://trinket.io/embed/python/3d7b1ae52f?outputOnly=true&runOption=console&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></tip-box>
 <p><strong>Python variable names (by convention) use lower case letters with <code class="hljs inline no-lang" v-pre>_</code> separating words.</strong></p>
-<pre><code class="hljs python" v-pre><span>long_variable_name = <span class="hljs-number">56</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span>long_variable_name = <span class="hljs-number">56</span>
 </span></code></pre><p><strong>Variable names are case sensitive.</strong> In the example below, you can see how Python prints an error message if you try to access the variable <code class="hljs inline no-lang" v-pre>height</code> using the name <code class="hljs inline no-lang" v-pre>Height</code></p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">12.0</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">12.0</span>
 </span><span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height
 </span><span><span class="hljs-number">12.0</span>
@@ -273,7 +273,7 @@
 </span><span>   Height
 </span><span>NameError: name <span class="hljs-string">&#x27;Height&#x27;</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> defined
 </span></code></pre><p><strong>Variables can be overwritten</strong>. In the example below, <code class="hljs inline no-lang" v-pre>height</code> was initially <code class="hljs inline no-lang" v-pre>5</code> but the value is reassigned later to be <code class="hljs inline no-lang" v-pre>1</code> more than the previous value.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>height
 </span><span><span class="hljs-number">5</span>
 </span><span>
@@ -283,7 +283,7 @@
 </span></code></pre><p><strong>The value of one variable can be assigned to another variable.</strong></p>
 <tip-box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, the value of variable <code class="hljs inline no-lang" v-pre>height</code> is assigned to the variable <code class="hljs inline no-lang" v-pre>width</code>.</p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
+<pre><code class="no-line-numbers hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>height = <span class="hljs-number">5</span>
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>width = height
 </span><span><span class="hljs-meta">&gt;&gt;&gt; </span>width
 </span><span><span class="hljs-number">5</span>
@@ -445,7 +445,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Mon, 11 Jan 2021, 23:09:00 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Tue, 12 Jan 2021, 0:51:04 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
