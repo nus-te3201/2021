@@ -127,11 +127,7 @@
 </span><span>
 </span></code></pre><div>
 <p><span class="dimmed">[Click <a href="http://pythontutor.com/iframe-embed.html#code=def%20say_hello%28%29%3A%0A%20%20print%28'Hello!'%29%0A%20%20print%28'How%20are%20you%3F'%29%0A%20%20print%28'Nice%20to%20meet%20you.'%29%0A%20%20%0A%23%20call%20the%20function%20twice%0Aprint%28'Going%20to%20call%20the%20function%20...'%29%0Asay_hello%28%29%0Aprint%28'Going%20to%20repeat%20...'%29%0Asay_hello%28%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">here</a> to visualize the execution]</span></p></div></td></tr></table></div>
-<p>Note how the statements inside the function are not executed unless the method is called.</p>
-<div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/hello-function?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div></tip-box>
+<p>Note how the statements inside the function are not executed unless the method is called.</p></tip-box>
 <p>The function definition should appear in the code <em>before</em> it is called.</p>
 <tip-box> 
 <table>
@@ -224,9 +220,6 @@
 </span><span>
 </span></code></pre><div>
 <p><span class="dimmed">[Click <a href="http://pythontutor.com/iframe-embed.html#code=def%20say_hello%28name%29%3A%0A%20%20print%28'Hello%20'%20%2B%20name%29%0A%20%20print%28'How%20are%20you',%20name,%20'%3F'%29%0A%20%20%0Asay_hello%28'Gina'%29%0Asay_hello%28'John'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">here</a> to visualize the execution]</span></p></div></td></tr></table></div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/hello-name?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below has a <code class="hljs inline no-lang" v-pre>say_hello</code> function that takes one parameter and a <code class="hljs inline no-lang" v-pre>repeat_hello</code> function that takes two parameters. Furthermore, note how one function calls the other.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>(<span class="hljs-params">name</span>):</span>
 </span><span>  print(<span class="hljs-string">&#x27;Knock knock &#x27;</span> + name)
@@ -238,11 +231,12 @@
 </span><span>  
 </span><span>repeat_hello(<span class="hljs-string">&#x27;Penny&#x27;</span>, <span class="hljs-number">3</span>)
 </span><span>say_hello(<span class="hljs-string">&#x27;Sheldon&#x27;</span>)
-</span></code></pre><div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/hello-given-times?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span class="dimmed">😆 See the human version of the above code</span></p></template>
+</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>Hello Penny
+</span><span>Hello Penny
+</span><span>Hello Penny
+</span><span>Hello Sheldon
+</span></code></pre><panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span class="dimmed">😆 See the human version of the above code</span></p></template>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jrzUsHNGZHc?rel=0&showinfo=0&start=0&end=15&version=3" frameborder="0" allowfullscreen></iframe>
 <p></p></panel><p></p><p></p></tip-box>
 <p><strong>Parameter values are forgotten after the function returns</strong>.</p>
@@ -513,6 +507,9 @@
 <panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/functions-breedCows?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></div></tip-box>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Global and local scope</span></p></template>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/M-CoVBK_bLE?rel=0&showinfo=0&start=0&version=3" frameborder="0" allowfullscreen></iframe>
+<p></p></panel><p></p><p></p>
 <div>
 <panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Grader - Add <code class="hljs inline no-lang" v-pre>main</code> Function</p></template>
   <div>
@@ -857,7 +854,7 @@ Here is an example of how the code is likely to look like:</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Tue, 19 Jan 2021, 20:58:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 20 Jan 2021, 23:23:21 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>

@@ -281,7 +281,7 @@
 </span></code></pre></td></tr></table></div></box>
 <p>It is also possible to <strong>use <code class="hljs inline no-lang" v-pre>except Exception</code> to catch any kind of exception</strong>. However, that practice is discouraged.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below handles both <code class="hljs inline no-lang" v-pre>ZeroDivisionError</code> and <code class="hljs inline no-lang" v-pre>ValueError</code> in the same <code class="hljs inline no-lang" v-pre>except</code> clause.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below handles both <code class="hljs inline no-lang" v-pre>ZeroDivisionError</code> and <code class="hljs inline no-lang" v-pre>ValueError</code> <em>and any other exception</em> in the same <code class="hljs inline no-lang" v-pre>except</code> clause.</p>
 <div>
 <table>
 <tr>
@@ -298,10 +298,6 @@
   <td valign="bottom">
 <pre><code class="hljs" v-pre><span>Something wrong
 </span></code></pre></td></tr></table></div></box>
-<div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/errors-exceptions-handling?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div>
 <p>📎 <strong>Resources</strong>:</p>
 <ul>
 <li><a href="https://www.tutorialspoint.com/python/standard_exceptions.htm">Python built-in exceptions</a></li></ul>
@@ -395,10 +391,6 @@
 <pre><code class="hljs" v-pre><span>Cannot hide ends: Not enough items
 </span><span>hide_ends2 failed: Not enough items
 </span></code></pre></td></tr></table></div></box>
-<div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/errors-exceptions-raising?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div>
 <p>Here are some commonly used built-in exceptions (<a href="https://docs.python.org/3/library/exceptions.html#concrete-exceptions">full list</a>) you can raise/handle in your code:</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>IndexError</code>: Indicates an index of a sequence (e.g., a list) is out of range.</li>
@@ -716,11 +708,7 @@ Note that these words are separated by tabs, not normal spaces:<code class="hljs
 </span><span>  print(<span class="hljs-string">&#x27;removing head of list &#x27;</span>, items)
 </span><span>  <span class="hljs-keyword">del</span> items[<span class="hljs-number">0</span>]
 </span></code></pre></tip-box>
-<p>📎 Vist <a href="https://www.python.org/dev/peps/pep-0257/">this page</a> to learn more about docstrings</p>
-<div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-literals?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
+<p>📎 Vist <a href="https://www.python.org/dev/peps/pep-0257/">this page</a> to learn more about docstrings</p></div><hr style="border-top: 3px double #c5c5c5;">
 <div>
 <h3 id="working-with-strings"><span id="working-with-strings" class="anchor"></span>Working with Strings<a class="fa fa-anchor" href="#working-with-strings" onclick="event.stopPropagation()"></a></h3>
 <p>As you have seen before, you can use <code class="hljs inline no-lang" v-pre>+</code> and <code class="hljs inline no-lang" v-pre>*</code> operators to concatenate and replicate strings<br>
@@ -821,10 +809,6 @@ Note that these words are separated by tabs, not normal spaces:<code class="hljs
 </span><span>False
 </span><span>True
 </span></code></pre></td></tr></table></div></box>
-<div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-workingWith?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div>
 <div>
 <panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Has All Characters</p></template>
   <div>
@@ -1161,10 +1145,6 @@ Note that these words are separated by tabs, not normal spaces:<code class="hljs
 </span><span>:::::Title::::::
 </span></code></pre></td></tr></table></div></box>
 <div>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
-<iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/strings-methods?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-<p></p></panel><p></p><p></p></div>
-<div>
 <panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Print Formatted Item</p></template>
   <div>
 <h4 id="exercise-print-formatted-item"><span id="exercise-print-formatted-item" class="anchor"></span>Exercise : Print Formatted Item<a class="fa fa-anchor" href="#exercise-print-formatted-item" onclick="event.stopPropagation()"></a></h4>
@@ -1265,7 +1245,7 @@ Note that these words are separated by tabs, not normal spaces:<code class="hljs
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Tue, 19 Jan 2021, 20:58:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 20 Jan 2021, 23:23:21 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
