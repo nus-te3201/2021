@@ -201,7 +201,8 @@
 <p>Complete the functions as described below:</p>
 <ul>
 <li><code class="hljs inline no-lang" v-pre>get_head(item_list)</code>: returns the first item of the list received as the <code class="hljs inline no-lang" v-pre>item_list</code> parameter.</li>
-<li><code class="hljs inline no-lang" v-pre>get_tail(item_list)</code>: returns the last item of the list received as the <code class="hljs inline no-lang" v-pre>item_list</code> parameter.</li></ul>
+<li><code class="hljs inline no-lang" v-pre>get_tail(item_list)</code>: returns the last item of the list received as the <code class="hljs inline no-lang" v-pre>item_list</code> parameter.</li>
+<li>You may assume that the list has at least one item.</li></ul>
 <div>
 <table>
 <tr>
@@ -213,12 +214,16 @@
 </span><span>  <span class="hljs-keyword">return</span> <span class="hljs-comment"># ADD CODE HERE</span>
 </span><span>
 </span><span>print(get_head([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]))
+</span><span>print(get_head([<span class="hljs-number">5</span>]))
 </span><span>print(get_tail([<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3.0</span>]))
+</span><span>print(get_tail([<span class="hljs-string">&#x27;cat&#x27;</span>]))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
 <pre><code class="hljs" v-pre><span>1
+</span><span>5
 </span><span>3.0
+</span><span>cat
 </span></code></pre></td></tr></table></div>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_head</span>(<span class="hljs-params">item_list</span>):</span>
@@ -372,7 +377,8 @@ Similarly, <code class="hljs inline no-lang" v-pre>s = s + '  World!'</code> is 
 <p>Notes:</p>
 <ul>
 <li>You can follow the example of <code class="hljs inline no-lang" v-pre>set_head(item_list, new_head)</code> function which modifies the given <code class="hljs inline no-lang" v-pre>item_list</code> by setting its first element to <code class="hljs inline no-lang" v-pre>new_head</code>.</li>
-<li><code class="hljs inline no-lang" v-pre>pass</code> is a dummy statement that does nothing. We use it here because Python does not accept empty functions. You should replace it with your own implementation of the function.</li></ul>
+<li><code class="hljs inline no-lang" v-pre>pass</code> is a dummy statement that does nothing. We use it here because Python does not accept empty functions. You should replace it with your own implementation of the function.</li>
+<li>You may assume the list has at least two elements.</li></ul>
 <table>
 <tr>
   <td>
@@ -387,11 +393,15 @@ Similarly, <code class="hljs inline no-lang" v-pre>s = s + '  World!'</code> is 
 </span><span>print(pets)
 </span><span>swap_ends(pets)
 </span><span>print(pets)
+</span><span>items = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>]
+</span><span>swap_ends(items)
+</span><span>print(items)
 </span></code></pre></td>
   <td><br><br><br><br><br><br><br><br>&nbsp;→&nbsp;</td>
-  <td><br><br><br><br><br><br><br><br>
+  <td><br><br><br><br><br><br><br><br><br>
 <pre><code class="hljs" v-pre><span>['parrot', 'fish', 'dog', 'rock']
 </span><span>['rock', 'fish', 'dog', 'parrot']
+</span><span>[2, 1]
 </span></code></pre></td></tr></table></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
 <div>
 <h3 id="working-with-lists"><span id="working-with-lists" class="anchor"></span>Working with Lists<a class="fa fa-anchor" href="#working-with-lists" onclick="event.stopPropagation()"></a></h3>
@@ -1103,7 +1113,7 @@ e.g., <code class="hljs inline no-lang" v-pre>list('quick')</code> → <code cla
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Wed, 20 Jan 2021, 23:23:21 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Sun, 24 Jan 2021, 1:10:50 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
