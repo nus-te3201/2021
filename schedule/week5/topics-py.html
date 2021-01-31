@@ -306,7 +306,7 @@
   <div>
 <h4 id="exercise-enter-integer"><span id="exercise-enter-integer" class="anchor"></span>Exercise : Enter Integer<a class="fa fa-anchor" href="#exercise-enter-integer" onclick="event.stopPropagation()"></a></h4>
 <p>The code below assumes the entered string will always represent an integer.</p>
-<pre><code class="hljs python" v-pre><span>value = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Input an integer:&#x27;</span>)
+<pre><code class="hljs python" v-pre><span>value = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Input an integer: &#x27;</span>)
 </span><span>print(<span class="hljs-string">&#x27;You entered&#x27;</span>, value)
 </span></code></pre><p>However, users may not follow that assumption. If the user were to enter a non-integer string, the program crashes. To avoid such crashes, programs need to do <em>input validation</em> i.e., perform checks on inputs to ensure their validity.</p>
 <p>Update the above code so that it accepts integers only, and produces the behavior given below.</p>
@@ -325,7 +325,7 @@
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
 </span><span>  <span class="hljs-keyword">try</span>:
-</span><span>    value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Input an integer:&#x27;</span>))
+</span><span>    value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Input an integer: &#x27;</span>))
 </span><span>    <span class="hljs-comment"># YOUR CODE HERE! print? break? continue?</span>
 </span><span>  <span class="hljs-keyword">except</span> ValueError:
 </span><span>    <span class="hljs-comment"># YOUR CODE HERE!</span>
@@ -1245,7 +1245,7 @@ Note that these words are separated by tabs, not normal spaces:<code class="hljs
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Tue, 26 Jan 2021, 21:55:35 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Sun, 31 Jan 2021, 19:48:09 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
