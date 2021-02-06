@@ -203,7 +203,7 @@
 <li><code class="hljs inline no-lang" v-pre>..\..\modules\te3201\exercises\ex1.txt</code></li></ul>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">another example</span></p></template>
 <p><a href="https://automatetheboringstuff.com/images/000032.jpg" target="_self"><img src="https://automatetheboringstuff.com/images/000032.jpg" alt class="img-fluid"></a></p></panel><p></p></box>
-<p>You can use <code class="hljs inline no-lang" v-pre>os.mkdirs()</code> function to create folders and <code class="hljs inline no-lang" v-pre>os.removedirs()</code> to delete folders.</p>
+<p>You can use <code class="hljs inline no-lang" v-pre>os.makedirs()</code> function to create folders and <code class="hljs inline no-lang" v-pre>os.removedirs()</code> to delete folders.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example code showing how to create/delete directories</p>
 <div>
@@ -678,7 +678,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 <td>pens, pencils</td>
 <td>5.0</td>
 <td>0.35</td></tr></tbody></table></div></td></tr></table></div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">💡 Python hints</span></p></template>
+<p>Start with the following code:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> csv
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_GST</span>(<span class="hljs-params">source_file, target_file</span>):</span>
@@ -724,7 +724,11 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>  
 </span><span>process(<span class="hljs-string">&#x27;itemlist1.csv&#x27;</span>, <span class="hljs-string">&#x27;updated_itemlist1.csv&#x27;</span>)
 </span><span>process(<span class="hljs-string">&#x27;itemlist2.csv&#x27;</span>, <span class="hljs-string">&#x27;updated_itemlist2.csv&#x27;</span>)
-</span></code></pre></panel></div></panel><p></p></div></div>
+</span></code></pre><p><code class="hljs inline no-lang" v-pre>itemlist2.csv</code>:</p>
+<pre><code class="hljs" v-pre><span>item,price
+</span><span>bread,1.0
+</span><span>bananas, 4.0
+</span></code></pre></div></panel><p></p></div></div>
 <div>
 <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
 <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
@@ -762,7 +766,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/5hwG2gEGzVg" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 <p><strong><a href="https://www.jetbrains.com/pycharm/">PyCharm</a> is a more sophisticated IDE that is widely used.</strong> PyCharm has a free community edition. The professional edition too is free for students.</p>
 <panel expanded><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Installing and setting up PyCharm</p></template>
-<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/0y5XlNeFxNk" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/AUiM1UaRCPc" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel>
 <div>
 <panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Setup a Project in PyCharm</p></template>
   <div>
@@ -771,10 +775,10 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 <li>Install Python and PyCharm if you haven't done so already.</li>
 <li>Start PyCharm and click on the <code class="hljs inline no-lang" v-pre>Create New Project</code> option.<br>
 <a href="/2021/programming/ide/images/createNewProject.png" target="_self"><img src="/2021/programming/ide/images/createNewProject.png" alt class="img-fluid"></a></li>
-<li>Create a folder for your project. In the next screen, specify that as the project location.<br>
+<li>In the next screen, specify that as the project location.<br>
 <a href="/2021/programming/ide/images/specifyProjectLocation.png" target="_self"><img src="/2021/programming/ide/images/specifyProjectLocation.png" alt class="img-fluid"></a></li>
 <li>You can accept defaults for the remaining steps.</li>
-<li>To add a new file, right-click on project name and choose <code class="hljs inline no-lang" v-pre>New</code> → <code class="hljs inline no-lang" v-pre>File</code>. Provide a file name in the next screen. E.g., <code class="hljs inline no-lang" v-pre>hello.py</code><br>
+<li>To add a new file, right-click on project name and choose <code class="hljs inline no-lang" v-pre>New</code> → <code class="hljs inline no-lang" v-pre>Python File</code>. Provide a file name in the next screen. E.g., <code class="hljs inline no-lang" v-pre>greet.py</code><br>
 <a href="/2021/programming/ide/images/addNewFile.png" target="_self"><img src="/2021/programming/ide/images/addNewFile.png" alt class="img-fluid"></a></li>
 <li>Type your code in the file.<br>
 <a href="/2021/programming/ide/images/editCode.png" target="_self"><img src="/2021/programming/ide/images/editCode.png" alt class="img-fluid"></a><br>
@@ -790,7 +794,7 @@ Here is an example:<pre><code class="hljs python" v-pre><span>greeting = <span c
 </span><span>print_greeting(<span class="hljs-string">&#x27;jane&#x27;</span>)
 </span></code></pre></li>
 <li>To run the code, Right-click on project name and choose <code class="hljs inline no-lang" v-pre>Run 'filename'</code>.<br>
-<a href="/2021/programming/ide/images/runCode.png" target="_self"><img src="/2021/programming/ide/images/runCode.png" alt class="img-fluid"></a></li>
+<img src="/2021/programming/ide/images/runCode.png" width="500"></li>
 <li>The output will appear in the panel at the bottom of the IDE.<br>
 <a href="/2021/programming/ide/images/seeOutput.png" target="_self"><img src="/2021/programming/ide/images/seeOutput.png" alt class="img-fluid"></a></li></ol></div></panel><p></p></div>
 <panel expanded><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Debugging in PyCharm</p></template>
@@ -853,7 +857,7 @@ Useful buttons:<br>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Tue, 2 Feb 2021, 23:27:37 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.2</a>, generated on Sat, 6 Feb 2021, 23:01:44 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
