@@ -512,7 +512,7 @@
   <div>
 <h4 id="exercise-player-stats"><span id="exercise-player-stats" class="anchor"></span>Exercise: Player Stats<a class="fa fa-anchor" href="#exercise-player-stats" onclick="event.stopPropagation()"></a></h4>
 <p>Assume in each inning a player gets to bat a number of times and each hit can score 0, 1, 4, or 6, which are known as <em>hit sizes</em>. There is a need to keep track of how many times a player achieved each hit size in an inning.</p>
-<p>Note how the <code class="hljs inline no-lang" v-pre>player_stats</code> dictionary in the code below uses lists which contain dictionaries to store, for each player, how many times the player scored a certain hit size, for each inning. For example, the player <code class="hljs inline no-lang" v-pre>amy</code> scored hit size of 0 x 0 times; hit size of 1 x 1 times; hit size of 4 x 1 times; hit size of 6 x 0 time in the first inning (which adds up to a score of <code class="hljs inline no-lang" v-pre>0*0 + 1*1 + 4*1 + 6*0 = 10</code> for her first inning).</p>
+<p>Note how the <code class="hljs inline no-lang" v-pre>player_stats</code> dictionary in the code below uses lists which contain dictionaries to store, for each player, how many times the player scored a certain hit size, for each inning. For example, the player <code class="hljs inline no-lang" v-pre>amy</code> scored hit size of 0 x 0 times; hit size of 1 x 1 times; hit size of 4 x 1 times; hit size of 6 x 0 time in the first inning (which adds up to a score of <code class="hljs inline no-lang" v-pre>0*0 + 1*1 + 4*1 + 6*0 = 5</code> for her first inning).</p>
 <pre><code class="hljs python" v-pre><span>player_stats = {<span class="hljs-string">&#x27;amy&#x27;</span>: [{<span class="hljs-number">0</span>:<span class="hljs-number">0</span>, <span class="hljs-number">1</span>:<span class="hljs-number">1</span>, <span class="hljs-number">4</span>:<span class="hljs-number">1</span>, <span class="hljs-number">6</span>:<span class="hljs-number">0</span>},  <span class="hljs-comment"># amy&#x27;s first inning stats</span>
 </span><span>                        {<span class="hljs-number">0</span>:<span class="hljs-number">2</span>, <span class="hljs-number">1</span>:<span class="hljs-number">5</span>, <span class="hljs-number">4</span>:<span class="hljs-number">0</span>, <span class="hljs-number">6</span>:<span class="hljs-number">0</span>},  <span class="hljs-comment"># amy&#x27;s second inning stats</span>
 </span><span>                        {<span class="hljs-number">0</span>:<span class="hljs-number">0</span>, <span class="hljs-number">1</span>:<span class="hljs-number">0</span>, <span class="hljs-number">4</span>:<span class="hljs-number">1</span>, <span class="hljs-number">6</span>:<span class="hljs-number">1</span>}], <span class="hljs-comment"># amy&#x27;s third inning stats</span>
@@ -753,7 +753,7 @@ As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'cc
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Sun, 21 Feb 2021, 17:03:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Mon, 22 Feb 2021, 17:32:36 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
