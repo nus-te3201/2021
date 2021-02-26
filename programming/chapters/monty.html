@@ -794,6 +794,20 @@ Note: <code class="hljs inline no-lang" v-pre>by:</code> is a keyword. Anything 
 <div id="monty9">
 <h3 id="level-9-use-classes"><span id="level-9-use-classes" class="anchor"></span><span class="badge badge-info">Level 9</span> <span class="text-info">Use Classes</span><a class="fa fa-anchor" href="#level-9-use-classes" onclick="event.stopPropagation()"></a></h3>
 <p>Enhance the <a href="/2021/programming/chapters/monty.html#monty8">Monty Level 8 code</a> to use classes <code class="hljs inline no-lang" v-pre>ToDo</code> and <code class="hljs inline no-lang" v-pre>Deadline</code> (i.e., you need to define these two classes) to represent todo tasks and deadlines, respectively.</p>
+<box><template slot="_header"><p><span aria-hidden="true" class="fas fa-lightbulb"></span> A shorthand for <code class="hljs inline no-lang" v-pre>if-else</code></p></template>
+Consider the following code:
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_as_word</span>(<span class="hljs-params">status</span>):</span>
+</span><span>    <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span>:
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Yes&#x27;</span>
+</span><span>    <span class="hljs-keyword">else</span>:
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;No&#x27;</span>
+</span></code></pre><p>The same can be written using the following shorthand for <code class="hljs inline no-lang" v-pre>if-else</code>:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_as_word</span>(<span class="hljs-params">status</span>):</span>
+</span><span>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Yes&#x27;</span> <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;No&#x27;</span>
+</span></code></pre><p>Two more examples:</p>
+<pre><code class="hljs python" v-pre><span>status_as_word = <span class="hljs-string">&#x27;Yes&#x27;</span> <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;No&#x27;</span>
+</span><span>print(<span class="hljs-string">&#x27;Yes&#x27;</span>) <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> print(<span class="hljs-string">&#x27;No&#x27;</span>)
+</span></code></pre><p>Note that this shorthand requires both the <code class="hljs inline no-lang" v-pre>if</code> part and the <code class="hljs inline no-lang" v-pre>else</code> part.</p></box>
 <panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
 <p>Here is the code for an example <code class="hljs inline no-lang" v-pre>ToDo</code> class:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ToDo</span>:</span>
@@ -1319,7 +1333,7 @@ Note: <code class="hljs inline no-lang" v-pre>by:</code> is a keyword. Anything 
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Mon, 22 Feb 2021, 17:32:36 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Fri, 26 Feb 2021, 19:21:14 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
