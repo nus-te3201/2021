@@ -280,7 +280,33 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">return</span> ...
-</span></code></pre></panel></div></panel><p></p></div></div>
+</span></code></pre></panel></div></panel><p></p></div>
+<div>
+<panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: <code class="hljs inline no-lang" v-pre>StockItem</code> with Price</p></template>
+  <div>
+<h4 id="exercise-stockitem-with-price"><span id="exercise-stockitem-with-price" class="anchor"></span>Exercise : <code class="hljs inline no-lang" v-pre>StockItem</code> with Price<a class="fa fa-anchor" href="#exercise-stockitem-with-price" onclick="event.stopPropagation()"></a></h4>
+<p>Enhance the <code class="hljs inline no-lang" v-pre>StockItem</code> class you wrote in the previous exercise so that each <code class="hljs inline no-lang" v-pre>StockItem</code> object can keep track of its own price and the price can be increased later.</p>
+<table>
+<tr>
+  <td>
+<pre><code class="hljs python" v-pre><span><span class="hljs-comment"># ADD StockItem class here</span>
+</span><span><span class="hljs-comment"># It should have attributes: name, price</span>
+</span><span><span class="hljs-comment"># It should have methods: info, increase_price</span>
+</span><span>
+</span><span>items = []
+</span><span>items.append(StockItem(<span class="hljs-string">&#x27;Pen&#x27;</span>, <span class="hljs-number">5</span>))  <span class="hljs-comment"># a pen worth 5 dollars</span>
+</span><span>items.append(StockItem(<span class="hljs-string">&#x27;Pencil&#x27;</span>, <span class="hljs-number">3</span>))
+</span><span>items.append(StockItem(<span class="hljs-string">&#x27;Cup&#x27;</span>, <span class="hljs-number">1</span>))
+</span><span><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> items:
+</span><span>    item.increase_price(<span class="hljs-number">1</span>)  <span class="hljs-comment"># increase price by 1</span>
+</span><span>    print(item.info())
+</span></code></pre></td>
+  <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
+  <td valign="bottom"> 
+<pre><code class="hljs" v-pre><span>The price of Pen is 6
+</span><span>The price of Pencil is 4
+</span><span>The price of Cup is 2
+</span></code></pre></td></tr></table></div></panel><p></p></div></div>
 <div>
 <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
 <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
@@ -345,6 +371,7 @@ This is how the arguments are matched with the parameters:</p>
 <a class="nav-link py-1" href="#classes">Classes&#x200E;</a>
 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
 <a class="nav-link py-1" href="#exercise-create-stockitem-class">Exercise : Create StockItem Class&#x200E;</a>
+<a class="nav-link py-1" href="#exercise-stockitem-with-price">Exercise : StockItem with Price&#x200E;</a>
 </nav>
 </nav>
 <a class="nav-link py-1" href="#appendix-a-installing-3rd-party-modules">Appendix A: Installing 3rd-Party Modules&#x200E;</a>
@@ -360,7 +387,7 @@ This is how the arguments are matched with the parameters:</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Fri, 26 Feb 2021, 19:21:14 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Fri, 26 Feb 2021, 20:25:47 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
