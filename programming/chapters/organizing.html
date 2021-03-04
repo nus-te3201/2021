@@ -108,14 +108,14 @@
 <p><strong>You can organize files into sub-directories too.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following two files.</p>
-<p><code class="hljs inline no-lang" v-pre>[project_root]/misc/print_utils/misc.py</code>:</p>
+<p><code class="hljs inline no-lang" v-pre>[project_root]/utils/print_utils/misc.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_as_list</span>(<span class="hljs-params">text</span>):</span>
 </span><span>    print(<span class="hljs-built_in">list</span>(text))
 </span></code></pre><p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">from</span> utils.print_utils <span class="hljs-keyword">import</span> misc 
 </span><span>
 </span><span>misc.print_as_list(<span class="hljs-string">&#x27;Adam&#x27;</span>)
-</span></code></pre><p>Notice how the <code class="hljs inline no-lang" v-pre>import</code> statement uses a slightly different syntax and uses <code class="hljs inline no-lang" v-pre>.</code> to indicate directory nesting (i.e., <code class="hljs inline no-lang" v-pre>misc/print_utils</code> → <code class="hljs inline no-lang" v-pre>misc.print_utils</code>). In fact, there are <a href="https://docs.python.org/3/tutorial/modules.html">other variations of the <code class="hljs inline no-lang" v-pre>import</code> syntax</a>.</p></box>
+</span></code></pre><p>Notice how the <code class="hljs inline no-lang" v-pre>import</code> statement uses a slightly different syntax and uses <code class="hljs inline no-lang" v-pre>.</code> to indicate directory nesting (i.e., <code class="hljs inline no-lang" v-pre>utils/print_utils</code> → <code class="hljs inline no-lang" v-pre>utils.print_utils</code>). In fact, there are <a href="https://docs.python.org/3/tutorial/modules.html">other variations of the <code class="hljs inline no-lang" v-pre>import</code> syntax</a>.</p></box>
 <p>When you import a module, Python will interpret and execute any code in it.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this <code class="hljs inline no-lang" v-pre>student</code> module being imported into the <code class="hljs inline no-lang" v-pre>course</code> module.</p>
@@ -185,7 +185,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Wed, 3 Mar 2021, 0:43:02 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Fri, 5 Mar 2021, 0:43:07 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
