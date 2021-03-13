@@ -1,20 +1,11 @@
 {% from "common/topics.njk" import panopto, slugify, topic_followup, topic_preamble with context %}
 
-{% call topic_preamble("UML Class Diagrams: Basics", reuse=false) %}
+{% call topic_preamble("UML Class and Object Diagrams: Basics", reuse=false) %}
 This week, **we start learning a UML diagram called _Class Diagrams_.**
-
-{{ panopto("c9727e98-4bb6-4de3-b3ec-ab81009c3af2") }}
-{% endcall %}
-<!-- ---------------------------------------------------------------------------- -->
-{% call topic_preamble("UML Object Diagrams", reuse=false) %}
 **As we learn about class diagrams, we should also learn about _object diagrams_** as they complement each other.
 {% endcall %}
 <!-- ---------------------------------------------------------------------------- -->
-{% call topic_preamble("uml-notes-notes", reuse=false) %}
-**UML has a way to add additional notes to any UML diagram**, as shown below.
-{% endcall %}
-<!-- ---------------------------------------------------------------------------- -->
-{% call topic_followup("uml-notes-constraints", reuse=false) %}
+{% call topic_followup("UML Class and Object Diagrams: Basics", reuse=false) %}
 After learning the UML notations above, you can attempt the exercise in the following video:
 
 {{ panopto("dab3bb0f-c0cd-40af-8e39-ab88005aa195") }}
