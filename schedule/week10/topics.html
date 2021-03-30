@@ -641,6 +641,81 @@ Similarly, an inheritance results in a dependency from the child class to the pa
 <panel type="seamless" class="algolia-no-index">
   <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span><span></span></div>
 <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=f4f7e1f2-60a4-4d18-b70a-ac4000f17608&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+<p>After watching the above example, you can try this exercise:</p>
+<panel class="algolia-no-index"><template slot="header"><p>Exercise: Draw class/object diagrams for HouseManager code</p></template>
+<div>
+<p>Consider the following code:</p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HouseManager</span>:</span>
+</span><span>    MAX_ROOMS = <span class="hljs-number">5</span>  <span class="hljs-comment"># this is a class-level constant</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>        self.houses = []
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RoomsError</span>(<span class="hljs-params">Exception</span>):</span>  <span class="hljs-comment"># this is a user-defined exception</span>
+</span><span>    <span class="hljs-keyword">pass</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">House</span>:</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, address</span>):</span>
+</span><span>        self.address = address
+</span><span>        self.__rooms = {}  <span class="hljs-comment"># this is a private variable</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_room</span>(<span class="hljs-params">self, name, room</span>):</span>
+</span><span>        <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(self.__rooms.keys()) == HouseManager.MAX_ROOMS:
+</span><span>            <span class="hljs-keyword">raise</span> RoomsError()
+</span><span>        self.__rooms[name] = room
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__room_info</span>(<span class="hljs-params">self</span>):</span>
+</span><span>        lines = []
+</span><span>        <span class="hljs-keyword">for</span> name, r <span class="hljs-keyword">in</span> self.__rooms.items():
+</span><span>            lines.append(<span class="hljs-string">&#x27;* &#x27;</span> + name + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">str</span>(r))
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;\n&#x27;</span>.join(lines)
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>        room_count = <span class="hljs-built_in">len</span>(self.__rooms.keys())
+</span><span>        room_info = self.__room_info()
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;The house at &#x27;</span> + self.address + <span class="hljs-string">&#x27; has &#x27;</span> + <span class="hljs-built_in">str</span>(room_count) + <span class="hljs-string">&#x27; rooms:\n&#x27;</span> + room_info + <span class="hljs-string">&#x27;\n&#x27;</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Room</span>:</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, desc</span>):</span>
+</span><span>        self.__desc = desc
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;[desc: &#x27;</span> + self.__desc + <span class="hljs-string">&#x27;]&#x27;</span>
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">LivingRoom</span>(<span class="hljs-params">Room</span>):</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>  <span class="hljs-comment"># overriding a method of the parent class</span>
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;[type: LivingRoom] &#x27;</span> + <span class="hljs-built_in">super</span>().__str__()
+</span><span>
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BedRoom</span>(<span class="hljs-params">Room</span>):</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__str__</span>(<span class="hljs-params">self</span>):</span>
+</span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;[type: BedRoom] &#x27;</span> + <span class="hljs-built_in">super</span>().__str__()
+</span><span>
+</span><span>
+</span><span><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&#x27;__main__&#x27;</span>:
+</span><span>    hm = HouseManager()
+</span><span>    h1 = House(<span class="hljs-string">&#x27;S123456&#x27;</span>)
+</span><span>    h1.add_room(<span class="hljs-string">&#x27;room1&#x27;</span>, LivingRoom(<span class="hljs-string">&#x27;main living room&#x27;</span>))
+</span><span>    h1.add_room(<span class="hljs-string">&#x27;room2&#x27;</span>, BedRoom(<span class="hljs-string">&#x27;master bedroom&#x27;</span>))
+</span><span>    h1.add_room(<span class="hljs-string">&#x27;room3&#x27;</span>, BedRoom(<span class="hljs-string">&#x27;guest bedroom&#x27;</span>))
+</span><span>    print(h1)
+</span><span>    hm.houses.append(h1)
+</span><span>    hm.houses.append(House(<span class="hljs-string">&#x27;S654321&#x27;</span>))
+</span><span>    print(hm.houses[<span class="hljs-number">1</span>])
+</span></code></pre><p>When executed, it produces the following output:</p>
+<pre><code class="hljs" v-pre><span>The house at S123456 has 3 rooms:
+</span><span>* room1 [type: LivingRoom] [desc: main living room]
+</span><span>* room2 [type: BedRoom] [desc: master bedroom]
+</span><span>* room3 [type: BedRoom] [desc: guest bedroom]
+</span><span>
+</span><span>The house at S654321 has 0 rooms:
+</span></code></pre><p>(a) Draw a class diagram to represent the classes in the code.</p>
+<p>(b) Draw an object diagram to represent the object structure produced by the lines 53-61.</p></div></panel>
 <p></p></div></div></div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -1037,7 +1112,7 @@ How unit testing (and other good coding practices) could have prevented a major 
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Wed, 24 Mar 2021, 16:59:28 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 30 Mar 2021, 17:22:37 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
