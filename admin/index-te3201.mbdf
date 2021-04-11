@@ -155,10 +155,10 @@ In some weeks, there will be some programming exercises for you to submit (on Co
 
 ### Week 13: Final Submission
 
-**Submission Deadline**: Sunday of week 13 (Apr 19th). ==Submissions later than the deadline are liable to a late submission penalty==, to be fair to those who submitted on time. But given that you are part time students, the late submission penalty will be small (e.g., `-1` per day).
-* **The deadline for seeking feedback on the project report draft**: week 13 lecture. 
-  * Preferred mode of feedback: ~~in-person (reason: it is hard to give written feedback on diagrams)~~ via email
-  * Such feedback will be limited to high-level comments only (reason: the report is graded).
+**Submission Deadline**: Sunday of week 13 ({{ date_w13_start | date("YYYY-MM-DD", 6) }}). ==Submissions later than the deadline are liable to a late submission penalty==, to be fair to those who submitted on time. But given that you are part time students, the late submission penalty will be small (e.g., `-1` per day).
+* **The deadline for seeking feedback on the project report draft**: ==week 13 lecture ({{ date_w13_start | date("YYYY-MM-DD", 1) }})==.
+  * Preferred mode of feedback: ~~in-person (reason: it is hard to give written feedback on diagrams)~~ via email.
+  * Such feedback will be limited to high-level comments only (reason: the report is graded), and given only once per student.
 
 **Deliverables**:
 1. **Source code** of the working program: zip (not rar) the code and submit to LumiNUS<br>name:
