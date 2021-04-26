@@ -161,17 +161,20 @@ In some weeks, there will be some programming exercises for you to submit (on Co
   * Such feedback will be limited to high-level comments only (reason: the report is graded), and given only once per student.
 
 **Deliverables**:
-1. **Source code** of the working program: zip (not rar) the code and submit to LumiNUS<br>name:
-   File name: `{YourName}.zip` e.g., `JunHao.zip`
-1. **Documentation**: a single .docx (preferred) or a pdf file that follows the template given (template file will be available in LumiNUS).<br>
-   Submission: Upload to LumiNUS. The file name should be your name e.g., `JunHao.docx`
+1. **Code** of the working program: zip (not rar) the code.
+   * Submission: Upload to LumiNUS/files folder named **`final-project-submissions/code`**
+   * File name: `{Your Name}.zip` e.g., `Jun Hao.zip`
+1. **Documentation**: a single .docx (preferred) or a pdf file that follows the template given (template file will be available in LumiNUS).
+   * Submission: Upload to LumiNUS/files folder named **`final-project-submissions/report`**
+   * File name: `{Your Name}.docx/pdf`  e.g., `Jun Hao.docx`
 1. **Demo video**:
    * Record a demo video showcasing the features of your product.
    * Use the exact version of the code you submitted (i.e., the demo should match the submitted code exactly).
    * Recommended length 7 minutes, max length 10 minutes.
    * Audio narration is optional if the demo can be understood without the audio.
    * Ensure the video is in a format that can be played by any computer.
-   * Submission: Name the file with your name (to match the zip and the report file) and upload to LumiNUS.
+   * Submission: Upload to LumiNUS/files folder named **`final-project-submissions/demo`**
+   * File name: `{Your Name}.mp4`  e.g., `Jun Hao.mp4`
 
 </div>
 
@@ -295,7 +298,7 @@ If you face difficulties/doubts while learning the weekly topics, doing weekly e
 * In your computer, close all other apps and browser tabs other than the ones permitted to be use for the exam. Remember to exit other background apps that starts automatically such as telegram.
 * Launch MS-Teams, login to it, and close the app without exiting (which makes it run in the background).
 * Login to LumiNUS. The password to open the quiz will be broadcast via Zoom (audio announcement plus chat message) by the invigilator later.
-* Launch Zoom, login, ensure profile name and camera complies with our requirements, and join the meeting (use the ==same Zoom link used for the lectures==). Wait for the invigilator to take you into the meeting.
+* Launch Zoom, login, ensure profile name and camera complies with our requirements, and join the meeting (use the ==the Zoom link to use for the exam will be sent to you near to the exam date==). Wait for the invigilator to take you into the meeting.
 * Once you are inside the Zoom meeting, wait patiently until all students have been admitted and the exam is ready to start. **This wait could be as long as 30 minutes.**
 
 ### Format
