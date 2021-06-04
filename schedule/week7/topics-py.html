@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Week 7 - Programming Topics</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -163,8 +164,8 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_subject_info</span>(<span class="hljs-params">code, name, level, is_core</span>):</span>
 </span><span>  <span class="hljs-keyword">return</span> {} <span class="hljs-comment"># UPDATE THIS LINE</span>
 </span><span>  
-</span><span>print(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
-</span><span>print(get_subject_info(<span class="hljs-string">&#x27;CS1101&#x27;</span>, <span class="hljs-string">&#x27;Programming Basics&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">True</span>))
+</span><span><span class="hljs-built_in">print</span>(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
+</span><span><span class="hljs-built_in">print</span>(get_subject_info(<span class="hljs-string">&#x27;CS1101&#x27;</span>, <span class="hljs-string">&#x27;Programming Basics&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-literal">True</span>))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>{'code': 'TE3201', 'name': 'Software Engineering', 'level': 3, 'core?': False}
 </span><span>{'code': 'CS1101', 'name': 'Programming Basics', 'level': 1, 'core?': True}
@@ -172,7 +173,7 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_subject_info</span>(<span class="hljs-params">code, name, level, is_core</span>):</span>
 </span><span>  <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;code&#x27;</span>: code, ...} 
 </span><span>  
-</span><span>print(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
+</span><span><span class="hljs-built_in">print</span>(get_subject_info(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-literal">False</span>))
 </span></code></pre></panel></div></panel><p></p></div></div>
 <div>
 <h3 id="working-with-dictionaries"><span id="working-with-dictionaries" class="anchor"></span>Working with Dictionaries<a class="fa fa-anchor" href="#working-with-dictionaries" onclick="event.stopPropagation()"></a></h3>
@@ -185,9 +186,9 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>numbers = {<span class="hljs-number">1</span>: <span class="hljs-string">&#x27;one&#x27;</span>, <span class="hljs-number">2</span>: <span class="hljs-string">&#x27;two&#x27;</span>, <span class="hljs-number">3</span>: <span class="hljs-string">&#x27;three&#x27;</span>}
 </span><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
-</span><span>print(<span class="hljs-built_in">type</span>(numbers))
-</span><span>print(numbers[<span class="hljs-number">1</span>])
-</span><span>print(prices[<span class="hljs-string">&#x27;butter&#x27;</span>])
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(numbers))
+</span><span><span class="hljs-built_in">print</span>(numbers[<span class="hljs-number">1</span>])
+</span><span><span class="hljs-built_in">print</span>(prices[<span class="hljs-string">&#x27;butter&#x27;</span>])
 </span></code></pre></td>
   <td valign="middle">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -202,11 +203,11 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>grades = {<span class="hljs-string">&#x27;TE3201&#x27;</span>: <span class="hljs-string">&#x27;A&#x27;</span>}
 </span><span>grades[<span class="hljs-string">&#x27;CS2103&#x27;</span>] = <span class="hljs-string">&#x27;B&#x27;</span>
-</span><span>print(<span class="hljs-string">&#x27;After adding:&#x27;</span>,grades)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;After adding:&#x27;</span>,grades)
 </span><span>grades[<span class="hljs-string">&#x27;TE3201&#x27;</span>] = <span class="hljs-string">&#x27;A+&#x27;</span>
-</span><span>print(<span class="hljs-string">&#x27;After updating:&#x27;</span>,grades)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;After updating:&#x27;</span>,grades)
 </span><span><span class="hljs-keyword">del</span> grades[<span class="hljs-string">&#x27;CS2103&#x27;</span>]
-</span><span>print(<span class="hljs-string">&#x27;After deleting:&#x27;</span>, grades)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;After deleting:&#x27;</span>, grades)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -234,13 +235,13 @@
 </span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># REPLACE THIS WITH YOUR CODE!</span>
 </span><span>  
 </span><span>game1_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}
-</span><span>print(get_score(game1_scores, <span class="hljs-string">&#x27;betty&#x27;</span>))
-</span><span>print(get_score(game1_scores, <span class="hljs-string">&#x27;amy&#x27;</span>))
+</span><span><span class="hljs-built_in">print</span>(get_score(game1_scores, <span class="hljs-string">&#x27;betty&#x27;</span>))
+</span><span><span class="hljs-built_in">print</span>(get_score(game1_scores, <span class="hljs-string">&#x27;amy&#x27;</span>))
 </span><span>set_score(game1_scores, <span class="hljs-string">&#x27;charlie&#x27;</span>, <span class="hljs-number">5</span>)
 </span><span>set_score(game1_scores, <span class="hljs-string">&#x27;dan&#x27;</span>, <span class="hljs-number">0</span>)
-</span><span>print(game1_scores)
+</span><span><span class="hljs-built_in">print</span>(game1_scores)
 </span><span>delete_score(game1_scores, <span class="hljs-string">&#x27;dan&#x27;</span>)
-</span><span>print(game1_scores)
+</span><span><span class="hljs-built_in">print</span>(game1_scores)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>36
 </span><span>35
@@ -261,7 +262,7 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>is_nice = {<span class="hljs-string">&#x27;jane&#x27;</span>: <span class="hljs-literal">False</span>, <span class="hljs-string">&#x27;hakim&#x27;</span>: <span class="hljs-literal">True</span>}
-</span><span>print(is_nice[<span class="hljs-string">&#x27;santa&#x27;</span>])
+</span><span><span class="hljs-built_in">print</span>(is_nice[<span class="hljs-string">&#x27;santa&#x27;</span>])
 </span></code></pre></td>
   <td valign="top">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -281,8 +282,8 @@
 </span><span>  <span class="hljs-keyword">return</span> scores[player] <span class="hljs-comment"># UPDATE HERE!</span>
 </span><span>    
 </span><span>game1_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}
-</span><span>print(get_score1(game1_scores, <span class="hljs-string">&#x27;charlie&#x27;</span>))
-</span><span>print(get_score1(game1_scores, <span class="hljs-string">&#x27;brown&#x27;</span>))
+</span><span><span class="hljs-built_in">print</span>(get_score1(game1_scores, <span class="hljs-string">&#x27;charlie&#x27;</span>))
+</span><span><span class="hljs-built_in">print</span>(get_score1(game1_scores, <span class="hljs-string">&#x27;brown&#x27;</span>))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>30
 </span><span>brown is not in the game!
@@ -302,7 +303,7 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
 </span><span><span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> prices.keys():
-</span><span>  print(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
+</span><span>  <span class="hljs-built_in">print</span>(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -316,7 +317,7 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
 </span><span><span class="hljs-keyword">for</span> v <span class="hljs-keyword">in</span> prices.values():
-</span><span>  print(v)
+</span><span>  <span class="hljs-built_in">print</span>(v)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -333,7 +334,7 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
 </span><span><span class="hljs-keyword">for</span> k <span class="hljs-keyword">in</span> <span class="hljs-built_in">sorted</span>(prices.keys()):
-</span><span>  print(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
+</span><span>  <span class="hljs-built_in">print</span>(k, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, prices[k])
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -360,7 +361,7 @@
 </span><span>
 </span><span>game2_scores = {<span class="hljs-string">&#x27;zac&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">30</span>, <span class="hljs-string">&#x27;aaron&#x27;</span>: <span class="hljs-number">10</span>}
 </span><span>print_scorecard(game2_scores)
-</span><span>print(<span class="hljs-string">&#x27;total =&#x27;</span>, get_team_score(game2_scores))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total =&#x27;</span>, get_team_score(game2_scores))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>aaron = 10
 </span><span>betty = 30
@@ -381,8 +382,8 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
-</span><span>print(<span class="hljs-string">&#x27;bread&#x27;</span> <span class="hljs-keyword">in</span> prices.keys())
-</span><span>print(<span class="hljs-string">&#x27;sugar&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> prices.keys())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;bread&#x27;</span> <span class="hljs-keyword">in</span> prices.keys())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;sugar&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> prices.keys())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -394,8 +395,8 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>prices = {<span class="hljs-string">&#x27;bread&#x27;</span>: <span class="hljs-number">3.5</span>, <span class="hljs-string">&#x27;butter&#x27;</span>: <span class="hljs-number">5.0</span>, <span class="hljs-string">&#x27;banana&#x27;</span>: <span class="hljs-number">0.15</span>}
-</span><span>print(<span class="hljs-number">3.5</span> <span class="hljs-keyword">in</span> prices.values())
-</span><span>print(<span class="hljs-number">6.0</span> <span class="hljs-keyword">in</span> prices.values())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">3.5</span> <span class="hljs-keyword">in</span> prices.values())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">6.0</span> <span class="hljs-keyword">in</span> prices.values())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -417,7 +418,7 @@
 </span><span>game3_scores = {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">35</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">36</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>}    
 </span><span>add_bonus(game3_scores, <span class="hljs-string">&#x27;amy&#x27;</span>, <span class="hljs-number">5</span>)
 </span><span>add_bonus(game3_scores, <span class="hljs-string">&#x27;dan&#x27;</span>, <span class="hljs-number">10</span>)
-</span><span>print(game3_scores)
+</span><span><span class="hljs-built_in">print</span>(game3_scores)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>{'amy': 40, 'betty': 36, 'charlie': 30, 'dan': 10}
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
@@ -437,18 +438,18 @@
 </span><span>               <span class="hljs-string">&#x27;CS3281&#x27;</span>: [<span class="hljs-string">&#x27;do presentation&#x27;</span>]}
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Python ignores line breaks and indentations in the middle of a dictionary/list definition <span class="dimmed">which allows you to structure the code into a more readable format (e.g., one key-value pair per line).</span></p>
 <p>As the values in this dictionary are lists, you can do list operations on them, e.g., <code class="hljs inline no-lang" v-pre>append()</code>, <code class="hljs inline no-lang" v-pre>len()</code></p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;CS3281 assignments:&#x27;</span>, assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;CS3281 assignments:&#x27;</span>, assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
 </span><span>
 </span><span>assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>].append(<span class="hljs-string">&#x27;study for exams&#x27;</span>)
-</span><span>print(assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
+</span><span><span class="hljs-built_in">print</span>(assignments[<span class="hljs-string">&#x27;CS3281&#x27;</span>])
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;How many things to do in TE3201?&#x27;</span>, <span class="hljs-built_in">len</span>(assignments[<span class="hljs-string">&#x27;TE3201&#x27;</span>]))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;How many things to do in TE3201?&#x27;</span>, <span class="hljs-built_in">len</span>(assignments[<span class="hljs-string">&#x27;TE3201&#x27;</span>]))
 </span><span>
 </span><span><span class="hljs-comment"># calculate total assignments</span>
 </span><span>total = <span class="hljs-number">0</span>
 </span><span><span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> assignments.values():
 </span><span>  total = total + <span class="hljs-built_in">len</span>(a)
-</span><span>print(<span class="hljs-string">&#x27;total tasks to do:&#x27;</span>, total)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total tasks to do:&#x27;</span>, total)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>CS3281 assignments: ['do presentation']
 </span><span>['do presentation', 'study for exams']
@@ -477,7 +478,7 @@
 <td>(did not play any innings)</td></tr></tbody></table></div><pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_detailed_scores</span>():</span>
 </span><span>  <span class="hljs-keyword">return</span> {<span class="hljs-string">&#x27;amy&#x27;</span>: <span class="hljs-number">20</span>, <span class="hljs-string">&#x27;betty&#x27;</span>: <span class="hljs-number">30</span>, <span class="hljs-string">&#x27;charlie&#x27;</span>: <span class="hljs-number">30</span>} <span class="hljs-comment">#REPLACE WITH YOUR CODE! </span>
 </span><span>
-</span><span>print(get_detailed_scores())
+</span><span><span class="hljs-built_in">print</span>(get_detailed_scores())
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>{'amy': [5, 5, 10], 'betty': [10], 'charlie': []}
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</span></p></template>
@@ -491,14 +492,14 @@
 </span><span>           <span class="hljs-string">&#x27;sara&#x27;</span>: {<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Sara Parker&#x27;</span>, <span class="hljs-string">&#x27;birthday&#x27;</span>: <span class="hljs-string">&#x27;Jun 30&#x27;</span>},
 </span><span>           <span class="hljs-string">&#x27;betty&#x27;</span>: {<span class="hljs-string">&#x27;name&#x27;</span>: <span class="hljs-string">&#x27;Betsy Sims&#x27;</span>, <span class="hljs-string">&#x27;birthday&#x27;</span>: <span class="hljs-string">&#x27;Jan 12&#x27;</span>}}
 </span><span>           
-</span><span>print(friends[<span class="hljs-string">&#x27;john&#x27;</span>][<span class="hljs-string">&#x27;birthday&#x27;</span>])
+</span><span><span class="hljs-built_in">print</span>(friends[<span class="hljs-string">&#x27;john&#x27;</span>][<span class="hljs-string">&#x27;birthday&#x27;</span>])
 </span><span>
 </span><span><span class="hljs-comment"># print friends whose birthday is Jan 12</span>
 </span><span>
 </span><span><span class="hljs-keyword">for</span> f <span class="hljs-keyword">in</span> friends.keys():
 </span><span>  details = friends[f]
 </span><span>  <span class="hljs-keyword">if</span> details[<span class="hljs-string">&#x27;birthday&#x27;</span>] == <span class="hljs-string">&#x27;Jan 12&#x27;</span>:
-</span><span>    print(details[<span class="hljs-string">&#x27;name&#x27;</span>])
+</span><span>    <span class="hljs-built_in">print</span>(details[<span class="hljs-string">&#x27;name&#x27;</span>])
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>Jan 12
 </span><span>John Doe
@@ -523,8 +524,8 @@ e.g., <code class="hljs inline no-lang" v-pre>get_player_hit_count(player_stats,
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_player_hit_count</span>(<span class="hljs-params">stats, player, inning, hit_size</span>):</span>
 </span><span>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span> <span class="hljs-comment">#REPLACE WITH YOUR CODE!</span>
 </span><span>  
-</span><span>print(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;amy&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
-</span><span>print(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;betty&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>))
+</span><span><span class="hljs-built_in">print</span>(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;amy&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>))
+</span><span><span class="hljs-built_in">print</span>(get_player_hit_count(player_stats, <span class="hljs-string">&#x27;betty&#x27;</span>, <span class="hljs-number">1</span>, <span class="hljs-number">4</span>))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>5
 </span><span>2
@@ -668,7 +669,7 @@ As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'cc
 </span><span><span class="hljs-string">  word -- (type:string) the title of the banner</span>
 </span><span><span class="hljs-string">  width -- (type:int) the width of the banner</span>
 </span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
-</span><span>  print(<span class="hljs-string">&#x27;#&#x27;</span>*width)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;#&#x27;</span>*width)
 </span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
 </span><span>
 </span><span>
@@ -686,7 +687,7 @@ As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'cc
 </span><span><span class="hljs-string">  total -- (type:int) the total to print</span>
 </span><span><span class="hljs-string">  width -- (type:int) the width to use for printing</span>
 </span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
-</span><span>  print(<span class="hljs-string">&#x27;---&#x27;</span>.rjust(width, <span class="hljs-string">&#x27; &#x27;</span>))
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;---&#x27;</span>.rjust(width, <span class="hljs-string">&#x27; &#x27;</span>))
 </span><span>  <span class="hljs-comment"># ADD YOUR CODE HERE</span>
 </span><span>
 </span><span>
@@ -713,7 +714,7 @@ As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'cc
 </span><span>  <span class="hljs-keyword">return</span> total
 </span><span>
 </span><span>print_inventory({<span class="hljs-string">&#x27;pots&#x27;</span>:<span class="hljs-number">5</span>, <span class="hljs-string">&#x27;eggs&#x27;</span>:<span class="hljs-number">100</span>}, <span class="hljs-string">&#x27;Kitchen&#x27;</span>, <span class="hljs-number">15</span>)
-</span><span>print(<span class="hljs-string">&#x27;\n&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;\n&#x27;</span>)
 </span><span>print_inventory({<span class="hljs-string">&#x27;pens&#x27;</span>: <span class="hljs-number">85</span>, <span class="hljs-string">&#x27;books&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;pencils&#x27;</span>: <span class="hljs-number">22</span>}, <span class="hljs-string">&#x27;Book Shop&#x27;</span>, <span class="hljs-number">25</span>)
 </span></code></pre></panel></div></panel><p></p></div></div></div></div>
 <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
@@ -753,12 +754,12 @@ As you know, <code class="hljs inline no-lang" v-pre>' '.join(['aaa', 'bbb', 'cc
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

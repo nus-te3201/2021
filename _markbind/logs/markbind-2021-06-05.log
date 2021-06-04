@@ -1,0 +1,23 @@
+2021-06-04T16:02:52.464Z - info: Website generation (lazy) started at 12:02:48 am
+2021-06-04T16:02:57.127Z - info: Building assets...
+2021-06-04T16:03:01.926Z - info: Assets built
+2021-06-04T16:03:01.927Z - info: Generating landing page...
+2021-06-04T16:03:02.789Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-overview.html' found in file 'C:\repos\nus-cs2103\cs2103-website-base\_markbind\headers\header.md'
+2021-06-04T16:03:02.791Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/ip-showcase.html' found in file 'C:\repos\nus-cs2103\cs2103-website-base\_markbind\headers\header.md'
+2021-06-04T16:03:02.792Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tp-expectations.html' found in file 'C:\repos\nus-cs2103\cs2103-website-base\_markbind\headers\header.md'
+2021-06-04T16:03:02.793Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/teamList.html' found in file 'C:\repos\nus-cs2103\cs2103-website-base\_markbind\headers\header.md'
+2021-06-04T16:03:02.796Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/tutorials.html' found in file 'C:\repos\nus-cs2103\cs2103-website-base\_markbind\headers\header.md'
+2021-06-04T16:03:02.861Z - warn: You might have an invalid intra-link! Ignore this warning if it was intended.
+'/2021/admin/url_ms_teams_class' found in file 'C:\repos\nus-cs2103\cs2103-website-base\admin\index-te3201.mbdf'
+2021-06-04T16:03:03.359Z - info: Landing page built, other pages will be built as you navigate to them!
+2021-06-04T16:03:04.128Z - info: Site data built
+2021-06-04T16:03:04.128Z - info: Website generation (lazy) complete! Total build time: 15.493s
+2021-06-04T16:03:04.922Z - info: Serving "C:\repos\nus-cs2103\cs2103-website-base\_site" at http://127.0.0.1:8080
+2021-06-04T16:03:04.922Z - info: Press CTRL+C to stop ...
+2021-06-04T16:04:17.489Z - info: Website generation started at 12:04:14 am
+2021-06-04T16:04:22.090Z - info: Building assets...

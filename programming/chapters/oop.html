@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Object-Oriented Programming</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -122,9 +123,9 @@
 </span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># an empty class</span>
 </span><span>
 </span><span>john = Employee() <span class="hljs-comment"># create an Employee object</span>
-</span><span>print(<span class="hljs-built_in">type</span>(john)) <span class="hljs-comment"># print type of the john object</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(john)) <span class="hljs-comment"># print type of the john object</span>
 </span><span>alice = Employee()
-</span><span>print(<span class="hljs-built_in">type</span>(alice))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(alice))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> <span class="dimmed">Note how the type of each object is given as <code class="hljs inline no-lang" v-pre>&lt;class 'Employee'&gt;</code> i.e., a class with name <code class="hljs inline no-lang" v-pre>Employee</code>.</span></p>
 <pre><code class="hljs" v-pre><span>&lt;class 'Employee'&gt;
 </span><span>&lt;class 'Employee'&gt;
@@ -139,7 +140,7 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pen</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span>(<span class="hljs-params">self, text</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;writing:&#x27;</span>, text)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;writing:&#x27;</span>, text)
 </span><span>    
 </span><span>p = Pen()
 </span><span>p.write(<span class="hljs-string">&#x27;It was a dark night ...&#x27;</span>)
@@ -169,7 +170,7 @@ This is how the arguments are matched with the parameters:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, name</span>):</span>
-</span><span>    print(name, <span class="hljs-string">&#x27;initialized!&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;initialized!&#x27;</span>)
 </span><span>    
 </span><span>tom = Person(<span class="hljs-string">&#x27;Tom&#x27;</span>)
 </span></code></pre></td>
@@ -184,8 +185,8 @@ This is how the arguments are matched with the parameters:</p>
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(x.get_age())
-</span><span>print(x.birthday)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(x.get_age())
+</span><span><span class="hljs-built_in">print</span>(x.birthday)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -204,14 +205,14 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-comment"># print attributes of the object</span>
-</span><span>    print(<span class="hljs-string">&#x27;Book info:&#x27;</span>, self.title, <span class="hljs-string">&#x27;/by&#x27;</span>, self.author) 
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Book info:&#x27;</span>, self.title, <span class="hljs-string">&#x27;/by&#x27;</span>, self.author) 
 </span><span>    
 </span><span>book1 = Book(<span class="hljs-string">&#x27;The Jungle Book&#x27;</span>, <span class="hljs-string">&#x27;Leo Tolstoy&#x27;</span>)
 </span><span>book2 = Book(<span class="hljs-string">&#x27;The Art of War&#x27;</span>, <span class="hljs-string">&#x27;Sun Tzu&#x27;</span>)
 </span><span>
-</span><span>print()  <span class="hljs-comment"># print a blank line</span>
-</span><span>print(<span class="hljs-string">&#x27;Title:&#x27;</span>, book1.title) 
-</span><span>print(<span class="hljs-string">&#x27;Author:&#x27;</span>, book1.author)
+</span><span><span class="hljs-built_in">print</span>()  <span class="hljs-comment"># print a blank line</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Title:&#x27;</span>, book1.title) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Author:&#x27;</span>, book1.author)
 </span><span>book1.describe()
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>Book info: The Jungle Book /by Leo Tolstoy
@@ -234,7 +235,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_authors</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> self.books:
-</span><span>      print(b.author)
+</span><span>      <span class="hljs-built_in">print</span>(b.author)
 </span><span>      
 </span><span>my_list = ReadingList([book1]) <span class="hljs-comment"># book1 defined in a previous example </span>
 </span><span>my_list.add_book(book2) <span class="hljs-comment"># book2 defined in a previous example</span>
@@ -256,12 +257,12 @@ This is how the arguments are matched with the parameters:</p>
 </span><span><span class="hljs-comment"># It should have a method: info() </span>
 </span><span>    
 </span><span>a = StockItem(<span class="hljs-string">&#x27;Apple&#x27;</span>)
-</span><span>print(a.info())
-</span><span>print(a.name)
+</span><span><span class="hljs-built_in">print</span>(a.info())
+</span><span><span class="hljs-built_in">print</span>(a.name)
 </span><span>b = StockItem(<span class="hljs-string">&#x27;Bag of Beans&#x27;</span>)
-</span><span>print(b.info())
+</span><span><span class="hljs-built_in">print</span>(b.info())
 </span><span>b.name = <span class="hljs-string">&#x27;Bananas&#x27;</span>
-</span><span>print(b.info())
+</span><span><span class="hljs-built_in">print</span>(b.info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -297,7 +298,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>items.append(StockItem(<span class="hljs-string">&#x27;Cup&#x27;</span>, <span class="hljs-number">1</span>))
 </span><span><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> items:
 </span><span>    item.increase_price(<span class="hljs-number">1</span>)  <span class="hljs-comment"># increase price by 1</span>
-</span><span>    print(item.info())
+</span><span>    <span class="hljs-built_in">print</span>(item.info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -323,14 +324,14 @@ This is how the arguments are matched with the parameters:</p>
 <li>can be accessed using the class name (i.e., <code class="hljs inline no-lang" v-pre>Student.total_students</code>) or the object (i.e., <code class="hljs inline no-lang" v-pre>amy.total_students</code>) and both give the same value.</li>
 <li>is shared among all objects and correctly gives <code class="hljs inline no-lang" v-pre>2</code> after another <code class="hljs inline no-lang" v-pre>Student</code> object has been created.</li></ul>
 <pre><code class="hljs python" v-pre><span>amy = Student(<span class="hljs-string">&quot;Amy&quot;</span>)
-</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students) <span class="hljs-comment"># access via class name</span></span>
-</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, amy.total_students) <span class="hljs-comment"># access via object</span>
-</span><span>print(<span class="hljs-string">&#x27;Amy course count:&#x27;</span>, amy.course_count)
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students) <span class="hljs-comment"># access via class name</span></span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, amy.total_students) <span class="hljs-comment"># access via object</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Amy course count:&#x27;</span>, amy.course_count)
 </span><span>
 </span><span>ben = Student(<span class="hljs-string">&quot;Ben&quot;</span>)
-</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students)</span>
-</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, ben.total_students) 
-</span><span>print(<span class="hljs-string">&#x27;Ben course count:&#x27;</span>, ben.course_count)
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students)</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, ben.total_students) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Ben course count:&#x27;</span>, ben.course_count)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>total students: 1
 </span><span>total students: 1
@@ -351,17 +352,17 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_text</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">if</span> Printer.enabled:
-</span><span>      print(self.text)
+</span><span>      <span class="hljs-built_in">print</span>(self.text)
 </span><span>
 </span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disable</span>(<span class="hljs-params">cls</span>):</span></span>
 </span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">False</span>  <span class="hljs-comment"># cls here is same as Printer</span></span>
-</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers disabled&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;All Printers disabled&#x27;</span>)</span>
 </span><span>
 </span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">enable</span>(<span class="hljs-params">cls</span>):</span></span>
 </span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">True</span></span>
-</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers enabled&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;All Printers enabled&#x27;</span>)</span>
 </span></code></pre><p>The code below uses the class-level method to enable/disable printing for all <code class="hljs inline no-lang" v-pre>Printer</code> objects.</p>
 <div>
 <table>
@@ -404,19 +405,19 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.code = code
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
 </span><span>    
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
 </span><span>s1 = Subject(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>) 
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
-</span><span>print(Subject.limit_reached(<span class="hljs-number">1</span>))
-</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">1</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">2</span>))
 </span><span>s2 = Subject(<span class="hljs-string">&#x27;TEE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
-</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
-</span><span>print(Subject.limit_reached(<span class="hljs-number">3</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">3</span>))
 </span><span>Subject.total = <span class="hljs-number">100</span>
-</span><span>print(Subject.limit_reached(<span class="hljs-number">100</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">100</span>))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -440,7 +441,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    Subject.total = Subject.total + <span class="hljs-number">1</span> <span class="hljs-comment"># Note this line</span>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
 </span><span>    
 </span><span><span class="hljs-meta">  @classmethod</span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">limit_reached</span>(<span class="hljs-params">cls, limit</span>):</span>
@@ -460,8 +461,8 @@ This is how the arguments are matched with the parameters:</p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Account</code> class below.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span>:</span>
 </span><span>  currency = <span class="hljs-string">&#x27;$&#x27;</span>   <span class="hljs-comment"># public</span>
-</span><span>  _min = <span class="hljs-number">10.</span>       <span class="hljs-comment"># protected</span>
-</span><span>  __max = <span class="hljs-number">1000.0</span>   <span class="hljs-comment"># private</span>
+</span><span>  _<span class="hljs-built_in">min</span> = <span class="hljs-number">10.</span>       <span class="hljs-comment"># protected</span>
+</span><span>  __<span class="hljs-built_in">max</span> = <span class="hljs-number">1000.0</span>   <span class="hljs-comment"># private</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, person, amount</span>):</span>
 </span><span>    self.__balance = amount <span class="hljs-comment"># private</span>
@@ -484,10 +485,10 @@ This is how the arguments are matched with the parameters:</p>
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;currency:&#x27;</span>, Account.currency)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;currency:&#x27;</span>, Account.currency)
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;status:&#x27;</span>, a.status)
-</span><span>print(<span class="hljs-string">&#x27;info:&#x27;</span>, a.get_info())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;status:&#x27;</span>, a.status)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;info:&#x27;</span>, a.get_info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -500,10 +501,10 @@ This is how the arguments are matched with the parameters:</p>
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;minimum allowed:&#x27;</span>, Account._min) 
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;minimum allowed:&#x27;</span>, Account._<span class="hljs-built_in">min</span>) 
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;owner:&#x27;</span>, a._owner) 
-</span><span>print(<span class="hljs-string">&#x27;more info:&#x27;</span>, a._get_more_info())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;owner:&#x27;</span>, a._owner) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;more info:&#x27;</span>, a._get_more_info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -512,10 +513,10 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>more info: ['OK', 'Adam']
 </span></code></pre></td></tr></table></div>
 <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> The following code will not work because they try to access private members.</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;maximum allowed:&#x27;</span>, Account.__max) <span class="hljs-comment"># error</span>
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;maximum allowed:&#x27;</span>, Account.__<span class="hljs-built_in">max</span>) <span class="hljs-comment"># error</span>
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;balance:&#x27;</span>, a.__balance) <span class="hljs-comment"># error</span>
-</span><span>print(<span class="hljs-string">&#x27;income:&#x27;</span>, a.__get_income()) <span class="hljs-comment"># error</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;balance:&#x27;</span>, a.__balance) <span class="hljs-comment"># error</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;income:&#x27;</span>, a.__get_income()) <span class="hljs-comment"># error</span>
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>AttributeError: type object 'Account' has no attribute '__max'...
 </span><span>AttributeError: 'Account' object has no attribute '__balance'...
@@ -540,10 +541,10 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__max_expenditure</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">return</span> self.__budget * School.__target
 </span><span>    
-</span><span>print(School.__target)
+</span><span><span class="hljs-built_in">print</span>(School.__target)
 </span><span>s = School(<span class="hljs-number">100000</span>)
-</span><span>print(s.__budget)
-</span><span>print(s.__max_expenditure())
+</span><span><span class="hljs-built_in">print</span>(s.__budget)
+</span><span><span class="hljs-built_in">print</span>(s.__max_expenditure())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -570,7 +571,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
 </span><span>
 </span><span>amy = Person(<span class="hljs-string">&#x27;Amy&#x27;</span>)
 </span><span>amy.print_info()
@@ -587,12 +588,12 @@ This is how the arguments are matched with the parameters:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params">Person</span>):</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teach</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
 </span><span>
 </span><span>dan = Teacher(<span class="hljs-string">&#x27;Dan&#x27;</span>)
 </span><span>dan.print_info()
 </span><span>dan.teach()
-</span><span>print(<span class="hljs-string">&#x27;the name is&#x27;</span>, dan.name)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;the name is&#x27;</span>, dan.name)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -622,7 +623,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
 </span><span>    
 </span><span><span class="hljs-comment"># ADD YOUR CODE HERE</span>
 </span><span>    
@@ -658,10 +659,10 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    <span class="highlighted">self.matric = matric</span>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">learn</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
 </span><span>    
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span></span>
-</span><span>    <span class="highlighted">print(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)</span>
 </span><span>
 </span><span>adam = Person(<span class="hljs-string">&#x27;Adam&#x27;</span>)
 </span><span>adam.print_info()
@@ -677,7 +678,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.name = name
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a person&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a person&#x27;</span>)
 </span></code></pre><p><br><br></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>Adam is a person
 </span><span>Ben is a student
@@ -725,17 +726,17 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
 </span><span>    
 </span><span>
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bird</span>(<span class="hljs-params">Animal</span>):</span>
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">move</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m flying&quot;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m flying&quot;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-comment"># CALL info() METHOD OF PARENT CLASS HERE </span>
-</span><span>    print(<span class="hljs-string">&quot;I have feathers&quot;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I have feathers&quot;</span>)
 </span><span>
 </span><span><span class="hljs-comment"># ADD FlightlessBird CLASS HERE</span>
 </span><span>
@@ -776,7 +777,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    <span class="highlighted"><span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Book title: &#x27;</span> + self.title</span>
 </span><span>    
 </span><span>book = Book(<span class="hljs-string">&#x27;Python for Beginners&#x27;</span>)
-</span><span><span class="highlighted">print(book)</span>
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(book)</span>
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -799,8 +800,8 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>  
 </span><span>  <span class="hljs-comment"># OVERRIDE __str__ METHOD HERE</span>
 </span><span>    
-</span><span>print(Person(<span class="hljs-string">&#x27;Amy&#x27;</span>, <span class="hljs-number">25</span>))
-</span><span>print(Person(<span class="hljs-string">&#x27;Ben&#x27;</span>, <span class="hljs-number">26</span>))
+</span><span><span class="hljs-built_in">print</span>(Person(<span class="hljs-string">&#x27;Amy&#x27;</span>, <span class="hljs-number">25</span>))
+</span><span><span class="hljs-built_in">print</span>(Person(<span class="hljs-string">&#x27;Ben&#x27;</span>, <span class="hljs-number">26</span>))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -822,14 +823,14 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
 </span></code></pre><pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params">Person</span>):</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teach</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a teacher&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a teacher&#x27;</span>)
 </span><span>    
 </span></code></pre></td>
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
@@ -840,14 +841,14 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    self.matric = matric
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">learn</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
 </span></code></pre><pre><code class="hljs python" v-pre><span><span class="highlighted"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TeachingAssistant</span>(<span class="hljs-params">Teacher, Student</span>):</span></span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">grade</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is grading&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is grading&#x27;</span>)
 </span></code></pre></td></tr></table></div>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>TeachingAssistant</code> class above inherits from both <code class="hljs inline no-lang" v-pre>Student</code> class and the <code class="hljs inline no-lang" v-pre>Teacher</code> class both of which inherit from the <code class="hljs inline no-lang" v-pre>Person</code> class. That means a <code class="hljs inline no-lang" v-pre>TeachingAssistant</code> object can use methods from classes <code class="hljs inline no-lang" v-pre>object</code>, <code class="hljs inline no-lang" v-pre>Person</code>, <code class="hljs inline no-lang" v-pre>Student</code>, <code class="hljs inline no-lang" v-pre>Teacher</code>, and <code class="hljs inline no-lang" v-pre>TeachingAssistant</code>.</p>
 <table>
@@ -879,12 +880,12 @@ This is how the arguments are matched with the parameters:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Camera</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">take_photo</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;taking photo&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;taking photo&#x27;</span>)
 </span><span>    
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Phone</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_call</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;making call&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;making call&#x27;</span>)
 </span><span>    
 </span><span><span class="hljs-comment"># ADD SmartPhone CLASS HERE</span>
 </span><span>
@@ -936,9 +937,9 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    <span class="hljs-keyword">try</span>:
 </span><span>        execute_command(command)
 </span><span>    <span class="hljs-keyword">except</span> EmptyCommandError:
-</span><span>        print(<span class="hljs-string">&#x27;empty command&#x27;</span>)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;empty command&#x27;</span>)
 </span><span>    <span class="hljs-keyword">except</span> InvalidCommandError <span class="hljs-keyword">as</span> e:
-</span><span>        print(<span class="hljs-string">&#x27;invalid command:&#x27;</span>, e.command, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, e.explanation)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;invalid command:&#x27;</span>, e.command, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, e.explanation)
 </span><span>
 </span><span>
 </span><span>process(<span class="hljs-string">&#x27;&#x27;</span>)
@@ -983,12 +984,12 @@ This is how the arguments are matched with the parameters:</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

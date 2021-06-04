@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Schedule</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -72,95 +73,72 @@
 <div>
 <div class="website-content">
 <nav>
-<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/2021/schedule/week11"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<ul class="pagination mt-2"><li class="page-item disabled"><a class="page-link" href="/2021/schedule/week1"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-<li class="page-item active"><a class="page-link" href="/2021/schedule/week12/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-<li class="page-item"><a class="page-link" href="/2021/schedule/week12/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
-<li class="page-item"><a class="page-link" href="/2021/schedule/week12/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
-<li class="page-item"><a class="page-link" href="/2021/schedule/week12/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
-<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week13"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<li class="page-item active"><a class="page-link" href="/2021/schedule/week1/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/topics-py.html"><span><span><span aria-hidden="true" class="fas fa-code"></span></span></span> Programming Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> SE Topics</a></li>
+<li class="page-item"><a class="page-link" href="/2021/schedule/week1/admin.html"><span><span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span></span> Tasks</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/2021/schedule/week2"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-12-tue-mar-30th-summary"><span id="week-12-tue-mar-30th-summary" class="anchor"></span>Week 12 <small><small><span class="dimmed">[Tue, Mar 30th]</span> - Summary</small></small><a class="fa fa-anchor" href="#week-12-tue-mar-30th-summary" onclick="event.stopPropagation()"></a></h1>
-<div></div>
+<h1 id="week-1-mon-jan-11th-summary"><span id="week-1-mon-jan-11th-summary" class="anchor"></span>Week 1 <small><small><span class="dimmed">[Mon, Jan 11th]</span> - Summary</small></small><a class="fa fa-anchor" href="#week-1-mon-jan-11th-summary" onclick="event.stopPropagation()"></a></h1>
+<div>
+<box type="info" dismissible>
+<p>A summary of the week, and announcements relevant to that week, will appear in this tab. Refer to the respective tabs (i.e., <a href="/2021/schedule/week1/topics.html"><span class="border bg-white"> <span aria-hidden="true" class="fas fa-code"></span> Programming Topics </span></a>, <a href="/2021/schedule/week1/topics.html"><span class="border bg-white"> <span><span aria-hidden="true" class="fas fa-book"></span></span> SE Topics </span></a>, <a href="/2021/schedule/week1/admin.html"><span class="border bg-white"> <span><span aria-hidden="true" class="glyphicon glyphicon-check"></span></span> Tasks </span></a>, ... given at the top of this page) for more details.</p>
+<p>A <strong><a href="/2021/schedule/timeline.html">full timeline</a></strong> is available too.
+</p></box><p></p></div>
 <span id="summary">
 <div class="container">
   <div class="row">
   <div class="col-sm" style="border-right: 1px dotted lightgrey">
-<h4 id="programming-topics"><span id="programming-topics" class="anchor"></span><a href="/2021/schedule/week12/topics-py.html" class="badge badge-light"><span aria-hidden="true" class="fas fa-code"></span> Programming Topics</a><a class="fa fa-anchor" href="#programming-topics" onclick="event.stopPropagation()"></a></h4>
+<h4 id="programming-topics"><span id="programming-topics" class="anchor"></span><a href="/2021/schedule/week1/topics-py.html" class="badge badge-light"><span aria-hidden="true" class="fas fa-code"></span> Programming Topics</a><a class="fa fa-anchor" href="#programming-topics" onclick="event.stopPropagation()"></a></h4>
 <div>
-<p><span class="indented">~No more Python Topics~</span></p></div></div>
+<ul>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#expressions-data-types-variables"><strong>Expressions, Data Types, Variables</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#computer-programs">Computer Programs</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#setting-up-the-programming-environment">Setting up the Programming Environment</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#working-with-an-interactive-shell">Working with an Interactive Shell</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#operators">Operators</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#data-types">Data Types</a></li>
+<li><a href="/2021/programming/chapters/expressions-types-variables.html#variables">Variables</a></li></ul></li>
+<li><a href="/2021/programming/chapters/programs.html#python-programs"><strong>Python Programs</strong></a>
+<ul>
+<li><a href="/2021/programming/chapters/programs.html#scripts-programs">Scripts (Programs)</a></li>
+<li><a href="/2021/programming/chapters/programs.html#comments">Comments</a></li>
+<li><a href="/2021/programming/chapters/programs.html#using-functions">Using Functions</a></li></ul></li></ul></div></div>
   <div class="col-sm">
-<h4 id="se-topics"><span id="se-topics" class="anchor"></span><a href="/2021/schedule/week12/topics.html" class="badge badge-light"><span><span aria-hidden="true" class="fas fa-book"></span></span> SE Topics</a><a class="fa fa-anchor" href="#se-topics" onclick="event.stopPropagation()"></a></h4>
+<h4 id="se-topics"><span id="se-topics" class="anchor"></span><a href="/2021/schedule/week1/topics.html" class="badge badge-light"><span><span aria-hidden="true" class="fas fa-book"></span></span> SE Topics</a><a class="fa fa-anchor" href="#se-topics" onclick="event.stopPropagation()"></a></h4>
 <ul>
-<li>[<a href="/2021/schedule/week12/topics.html#W12-1">W12.1</a>] <strong>Revision Control</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
-<p></p>
-<ul>
-<li>[<a href="/2021/schedule/week12/topics.html#W12-2">W12.2</a>] <strong>Writing Developer Documents</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<li>[<a href="/2021/schedule/week1/topics.html#W1-1">W1.1</a>] <strong>SE: Intro</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <p></p>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
-<li>[<a href="/2021/schedule/week12/topics.html#W12-1">W12.1</a>] <strong>Revision Control</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<li>[<a href="/2021/schedule/week1/topics.html#W1-1">W1.1</a>] <strong>SE: Intro</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <div class="indented-level2">
 <small>
 <ul>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-1a">W12.1a</a>] <span>Project Management → Revision Control →
-</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-1b">W12.1b</a>] <span>Project Management → Revision Control →
-</span></span> <span>Repositories</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li></ul></small></div>
-<p></p>
-<ul>
-<li>[<a href="/2021/schedule/week12/topics.html#W12-2">W12.2</a>] <strong>Writing Developer Documents</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
-<div class="indented-level2">
-<small>
-<p>   <strong>Type of Developer Docs</strong></p>
-<ul>
-<li><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2a">W12.2a</a>] <span>Implementation → Documentation → Introduction →
-</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
-<p>   <strong>Guideline: Aim for Comprehensibility</strong></p>
-<ul>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2b">W12.2b</a>] <span>Implementation → Documentation → Guidelines → Aim for Comprehensibility →
-</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2c">W12.2c</a>] <span>Implementation → Documentation → Guidelines → Aim for Comprehensibility →
-</span></span> <span>How</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
-<p>   <strong>Guideline: Describe Top-Down</strong></p>
-<ul>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2d">W12.2d</a>] <span>Implementation → Documentation → Guidelines → Describe Top-Down →
-</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2e">W12.2e</a>] <span>Implementation → Documentation → Guidelines → Describe Top-Down →
-</span></span> <span>Why</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2f">W12.2f</a>] <span>Implementation → Documentation → Guidelines → Describe Top-Down →
-</span></span> <span>How</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
-<p>   <strong>Guideline: Minimal but Sufficient</strong></p>
-<ul>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2g">W12.2g</a>] <span>Implementation → Documentation → Guidelines → Minimal but Sufficient →
-</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
-<li>
-<p><span class="dimmed">[<a href="/2021/schedule/week12/topics.html#W12-2h">W12.2h</a>] <span>Implementation → Documentation → Guidelines → Minimal but Sufficient →
-</span></span> <span>How</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<li><span class="dimmed">[<a href="/2021/schedule/week1/topics.html#W1-1a">W1.1a</a>] <span>Software Engineering → Introduction →
+</span></span> <span>Pros and cons</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul></small></div>
 <p></p></div></panel></div></div>
   <div class="row" style="border-top: 1px dotted lightgrey">
   <div class="col-sm">
-<h4 id="tasks"><span id="tasks" class="anchor"></span><a href="/2021/schedule/week12/admin.html" class="badge badge-light mt-2"><span aria-hidden="true" class="fas fa-tasks"></span> Tasks</a><a class="fa fa-anchor" href="#tasks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="tasks"><span id="tasks" class="anchor"></span><a href="/2021/schedule/week1/admin.html" class="badge badge-light mt-2"><span aria-hidden="true" class="fas fa-tasks"></span> Tasks</a><a class="fa fa-anchor" href="#tasks" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ol>
-<li>Enhance previous week's increment or add another individual feature</li>
-<li>Start preparing for the final submission</li></ol></div></div></div></div></span>
+<li>Learn about the module and the website</li>
+<li>Submit the pre-module survey <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> by Saturday 2359</span></span></li>
+<li>Attend the lecture</li>
+<li>Submit weekly exercises</li>
+<li>Submit weekly project increment <code class="hljs inline no-lang" v-pre>Monty Level 1. Echo Once</code></li></ol></div></div></div></div></span>
 <br></div></div>
 <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
 <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-<a class="nav-link py-1" href="#week-12-tue-mar-30th-summary">Week 12 [Tue, Mar 30th] - Summary&#x200E;</a>
+<a class="nav-link py-1" href="#week-1-mon-jan-11th-summary">Week 1 [Mon, Jan 11th] - Summary&#x200E;</a>
 
 </nav>
 </div>
@@ -169,12 +147,12 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

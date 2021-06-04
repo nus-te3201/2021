@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Error Handling</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -113,7 +114,7 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> <span class="hljs-number">5</span> &gt; <span class="hljs-number">4</span>
-</span><span>  print(<span class="hljs-string">&#x27;Greater&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Greater&#x27;</span>)
 </span></code></pre></td>
   <td valign="top">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -137,10 +138,10 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span>(<span class="hljs-params">number, divisor</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Starting calculation&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Starting calculation&#x27;</span>)
 </span><span>  result = number/divisor
-</span><span>  print(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
-</span><span>  print(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
 </span><span>
 </span><span>divide(<span class="hljs-number">50</span>, <span class="hljs-number">5</span>)
 </span><span>divide(<span class="hljs-number">3</span>, <span class="hljs-number">0</span>)
@@ -165,13 +166,13 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide2</span>(<span class="hljs-params">number, divisor</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Starting calculation&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Starting calculation&#x27;</span>)
 </span><span>  <span class="hljs-keyword">try</span>:
 </span><span>    result = number/divisor
-</span><span>    print(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
+</span><span>    <span class="hljs-built_in">print</span>(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
 </span><span>  <span class="hljs-keyword">except</span> ZeroDivisionError:
-</span><span>    print(<span class="hljs-string">&#x27;Cannot divide by zero&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Cannot divide by zero&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
 </span><span>
 </span><span>divide2(<span class="hljs-number">3</span>, <span class="hljs-number">0</span>)
 </span><span>divide2(<span class="hljs-number">3</span>, <span class="hljs-number">1.5</span>)
@@ -214,15 +215,15 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide3</span>(<span class="hljs-params">number, divisor</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Calculating&#x27;</span>, number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculating&#x27;</span>, number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor)
 </span><span>  <span class="hljs-keyword">try</span>:
 </span><span>    result = <span class="hljs-built_in">float</span>(number)/<span class="hljs-built_in">float</span>(divisor)
-</span><span>    print(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
+</span><span>    <span class="hljs-built_in">print</span>(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
 </span><span>  <span class="hljs-keyword">except</span> ZeroDivisionError:
-</span><span>    print(<span class="hljs-string">&#x27;Cannot divide by zero&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Cannot divide by zero&#x27;</span>)
 </span><span>  <span class="hljs-keyword">except</span> ValueError:
-</span><span>    print(<span class="hljs-string">&#x27;Cannot divide non-numbers&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Cannot divide non-numbers&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
 </span><span>
 </span><span>divide3(<span class="hljs-number">3</span>, <span class="hljs-number">0</span>)
 </span><span>divide3(<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;abc&#x27;</span>)
@@ -245,13 +246,13 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide4</span>(<span class="hljs-params">number, divisor</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Calculating&#x27;</span>, number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculating&#x27;</span>, number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor)
 </span><span>  <span class="hljs-keyword">try</span>:
 </span><span>    result = <span class="hljs-built_in">float</span>(number)/<span class="hljs-built_in">float</span>(divisor)
-</span><span>    print(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
+</span><span>    <span class="hljs-built_in">print</span>(number, <span class="hljs-string">&#x27;/&#x27;</span>, divisor, <span class="hljs-string">&#x27;=&#x27;</span>, result)
 </span><span>  <span class="hljs-keyword">except</span> (ZeroDivisionError, ValueError):
-</span><span>    print(<span class="hljs-string">&#x27;Incorrect inputs&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Incorrect inputs&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Calculation over!........&#x27;</span>)
 </span><span>
 </span><span>divide4(<span class="hljs-number">3</span>, <span class="hljs-number">0</span>)
 </span><span>divide4(<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;abc&#x27;</span>)
@@ -279,7 +280,7 @@
 </span><span>  <span class="hljs-keyword">except</span> IndexError:
 </span><span>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;List too short&#x27;</span>
 </span><span>
-</span><span>print(get_head([]))
+</span><span><span class="hljs-built_in">print</span>(get_head([]))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -298,7 +299,7 @@
 </span><span>  <span class="hljs-keyword">except</span> Exception:
 </span><span>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Something wrong&#x27;</span>
 </span><span>
-</span><span>print(get_head2(<span class="hljs-number">2</span>))
+</span><span><span class="hljs-built_in">print</span>(get_head2(<span class="hljs-number">2</span>))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -313,7 +314,7 @@
 <h4 id="exercise-enter-integer"><span id="exercise-enter-integer" class="anchor"></span>Exercise : Enter Integer<a class="fa fa-anchor" href="#exercise-enter-integer" onclick="event.stopPropagation()"></a></h4>
 <p>The code below assumes the entered string will always represent an integer.</p>
 <pre><code class="hljs python" v-pre><span>value = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Input an integer: &#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;You entered&#x27;</span>, value)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You entered&#x27;</span>, value)
 </span></code></pre><p>However, users may not follow that assumption. If the user were to enter a non-integer string, the program crashes. To avoid such crashes, programs need to do <em>input validation</em> i.e., perform checks on inputs to ensure their validity.</p>
 <p>Update the above code so that it accepts integers only, and produces the behavior given below.</p>
 <pre><code class="hljs" v-pre><span>Input an integer: x
@@ -336,7 +337,7 @@
 </span><span>  <span class="hljs-keyword">except</span> ValueError:
 </span><span>    <span class="hljs-comment"># YOUR CODE HERE!</span>
 </span><span>    
-</span><span>print(<span class="hljs-string">&#x27;You entered&#x27;</span>, value)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You entered&#x27;</span>, value)
 </span></code></pre></panel></div></panel><p></p></div></div>
 <div>
 <h3 id="raising-exceptions"><span id="raising-exceptions" class="anchor"></span>Raising Exceptions<a class="fa fa-anchor" href="#raising-exceptions" onclick="event.stopPropagation()"></a></h3>
@@ -357,9 +358,9 @@
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hide_ends</span>(<span class="hljs-params">items</span>):</span>
 </span><span>  <span class="hljs-keyword">try</span>:
 </span><span>    body = get_body(items)
-</span><span>    print([<span class="hljs-string">&#x27;_&#x27;</span>] + body + [<span class="hljs-string">&#x27;_&#x27;</span>])
+</span><span>    <span class="hljs-built_in">print</span>([<span class="hljs-string">&#x27;_&#x27;</span>] + body + [<span class="hljs-string">&#x27;_&#x27;</span>])
 </span><span>  <span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> e:
-</span><span>    print(<span class="hljs-string">&#x27;Cannot hide ends:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Cannot hide ends:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
 </span><span>
 </span><span>hide_ends([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>])
 </span><span>hide_ends([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])
@@ -380,16 +381,16 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">hide_ends2</span>(<span class="hljs-params">items</span>):</span>
 </span><span>  <span class="hljs-keyword">try</span>:
 </span><span>    body = get_body(items)
-</span><span>    print([<span class="hljs-string">&#x27;_&#x27;</span>] + body + [<span class="hljs-string">&#x27;_&#x27;</span>])
+</span><span>    <span class="hljs-built_in">print</span>([<span class="hljs-string">&#x27;_&#x27;</span>] + body + [<span class="hljs-string">&#x27;_&#x27;</span>])
 </span><span>  <span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> e:
-</span><span>    print(<span class="hljs-string">&#x27;Cannot hide ends:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Cannot hide ends:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
 </span><span>    <span class="hljs-keyword">raise</span>
 </span><span>
 </span><span><span class="hljs-keyword">try</span>:
 </span><span>  hide_ends2([<span class="hljs-number">0</span>])
 </span><span>  hide_ends2([<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>])
 </span><span><span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> e:
-</span><span>  print(<span class="hljs-string">&#x27;hide_ends2 failed:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hide_ends2 failed:&#x27;</span>, <span class="hljs-built_in">str</span>(e))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -412,7 +413,7 @@
 <p><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> This exercise has a long description because it explains how the given code is structured. It is important for you to learn how to break down code into smaller functions like the ones given in this exercise.</p></tip-box>
 <p>The function given below checks if a given input is an even integer in a given range.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">check</span>(<span class="hljs-params">number, start, end</span>):</span>
-</span><span>  print(number, <span class="hljs-string">&#x27;is an int in range&#x27;</span>, start, <span class="hljs-string">&#x27;-&#x27;</span>, end, <span class="hljs-string">&#x27;?&#x27;</span>, is_even_int_in_range(number, start, end))
+</span><span>  <span class="hljs-built_in">print</span>(number, <span class="hljs-string">&#x27;is an int in range&#x27;</span>, start, <span class="hljs-string">&#x27;-&#x27;</span>, end, <span class="hljs-string">&#x27;?&#x27;</span>, is_even_int_in_range(number, start, end))
 </span></code></pre><p>Some example inputs and outputs are given below:</p>
 <pre><code class="hljs python" v-pre><span>check(<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;y&#x27;</span>, <span class="hljs-string">&#x27;z&#x27;</span>) <span class="hljs-comment"># False (3 is not even)</span>
 </span><span>check(<span class="hljs-number">2</span>, <span class="hljs-number">3.4</span>, <span class="hljs-number">5</span>)
@@ -599,12 +600,12 @@ e.g., <code class="hljs inline no-lang" v-pre>type('x') is not float</code> eval
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

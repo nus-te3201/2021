@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Software Engineering for Self-Directed Learners [Printable Version for TE3201]</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -819,7 +819,7 @@ Extensions:
 <p>In use case diagrams you can use the <code class="hljs inline no-lang" v-pre>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p></div>
 <div>
 <link rel="stylesheet" href="/2021/book/css/common.css">
-<p><strong>A use case can <mark>include</mark> another use case.</strong> <ins>Underlined text</ins> is commonly used to show an inclusion of a use case.</p>
+<p><strong>A use case can <mark>include</mark> another use case.</strong> <span class="underline">Underlined text</span> is commonly used to show an inclusion of a use case.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This use case includes two other use cases, one in step 1 and one in step 2.</p>
 <div class="text-monospace">
@@ -829,8 +829,8 @@ Extensions:
 <li>Actors: Staff, Student</li>
 <li>MSS:
 <ol>
-<li>Staff <mark><ins>creates the survey (UC44)</ins></mark>.</li>
-<li>Student <mark><ins>completes the survey (UC50)</ins></mark>.</li>
+<li>Staff <mark><span class="underline">creates the survey (UC44)</span></mark>.</li>
+<li>Student <mark><span class="underline">completes the survey (UC50)</span></mark>.</li>
 <li>Staff views the survey results.<br>
 Use case ends.</li></ol></li></ul></div></box>
 <p>Inclusions are useful,</p>
@@ -2349,16 +2349,16 @@ components of real systems, but equally as well fulfill assigned roles as compon
 </span><span>    print_banner()
 </span><span>
 </span><span>    <span class="hljs-comment"># print details</span>
-</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
-</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + get_outstanding())
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;amount	&quot;</span> + get_outstanding())
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span>():</span>
 </span><span>    print_banner()
 </span><span>    print_details(get_outstanding())
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span>(<span class="hljs-params">amount</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
-</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
 </span></code></pre></div></div></box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p></div></div></div></div>
@@ -4120,12 +4120,12 @@ Similarly, an inheritance results in a dependency from the child class to the pa
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

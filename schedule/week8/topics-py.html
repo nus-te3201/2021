@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Week 8 - Programming Topics</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -124,9 +125,9 @@
 </span><span>  <span class="hljs-keyword">pass</span> <span class="hljs-comment"># an empty class</span>
 </span><span>
 </span><span>john = Employee() <span class="hljs-comment"># create an Employee object</span>
-</span><span>print(<span class="hljs-built_in">type</span>(john)) <span class="hljs-comment"># print type of the john object</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(john)) <span class="hljs-comment"># print type of the john object</span>
 </span><span>alice = Employee()
-</span><span>print(<span class="hljs-built_in">type</span>(alice))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(alice))
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> <span class="dimmed">Note how the type of each object is given as <code class="hljs inline no-lang" v-pre>&lt;class 'Employee'&gt;</code> i.e., a class with name <code class="hljs inline no-lang" v-pre>Employee</code>.</span></p>
 <pre><code class="hljs" v-pre><span>&lt;class 'Employee'&gt;
 </span><span>&lt;class 'Employee'&gt;
@@ -141,7 +142,7 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Pen</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span>(<span class="hljs-params">self, text</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;writing:&#x27;</span>, text)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;writing:&#x27;</span>, text)
 </span><span>    
 </span><span>p = Pen()
 </span><span>p.write(<span class="hljs-string">&#x27;It was a dark night ...&#x27;</span>)
@@ -171,7 +172,7 @@ This is how the arguments are matched with the parameters:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, name</span>):</span>
-</span><span>    print(name, <span class="hljs-string">&#x27;initialized!&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;initialized!&#x27;</span>)
 </span><span>    
 </span><span>tom = Person(<span class="hljs-string">&#x27;Tom&#x27;</span>)
 </span></code></pre></td>
@@ -186,8 +187,8 @@ This is how the arguments are matched with the parameters:</p>
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(x.get_age())
-</span><span>print(x.birthday)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(x.get_age())
+</span><span><span class="hljs-built_in">print</span>(x.birthday)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -206,14 +207,14 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-comment"># print attributes of the object</span>
-</span><span>    print(<span class="hljs-string">&#x27;Book info:&#x27;</span>, self.title, <span class="hljs-string">&#x27;/by&#x27;</span>, self.author) 
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Book info:&#x27;</span>, self.title, <span class="hljs-string">&#x27;/by&#x27;</span>, self.author) 
 </span><span>    
 </span><span>book1 = Book(<span class="hljs-string">&#x27;The Jungle Book&#x27;</span>, <span class="hljs-string">&#x27;Leo Tolstoy&#x27;</span>)
 </span><span>book2 = Book(<span class="hljs-string">&#x27;The Art of War&#x27;</span>, <span class="hljs-string">&#x27;Sun Tzu&#x27;</span>)
 </span><span>
-</span><span>print()  <span class="hljs-comment"># print a blank line</span>
-</span><span>print(<span class="hljs-string">&#x27;Title:&#x27;</span>, book1.title) 
-</span><span>print(<span class="hljs-string">&#x27;Author:&#x27;</span>, book1.author)
+</span><span><span class="hljs-built_in">print</span>()  <span class="hljs-comment"># print a blank line</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Title:&#x27;</span>, book1.title) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Author:&#x27;</span>, book1.author)
 </span><span>book1.describe()
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>Book info: The Jungle Book /by Leo Tolstoy
@@ -236,7 +237,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">show_authors</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">for</span> b <span class="hljs-keyword">in</span> self.books:
-</span><span>      print(b.author)
+</span><span>      <span class="hljs-built_in">print</span>(b.author)
 </span><span>      
 </span><span>my_list = ReadingList([book1]) <span class="hljs-comment"># book1 defined in a previous example </span>
 </span><span>my_list.add_book(book2) <span class="hljs-comment"># book2 defined in a previous example</span>
@@ -258,12 +259,12 @@ This is how the arguments are matched with the parameters:</p>
 </span><span><span class="hljs-comment"># It should have a method: info() </span>
 </span><span>    
 </span><span>a = StockItem(<span class="hljs-string">&#x27;Apple&#x27;</span>)
-</span><span>print(a.info())
-</span><span>print(a.name)
+</span><span><span class="hljs-built_in">print</span>(a.info())
+</span><span><span class="hljs-built_in">print</span>(a.name)
 </span><span>b = StockItem(<span class="hljs-string">&#x27;Bag of Beans&#x27;</span>)
-</span><span>print(b.info())
+</span><span><span class="hljs-built_in">print</span>(b.info())
 </span><span>b.name = <span class="hljs-string">&#x27;Bananas&#x27;</span>
-</span><span>print(b.info())
+</span><span><span class="hljs-built_in">print</span>(b.info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -299,7 +300,7 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>items.append(StockItem(<span class="hljs-string">&#x27;Cup&#x27;</span>, <span class="hljs-number">1</span>))
 </span><span><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> items:
 </span><span>    item.increase_price(<span class="hljs-number">1</span>)  <span class="hljs-comment"># increase price by 1</span>
-</span><span>    print(item.info())
+</span><span>    <span class="hljs-built_in">print</span>(item.info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -335,9 +336,9 @@ This is how the arguments are matched with the parameters:</p>
 </span><span>
 </span><span>colorama.init()  <span class="hljs-comment"># one-time initialization</span>
 </span><span>
-</span><span>print(colorama.Fore.YELLOW + <span class="hljs-string">&#x27; Some yellow text&#x27;</span>)
-</span><span>print(colorama.Fore.BLUE + colorama.Back.WHITE + <span class="hljs-string">&#x27; Some blue text in a white background&#x27;</span>)
-</span><span>print(colorama.Style.RESET_ALL + <span class="hljs-string">&#x27; Back to normal now&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(colorama.Fore.YELLOW + <span class="hljs-string">&#x27; Some yellow text&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(colorama.Fore.BLUE + colorama.Back.WHITE + <span class="hljs-string">&#x27; Some blue text in a white background&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(colorama.Style.RESET_ALL + <span class="hljs-string">&#x27; Back to normal now&#x27;</span>)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span><br></p>
 <p><img src="/2021/programming/thirdparty/images/coloramaOutput.png"></p><p></p><p></p></tip-box>
 <tip-box> 
@@ -387,12 +388,12 @@ This is how the arguments are matched with the parameters:</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

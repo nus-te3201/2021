@@ -1,4 +1,792 @@
 {
-  "enableSearch": false,
-  "pages": []
+  "enableSearch": true,
+  "pages": [
+    {
+      "src": "book/about/acknowledgements.md",
+      "title": "About: Acknowledgements",
+      "headings": {
+        "license": "License",
+        "bug-reports-suggestions": "Bug reports, suggestions",
+        "contributions": "Contributions",
+        "contact-us": "Contact us",
+        "acknowledgements": "Acknowledgements"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/index.md",
+      "title": "Textbook",
+      "headings": {
+        "software-engineering-for-self-directed-learners-te3201-edition-2021": "Software Engineering for Self-Directed Learners TE3201 edition - 2021"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/architecture.md",
+      "title": "Textbook Chapter : Software Architecture",
+      "headings": {
+        "introduction": "Introduction",
+        "architecture-diagrams": "Architecture diagrams",
+        "architectural-styles": "Architectural styles",
+        "introduction-2": "Introduction",
+        "n-tier-architectural-style": "N-tier architectural style",
+        "client-server-architectural-style": "Client-server architectural style",
+        "transaction-processing-architectural-style": "Transaction processing architectural style",
+        "service-oriented-architectural-style": "Service-oriented architectural style",
+        "event-driven-architectural-style": "Event-driven architectural style",
+        "more": "More",
+        "software-architecture": "Software architecture"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/codeQuality.md",
+      "title": "Textbook Chapter : Code Quality",
+      "headings": {
+        "introduction": "Introduction",
+        "guideline-maximise-readability": "Guideline: Maximise readability",
+        "guideline-follow-a-standard": "Guideline: Follow a standard",
+        "guideline-name-well": "Guideline: Name well",
+        "guideline-comment-minimally-but-sufficiently": "Guideline: Comment minimally, but sufficiently",
+        "basic-2": "Basic",
+        "basic-4": "Basic",
+        "basic-5": "Basic",
+        "code-quality": "Code quality"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/cppToJava.md",
+      "title": "Textbook Chapter : C++ to Java",
+      "headings": {
+        "the-java-world": "The Java world",
+        "getting-started": "Getting started",
+        "data-types": "Data types",
+        "control-flow": "Control flow",
+        "java-objects": "Java objects",
+        "java-classes": "Java classes",
+        "some-useful-classes": "Some useful classes",
+        "inheritance": "Inheritance",
+        "exceptions": "Exceptions",
+        "generics": "Generics",
+        "collections": "Collections",
+        "junit": "JUnit",
+        "miscellaneous-topics": "Miscellaneous topics",
+        "exercise-run-helloworld": " [Exercise] Run HelloWorld",
+        "key-exercise-byeworld": " [Key Exercise] ByeWorld",
+        "key-exercise-compare-names": " [Key Exercise] Compare names",
+        "key-exercise-grade-helper": " [Key Exercise] Grade Helper",
+        "key-exercise-getgradecap-method": " [Key Exercise] getGradeCap Method",
+        "key-exercise-getmultiplegradecaps-method": " [Key Exercise] getMultipleGradeCaps Method",
+        "key-exercise-create-rectangle-objects": " [Key Exercise] create Rectangle objects",
+        "key-exercise-use-rectangle-objects": " [Key Exercise] use Rectangle objects",
+        "key-exercise-pass-objects-to-move-method": " [Key Exercise] pass objects to move method",
+        "key-exercise-define-a-circle-class": " [Key Exercise] define a Circle class",
+        "key-exercise-add-getters-setters-to-the-circle-class": " [Key Exercise] add getters/setters to the Circle class",
+        "key-exercise-add-getmaxradius-to-the-circle-class": " [Key Exercise] add getMaxRadius to the Circle class",
+        "key-exercise-printprice-method": " [Key Exercise] printPrice method",
+        "key-exercise-printtotalscore-method": " [Key Exercise] printTotalScore method",
+        "key-exercise-filteremails-method": " [Key Exercise] filterEmails method",
+        "key-exercise-find-total-expenditure": " [Key Exercise] find total expenditure",
+        "key-exercise-inherit-the-task-class": " [Key Exercise] inherit the Task class",
+        "key-exercise-override-the-tostring-method": " [Key Exercise] override the toString method",
+        "key-exercise-print-printable-items": " [Key Exercise] print Printable items",
+        "key-exercise-print-shape-area": " [Key Exercise] print shape area",
+        "key-exercise-print-area-with-abstract-shape": " [Key Exercise] print area with abstract Shape",
+        "key-exercise-parse-rectangle-descriptor": " [Key Exercise] parse rectangle descriptor",
+        "key-exercise-numbers-list": " [Key Exercise] Numbers list",
+        "key-exercise-weekly-roster": " [Key Exercise] weekly roster",
+        "key-exercise-show-priority-color": " [Key Exercise] show priority color",
+        "c-to-java": "C++ to Java"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/design.md",
+      "title": "Textbook Chapter : Software Design",
+      "headings": {
+        "introduction": "Introduction",
+        "software-design": "Software design"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/designApproaches.md",
+      "title": "Textbook Chapter : Design Approaches",
+      "headings": {
+        "multi-level-design": "Multi-level design",
+        "top-down-and-bottom-up-design": "Top-down and bottom-up design",
+        "agile-design": "Agile design",
+        "design-approaches": "Design approaches"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/designFundamentals.md",
+      "title": "Textbook Chapter : Design Fundamentals",
+      "headings": {
+        "abstraction": "Abstraction",
+        "design-fundamentals": "Design fundamentals"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/designPatterns.md",
+      "title": "Textbook Chapter : Software Design Patterns",
+      "headings": {
+        "introduction": "Introduction",
+        "singleton-pattern": "Singleton pattern",
+        "abstraction-occurrence-pattern": "Abstraction occurrence pattern",
+        "facade-pattern": "Facade pattern",
+        "command-pattern": "Command pattern",
+        "model-view-controller-mvc-pattern": "Model view controller (MVC) pattern",
+        "observer-pattern": "Observer pattern",
+        "more": "More",
+        "software-design-patterns": "Software design patterns"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/documentation.md",
+      "title": "Textbook Chapter : Documentation",
+      "headings": {
+        "introduction": "Introduction",
+        "guidelines": "Guidelines",
+        "guideline-go-top-down-not-bottom-up": "Guideline: Go top-down, not bottom-up",
+        "guideline-aim-for-comprehensibility": "Guideline: Aim for comprehensibility",
+        "guideline-document-minimally-but-sufficiently": "Guideline: Document minimally, but sufficiently",
+        "documentation": "Documentation"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/errorHandling.md",
+      "title": "Textbook Chapter : Error Handling",
+      "headings": {
+        "introduction": "Introduction",
+        "exceptions": "Exceptions",
+        "error-handling": "Error handling"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/gatheringRequirements.md",
+      "title": "Textbook Chapter : Gathering Requirements",
+      "headings": {
+        "gathering-requirements": "Gathering requirements"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/gitAndGithub.md",
+      "title": "Textbook Chapter : Git and Github",
+      "headings": {
+        "git-and-github": "Git and GitHub"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/ides.md",
+      "title": "Textbook Chapter : IDEs",
+      "headings": {
+        "introduction": "Introduction",
+        "debugging": "Debugging",
+        "ides": "IDEs"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/integration.md",
+      "title": "Textbook Chapter : Integration",
+      "headings": {
+        "introduction": "Introduction",
+        "approaches": "Approaches",
+        "integration": "Integration"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/intellij.md",
+      "title": "Textbook Chapter : Intellij IDEA",
+      "headings": {
+        "intellij-idea": "IntelliJ IDEA"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/modeling.md",
+      "title": "Textbook Chapter : Modeling",
+      "headings": {
+        "introduction": "Introduction",
+        "modeling": "Modeling"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/oop.md",
+      "title": "Textbook Chapter : Object-Oriented Programming",
+      "headings": {
+        "introduction": "Introduction",
+        "objects": "Objects",
+        "classes": "Classes",
+        "associations": "Associations",
+        "inheritance": "Inheritance",
+        "object-oriented-programming": "Object-Oriented Programming"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/principles.md",
+      "title": "Textbook Chapter : Principles",
+      "headings": {
+        "principles": "Principles"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/processModels.md",
+      "title": "Textbook Chapter : SDLC Process Models",
+      "headings": {
+        "introduction": "Introduction",
+        "example-process-models": "Example process models",
+        "more": "More",
+        "sdlc-process-models": "SDLC process models"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/projectPlanning.md",
+      "title": "Textbook Chapter : Project Planning",
+      "headings": {
+        "project-planning": "Project planning"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/qualityAssurance.md",
+      "title": "Textbook Chapter : Quality Assurance",
+      "headings": {
+        "introduction": "Introduction",
+        "code-reviews": "Code reviews",
+        "static-analysis": "Static analysis",
+        "formal-verification": "Formal verification",
+        "quality-assurance": "Quality assurance"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/refactoring.md",
+      "title": "Textbook Chapter : Refactoring",
+      "headings": {
+        "refactoring": "Refactoring"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/requirements.md",
+      "title": "Textbook Chapter : Requirements",
+      "headings": {
+        "requirements": "Requirements"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/reuse.md",
+      "title": "Textbook Chapter : Reuse",
+      "headings": {
+        "introduction": "Introduction",
+        "apis": "APIs",
+        "libraries": "Libraries",
+        "frameworks": "Frameworks",
+        "platforms": "Platforms",
+        "cloud-computing": "Cloud computing",
+        "reuse": "Reuse"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/revisionControl.md",
+      "title": "Textbook Chapter : Revision Control",
+      "headings": {
+        "revision-control": "Revision control"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/softwareEngineering.md",
+      "title": "Textbook Chapter : Software Engineering",
+      "headings": {
+        "introduction": "Introduction",
+        "software-engineering": "Software Engineering"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/specifyingRequirements.md",
+      "title": "Textbook Chapter : Specifying Requirements",
+      "headings": {
+        "prose": "Prose",
+        "feature-lists": "Feature lists",
+        "user-stories": "User stories",
+        "use-cases": "Use cases",
+        "glossary": "Glossary",
+        "supplementary-requirements": "Supplementary requirements",
+        "specifying-requirements": "Specifying requirements"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/teamwork.md",
+      "title": "Textbook Chapter : Teamwork",
+      "headings": {
+        "teamwork": "Teamwork"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/test.md",
+      "title": "",
+      "headings": {},
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/testCaseDesign.md",
+      "title": "Textbook Chapter : Test Case Design",
+      "headings": {
+        "introduction": "Introduction",
+        "equivalence-partitions": "Equivalence partitions",
+        "boundary-value-analysis": "Boundary value analysis",
+        "recap": "Recap",
+        "test-case-design": "Test case design"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/testing.md",
+      "title": "Textbook Chapter : Testing",
+      "headings": {
+        "introduction": "Introduction",
+        "testing-types": "Testing types",
+        "test-automation": "Test automation",
+        "regression-testing": "Regression testing",
+        "developer-testing": "Developer testing",
+        "unit-testing": "Unit testing",
+        "integration-testing": "Integration testing",
+        "system-testing": "System testing",
+        "alpha-and-beta-testing": "Alpha and beta testing",
+        "dogfooding": "Dogfooding",
+        "exploratory-versus-scripted-testing": "Exploratory versus scripted testing",
+        "acceptance-testing": "Acceptance testing",
+        "testing": "Testing"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/chapters/uml.md",
+      "title": "Textbook Chapter : UML",
+      "headings": {
+        "class-diagrams": "Class diagrams",
+        "object-diagrams": "Object diagrams",
+        "activity-diagrams": "Activity diagrams",
+        "notes": "Notes",
+        "miscellaneous": "Miscellaneous",
+        "introduction": "Introduction",
+        "classes": "Classes",
+        "associations": "Associations",
+        "dependencies": "Dependencies",
+        "associations-as-attributes": "Associations as attributes",
+        "class-level-members": "Class-level members",
+        "composition": "Composition",
+        "aggregation": "Aggregation",
+        "class-inheritance": "Class inheritance",
+        "introduction-3": "Introduction",
+        "basic-notations": "Basic notations",
+        "uml": "UML"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/common/definitions.md",
+      "title": "Definitions",
+      "headings": {
+        "definitions": "Definitions",
+        "a": "A",
+        "b": "B",
+        "c": "C",
+        "d": "D",
+        "e": "E",
+        "f": "F",
+        "g": "G",
+        "i": "I",
+        "l": "L",
+        "o": "O",
+        "p": "P",
+        "r": "R",
+        "s": "S",
+        "t": "T",
+        "u": "U",
+        "w": "W",
+        "y": "Y"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/common/exercises.md",
+      "title": "Combined Exercises",
+      "headings": {
+        "combined-exercises": "Combined Exercises"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "se-book-adapted/projectDuke/index.md",
+      "title": "Project Duke",
+      "headings": {
+        "project-duke": "Project Duke",
+        "levels": "Levels",
+        "level-0-greet": "Level 0. Greet",
+        "level-1-greet-echo-exit": "Level 1. Greet, Echo, Exit",
+        "level-2-add-list": "Level 2. Add, List",
+        "level-3-mark-as-done": "Level 3. Mark as Done",
+        "level-4-todos-events-deadlines": "Level 4. ToDos, Events, Deadlines",
+        "level-5-handle-errors": "Level 5. Handle Errors",
+        "level-6-delete": "Level 6. Delete",
+        "level-7-save": "Level 7. Save",
+        "level-8-dates-and-times": "Level 8. Dates and Times",
+        "level-9-find": "Level 9. Find",
+        "level-10-gui": "Level 10. GUI",
+        "extensions-category-a": "Extensions: Category A",
+        "a-classes-2": "A-Classes",
+        "a-inheritance-2": "A-Inheritance",
+        "a-abstractclasses": "A-AbstractClasses",
+        "a-exceptions-2": "A-Exceptions",
+        "a-textuitesting": "A-TextUiTesting",
+        "a-collections-2": "A-Collections",
+        "a-moreoop": "A-MoreOOP",
+        "a-junit": "A-JUnit",
+        "a-packages": "A-Packages",
+        "a-javadoc": "A-JavaDoc",
+        "a-codingstandard": "A-CodingStandard",
+        "a-checkstyle": "A-CheckStyle",
+        "a-codequality": "A-CodeQuality",
+        "a-assertions": "A-Assertions",
+        "a-jar": "A-Jar",
+        "a-gradle": "A-Gradle",
+        "a-ci": "A-CI",
+        "a-enums": "A-Enums",
+        "a-varargs": "A-Varargs",
+        "a-lambdas": "A-Lambdas",
+        "a-streams": "A-Streams",
+        "a-libraries": "A-Libraries",
+        "a-userguide": "A-UserGuide",
+        "a-devguide": "A-DevGuide",
+        "a-release": "A-Release",
+        "a-bettergui": "A-BetterGui",
+        "extensions-category-b": "Extensions: Category B",
+        "b-tentativescheduling": "B-TentativeScheduling",
+        "b-snooze": "B-Snooze",
+        "b-recurringtasks": "B-RecurringTasks",
+        "b-doaftertasks": "B-DoAfterTasks",
+        "b-dowithinperiodtasks": "B-DoWithinPeriodTasks",
+        "b-fixeddurationtasks": "B-FixedDurationTasks",
+        "b-reminders": "B-Reminders",
+        "b-findfreetimes": "B-FindFreeTimes",
+        "b-viewschedules": "B-ViewSchedules",
+        "b-detectanomalies": "B-DetectAnomalies",
+        "extensions-category-c": "Extensions: Category C",
+        "c-detectduplicates": "C-DetectDuplicates",
+        "c-flexibledatasource": "C-FlexibleDataSource",
+        "c-sort": "C-Sort",
+        "c-naturaldates": "C-NaturalDates",
+        "c-bettersearch": "C-BetterSearch",
+        "c-update": "C-Update",
+        "c-tagging": "C-Tagging",
+        "c-priority": "C-Priority",
+        "c-archive": "C-Archive",
+        "c-massops": "C-MassOps",
+        "c-statistics": "C-Statistics",
+        "c-undo": "C-Undo",
+        "c-help": "C-Help",
+        "c-friendliersyntax": "C-FriendlierSyntax",
+        "extensions-category-d": "Extensions: Category D",
+        "d-contacts": "D-Contacts",
+        "d-notes": "D-Notes",
+        "d-expenses": "D-Expenses",
+        "d-loans": "D-Loans",
+        "d-places": "D-Places",
+        "d-trivia": "D-Trivia",
+        "d-clients": "D-Clients",
+        "d-merchandise": "D-Merchandise"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "book/combined/exercises.md",
+      "title": "Combined Exercises",
+      "headings": {
+        "combined-exercises": "Combined Exercises"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/index.md",
+      "title": "Programming Basics (with Python)",
+      "headings": {
+        "programming-basics-with-python": "Programming Basics (with Python)"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/dictionaries.md",
+      "title": "Python Basics: Dictionaries",
+      "headings": {
+        "dictionaries": "Dictionaries",
+        "the-dictionary-data-structure": "The Dictionary Data Structure",
+        "working-with-dictionaries": "Working with Dictionaries",
+        "nested-dictionaries": "Nested Dictionaries"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/errors.md",
+      "title": "Python Basics: Error Handling",
+      "headings": {
+        "error-handling": "Error Handling",
+        "introduction-to-errors": "Introduction to Errors",
+        "syntax-errors": "Syntax Errors",
+        "handling-exceptions": "Handling Exceptions",
+        "raising-exceptions": "Raising Exceptions"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/expressions-types-variables.md",
+      "title": "Python Basics: Expressions, Data Types, Variables",
+      "headings": {
+        "expressions-data-types-variables": "Expressions, Data Types, Variables",
+        "computer-programs": "Computer Programs",
+        "setting-up-the-programming-environment": "Setting up the Programming Environment",
+        "working-with-an-interactive-shell": "Working with an Interactive Shell",
+        "operators": "Operators",
+        "data-types": "Data Types",
+        "variables": "Variables"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/files.md",
+      "title": "Python Basics: Files",
+      "headings": {
+        "files": "Files",
+        "file-paths": "File Paths",
+        "reading-from-files": "Reading from Files",
+        "writing-to-files": "Writing to Files",
+        "csv-files": "CSV files"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/flowcontrol.md",
+      "title": "Python Basics: Flow Control",
+      "headings": {
+        "program-flow-control": "Program Flow Control",
+        "booleans": "Booleans",
+        "if-statements": "if Statements",
+        "while-statements": "while Statements",
+        "for-statements": "for Statements",
+        "importing-modules": "Importing Modules",
+        "early-termination": "Early Termination"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/functions.md",
+      "title": "Python Basics: Functions",
+      "headings": {
+        "functions": "Functions",
+        "writing-functions": "Writing Functions",
+        "function-parameters": "Function Parameters",
+        "return-value": "Return Value",
+        "local-and-global-scope": "Local and Global Scope"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/gui.md",
+      "title": "Python Basics: GUIs",
+      "headings": {
+        "guis": "GUIs",
+        "gui-basics": "GUI Basics"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/ide.md",
+      "title": "Python Basics: Using an IDE",
+      "headings": {
+        "appendix-b-using-an-ide": "Appendix B: Using an IDE"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/lists.md",
+      "title": "Python Basics: Lists",
+      "headings": {
+        "lists": "Lists",
+        "the-list-data-structure": "The List Data Structure",
+        "object-references": "Object References",
+        "working-with-lists": "Working with Lists",
+        "methods": "Methods",
+        "list-methods": "List Methods"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/monty.md",
+      "title": "Python Basics: The Monty Project",
+      "headings": {
+        "the-monty-project": "The Monty Project",
+        "levels": "Levels",
+        "level-1-echo-once": "Level 1 Echo Once",
+        "level-2-recognize-known-commands": "Level 2 Recognize Known Commands",
+        "level-3-use-functions": "Level 3 Use Functions",
+        "level-4-collect-tasks-in-memory": "Level 4 Collect Tasks in Memory",
+        "level-5-mark-tasks-as-done": "Level 5 Mark Tasks as Done",
+        "level-6-give-help": "Level 6 Give Help",
+        "level-7-save-tasks-to-disk": "Level 7 Save Tasks to Disk",
+        "level-8-support-deadlines": "Level 8 Support Deadlines",
+        "level-9-use-classes": "Level 9 Use Classes",
+        "level-10-use-more-classes": "Level 10 Use More Classes",
+        "level-11-use-multiple-code-files": "Level 11 Use Multiple Code Files",
+        "level-12-use-inheritance": "Level 12 Use Inheritance",
+        "level-13-add-unit-tests": "Level 13 Add Unit Tests",
+        "level-14-add-a-gui": "Level 14 Add a GUI",
+        "extensions-category-b": "Extensions: Category B",
+        "b-events": "B-Events",
+        "b-doaftertasks": "B-DoAfterTasks",
+        "b-dowithinperiodtasks": "B-DoWithinPeriodTasks",
+        "b-fixeddurationtasks": "B-FixedDurationTasks",
+        "extensions-category-c": "Extensions: Category C",
+        "c-detectduplicates": "C-DetectDuplicates",
+        "c-flexibledatasource": "C-FlexibleDataSource",
+        "c-datetimes": "C-DateTimes",
+        "c-sort": "C-Sort",
+        "c-search": "C-Search",
+        "c-update": "C-Update",
+        "c-tagging": "C-Tagging",
+        "c-priority": "C-Priority",
+        "c-archive": "C-Archive",
+        "c-massops": "C-MassOps",
+        "c-statistics": "C-Statistics",
+        "c-friendliersyntax": "C-FriendlierSyntax",
+        "extensions-category-d": "Extensions: Category D",
+        "d-contacts": "D-Contacts",
+        "d-notes": "D-Notes",
+        "d-expenses": "D-Expenses",
+        "d-loans": "D-Loans",
+        "d-places": "D-Places",
+        "d-trivia": "D-Trivia",
+        "d-clients": "D-Clients",
+        "d-merchandise": "D-Merchandise"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/oop.md",
+      "title": "Python Basics: Object-Oriented Programming",
+      "headings": {
+        "object-oriented-programming": "Object-Oriented Programming",
+        "classes": "Classes",
+        "class-level-members": "Class-Level Members",
+        "visibility": "Visibility",
+        "inheritance": "Inheritance"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/organizing.md",
+      "title": "Python Basics: Organizing Python Code",
+      "headings": {
+        "appendix-c-organizing-python-code": "Appendix C: Organizing Python Code"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/programs.md",
+      "title": "Python Basics: Programs",
+      "headings": {
+        "python-programs": "Python Programs",
+        "scripts-programs": "Scripts (Programs)",
+        "comments": "Comments",
+        "using-functions": "Using Functions"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/strings.md",
+      "title": "Python Basics: Strings",
+      "headings": {
+        "strings": "Strings",
+        "string-literals": "String Literals",
+        "working-with-strings": "Working with Strings",
+        "string-methods": "String Methods"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/thirdparty.md",
+      "title": "Python Basics: Installing 3rd Party Libraries",
+      "headings": {
+        "appendix-a-installing-3rd-party-modules": "Appendix A: Installing 3rd-Party Modules"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "programming/chapters/unittesting.md",
+      "title": "Python Basics: Unit Testing",
+      "headings": {
+        "appendix-d-unit-testing": "Appendix D: Unit Testing"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "admin/index.md",
+      "title": "Admin Info",
+      "headings": {
+        "weekly-project-increments": "Weekly Project Increments",
+        "te3201-software-engineering": "TE3201 Software Engineering",
+        "module-overview": "Module overview",
+        "using-this-module-website": "Using this module website",
+        "browser-compatibility": "Browser compatibility",
+        "information-layers": "Information layers",
+        "conventions-used": "Conventions used",
+        "searching-for-keywords": "Searching for keywords",
+        "saving-as-pdf-files": "Saving as PDF files",
+        "printing-textbook-content": "Printing Textbook Content",
+        "making-this-website-better": "Making this Website Better",
+        "instructors": "Instructors",
+        "lectures": "Lectures",
+        "tutorials": "Tutorials",
+        "textbook": "Textbook",
+        "programming-language": "Programming Language",
+        "programming-exercises": "Programming Exercises",
+        "project": "Project",
+        "week-13-final-submission-3": "Week 13: Final Submission",
+        "policies": "Policies",
+        "deadlines": "Deadlines",
+        "plagiarism": "Plagiarism",
+        "tools": "Tools",
+        "coursemology": "Coursemology",
+        "pycharm": "PyCharm",
+        "getting-help": "Getting Help",
+        "assessment": "Assessment",
+        "exam": "Exam",
+        "procedure-rules": "procedure/rules",
+        "30-15-minutes-before-the-exam": "30-15 minutes before the exam",
+        "format": "Format",
+        "resources": "Resources"
+      },
+      "headingKeywords": {}
+    }
+  ]
 }

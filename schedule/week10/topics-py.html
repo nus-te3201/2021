@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Week 10 - Programming Topics</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -113,7 +114,7 @@
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
 </span><span>
 </span><span>amy = Person(<span class="hljs-string">&#x27;Amy&#x27;</span>)
 </span><span>amy.print_info()
@@ -130,12 +131,12 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params">Person</span>):</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teach</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
 </span><span>
 </span><span>dan = Teacher(<span class="hljs-string">&#x27;Dan&#x27;</span>)
 </span><span>dan.print_info()
 </span><span>dan.teach()
-</span><span>print(<span class="hljs-string">&#x27;the name is&#x27;</span>, dan.name)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;the name is&#x27;</span>, dan.name)
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -165,7 +166,7 @@
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
 </span><span>    
 </span><span><span class="hljs-comment"># ADD YOUR CODE HERE</span>
 </span><span>    
@@ -201,10 +202,10 @@
 </span><span>    <span class="highlighted">self.matric = matric</span>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">learn</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
 </span><span>    
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span></span>
-</span><span>    <span class="highlighted">print(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)</span>
 </span><span>
 </span><span>adam = Person(<span class="hljs-string">&#x27;Adam&#x27;</span>)
 </span><span>adam.print_info()
@@ -220,7 +221,7 @@
 </span><span>    self.name = name
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a person&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a person&#x27;</span>)
 </span></code></pre><p><br><br></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>Adam is a person
 </span><span>Ben is a student
@@ -268,17 +269,17 @@
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m a&quot;</span>, self.name)
 </span><span>    
 </span><span>
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bird</span>(<span class="hljs-params">Animal</span>):</span>
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">move</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;I&#x27;m flying&quot;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I&#x27;m flying&quot;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">info</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-comment"># CALL info() METHOD OF PARENT CLASS HERE </span>
-</span><span>    print(<span class="hljs-string">&quot;I have feathers&quot;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;I have feathers&quot;</span>)
 </span><span>
 </span><span><span class="hljs-comment"># ADD FlightlessBird CLASS HERE</span>
 </span><span>
@@ -319,7 +320,7 @@
 </span><span>    <span class="highlighted"><span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Book title: &#x27;</span> + self.title</span>
 </span><span>    
 </span><span>book = Book(<span class="hljs-string">&#x27;Python for Beginners&#x27;</span>)
-</span><span><span class="highlighted">print(book)</span>
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(book)</span>
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -342,8 +343,8 @@
 </span><span>  
 </span><span>  <span class="hljs-comment"># OVERRIDE __str__ METHOD HERE</span>
 </span><span>    
-</span><span>print(Person(<span class="hljs-string">&#x27;Amy&#x27;</span>, <span class="hljs-number">25</span>))
-</span><span>print(Person(<span class="hljs-string">&#x27;Ben&#x27;</span>, <span class="hljs-number">26</span>))
+</span><span><span class="hljs-built_in">print</span>(Person(<span class="hljs-string">&#x27;Amy&#x27;</span>, <span class="hljs-number">25</span>))
+</span><span><span class="hljs-built_in">print</span>(Person(<span class="hljs-string">&#x27;Ben&#x27;</span>, <span class="hljs-number">26</span>))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -365,14 +366,14 @@
 </span><span>    self.name = name
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;My name is&#x27;</span>, self.name)
 </span></code></pre><pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span>(<span class="hljs-params">Person</span>):</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teach</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is teaching&#x27;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a teacher&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a teacher&#x27;</span>)
 </span><span>    
 </span></code></pre></td>
   <td valign="bottom">&nbsp;&nbsp;<br><br></td>
@@ -383,14 +384,14 @@
 </span><span>    self.matric = matric
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">learn</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is learning&#x27;</span>)
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
 </span></code></pre><pre><code class="hljs python" v-pre><span><span class="highlighted"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TeachingAssistant</span>(<span class="hljs-params">Teacher, Student</span>):</span></span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">grade</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.name, <span class="hljs-string">&#x27;is grading&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(self.name, <span class="hljs-string">&#x27;is grading&#x27;</span>)
 </span></code></pre></td></tr></table></div>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>TeachingAssistant</code> class above inherits from both <code class="hljs inline no-lang" v-pre>Student</code> class and the <code class="hljs inline no-lang" v-pre>Teacher</code> class both of which inherit from the <code class="hljs inline no-lang" v-pre>Person</code> class. That means a <code class="hljs inline no-lang" v-pre>TeachingAssistant</code> object can use methods from classes <code class="hljs inline no-lang" v-pre>object</code>, <code class="hljs inline no-lang" v-pre>Person</code>, <code class="hljs inline no-lang" v-pre>Student</code>, <code class="hljs inline no-lang" v-pre>Teacher</code>, and <code class="hljs inline no-lang" v-pre>TeachingAssistant</code>.</p>
 <table>
@@ -422,12 +423,12 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Camera</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">take_photo</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;taking photo&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;taking photo&#x27;</span>)
 </span><span>    
 </span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Phone</span>:</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">make_call</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(<span class="hljs-string">&#x27;making call&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;making call&#x27;</span>)
 </span><span>    
 </span><span><span class="hljs-comment"># ADD SmartPhone CLASS HERE</span>
 </span><span>
@@ -479,9 +480,9 @@
 </span><span>    <span class="hljs-keyword">try</span>:
 </span><span>        execute_command(command)
 </span><span>    <span class="hljs-keyword">except</span> EmptyCommandError:
-</span><span>        print(<span class="hljs-string">&#x27;empty command&#x27;</span>)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;empty command&#x27;</span>)
 </span><span>    <span class="hljs-keyword">except</span> InvalidCommandError <span class="hljs-keyword">as</span> e:
-</span><span>        print(<span class="hljs-string">&#x27;invalid command:&#x27;</span>, e.command, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, e.explanation)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;invalid command:&#x27;</span>, e.command, <span class="hljs-string">&#x27;-&gt;&#x27;</span>, e.explanation)
 </span><span>
 </span><span>
 </span><span>process(<span class="hljs-string">&#x27;&#x27;</span>)
@@ -611,12 +612,12 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

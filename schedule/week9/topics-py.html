@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Week 9 - Programming Topics</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -116,14 +117,14 @@
 <li>can be accessed using the class name (i.e., <code class="hljs inline no-lang" v-pre>Student.total_students</code>) or the object (i.e., <code class="hljs inline no-lang" v-pre>amy.total_students</code>) and both give the same value.</li>
 <li>is shared among all objects and correctly gives <code class="hljs inline no-lang" v-pre>2</code> after another <code class="hljs inline no-lang" v-pre>Student</code> object has been created.</li></ul>
 <pre><code class="hljs python" v-pre><span>amy = Student(<span class="hljs-string">&quot;Amy&quot;</span>)
-</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students) <span class="hljs-comment"># access via class name</span></span>
-</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, amy.total_students) <span class="hljs-comment"># access via object</span>
-</span><span>print(<span class="hljs-string">&#x27;Amy course count:&#x27;</span>, amy.course_count)
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students) <span class="hljs-comment"># access via class name</span></span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, amy.total_students) <span class="hljs-comment"># access via object</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Amy course count:&#x27;</span>, amy.course_count)
 </span><span>
 </span><span>ben = Student(<span class="hljs-string">&quot;Ben&quot;</span>)
-</span><span><span class="highlighted">print(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students)</span>
-</span><span>print(<span class="hljs-string">&#x27;total students:&#x27;</span>, ben.total_students) 
-</span><span>print(<span class="hljs-string">&#x27;Ben course count:&#x27;</span>, ben.course_count)
+</span><span><span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, Student.total_students)</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total students:&#x27;</span>, ben.total_students) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Ben course count:&#x27;</span>, ben.course_count)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>total students: 1
 </span><span>total students: 1
@@ -144,17 +145,17 @@
 </span><span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_text</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">if</span> Printer.enabled:
-</span><span>      print(self.text)
+</span><span>      <span class="hljs-built_in">print</span>(self.text)
 </span><span>
 </span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">disable</span>(<span class="hljs-params">cls</span>):</span></span>
 </span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">False</span>  <span class="hljs-comment"># cls here is same as Printer</span></span>
-</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers disabled&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;All Printers disabled&#x27;</span>)</span>
 </span><span>
 </span><span><span class="highlighted"><span class="hljs-meta">  @classmethod</span></span>
 </span><span>  <span class="highlighted"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">enable</span>(<span class="hljs-params">cls</span>):</span></span>
 </span><span>    <span class="highlighted">cls.enabled = <span class="hljs-literal">True</span></span>
-</span><span>    <span class="highlighted">print(<span class="hljs-string">&#x27;All Printers enabled&#x27;</span>)</span>
+</span><span>    <span class="highlighted"><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;All Printers enabled&#x27;</span>)</span>
 </span></code></pre><p>The code below uses the class-level method to enable/disable printing for all <code class="hljs inline no-lang" v-pre>Printer</code> objects.</p>
 <div>
 <table>
@@ -197,19 +198,19 @@
 </span><span>    self.code = code
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
 </span><span>    
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
 </span><span>s1 = Subject(<span class="hljs-string">&#x27;TE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>) 
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
-</span><span>print(Subject.limit_reached(<span class="hljs-number">1</span>))
-</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">1</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">2</span>))
 </span><span>s2 = Subject(<span class="hljs-string">&#x27;TEE3201&#x27;</span>, <span class="hljs-string">&#x27;Software Engineering&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
-</span><span>print(Subject.limit_reached(<span class="hljs-number">2</span>))
-</span><span>print(Subject.limit_reached(<span class="hljs-number">3</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total subjects:&#x27;</span>, Subject.total)
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">2</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">3</span>))
 </span><span>Subject.total = <span class="hljs-number">100</span>
-</span><span>print(Subject.limit_reached(<span class="hljs-number">100</span>))
+</span><span><span class="hljs-built_in">print</span>(Subject.limit_reached(<span class="hljs-number">100</span>))
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -233,7 +234,7 @@
 </span><span>    Subject.total = Subject.total + <span class="hljs-number">1</span> <span class="hljs-comment"># Note this line</span>
 </span><span>    
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_info</span>(<span class="hljs-params">self</span>):</span>
-</span><span>    print(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
+</span><span>    <span class="hljs-built_in">print</span>(self.code, <span class="hljs-string">&#x27;:&#x27;</span>, self.name)
 </span><span>    
 </span><span><span class="hljs-meta">  @classmethod</span>
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">limit_reached</span>(<span class="hljs-params">cls, limit</span>):</span>
@@ -258,8 +259,8 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code class="hljs inline no-lang" v-pre>Account</code> class below.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span>:</span>
 </span><span>  currency = <span class="hljs-string">&#x27;$&#x27;</span>   <span class="hljs-comment"># public</span>
-</span><span>  _min = <span class="hljs-number">10.</span>       <span class="hljs-comment"># protected</span>
-</span><span>  __max = <span class="hljs-number">1000.0</span>   <span class="hljs-comment"># private</span>
+</span><span>  _<span class="hljs-built_in">min</span> = <span class="hljs-number">10.</span>       <span class="hljs-comment"># protected</span>
+</span><span>  __<span class="hljs-built_in">max</span> = <span class="hljs-number">1000.0</span>   <span class="hljs-comment"># private</span>
 </span><span>  
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span>(<span class="hljs-params">self, person, amount</span>):</span>
 </span><span>    self.__balance = amount <span class="hljs-comment"># private</span>
@@ -282,10 +283,10 @@
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;currency:&#x27;</span>, Account.currency)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;currency:&#x27;</span>, Account.currency)
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;status:&#x27;</span>, a.status)
-</span><span>print(<span class="hljs-string">&#x27;info:&#x27;</span>, a.get_info())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;status:&#x27;</span>, a.status)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;info:&#x27;</span>, a.get_info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -298,10 +299,10 @@
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;minimum allowed:&#x27;</span>, Account._min) 
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;minimum allowed:&#x27;</span>, Account._<span class="hljs-built_in">min</span>) 
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;owner:&#x27;</span>, a._owner) 
-</span><span>print(<span class="hljs-string">&#x27;more info:&#x27;</span>, a._get_more_info())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;owner:&#x27;</span>, a._owner) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;more info:&#x27;</span>, a._get_more_info())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -310,10 +311,10 @@
 </span><span>more info: ['OK', 'Adam']
 </span></code></pre></td></tr></table></div>
 <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> The following code will not work because they try to access private members.</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;maximum allowed:&#x27;</span>, Account.__max) <span class="hljs-comment"># error</span>
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;maximum allowed:&#x27;</span>, Account.__<span class="hljs-built_in">max</span>) <span class="hljs-comment"># error</span>
 </span><span>a = Account(<span class="hljs-string">&#x27;Adam&#x27;</span>, <span class="hljs-number">100</span>)
-</span><span>print(<span class="hljs-string">&#x27;balance:&#x27;</span>, a.__balance) <span class="hljs-comment"># error</span>
-</span><span>print(<span class="hljs-string">&#x27;income:&#x27;</span>, a.__get_income()) <span class="hljs-comment"># error</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;balance:&#x27;</span>, a.__balance) <span class="hljs-comment"># error</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;income:&#x27;</span>, a.__get_income()) <span class="hljs-comment"># error</span>
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="no-line-numbers hljs" v-pre><span>AttributeError: type object 'Account' has no attribute '__max'...
 </span><span>AttributeError: 'Account' object has no attribute '__balance'...
@@ -338,10 +339,10 @@
 </span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__max_expenditure</span>(<span class="hljs-params">self</span>):</span>
 </span><span>    <span class="hljs-keyword">return</span> self.__budget * School.__target
 </span><span>    
-</span><span>print(School.__target)
+</span><span><span class="hljs-built_in">print</span>(School.__target)
 </span><span>s = School(<span class="hljs-number">100000</span>)
-</span><span>print(s.__budget)
-</span><span>print(s.__max_expenditure())
+</span><span><span class="hljs-built_in">print</span>(s.__budget)
+</span><span><span class="hljs-built_in">print</span>(s.__max_expenditure())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom"> 
@@ -380,7 +381,7 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following two files residing in the same directory.</p>
 <p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
-</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
 </span></code></pre><p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> student
 </span><span>
@@ -391,7 +392,7 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the following two files.</p>
 <p><code class="hljs inline no-lang" v-pre>[project_root]/utils/print_utils/misc.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_as_list</span>(<span class="hljs-params">text</span>):</span>
-</span><span>    print(<span class="hljs-built_in">list</span>(text))
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-built_in">list</span>(text))
 </span></code></pre><p><code class="hljs inline no-lang" v-pre>[project_root]/course.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">from</span> utils.print_utils <span class="hljs-keyword">import</span> misc 
 </span><span>
@@ -402,7 +403,7 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this <code class="hljs inline no-lang" v-pre>student</code> module being imported into the <code class="hljs inline no-lang" v-pre>course</code> module.</p>
 <p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
-</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
 </span><span>
 </span><span>describe(<span class="hljs-string">&#x27;Betty&#x27;</span>)
 </span></code></pre><div>
@@ -429,7 +430,7 @@
   <td valign="top">
 <p><code class="hljs inline no-lang" v-pre>[project_root]/student.py</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">describe</span>(<span class="hljs-params">name</span>):</span>
-</span><span>    print(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;is a student&#x27;</span>)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&quot;__main__&quot;</span>:
 </span><span>    describe(<span class="hljs-string">&#x27;Betty&#x27;</span>)
@@ -480,12 +481,12 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

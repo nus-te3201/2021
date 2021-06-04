@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Combined Exercises</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -19,6 +19,7 @@
 <body >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -61,7 +62,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -130,12 +131,12 @@
 <p></p>
 <question>
 Choose the correct statement
-<ul radio-group="b78c4" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="b78c4" type="radio"> a. A non-functional requirement is a requirement that hasn’t been fully implemented yet.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="b78c4" type="radio"> b. Functional requirements are always more important than non-functional ones.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="b78c4" type="radio"> c. In a green field project, one must start by studying the existing product.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="b78c4" type="radio"> d. Prototyping can be used to discover as well as record requirements.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="b78c4" type="radio"> e. Users know how the product should be. They just don’t know how to communicate it to us.</label></li></ul>
+<ul radio-group="1bc0b" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="1bc0b" type="radio"> a. A non-functional requirement is a requirement that hasn’t been fully implemented yet.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="1bc0b" type="radio"> b. Functional requirements are always more important than non-functional ones.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="1bc0b" type="radio"> c. In a green field project, one must start by studying the existing product.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="1bc0b" type="radio"> d. Prototyping can be used to discover as well as record requirements.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="1bc0b" type="radio"> e. Users know how the product should be. They just don’t know how to communicate it to us.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>d</p>
 <p>Explanation:</p>
@@ -154,12 +155,12 @@ Choose the correct statement
 <p></p>
 <question>
 Which one of these is the most useful to model a workflow?
-<ul radio-group="5830c" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="5830c" type="radio"> a. class diagram</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="5830c" type="radio"> b. object diagram</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="5830c" type="radio"> c. activity diagram</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="5830c" type="radio"> d. state machine diagram</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="5830c" type="radio"> e. use case diagram</label></li></ul>
+<ul radio-group="e8fb0" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="e8fb0" type="radio"> a. class diagram</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="e8fb0" type="radio"> b. object diagram</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="e8fb0" type="radio"> c. activity diagram</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="e8fb0" type="radio"> d. state machine diagram</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="e8fb0" type="radio"> e. use case diagram</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>c</p></div></question></panel></div></div>
 <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
@@ -169,7 +170,7 @@ Which one of these is the most useful to model a workflow?
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

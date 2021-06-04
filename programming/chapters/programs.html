@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Programs</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -112,8 +113,8 @@
 <ol>
 <li><trigger trigger="click" for="modal:scripts-openIdle">Open the IDLE tool</trigger>.</li>
 <li>Choose <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>New File</code></li>
-<li>In the new window that opens up, enter the following code <span class="dimmed"> (don't worry about the meaning of the code)</span>.<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Hello world!&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Bye!&#x27;</span>)
+<li>In the new window that opens up, enter the following code <span class="dimmed"> (don't worry about the meaning of the code)</span>.<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello world!&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Bye!&#x27;</span>)
 </span></code></pre></li>
 <li>Save the file by choosing <code class="hljs inline no-lang" v-pre>File</code> → <code class="hljs inline no-lang" v-pre>Save as</code>. You can give a name such as <code class="hljs inline no-lang" v-pre>hello.py</code></li>
 <li><code class="hljs inline no-lang" v-pre>Run</code> → <code class="hljs inline no-lang" v-pre>Run Module (F5)</code>. The output will show up in the IDLE shell.</li></ol>
@@ -128,10 +129,10 @@
 <p>You can use comments to provide more information about the code to the reader. Any text that follows <code class="hljs inline no-lang" v-pre>#</code> (until the end of the line) is considered as a comment by the Python interpreter, and is ignored.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-comment"># this is a simple hello world program</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Hello&#x27;</span>) <span class="hljs-comment"># start with a greeting</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello&#x27;</span>) <span class="hljs-comment"># start with a greeting</span>
 </span><span>
 </span><span><span class="hljs-comment"># read user&#x27;s name from the keyboard</span>
-</span><span>print(<span class="hljs-string">&#x27;What is your name?&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;What is your name?&#x27;</span>)
 </span><span>name = <span class="hljs-built_in">input</span>()
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Blank lines too are ignored by the Python interpreter. You can use blank lines to improve the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">ease of reading</span>readability</span> of the code <span class="dimmed"> e.g., by using a blank line to separate one group of statements from another</span></p></div><hr style="border-top: 3px double #c5c5c5;">
 <div>
@@ -141,15 +142,15 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> To print some text, you can use the <code class="hljs inline no-lang" v-pre>print</code> function which can take one or more arguments:</p>
 <tabs> 
   <tab><template slot="_header">Using the shell</template>
-<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
 </span><span>Hello World
 </span><span>
-</span><span><span class="hljs-meta">&gt;&gt;&gt; </span>print(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
+</span><span><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
 </span><span>Bye my friend
 </span></code></pre><p></p></tab>
   <tab class="algolia-no-index"><template slot="_header">Running as a script</template><p></p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello World&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Bye&#x27;</span>, <span class="hljs-string">&#x27;my&#x27;</span>, <span class="hljs-string">&#x27;friend&#x27;</span>)
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>Hello World
 </span><span>Bye my friend
@@ -160,11 +161,11 @@
 <p><strong>Some functions return a value.</strong></p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>int</code>, <code class="hljs inline no-lang" v-pre>float</code>, <code class="hljs inline no-lang" v-pre>str</code> functions can be used to convert a data value of one type to another. The built-in function <code class="hljs inline no-lang" v-pre>type</code> tells you the type of a value.</p>
 <pre><code class="hljs python" v-pre><span>age = <span class="hljs-number">25</span> <span class="hljs-comment"># age is of integer type</span>
-</span><span>print(<span class="hljs-string">&#x27;My age is &#x27;</span> + <span class="hljs-built_in">str</span>(age)) <span class="hljs-comment"># convert age to a string before printing</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;My age is &#x27;</span> + <span class="hljs-built_in">str</span>(age)) <span class="hljs-comment"># convert age to a string before printing</span>
 </span><span>
-</span><span>print(<span class="hljs-built_in">type</span>(-<span class="hljs-number">4</span>)) <span class="hljs-comment"># print the type of value -4</span>
-</span><span>print(<span class="hljs-built_in">type</span>(<span class="hljs-string">&#x27;-4&#x27;</span>)) <span class="hljs-comment"># print the type of value &#x27;-4&#x27;</span>
-</span><span>print(<span class="hljs-built_in">type</span>(<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;5.0&#x27;</span>))) <span class="hljs-comment"># convert string &#x27;5.0&#x27; to a float and print the type</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(-<span class="hljs-number">4</span>)) <span class="hljs-comment"># print the type of value -4</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(<span class="hljs-string">&#x27;-4&#x27;</span>)) <span class="hljs-comment"># print the type of value &#x27;-4&#x27;</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-built_in">type</span>(<span class="hljs-built_in">float</span>(<span class="hljs-string">&#x27;5.0&#x27;</span>))) <span class="hljs-comment"># convert string &#x27;5.0&#x27; to a float and print the type</span>
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>My age is 25
 </span><span>&lt;class 'int'&gt;
@@ -175,16 +176,16 @@
 <p></p></panel><p></p><p></p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>input</code> function can be used to read input from the keyboard. It waits for user input (until the user hits <kbd>Enter</kbd>) and returns all text entered by the user <mark>as a string</mark>. <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how a call to the <code class="hljs inline no-lang" v-pre>print</code> without any arguments (i.e. <code class="hljs inline no-lang" v-pre>print()</code>) prints an empty line.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-comment"># read current price</span>
-</span><span>print(<span class="hljs-string">&#x27;What is the current price?&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;What is the current price?&#x27;</span>)
 </span><span>price = <span class="hljs-built_in">input</span>() <span class="hljs-comment"># price is of type string because input() always return a string</span>
 </span><span>
 </span><span><span class="hljs-comment"># print current price</span>
-</span><span>print() <span class="hljs-comment"># print an empty line</span>
-</span><span>print(<span class="hljs-string">&#x27;Current price is $&#x27;</span> + price) <span class="hljs-comment"># no need to convert; price is already a string</span>
+</span><span><span class="hljs-built_in">print</span>() <span class="hljs-comment"># print an empty line</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Current price is $&#x27;</span> + price) <span class="hljs-comment"># no need to convert; price is already a string</span>
 </span><span>
 </span><span><span class="hljs-comment"># calculate and show discounted price</span>
 </span><span>discounted_price = <span class="hljs-built_in">float</span>(price)*<span class="hljs-number">0.5</span> <span class="hljs-comment"># convert to float type first</span>
-</span><span>print(<span class="hljs-string">&#x27;Price after 50% discount is $&#x27;</span> + <span class="hljs-built_in">str</span>(discounted_price)) <span class="hljs-comment"># convert back to string</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Price after 50% discount is $&#x27;</span> + <span class="hljs-built_in">str</span>(discounted_price)) <span class="hljs-comment"># convert back to string</span>
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/discounted?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe></panel>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Explanation of a similar Python program</span></p></template>
@@ -220,12 +221,12 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

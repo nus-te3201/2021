@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Flow Control</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -142,14 +143,14 @@
 <tr>
 <td style="text-align:center"><code class="hljs inline no-lang" v-pre>&gt;=</code></td>
 <td>Greater than or equal to</td></tr></tbody></table></div><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are some examples</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;hello&#x27;</span> == <span class="hljs-string">&#x27;Hello&#x27;</span>) <span class="hljs-comment"># False</span>
-</span><span>print(<span class="hljs-string">&#x27;dog&#x27;</span> != <span class="hljs-string">&#x27;cat&#x27;</span>) <span class="hljs-comment"># True</span>
-</span><span>print(<span class="hljs-literal">True</span> == <span class="hljs-literal">True</span>) <span class="hljs-comment"># True</span>
-</span><span>print(<span class="hljs-literal">True</span> != <span class="hljs-literal">False</span>) <span class="hljs-comment"># True</span>
-</span><span>print(<span class="hljs-number">42</span> == <span class="hljs-number">42.0</span>) <span class="hljs-comment"># True (they are different types of numbers, but of same value)</span>
-</span><span>print(<span class="hljs-number">42</span> == <span class="hljs-string">&#x27;42&#x27;</span>) <span class="hljs-comment"># False</span>
-</span><span>print(<span class="hljs-number">42</span> == <span class="hljs-built_in">int</span>(<span class="hljs-string">&#x27;42&#x27;</span>)) <span class="hljs-comment"># True</span>
-</span><span>print(<span class="hljs-number">20</span> &gt; <span class="hljs-number">10</span>) <span class="hljs-comment"># True</span>
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hello&#x27;</span> == <span class="hljs-string">&#x27;Hello&#x27;</span>) <span class="hljs-comment"># False</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;dog&#x27;</span> != <span class="hljs-string">&#x27;cat&#x27;</span>) <span class="hljs-comment"># True</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span> == <span class="hljs-literal">True</span>) <span class="hljs-comment"># True</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-literal">True</span> != <span class="hljs-literal">False</span>) <span class="hljs-comment"># True</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">42</span> == <span class="hljs-number">42.0</span>) <span class="hljs-comment"># True (they are different types of numbers, but of same value)</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">42</span> == <span class="hljs-string">&#x27;42&#x27;</span>) <span class="hljs-comment"># False</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">42</span> == <span class="hljs-built_in">int</span>(<span class="hljs-string">&#x27;42&#x27;</span>)) <span class="hljs-comment"># True</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-number">20</span> &gt; <span class="hljs-number">10</span>) <span class="hljs-comment"># True</span>
 </span></code></pre><p>In contrast, <strong><em>boolean operators</em> (<code class="hljs inline no-lang" v-pre>and</code>, <code class="hljs inline no-lang" v-pre>or</code> and <code class="hljs inline no-lang" v-pre>not</code>) work only on boolean values</strong>. Here is how they work.</p>
 <div class="container">
   <div class="row">
@@ -217,16 +218,16 @@
  <div class="row">
   <div class="col">
 <pre><code class="hljs python" v-pre><span>price = <span class="hljs-number">55</span>
-</span><span>print(price)
+</span><span><span class="hljs-built_in">print</span>(price)
 </span><span><span class="hljs-keyword">if</span> price &gt; <span class="hljs-number">50</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Expensive&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Expensive&#x27;</span>)
 </span><span>
 </span><span>weight = <span class="hljs-number">45</span>
-</span><span>print(weight)
+</span><span><span class="hljs-built_in">print</span>(weight)
 </span><span><span class="hljs-keyword">if</span> weight &gt; <span class="hljs-number">100</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Heavy&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Heavy&#x27;</span>)
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Done&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Done&#x27;</span>)
 </span></code></pre></div>
   <div class="col align-self-end">
 <p>output <span aria-hidden="true" class="fas fa-level-down-alt"></span></p>
@@ -238,10 +239,10 @@
 <p><span class="dimmed">[Click <a href="http://pythontutor.com/iframe-embed.html#code=price%20%3D%2055%0Aprint%28price%29%0Aif%20price%20%3E%2050%3A%0A%20%20%20%20print%28'Expensive'%29%0Aweight%20%3D%2045%0Aprint%28weight%29%0Aif%20weight%20%3E%20100%3A%0A%20%20%20%20print%28'Heavy'%29%0Aprint%28'Done'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">here</a> to visualize the execution]</span></p></div></div></div></div>
 <p>Note how the code that should execute when the condition is true is indented (usually by 4 spaces). <strong>Python uses indentation to indicate code <em>blocks</em></strong> (aka <em>clauses</em>) <span class="dimmed">i.e., a sequence of statements that belong together</span>. In the example below, lines 2-4 are in the same block because they are all indented by one level; if the condition is true, all three are executed; if the condition is false, all three are omitted. Line 5 goes back to the previous indentation level, indicating the end of the code block.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> name == <span class="hljs-string">&#x27;Blue&#x27;</span>:          <span class="hljs-comment"># line 1</span>
-</span><span>    print(<span class="hljs-string">&quot;It&#x27;s a color&quot;</span>)   <span class="hljs-comment"># line 2</span>
-</span><span>    print(<span class="hljs-string">&quot;It&#x27;s a feeling&quot;</span>) <span class="hljs-comment"># line 3</span>
-</span><span>    print(<span class="hljs-string">&quot;It&#x27;s a word&quot;</span>)    <span class="hljs-comment"># line 4</span>
-</span><span>print(<span class="hljs-string">&#x27;Done&#x27;</span>)               <span class="hljs-comment"># line 5</span>
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&#x27;s a color&quot;</span>)   <span class="hljs-comment"># line 2</span>
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&#x27;s a feeling&quot;</span>) <span class="hljs-comment"># line 3</span>
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;It&#x27;s a word&quot;</span>)    <span class="hljs-comment"># line 4</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Done&#x27;</span>)               <span class="hljs-comment"># line 5</span>
 </span></code></pre><div>
 <panel type="danger" expanded no-close><template slot="header"><p><span aria-hidden="true" class="fas fa-dumbbell"></span> Exercise: Even Numbers</p></template>
   <div>
@@ -259,15 +260,15 @@
 <pre><code class="hljs python" v-pre><span>age = <span class="hljs-number">13</span>
 </span><span>gender = <span class="hljs-string">&#x27;F&#x27;</span>
 </span><span><span class="hljs-keyword">if</span> (age &gt; <span class="hljs-number">12</span>) <span class="hljs-keyword">and</span> (age &lt; <span class="hljs-number">20</span>):          
-</span><span>    print(<span class="hljs-string">&#x27;Teenager&#x27;</span>)  <span class="hljs-comment"># indented one level - new code block starts here </span>
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Teenager&#x27;</span>)  <span class="hljs-comment"># indented one level - new code block starts here </span>
 </span><span>    <span class="hljs-keyword">if</span> gender == <span class="hljs-string">&#x27;F&#x27;</span>:
-</span><span>        print(<span class="hljs-string">&#x27;Female&#x27;</span>)<span class="hljs-comment"># indented two levels - this block is nested within the first block</span>
-</span><span>        print(<span class="hljs-string">&#x27;Girl&#x27;</span>)  
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Female&#x27;</span>)<span class="hljs-comment"># indented two levels - this block is nested within the first block</span>
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Girl&#x27;</span>)  
 </span><span>    <span class="hljs-keyword">if</span> gender == <span class="hljs-string">&#x27;M&#x27;</span>:
-</span><span>        print(<span class="hljs-string">&#x27;Male&#x27;</span>) <span class="hljs-comment"># another block nested within the first block</span>
-</span><span>        print(<span class="hljs-string">&#x27;Boy&#x27;</span>)
-</span><span>    print(<span class="hljs-string">&#x27;Gender code is &#x27;</span> + gender) 
-</span><span>print(<span class="hljs-string">&#x27;Age is &#x27;</span> + <span class="hljs-built_in">str</span>(age))               
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Male&#x27;</span>) <span class="hljs-comment"># another block nested within the first block</span>
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Boy&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Gender code is &#x27;</span> + gender) 
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Age is &#x27;</span> + <span class="hljs-built_in">str</span>(age))               
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span> <span><span class="dimmed">[Click <a href="http://pythontutor.com/iframe-embed.html#code=age%20%3D%2013%0Agender%20%3D%20'F'%0Aif%20%28age%20%3E%2012%29%20and%20%28age%20%3C%2020%29%3A%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20print%28%22Teenager%22%29%20%20%23%20indented%20one%20level%20-%20new%20code%20block%20starts%20here%20%0A%20%20%20%20if%20gender%20%3D%3D%20'F'%3A%0A%20%20%20%20%20%20%20%20print%28'Female'%29%23%20indented%20two%20levels%20-%20this%20block%20is%20nested%20within%20the%20first%20block%0A%20%20%20%20%20%20%20%20print%28'Girl'%29%20%20%0A%20%20%20%20if%20gender%20%3D%3D%20'M'%3A%0A%20%20%20%20%20%20%20%20print%28'Male'%29%20%23%20another%20block%20nested%20within%20the%20first%20block%0A%20%20%20%20%20%20%20%20print%28'Boy'%29%0A%20%20%20%20print%28'Gender%20code%20is%20'%20%2B%20gender%29%20%0Aprint%28'Age%20is%20'%20%2B%20str%28age%29%29%20&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">here</a> to visualize the execution]</span></span></p>
 <pre><code class="hljs python" v-pre><span>Teenager
 </span><span>Female
@@ -280,22 +281,22 @@
 <p>If a situation has only two <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">no more than one of them can be true at any time</span>mutually exclusive</span> possibilities <span class="dimmed">e.g. if we assume the value of <code class="hljs inline no-lang" v-pre>gender</code> can only be <code class="hljs inline no-lang" v-pre>M</code> or <code class="hljs inline no-lang" v-pre>F</code></span>, we can use the <code class="hljs inline no-lang" v-pre>else</code> statement to deal with both conditions together.</p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, the entire <code class="hljs inline no-lang" v-pre>else</code> block will be skipped if the <code class="hljs inline no-lang" v-pre>if</code> condition is true.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> gender == <span class="hljs-string">&#x27;F&#x27;</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Female&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Female&#x27;</span>)
 </span><span><span class="hljs-keyword">else</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Not Female&#x27;</span>)               
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Not Female&#x27;</span>)               
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Using <code class="hljs inline no-lang" v-pre>else</code></span></p></template>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lWeCgEbk-Ro?rel=0&showinfo=0&start=254&end=336&version=3" frameborder="0" allowfullscreen></iframe>
 <p></p></panel><p></p><p></p>
 <p>If a situation has more than two mutually exclusive possibilities, we can bring in <code class="hljs inline no-lang" v-pre>elif</code> (an abbreviation of <em>else if</em>) blocks too.</p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The example below shows how to use an <code class="hljs inline no-lang" v-pre>if-elif-else</code> construct to control the flow of the execution.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> gender == <span class="hljs-string">&#x27;F&#x27;</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Female&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Female&#x27;</span>)
 </span><span><span class="hljs-keyword">elif</span> gender == <span class="hljs-string">&#x27;M&#x27;</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Male&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Male&#x27;</span>)
 </span><span><span class="hljs-keyword">elif</span> gender == <span class="hljs-string">&#x27;O&#x27;</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Other&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Other&#x27;</span>)
 </span><span><span class="hljs-keyword">else</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Unrecognized value&#x27;</span>)             
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Unrecognized value&#x27;</span>)             
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/gender-if?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p>
@@ -366,9 +367,9 @@
   <td>
 <pre><code class="hljs python" v-pre><span>counter = <span class="hljs-number">0</span>
 </span><span><span class="hljs-keyword">while</span> counter &lt; <span class="hljs-number">3</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Hello&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello&#x27;</span>)
 </span><span>    counter = counter + <span class="hljs-number">1</span>
-</span><span>print(<span class="hljs-string">&#x27;Done&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Done&#x27;</span>)
 </span></code></pre></td>
   <td>&nbsp;→&nbsp;</td>
   <td>
@@ -388,7 +389,7 @@
 <p><strong><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Infinite Loops</strong>: Sometimes programming mistakes can result in <em>infinite loops</em> <span class="dimmed"> i.e., loops that never terminate.</span> In the example below, the condition <code class="hljs inline no-lang" v-pre>counter &lt; 3</code> always evaluates to <code class="hljs inline no-lang" v-pre>True</code> (because the statement to increment <code class="hljs inline no-lang" v-pre>counter</code> has been left out by mistake)</p>
 <pre><code class="hljs python" v-pre><span>counter = <span class="hljs-number">0</span>
 </span><span><span class="hljs-keyword">while</span> counter &lt; <span class="hljs-number">3</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Hello&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello&#x27;</span>)
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When using IDLE, if a bug in your code caused it to go into an infinite loop,  you can use <code class="hljs inline no-lang" v-pre>Ctrl + C</code> to force it to stop executing.</p>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Infinite loops</span></p></template>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/885qKiiKisI?rel=0&showinfo=0&start=297&end=340&version=3" frameborder="0" allowfullscreen></iframe></panel></tip-box>
@@ -400,13 +401,13 @@
 <pre><code class="hljs python" v-pre><span>price = <span class="hljs-number">100</span>
 </span><span>coin_value = <span class="hljs-number">0</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
 </span><span>
 </span><span>coin_value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a coin:&#x27;</span>))
-</span><span>print(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_value - price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_value - price)
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how the above code uses <code class="hljs inline no-lang" v-pre>input</code> function with a string argument e.g., <code class="hljs inline no-lang" v-pre>input('Enter a coin:')</code> to show the string to the user and read the input from the user at the same time.</p>
 <table>
 <tr>
@@ -419,7 +420,7 @@
 </span></code></pre></td></tr>
 <tr>
   <td>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Input a name:&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Input a name:&#x27;</span>)
 </span><span>name = <span class="hljs-built_in">input</span>()
 </span></code></pre></td>
   <td>&nbsp;→&nbsp;</td>
@@ -431,9 +432,9 @@
 <table>
 <tr>
   <td>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;ABC&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4.50</span>)
-</span><span>print(<span class="hljs-string">&#x27;ABC&#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">3</span>) + <span class="hljs-built_in">str</span>(<span class="hljs-number">4.50</span>))
-</span><span>print(<span class="hljs-string">&#x27;ABC&#x27;</span> + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">3</span>) + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">4.50</span>))
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;ABC&#x27;</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4.50</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;ABC&#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">3</span>) + <span class="hljs-built_in">str</span>(<span class="hljs-number">4.50</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;ABC&#x27;</span> + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">3</span>) + <span class="hljs-string">&#x27; &#x27;</span> + <span class="hljs-built_in">str</span>(<span class="hljs-number">4.50</span>))
 </span></code></pre></td>
   <td>&nbsp;→&nbsp;</td>
   <td>
@@ -456,7 +457,7 @@
 </span><span>Your balance: -<span class="hljs-number">50</span>
 </span></code></pre><p>Modify the code to repeat these two lines until the coin entered is enough to pay for the product. Note that you <mark>don't need to add up all the coins entered.</mark> Instead, assume the vending machine can accept only one coin for a purchase and keeps rejecting coins until a big-enough coin is entered.</p>
 <pre><code class="hljs python" v-pre><span>coin_value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a coin:&#x27;</span>))
-</span><span>print(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
 </span></code></pre><p>The output should be something like this:</p>
 <pre><code class="hljs python" v-pre><span>Price: <span class="hljs-number">100</span>
 </span><span>Enter a coin: <span class="hljs-number">50</span>
@@ -474,14 +475,14 @@
 <pre><code class="hljs python" v-pre><span>price = <span class="hljs-number">100</span>
 </span><span>coin_value = <span class="hljs-number">0</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
 </span><span>
 </span><span><span class="hljs-keyword">while</span> price &gt; coin_value:
 </span><span>  coin_value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a coin:&#x27;</span>))
-</span><span>  print(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_value)
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_value - price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_value - price)
 </span></code></pre><p>Modify the code so that it can accumulate coins until there is enough to pay for the product. An example output is given below:</p>
 <pre><code class="hljs python" v-pre><span>Price: <span class="hljs-number">100</span>
 </span><span>Enter a coin: <span class="hljs-number">20</span>
@@ -509,8 +510,8 @@
 </span><span>  <span class="hljs-keyword">if</span> password == <span class="hljs-string">&#x27;abcd&#x27;</span>:
 </span><span>    <span class="hljs-keyword">break</span> <span class="hljs-comment"># exit the loop</span>
 </span><span>  <span class="hljs-keyword">else</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Password incorrect. Try again.&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Password correct. You may proceed.&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Password incorrect. Try again.&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Password correct. You may proceed.&#x27;</span>)
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/password-loop?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -524,15 +525,15 @@
 <pre><code class="hljs python" v-pre><span>price = <span class="hljs-number">100</span>
 </span><span>coin_sum = <span class="hljs-number">0</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
 </span><span>
 </span><span><span class="hljs-keyword">while</span> price &gt; coin_sum:
 </span><span>  coin_value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a coin:&#x27;</span>))
 </span><span>  coin_sum = coin_sum + coin_value
-</span><span>  print(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_sum)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_sum)
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum - price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum - price)
 </span></code></pre><p>Modify the code so that the user can abort the purchase by entering <code class="hljs inline no-lang" v-pre>0</code> as the coin value:</p>
 <pre><code class="hljs python" v-pre><span>Price: <span class="hljs-number">100</span>
 </span><span>Enter a coin: <span class="hljs-number">20</span>
@@ -550,7 +551,7 @@
 </span><span>    <span class="hljs-keyword">break</span>
 </span><span><span class="hljs-meta">... </span>
 </span><span><span class="hljs-keyword">if</span> is_aborting:
-</span><span>  print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum)
 </span></code></pre></panel></div></div></panel><p></p></div> 
 <p><strong>You can use a <code class="hljs inline no-lang" v-pre>continue</code> statement to skip the remainder of the current iteration</strong> and go back to the <code class="hljs inline no-lang" v-pre>while</code> condition.</p>
 <tip-box> 
@@ -560,11 +561,11 @@
 </span><span><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">3</span>:
 </span><span>  word = <span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a word (with 4 letters or more):&#x27;</span>)
 </span><span>  <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(word) &lt; <span class="hljs-number">4</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Too short. Ignored.&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Too short. Ignored.&#x27;</span>)
 </span><span>    <span class="hljs-keyword">continue</span> <span class="hljs-comment"># skip the remainder of the iteration</span>
 </span><span>  accepted_words = accepted_words + <span class="hljs-string">&#x27; &#x27;</span> + word
 </span><span>  count = count + <span class="hljs-number">1</span>
-</span><span>print(<span class="hljs-string">&#x27;Accepted words: &#x27;</span> + accepted_words)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Accepted words: &#x27;</span> + accepted_words)
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/three-words?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -580,7 +581,7 @@
 </span><span>coin_sum = <span class="hljs-number">0</span>
 </span><span>is_aborting = <span class="hljs-literal">False</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Price:&#x27;</span>, price)
 </span><span>
 </span><span><span class="hljs-keyword">while</span> price &gt; coin_sum:
 </span><span>  coin_value = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter a coin:&#x27;</span>))
@@ -588,13 +589,13 @@
 </span><span>    is_aborting = <span class="hljs-literal">True</span>
 </span><span>    <span class="hljs-keyword">break</span>
 </span><span>  coin_sum = coin_sum + coin_value
-</span><span>  print(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_sum)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;You have entered:&#x27;</span>, coin_sum)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> is_aborting:
-</span><span>  print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum)
 </span><span><span class="hljs-keyword">else</span>:
-</span><span>  print(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum - price)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Here is the product&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Your balance:&#x27;</span>, coin_sum - price)
 </span></code></pre><p>Modify the code so that it accepts coins of value 10, 20, 50, 100 only:</p>
 <pre><code class="hljs python" v-pre><span>Price: <span class="hljs-number">100</span>
 </span><span>Enter a coin: <span class="hljs-number">30</span>
@@ -624,7 +625,7 @@
 <tr>
   <td>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">3</span>):
-</span><span>  print(i, <span class="hljs-string">&#x27;Knock knock, Penny!&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(i, <span class="hljs-string">&#x27;Knock knock, Penny!&#x27;</span>)
 </span></code></pre></td>
   <td>&nbsp;→&nbsp;</td>
   <td>
@@ -635,7 +636,7 @@
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note how the above <code class="hljs inline no-lang" v-pre>for</code> loop is equivalent to the following <code class="hljs inline no-lang" v-pre>while</code> loop but more concise.</p>
 <pre><code class="hljs python" v-pre><span>i = <span class="hljs-number">0</span>
 </span><span><span class="hljs-keyword">while</span> i &lt; <span class="hljs-number">3</span>:
-</span><span>  print(i, <span class="hljs-string">&#x27;Knock knock, Penny!&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(i, <span class="hljs-string">&#x27;Knock knock, Penny!&#x27;</span>)
 </span><span>  i = i + <span class="hljs-number">1</span>
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/penny-thrice?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -672,7 +673,7 @@
 </span><span>  
 </span><span>  <span class="hljs-comment"># exit if user input is empty</span>
 </span><span>  <span class="hljs-keyword">if</span> number_as_string == <span class="hljs-string">&#x27;&#x27;</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Exiting as per user request...&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Exiting as per user request...&#x27;</span>)
 </span><span>    <span class="hljs-keyword">break</span>
 </span><span>    
 </span><span>  <span class="hljs-comment"># convert the input into an integer</span>
@@ -680,14 +681,14 @@
 </span><span>  
 </span><span>  <span class="hljs-comment"># skip if the number is negative</span>
 </span><span>  <span class="hljs-keyword">if</span> number_as_int &lt; <span class="hljs-number">0</span> :
-</span><span>    print(<span class="hljs-string">&#x27;Negative number, skipped&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Negative number, skipped&#x27;</span>)
 </span><span>    <span class="hljs-keyword">continue</span> 
 </span><span>    
 </span><span>  <span class="hljs-comment"># update the total and print the running total</span>
 </span><span>  total = total + number_as_int
-</span><span>  print(<span class="hljs-string">&#x27;Running total:&#x27;</span> + <span class="hljs-built_in">str</span>(total))
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Running total:&#x27;</span> + <span class="hljs-built_in">str</span>(total))
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Grand total of non-negative numbers:&#x27;</span>, <span class="hljs-built_in">str</span>(total))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grand total of non-negative numbers:&#x27;</span>, <span class="hljs-built_in">str</span>(total))
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/addup-positive?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -718,9 +719,9 @@
 <tip-box> 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below use two nested <code class="hljs inline no-lang" v-pre>for</code> loops to print multiplication tables for 2, 3, and 4.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">2</span>, <span class="hljs-number">5</span>):
-</span><span>  print(<span class="hljs-string">&#x27;Multiplication table for&#x27;</span>, i)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Multiplication table for&#x27;</span>, i)
 </span><span>  <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">1</span>, <span class="hljs-number">11</span>):
-</span><span>    print(i, <span class="hljs-string">&#x27;x&#x27;</span>, j, <span class="hljs-string">&#x27;=&#x27;</span>, i*j)
+</span><span>    <span class="hljs-built_in">print</span>(i, <span class="hljs-string">&#x27;x&#x27;</span>, j, <span class="hljs-string">&#x27;=&#x27;</span>, i*j)
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/for-manyMultiplicationTables?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -777,9 +778,9 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> the code below imports the <code class="hljs inline no-lang" v-pre>random</code> module and uses its <code class="hljs inline no-lang" v-pre>randint()</code> function to generate a number between 1 and 10.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> random
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Going to print 5 random numbers between 1 and 10&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Going to print 5 random numbers between 1 and 10&#x27;</span>)
 </span><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">5</span>):
-</span><span>    print(random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>))
+</span><span>    <span class="hljs-built_in">print</span>(random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>))
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/five-randoms?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -813,11 +814,11 @@
 </span><span>n = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Number of factorials (0 to exit):&#x27;</span>))
 </span><span>
 </span><span><span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span>:
-</span><span>  print(<span class="hljs-string">&#x27;Terminating as requested...&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Terminating as requested...&#x27;</span>)
 </span><span>  sys.exit()
 </span><span>  
 </span><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(n):
-</span><span>    print(math.factorial(i+<span class="hljs-number">1</span>)) <span class="hljs-comment"># use i+1 because i starts from 0</span>
+</span><span>    <span class="hljs-built_in">print</span>(math.factorial(i+<span class="hljs-number">1</span>)) <span class="hljs-comment"># use i+1 because i starts from 0</span>
 </span></code></pre><panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</span></p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/print-factorials?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 <p></p></panel><p></p><p></p></tip-box>
@@ -864,12 +865,12 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

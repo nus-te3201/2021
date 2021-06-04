@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Files</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -137,11 +138,11 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> os
 </span><span>
 </span><span>cwd = os.getcwd() <span class="hljs-comment"># store current working dir</span>
-</span><span>print(cwd) <span class="hljs-comment"># print current working dir</span>
+</span><span><span class="hljs-built_in">print</span>(cwd) <span class="hljs-comment"># print current working dir</span>
 </span><span>os.chdir(<span class="hljs-string">&#x27;C:\\temp\\python&#x27;</span>) <span class="hljs-comment"># change dir</span>
-</span><span>print(os.getcwd()) <span class="hljs-comment"># print current working dir</span>
+</span><span><span class="hljs-built_in">print</span>(os.getcwd()) <span class="hljs-comment"># print current working dir</span>
 </span><span>os.chdir(cwd) <span class="hljs-comment"># change working dir back to original</span>
-</span><span>print(os.getcwd())
+</span><span><span class="hljs-built_in">print</span>(os.getcwd())
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -163,17 +164,17 @@
 <tr>
 <td><code class="hljs inline no-lang" v-pre>\'</code></td>
 <td>single quote</td>
-<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;How\&#x27;s Life&#x27;</span>)</code></td>
+<td><code class="hljs inline python" v-pre><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;How\&#x27;s Life&#x27;</span>)</code></td>
 <td><code class="hljs inline no-lang" v-pre>How's Life?</code></td></tr>
 <tr>
 <td><code class="hljs inline no-lang" v-pre>\&quot;</code></td>
 <td>double quote</td>
-<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&quot;Say \&quot;wow\&quot;&quot;</span>)</code></td>
+<td><code class="hljs inline python" v-pre><span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Say \&quot;wow\&quot;&quot;</span>)</code></td>
 <td><code class="hljs inline no-lang" v-pre>Say &quot;wow&quot;</code></td></tr>
 <tr>
 <td><code class="hljs inline no-lang" v-pre>\\</code></td>
 <td>back slash</td>
-<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;files\\text&#x27;</span>)</code></td>
+<td><code class="hljs inline python" v-pre><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;files\\text&#x27;</span>)</code></td>
 <td><code class="hljs inline no-lang" v-pre>files\text</code></td></tr></tbody></table></div><p>Another use of escape sequences is to give a special meaning to a character that normally does not have a special meaning. Here are some examples:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -185,12 +186,12 @@
 <tr>
 <td><code class="hljs inline no-lang" v-pre>\t</code></td>
 <td>horizontal tab</td>
-<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;aaa\tbbb&#x27;</span>)</code></td>
+<td><code class="hljs inline python" v-pre><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;aaa\tbbb&#x27;</span>)</code></td>
 <td><code class="hljs inline no-lang" v-pre>aaa</code> <code class="hljs inline no-lang" v-pre>  </code> <code class="hljs inline no-lang" v-pre>bbb</code></td></tr>
 <tr>
 <td><code class="hljs inline no-lang" v-pre>\n</code></td>
 <td>line break</td>
-<td><code class="hljs inline python" v-pre>print(<span class="hljs-string">&#x27;hi\nthere!&#x27;</span>)</code></td>
+<td><code class="hljs inline python" v-pre><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;hi\nthere!&#x27;</span>)</code></td>
 <td><code class="hljs inline no-lang" v-pre>hi</code><br><code class="hljs inline no-lang" v-pre>there!</code></td></tr></tbody></table></div></div></b-modal></tip-box>
 <p><strong>A path that specifies all folders starting from the root is an <em>absolute path</em>. A path that is specified relative to the current working directory is a <em>relative</em> path.</strong></p>
 <box>
@@ -215,12 +216,12 @@
 <table>
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span>print(os.getcwd())
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(os.getcwd())
 </span><span>os.makedirs(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
 </span><span>os.chdir(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
-</span><span>print(os.getcwd())
+</span><span><span class="hljs-built_in">print</span>(os.getcwd())
 </span><span>os.chdir(<span class="hljs-string">&#x27;..&#x27;</span>) <span class="hljs-comment"># go to parent dir</span>
-</span><span>print(os.getcwd())
+</span><span><span class="hljs-built_in">print</span>(os.getcwd())
 </span><span>os.chdir(<span class="hljs-string">&#x27;..&#x27;</span>)
 </span><span>os.removedirs(<span class="hljs-string">&#x27;ex\\w1&#x27;</span>)
 </span></code></pre></td>
@@ -234,7 +235,7 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below:</p>
 <pre><code class="hljs python" v-pre><span>cwd = os.getcwd()
-</span><span>print(os.path.join(cwd, <span class="hljs-string">&#x27;ex&#x27;</span>, <span class="hljs-string">&#x27;w2&#x27;</span>))
+</span><span><span class="hljs-built_in">print</span>(os.path.join(cwd, <span class="hljs-string">&#x27;ex&#x27;</span>, <span class="hljs-string">&#x27;w2&#x27;</span>))
 </span></code></pre><p>If you run it on a Windows computer in the folder <code class="hljs inline no-lang" v-pre>C:\modules\te3201</code>, it prints <code class="hljs inline no-lang" v-pre>C:\modules\te3201\ex\w2</code>.<br>
 If your run it on a OS-X computer in the folder <code class="hljs inline no-lang" v-pre>/Users/john</code>, it prints <code class="hljs inline no-lang" v-pre>/Users/john/ex/w2</code>.</p></box>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> To ensure that your code can work on any OS, you are advised to use <code class="hljs inline no-lang" v-pre>os.path.join()</code> function instead of hard-coding the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., <code class="hljs inline no-lang" v-pre>\\</code> on Windows and <code class="hljs inline no-lang" v-pre>/</code> on OS-X/Linux</span>path separators</span>.</p>
@@ -322,7 +323,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_current</span>():</span>
 </span><span>  <span class="hljs-string">&quot;&quot;&quot;Print current working directory&quot;&quot;&quot;</span>
-</span><span>  print(os.getcwd())
+</span><span>  <span class="hljs-built_in">print</span>(os.getcwd())
 </span></code></pre></panel></div></panel><p></p></div></div><hr style="border-top: 3px double #c5c5c5;">
 <div>
 <h3 id="reading-from-files"><span id="reading-from-files" class="anchor"></span>Reading from Files<a class="fa fa-anchor" href="#reading-from-files" onclick="event.stopPropagation()"></a></h3>
@@ -341,7 +342,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 <pre><code class="hljs python" v-pre><span>file_path = os.path.join(<span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;items.txt&#x27;</span>)
 </span><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-comment"># open in read mode</span>
 </span><span>items = f.read()
-</span><span>print(items)
+</span><span><span class="hljs-built_in">print</span>(items)
 </span><span>f.close()
 </span></code></pre></td>
   <td valign="middle">&nbsp;→&nbsp;<br><br></td>
@@ -358,9 +359,9 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 <pre><code class="hljs python" v-pre><span>file_path = os.path.join(<span class="hljs-string">&#x27;data&#x27;</span>, <span class="hljs-string">&#x27;items.txt&#x27;</span>)
 </span><span>f = <span class="hljs-built_in">open</span>(file_path, <span class="hljs-string">&#x27;r&#x27;</span>)
 </span><span>items = f.readlines()
-</span><span>print(items) <span class="hljs-comment"># print as a list</span>
+</span><span><span class="hljs-built_in">print</span>(items) <span class="hljs-comment"># print as a list</span>
 </span><span><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> items: <span class="hljs-comment"># print each item</span>
-</span><span>  print(i.strip()) <span class="hljs-comment"># use strip() to remove linebreak at the end of each line</span>
+</span><span>  <span class="hljs-built_in">print</span>(i.strip()) <span class="hljs-comment"># use strip() to remove linebreak at the end of each line</span>
 </span><span>f.close()
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>['first line\n', 'second line\n', 'third line\n']
@@ -401,9 +402,9 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyze_file</span>(<span class="hljs-params">filename</span>):</span>
 </span><span>  contents_as_list = get_file_content_as_list(filename)
-</span><span>  print(<span class="hljs-string">&#x27;lines in file:&#x27;</span>, contents_as_list)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;lines in file:&#x27;</span>, contents_as_list)
 </span><span>  stats = get_file_stats(contents_as_list)
-</span><span>  print(<span class="hljs-string">&#x27;It has&#x27;</span>, stats[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;lines containing&#x27;</span>, stats[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;letters&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;It has&#x27;</span>, stats[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;lines containing&#x27;</span>, stats[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;letters&#x27;</span>)
 </span><span>
 </span><span>analyze_file(<span class="hljs-string">&#x27;file1.txt&#x27;</span>)
 </span><span>analyze_file(<span class="hljs-string">&#x27;file2.txt&#x27;</span>)
@@ -510,7 +511,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span><span class="hljs-string">  &quot;&quot;&quot;</span>
 </span><span>  contents = get_file_content_as_list(sourcefile)
 </span><span>  write_with_line_numbers(contents, targetfile)
-</span><span>  print(get_file_content_as_list(targetfile))
+</span><span>  <span class="hljs-built_in">print</span>(get_file_content_as_list(targetfile))
 </span><span>  
 </span><span>process_file(<span class="hljs-string">&#x27;file1a.txt&#x27;</span>, <span class="hljs-string">&#x27;file1b.txt&#x27;</span>)
 </span><span>process_file(<span class="hljs-string">&#x27;file2a.txt&#x27;</span>, <span class="hljs-string">&#x27;file2b.txt&#x27;</span>)
@@ -569,7 +570,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>deliveries_file = <span class="hljs-built_in">open</span>(<span class="hljs-string">&#x27;deliveries.csv&#x27;</span>) <span class="hljs-comment"># open file</span>
 </span><span>deliveries_reader = csv.reader(deliveries_file) <span class="hljs-comment"># create a Reader</span>
 </span><span><span class="hljs-keyword">for</span> row <span class="hljs-keyword">in</span> deliveries_reader: <span class="hljs-comment"># access each line using the Reader</span>
-</span><span>  print(row)
+</span><span>  <span class="hljs-built_in">print</span>(row)
 </span><span>deliveries_file.close() <span class="hljs-comment"># close file</span>
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>['4/11/2017', 'Alice Bee', '4']
@@ -578,11 +579,11 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>['6/11/2017', 'Dan Pillai', '5']
 </span></code></pre><p>As you can see, <code class="hljs inline no-lang" v-pre>Reader</code> object returns content of a line as a list object with the value of each cell as an item in the list. Replacing the line,</p>
 <pre><code class="hljs python" v-pre><span>...
-</span><span>print(row)
+</span><span><span class="hljs-built_in">print</span>(row)
 </span><span>...
 </span></code></pre><p>... with the following line,</p>
 <pre><code class="hljs python" v-pre><span>...
-</span><span>print(<span class="hljs-string">&#x27;Date:&#x27;</span>, row[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;\tRecipient:&#x27;</span>, row[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;\tQuantity:&#x27;</span>, row[<span class="hljs-number">2</span>] )
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Date:&#x27;</span>, row[<span class="hljs-number">0</span>], <span class="hljs-string">&#x27;\tRecipient:&#x27;</span>, row[<span class="hljs-number">1</span>], <span class="hljs-string">&#x27;\tQuantity:&#x27;</span>, row[<span class="hljs-number">2</span>] )
 </span><span>...
 </span></code></pre><p>... will give you the output shown below:</p>
 <pre><code class="hljs" v-pre><span>Date: 4/11/2017 	Recipient: Alice Bee 	Quantity: 4
@@ -600,7 +601,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span>  <span class="hljs-comment"># convert 3rd cell to an int and add to total</span>
 </span><span>  total = total + <span class="hljs-built_in">int</span>(row[<span class="hljs-number">2</span>]) 
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Total quantity delivered:&#x27;</span>, total)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total quantity delivered:&#x27;</span>, total)
 </span><span>deliveries_file.close()
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs" v-pre><span>Total quantity delivered: 34
@@ -724,7 +725,7 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process</span>(<span class="hljs-params">source_file, target_file</span>):</span>
 </span><span>  
 </span><span>  calculate_GST(source_file, target_file)
-</span><span>  print(read_csv_lines(target_file))
+</span><span>  <span class="hljs-built_in">print</span>(read_csv_lines(target_file))
 </span><span>  
 </span><span>  
 </span><span>process(<span class="hljs-string">&#x27;itemlist1.csv&#x27;</span>, <span class="hljs-string">&#x27;updated_itemlist1.csv&#x27;</span>)
@@ -766,12 +767,12 @@ If your run it on a OS-X computer in the folder <code class="hljs inline no-lang
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

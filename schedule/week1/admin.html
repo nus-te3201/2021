@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Week 1 - Tasks</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -21,6 +21,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -63,7 +64,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
 
 
@@ -264,16 +265,16 @@
 </span><span>    print_banner()
 </span><span>
 </span><span>    <span class="hljs-comment"># print details</span>
-</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
-</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + get_outstanding())
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;amount	&quot;</span> + get_outstanding())
 </span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span>():</span>
 </span><span>    print_banner()
 </span><span>    print_details(get_outstanding())
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span>(<span class="hljs-params">amount</span>):</span>
-</span><span>    print(<span class="hljs-string">&quot;name:	&quot;</span> + name)
-</span><span>    print(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;name:	&quot;</span> + name)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;amount	&quot;</span> + amount)
 </span></code></pre></div></div></box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p></div>
@@ -595,7 +596,7 @@ If the question is not relevant to the rest of the class, prof/TA will contact y
 </span><span>&gt;&gt;&gt; Your command is: foo
 </span><span>&gt;&gt;&gt; Bye!
 </span></code></pre><panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
 </span><span><span class="hljs-comment"># ADD MORE CODE HERE</span>
 </span></code></pre></panel></div></panel></div></div></span></div></div>
 <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
@@ -619,12 +620,12 @@ If the question is not relevant to the rest of the class, prof/TA will contact y
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

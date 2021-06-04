@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: Functions</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -115,14 +116,14 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>():</span>
-</span><span>  print(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;How are you?&#x27;</span>)
-</span><span>  print(<span class="hljs-string">&#x27;Nice to meet you.&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;How are you?&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Nice to meet you.&#x27;</span>)
 </span><span>
 </span><span><span class="hljs-comment"># call the function twice</span>
-</span><span>print(<span class="hljs-string">&#x27;Going to call the function ...&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Going to call the function ...&#x27;</span>)
 </span><span>say_hello()
-</span><span>print(<span class="hljs-string">&#x27;Going to repeat ...&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Going to repeat ...&#x27;</span>)
 </span><span>say_hello()
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
@@ -145,26 +146,26 @@
 <tr>
   <td>
 <p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> (this works)</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;starting ...&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;starting ...&#x27;</span>)
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>():</span>
-</span><span>  print(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Going to say hello ...&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Going to say hello ...&#x27;</span>)
 </span><span>
 </span><span>say_hello()
 </span></code></pre></td>
   <td>&nbsp;&nbsp;</td>
   <td>
 <p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> (this will not work!)</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;starting ...&#x27;</span>)
-</span><span>print(<span class="hljs-string">&#x27;Going to say hello ...&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;starting ...&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Going to say hello ...&#x27;</span>)
 </span><span>
 </span><span><span class="hljs-comment"># call appears before definition</span>
 </span><span>say_hello()
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>():</span>
-</span><span>  print(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello!&#x27;</span>)
 </span></code></pre></td></tr></table></tip-box>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Defining your own functions</span></p></template>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WB4hJJkfhLU?rel=0&showinfo=0&start=13&end=199&version=3" frameborder="0" allowfullscreen></iframe>
@@ -181,7 +182,7 @@
 </span><span>  say_hip()
 </span><span>  say_hip()
 </span><span>  say_horray()
-</span><span>  print() <span class="hljs-comment"># print empty line</span>
+</span><span>  <span class="hljs-built_in">print</span>() <span class="hljs-comment"># print empty line</span>
 </span><span>  
 </span><span>  
 </span><span>  
@@ -216,8 +217,8 @@
 <tr>
   <td valign="top">
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>(<span class="hljs-params">name</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Hello &#x27;</span> + name)
-</span><span>  print(<span class="hljs-string">&#x27;How are you&#x27;</span>, name, <span class="hljs-string">&#x27;?&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Hello &#x27;</span> + name)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;How are you&#x27;</span>, name, <span class="hljs-string">&#x27;?&#x27;</span>)
 </span><span>
 </span><span>say_hello(<span class="hljs-string">&#x27;Gina&#x27;</span>)
 </span><span>say_hello(<span class="hljs-string">&#x27;John&#x27;</span>)
@@ -233,10 +234,10 @@
 <p><span class="dimmed">[Click <a href="http://pythontutor.com/iframe-embed.html#code=def%20say_hello%28name%29%3A%0A%20%20print%28'Hello%20'%20%2B%20name%29%0A%20%20print%28'How%20are%20you',%20name,%20'%3F'%29%0A%20%20%0Asay_hello%28'Gina'%29%0Asay_hello%28'John'%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=false&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">here</a> to visualize the execution]</span></p></div></td></tr></table></div>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below has a <code class="hljs inline no-lang" v-pre>say_hello</code> function that takes one parameter and a <code class="hljs inline no-lang" v-pre>repeat_hello</code> function that takes two parameters. Furthermore, note how one function calls the other.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">say_hello</span>(<span class="hljs-params">name</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Knock knock &#x27;</span> + name)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Knock knock &#x27;</span> + name)
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">repeat_hello</span>(<span class="hljs-params">name, times</span>):</span>
-</span><span>  print(<span class="hljs-string">&#x27;Greeting &#x27;</span>, name, times, <span class="hljs-string">&#x27;times&#x27;</span>)
+</span><span>  <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Greeting &#x27;</span>, name, times, <span class="hljs-string">&#x27;times&#x27;</span>)
 </span><span>  <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(times):
 </span><span>    say_hello(name)
 </span><span>  
@@ -254,13 +255,13 @@
 <tip-box> 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The code below produces an error because variable <code class="hljs inline no-lang" v-pre>v1</code> is not available after the function has returned.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_uniqueness</span>(<span class="hljs-params">v1, v2, v3</span>):</span>
-</span><span>  print(v1 != v2 <span class="hljs-keyword">and</span> v2 != v3 <span class="hljs-keyword">and</span> v3 != v1)
+</span><span>  <span class="hljs-built_in">print</span>(v1 != v2 <span class="hljs-keyword">and</span> v2 != v3 <span class="hljs-keyword">and</span> v3 != v1)
 </span><span>  
 </span><span>print_uniqueness(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>) <span class="hljs-comment"># True</span>
 </span><span>print_uniqueness(<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">2</span>) <span class="hljs-comment"># False</span>
 </span><span>
 </span><span><span class="hljs-comment"># Error. v1 is not available after function returns</span>
-</span><span>print(v1) 
+</span><span><span class="hljs-built_in">print</span>(v1) 
 </span></code></pre></tip-box>
 <panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Function parameters</span></p></template>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/WB4hJJkfhLU?rel=0&showinfo=0&start=199&end=315&version=3" frameborder="0" allowfullscreen></iframe>
@@ -273,7 +274,7 @@
 <pre><code class="hljs python" v-pre><span>project_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter project score:&#x27;</span>))
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -284,10 +285,10 @@
 </span><span><span class="hljs-keyword">else</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;D&#x27;</span>
 </span><span>
-</span><span>print(<span class="hljs-string">&#x27;Project :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (project_score//<span class="hljs-number">5</span>))
-</span><span>print(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (exam_score//<span class="hljs-number">5</span>))
-</span><span>print(<span class="hljs-string">&#x27;Total   :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (total_score//<span class="hljs-number">5</span>))
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Project :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (project_score//<span class="hljs-number">5</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (exam_score//<span class="hljs-number">5</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total   :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (total_score//<span class="hljs-number">5</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Read the above code to understand how it works. Do you remember <trigger trigger="click" for="printScoreFunction-operators">the meaning of <code class="hljs inline no-lang" v-pre>//</code> operator</trigger> used in the code above?</p>
 <b-modal id="printScoreFunction-operators" hide-footer size="lg" modal-class="mb-zoom" ref="printScoreFunction-operators" class="algolia-no-index"><template slot="modal-title"><span class="dimmed">Programming Basics » Expressions, Data Types, Variables »</span></template>
   <div>
@@ -345,9 +346,9 @@
 <p>Type an expression in the shell below and press enter. You can reload the previous expression using the up arrow key.</p>
 <iframe src="https://trinket.io/embed/python3/7b27e216a7?toggleCode=true&amp;runOption=console&start=result&runMode=console" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></panel></div></b-modal>
 <p>Add a <code class="hljs inline no-lang" v-pre>print_score</code> function to the code and replace the following three lines,</p>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;Project :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (project_score//<span class="hljs-number">5</span>))
-</span><span>print(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (exam_score//<span class="hljs-number">5</span>))
-</span><span>print(<span class="hljs-string">&#x27;Total   :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (total_score//<span class="hljs-number">5</span>))
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Project :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (project_score//<span class="hljs-number">5</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (exam_score//<span class="hljs-number">5</span>))
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total   :&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span> * (total_score//<span class="hljs-number">5</span>))
 </span></code></pre><p>with these three lines,</p>
 <pre><code class="hljs python" v-pre><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
@@ -396,8 +397,8 @@
 </span><span>  <span class="hljs-keyword">else</span>:
 </span><span>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Scissors&#x27;</span>
 </span><span>  
-</span><span>print(<span class="hljs-string">&#x27;Player1 response : &#x27;</span> + play())
-</span><span>print(<span class="hljs-string">&#x27;Player2 response : &#x27;</span> + play())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Player1 response : &#x27;</span> + play())
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Player2 response : &#x27;</span> + play())
 </span></code></pre><div>
 <panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-laptop"></span> Try your own</p></template>
 <iframe height="400px" width="100%" src="https://repl.it/@pythonbasics/rps-play-only?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
@@ -406,12 +407,12 @@
 <tip-box> 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>print_all_products</code> function below uses an empty <code class="hljs inline no-lang" v-pre>return</code> statement to return from the function early if one of the arguments is <code class="hljs inline no-lang" v-pre>0</code>:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_product</span>(<span class="hljs-params">a, b</span>):</span>
-</span><span>  print(a, <span class="hljs-string">&#x27;x&#x27;</span>, b, <span class="hljs-string">&#x27;=&#x27;</span>, a*b)
+</span><span>  <span class="hljs-built_in">print</span>(a, <span class="hljs-string">&#x27;x&#x27;</span>, b, <span class="hljs-string">&#x27;=&#x27;</span>, a*b)
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_all_products</span>(<span class="hljs-params">n1, n2, n3</span>):</span>
 </span><span>  <span class="hljs-comment"># return early if any value is 0</span>
 </span><span>  <span class="hljs-keyword">if</span> n1 == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> n2 == <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> n3 == <span class="hljs-number">0</span>:
-</span><span>    print(<span class="hljs-string">&#x27;Values cannot be zeros&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Values cannot be zeros&#x27;</span>)
 </span><span>    <span class="hljs-keyword">return</span>
 </span><span>  
 </span><span>  <span class="hljs-comment"># print all possible products</span>
@@ -435,13 +436,13 @@
 <h4 id="exercise-grader-calculate-grade-function"><span id="exercise-grader-calculate-grade-function" class="anchor"></span>Exercise : Grader - <code class="hljs inline no-lang" v-pre>calculate_grade</code> Function<a class="fa fa-anchor" href="#exercise-grader-calculate-grade-function" onclick="event.stopPropagation()"></a></h4>
 <p>In a previous exercise you wrote a function to print scores (an example solution is given below).</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span>project_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter project score:&#x27;</span>))
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -455,7 +456,7 @@
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Add a <code class="hljs inline no-lang" v-pre>calculate_grade</code> function to the code and replace the following lines,</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> total &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -487,16 +488,16 @@
 <tip-box> 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>breed_cows</code> function below can increase the global variable <code class="hljs inline no-lang" v-pre>total_cows</code> to <code class="hljs inline no-lang" v-pre>10</code> from the local scope because it has a <code class="hljs inline no-lang" v-pre>global total_cows</code> statement. If you remove that statement, the last print statement will print <code class="hljs inline no-lang" v-pre>5</code> instead of <code class="hljs inline no-lang" v-pre>10</code></p>
 <pre><code class="hljs python" v-pre><span>total_cows = <span class="hljs-number">5</span>
-</span><span>print(<span class="hljs-string">&#x27;total cows before breeding:&#x27;</span>, total_cows)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total cows before breeding:&#x27;</span>, total_cows)
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">breed_cows</span>():</span>
 </span><span>    <span class="hljs-keyword">global</span> total_cows
-</span><span>    print(<span class="hljs-string">&#x27;breeding cows&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;breeding cows&#x27;</span>)
 </span><span>    total_cows = <span class="hljs-number">10</span>
-</span><span>    print(<span class="hljs-string">&#x27;total cows at the end of breeding:&#x27;</span>, total_cows)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total cows at the end of breeding:&#x27;</span>, total_cows)
 </span><span>
 </span><span>breed_cows()
-</span><span>print(<span class="hljs-string">&#x27;total cows after breeding:&#x27;</span>, total_cows) <span class="hljs-comment"># prints 10</span>
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;total cows after breeding:&#x27;</span>, total_cows) <span class="hljs-comment"># prints 10</span>
 </span></code></pre><table>
 <tr>
   <td>
@@ -528,7 +529,7 @@
 <p>Take the <trigger trigger="click" for="modal:graderMainFunction-graderCalculateGradeFunction">a grader you wrote in the previous exercise</trigger>.
 Here is an example of how the code is likely to look like:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_grade</span>(<span class="hljs-params">project, exam</span>):</span>
 </span><span>  <span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam &gt;= <span class="hljs-number">25</span>:
@@ -544,14 +545,14 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span>grade = calculate_grade(project_score, exam_score)
 </span><span>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Move <mark>all the statements that are not inside a function</mark> (i.e., the last 10 statements in the code above) into a new function called <code class="hljs inline no-lang" v-pre>main</code>. Given below is the expected structure of the code. The external behavior of the code should remain as before.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
 </span><span>  <span class="hljs-comment"># ...</span>
@@ -569,13 +570,13 @@ Here is an example of how the code is likely to look like:</p>
 <h4 id="exercise-grader-calculate-grade-function-2"><span id="exercise-grader-calculate-grade-function-2" class="anchor"></span>Exercise : Grader - <code class="hljs inline no-lang" v-pre>calculate_grade</code> Function<a class="fa fa-anchor" href="#exercise-grader-calculate-grade-function-2" onclick="event.stopPropagation()"></a></h4>
 <p>In a previous exercise you wrote a function to print scores (an example solution is given below).</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span>project_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter project score:&#x27;</span>))
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -589,7 +590,7 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Add a <code class="hljs inline no-lang" v-pre>calculate_grade</code> function to the code and replace the following lines,</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> total &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -631,7 +632,7 @@ Restructure the <code class="hljs inline no-lang" v-pre>main</code> function so 
 <p>Take the <trigger trigger="click" for="modal:graderMainFunction-graderCalculateGradeFunction">a grader you wrote in the previous exercise</trigger>.
 Here is an example of how the code is likely to look like:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_grade</span>(<span class="hljs-params">project, exam</span>):</span>
 </span><span>  <span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam &gt;= <span class="hljs-number">25</span>:
@@ -647,14 +648,14 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span>grade = calculate_grade(project_score, exam_score)
 </span><span>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Move <mark>all the statements that are not inside a function</mark> (i.e., the last 10 statements in the code above) into a new function called <code class="hljs inline no-lang" v-pre>main</code>. Given below is the expected structure of the code. The external behavior of the code should remain as before.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
 </span><span>  <span class="hljs-comment"># ...</span>
@@ -672,13 +673,13 @@ Here is an example of how the code is likely to look like:</p>
 <h4 id="exercise-grader-calculate-grade-function-3"><span id="exercise-grader-calculate-grade-function-3" class="anchor"></span>Exercise : Grader - <code class="hljs inline no-lang" v-pre>calculate_grade</code> Function<a class="fa fa-anchor" href="#exercise-grader-calculate-grade-function-3" onclick="event.stopPropagation()"></a></h4>
 <p>In a previous exercise you wrote a function to print scores (an example solution is given below).</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span>project_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter project score:&#x27;</span>))
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -692,7 +693,7 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Add a <code class="hljs inline no-lang" v-pre>calculate_grade</code> function to the code and replace the following lines,</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> total &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -754,7 +755,7 @@ Restructure the <code class="hljs inline no-lang" v-pre>main</code> function so 
 <p>Take the <trigger trigger="click" for="modal:graderMainFunction-graderCalculateGradeFunction">a grader you wrote in the previous exercise</trigger>.
 Here is an example of how the code is likely to look like:</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_grade</span>(<span class="hljs-params">project, exam</span>):</span>
 </span><span>  <span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam &gt;= <span class="hljs-number">25</span>:
@@ -770,14 +771,14 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span>grade = calculate_grade(project_score, exam_score)
 </span><span>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Move <mark>all the statements that are not inside a function</mark> (i.e., the last 10 statements in the code above) into a new function called <code class="hljs inline no-lang" v-pre>main</code>. Given below is the expected structure of the code. The external behavior of the code should remain as before.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
 </span><span>  <span class="hljs-comment"># ...</span>
@@ -795,13 +796,13 @@ Here is an example of how the code is likely to look like:</p>
 <h4 id="exercise-grader-calculate-grade-function-4"><span id="exercise-grader-calculate-grade-function-4" class="anchor"></span>Exercise : Grader - <code class="hljs inline no-lang" v-pre>calculate_grade</code> Function<a class="fa fa-anchor" href="#exercise-grader-calculate-grade-function-4" onclick="event.stopPropagation()"></a></h4>
 <p>In a previous exercise you wrote a function to print scores (an example solution is given below).</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_score</span>(<span class="hljs-params">name, value</span>):</span>
-</span><span>  print(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
+</span><span>  <span class="hljs-built_in">print</span>(name, <span class="hljs-string">&#x27;=&#x27;</span> * (value//<span class="hljs-number">5</span>))
 </span><span>
 </span><span>project_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter project score:&#x27;</span>))
 </span><span>exam_score = <span class="hljs-built_in">int</span>(<span class="hljs-built_in">input</span>(<span class="hljs-string">&#x27;Enter exam score:&#x27;</span>))
 </span><span>
 </span><span>total_score = project_score + exam_score
-</span><span>print(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Total:&#x27;</span>, total_score)
 </span><span>
 </span><span><span class="hljs-keyword">if</span> total_score &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -815,7 +816,7 @@ Here is an example of how the code is likely to look like:</p>
 </span><span>print_score(<span class="hljs-string">&#x27;Project :&#x27;</span>, project_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Exam    :&#x27;</span>, exam_score)
 </span><span>print_score(<span class="hljs-string">&#x27;Total   :&#x27;</span>, total_score)
-</span><span>print(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Grade   :&#x27;</span>, grade)
 </span></code></pre><p>Add a <code class="hljs inline no-lang" v-pre>calculate_grade</code> function to the code and replace the following lines,</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> total &gt;= <span class="hljs-number">60</span> <span class="hljs-keyword">and</span> project_score &gt;= <span class="hljs-number">25</span> <span class="hljs-keyword">and</span> exam_score &gt;= <span class="hljs-number">25</span>:
 </span><span>    grade = <span class="hljs-string">&#x27;A&#x27;</span>
@@ -862,12 +863,12 @@ Here is an example of how the code is likely to look like:</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>

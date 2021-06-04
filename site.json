@@ -54,7 +54,7 @@
       "searchable": "yes"
     }
   ],
-  "enableSearch": false,
+  "enableSearch": true,
   "plugins": ["algolia","filterTags"],
   "pluginsContext": {
    "filterTags": {

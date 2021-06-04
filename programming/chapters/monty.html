@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.3">
+    <meta name="generator" content="MarkBind 2.18.1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TE3201 - Python Basics: The Monty Project</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~te3201">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/2021/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-danger">TE3201 <small>2021</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -62,7 +63,7 @@
     </dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -176,7 +177,7 @@
 </span><span>&gt;&gt;&gt; Your command is: foo
 </span><span>&gt;&gt;&gt; Bye!
 </span></code></pre><panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
 </span><span><span class="hljs-comment"># ADD MORE CODE HERE</span>
 </span></code></pre></panel></div>
 <hr style="border-top: 3px double #c5c5c5;">
@@ -212,11 +213,11 @@
 </span><span>y
 </span><span>&gt;&gt;&gt; Bye!
 </span></code></pre><panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
-<pre><code class="hljs python" v-pre><span>print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
+<pre><code class="hljs python" v-pre><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Hello, my name is Monty&#x27;</span>)
 </span><span><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
-</span><span>    print(<span class="hljs-string">&#x27;&gt;&gt;&gt; What can I do for you?&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; What can I do for you?&#x27;</span>)
 </span><span>    <span class="hljs-comment"># ADD MORE CODE HERE</span>
-</span><span>print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Bye!&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Bye!&#x27;</span>)
 </span></code></pre></panel></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div id="monty3">
@@ -240,7 +241,7 @@
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> sys
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">is_exit_confirmed</span>():</span>
-</span><span>    print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Are you sure? y/n&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Are you sure? y/n&#x27;</span>)
 </span><span>    response = <span class="hljs-built_in">input</span>()
 </span><span>    <span class="hljs-keyword">return</span> response == <span class="hljs-string">&#x27;y&#x27;</span>
 </span><span>
@@ -250,7 +251,7 @@
 </span><span>        <span class="hljs-keyword">return</span>
 </span><span>    <span class="hljs-keyword">elif</span> command == <span class="hljs-string">&#x27;exit&#x27;</span>:
 </span><span>        <span class="hljs-keyword">if</span> is_exit_confirmed():
-</span><span>            print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Bye!&#x27;</span>)
+</span><span>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Bye!&#x27;</span>)
 </span><span>            sys.exit()
 </span><span>    <span class="hljs-comment"># ...</span>
 </span><span>
@@ -304,8 +305,8 @@
   <td valign="top">
 <pre><code class="hljs python" v-pre><span>
 </span><span>s = <span class="hljs-string">&#x27;abcdefgh&#x27;</span>
-</span><span>print(s[<span class="hljs-number">2</span>:])
-</span><span>print(s[:<span class="hljs-number">5</span>])
+</span><span><span class="hljs-built_in">print</span>(s[<span class="hljs-number">2</span>:])
+</span><span><span class="hljs-built_in">print</span>(s[:<span class="hljs-number">5</span>])
 </span></code></pre></td>
   <td valign="bottom">&nbsp;→&nbsp;<br><br></td>
   <td valign="bottom">
@@ -322,7 +323,7 @@
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_items</span>():</span>
 </span><span>    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(items) == <span class="hljs-number">0</span>:
-</span><span>        print(<span class="hljs-string">&#x27;&gt;&gt;&gt; Nothing to list&#x27;</span>)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; Nothing to list&#x27;</span>)
 </span><span>    <span class="hljs-keyword">else</span>:
 </span><span>        <span class="hljs-keyword">for</span> i, item <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(items):
 </span><span>            <span class="hljs-comment"># ...</span>
@@ -347,7 +348,7 @@
 </span><span>    <span class="hljs-keyword">elif</span> command.startswith(<span class="hljs-string">&#x27;add &#x27;</span>):
 </span><span>        add_item(command)
 </span><span>    <span class="hljs-keyword">else</span>:
-</span><span>        print(<span class="hljs-string">&#x27;&gt;&gt;&gt; OOPS! Unknown command&#x27;</span>)
+</span><span>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; OOPS! Unknown command&#x27;</span>)
 </span><span>
 </span><span>
 </span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
@@ -420,12 +421,12 @@
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Each task has two data values: the description and the 'done' status. You can use a list to hold these two data items. That means your list of tasks will be a list containing lists. Example:</p>
 <pre><code class="hljs python" v-pre><span>tasks = []
 </span><span>tasks.append([<span class="hljs-string">&#x27;read book&#x27;</span>, <span class="hljs-literal">False</span>])
-</span><span>print(<span class="hljs-string">&#x27;Description of the first task:&#x27;</span>, tasks[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Description of the first task:&#x27;</span>, tasks[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
 </span><span>
 </span><span><span class="hljs-keyword">if</span> tasks[<span class="hljs-number">0</span>][<span class="hljs-number">1</span>]:
-</span><span>    print(<span class="hljs-string">&#x27;X&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;X&#x27;</span>)
 </span><span><span class="hljs-keyword">else</span>:
-</span><span>    print(<span class="hljs-string">&#x27;-&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;-&#x27;</span>)
 </span></code></pre><p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use exceptions to identify and handle errors in the command.</p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span>():</span>
 </span><span>    print_greeting()
@@ -434,7 +435,7 @@
 </span><span>            command = read_command()
 </span><span>            execute_command(command)
 </span><span>        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
-</span><span>            print(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
+</span><span>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
 </span></code></pre></box>
 <panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
 <pre><code class="hljs python" v-pre><span>
@@ -484,7 +485,7 @@
 </span><span>            command = read_command()
 </span><span>            execute_command(command)
 </span><span>        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
-</span><span>            print(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
+</span><span>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
 </span><span>
 </span><span>
 </span><span>main()
@@ -573,7 +574,7 @@
 </span><span><span class="hljs-string">*                                                                                 |___/   *</span>
 </span><span><span class="hljs-string">*******************************************************************************************</span>
 </span><span><span class="hljs-string">&#x27;&#x27;&#x27;</span>
-</span><span>    print(banner.strip(), <span class="hljs-string">&#x27;\n&#x27;</span>)
+</span><span>    <span class="hljs-built_in">print</span>(banner.strip(), <span class="hljs-string">&#x27;\n&#x27;</span>)
 </span></code></pre></panel></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div id="monty7">
@@ -655,7 +656,7 @@
 </span><span>             execute_command(command)
 </span><span>             save_data(DATA_FILE, items) <span class="hljs-comment"># save all tasks in the file</span>
 </span><span>         <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
-</span><span>             print(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
+</span><span>             <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;&gt;&gt;&gt; SORRY, I could not perform that command. Problem:&#x27;</span>, e)
 </span><span> 
 </span><span> 
 </span><span> main()
@@ -806,7 +807,7 @@ Consider the following code:
 </span><span>    <span class="hljs-keyword">return</span> <span class="hljs-string">&#x27;Yes&#x27;</span> <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;No&#x27;</span>
 </span></code></pre><p>Two more examples:</p>
 <pre><code class="hljs python" v-pre><span>status_as_word = <span class="hljs-string">&#x27;Yes&#x27;</span> <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;No&#x27;</span>
-</span><span>print(<span class="hljs-string">&#x27;Yes&#x27;</span>) <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> print(<span class="hljs-string">&#x27;No&#x27;</span>)
+</span><span><span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;Yes&#x27;</span>) <span class="hljs-keyword">if</span> status == <span class="hljs-number">1</span> <span class="hljs-keyword">else</span> <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;No&#x27;</span>)
 </span></code></pre><p>Note that this shorthand requires both the <code class="hljs inline no-lang" v-pre>if</code> part and the <code class="hljs inline no-lang" v-pre>else</code> part.</p></box>
 <panel minimized class="algolia-no-index"><template slot="header"><p><span aria-hidden="true" class="fas fa-battery-quarter"></span> Partial solution</p></template>
 <p>Here is the code for an example <code class="hljs inline no-lang" v-pre>ToDo</code> class:</p>
@@ -1333,12 +1334,12 @@ Consider the following code:
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.3</a>, generated on Tue, 27 Apr 2021, 0:22:59 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.18.1</a>, generated on Sat, 5 Jun 2021, 0:04:26 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
 <script>
   const baseUrl = '/2021'
-  MarkBind.setup()
+  MarkBind.setupWithSearch()
 </script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
